@@ -50,7 +50,7 @@ export async function POST(request: NextRequest) {
     return NextResponse.json({
       success: true,
       message: "Email inviata con successo",
-      id: data.id,
+      id: data?.id,
     });
   } catch (error) {
     console.error("Errore nell'invio dell'email:", error);
