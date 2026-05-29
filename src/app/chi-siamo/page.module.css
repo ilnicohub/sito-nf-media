@@ -1,0 +1,192 @@
+.main {
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  padding: 8rem 2rem 4rem;
+  text-align: center;
+  border-bottom: 1px solid var(--border);
+}
+
+.title {
+  font-size: clamp(3rem, 6vw, 5rem);
+  margin-bottom: 1.5rem;
+  font-weight: 500;
+  letter-spacing: -0.05em;
+}
+
+.subtitle {
+  color: var(--text-muted);
+  font-size: 1.1rem;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.contentSection, .valuesSection, .methodSection {
+  padding: 8rem 2rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Grid Chi Siamo */
+.grid {
+  display: grid;
+  gap: 6rem;
+  align-items: center;
+}
+
+@media (min-width: 992px) {
+  .grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.textBlock h2 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  font-weight: 500;
+  letter-spacing: -0.04em;
+}
+
+.textBlock p {
+  color: var(--text-muted);
+  font-size: 1.05rem;
+  line-height: 1.8;
+  margin-bottom: 1.5rem;
+}
+
+.imageBlock {
+  width: 100%;
+  aspect-ratio: 1;
+  background: rgba(255, 255, 255, 0.02);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.placeholder {
+  font-size: 1rem;
+  font-weight: 500;
+  letter-spacing: 0.2em;
+  opacity: 0.3;
+}
+
+/* Method Section */
+.methodHeader {
+  text-align: center;
+  margin-bottom: 5rem;
+}
+
+.methodHeader h2 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  font-weight: 500;
+  letter-spacing: -0.04em;
+}
+
+.accent {
+  color: var(--text-muted);
+  font-style: italic;
+}
+
+.methodHeader p {
+  color: var(--text-muted);
+  font-size: 1.1rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.methodGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 3rem;
+  position: relative;
+}
+
+/* Dotted line connecting steps on desktop */
+@media (min-width: 992px) {
+  .methodGrid::before {
+    content: '';
+    position: absolute;
+    top: 30px;
+    left: 10%;
+    right: 10%;
+    height: 1px;
+    background-image: linear-gradient(to right, var(--border) 50%, transparent 50%);
+    background-size: 10px 1px;
+    z-index: 0;
+  }
+}
+
+.methodCard {
+  background: var(--background);
+  position: relative;
+  z-index: 1;
+}
+
+.methodIcon {
+  width: 60px;
+  height: 60px;
+  background: var(--background);
+  border: 1px solid var(--border);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 2rem;
+  color: var(--foreground);
+}
+
+.methodCard h3 {
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+  font-weight: 500;
+}
+
+.methodCard p {
+  color: var(--text-muted);
+  line-height: 1.6;
+  font-size: 0.95rem;
+}
+
+/* Values Section */
+.valuesTitle {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 4rem;
+  font-weight: 500;
+  letter-spacing: -0.04em;
+}
+
+.valuesGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 4rem;
+}
+
+.valueCard {
+  text-align: left;
+}
+
+.icon {
+  color: var(--foreground);
+  margin-bottom: 2rem;
+}
+
+.valueCard h3 {
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+  font-weight: 500;
+}
+
+.valueCard p {
+  color: var(--text-muted);
+  line-height: 1.6;
+  font-size: 0.95rem;
+}

@@ -1,0 +1,136 @@
+.main {
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  padding: 8rem 2rem 4rem;
+  text-align: center;
+  border-bottom: 1px solid var(--border);
+}
+
+.title {
+  font-size: clamp(3rem, 6vw, 5rem);
+  margin-bottom: 1.5rem;
+  font-weight: 500;
+  letter-spacing: -0.05em;
+}
+
+.subtitle {
+  color: var(--text-muted);
+  font-size: 1.1rem;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 6rem 2rem;
+}
+
+.caseStudy {
+  background: var(--border);
+  border: 1px solid var(--border);
+  margin-bottom: 6rem;
+  display: flex;
+  flex-direction: column;
+}
+
+@media (min-width: 992px) {
+  .caseStudy {
+    flex-direction: row;
+  }
+}
+
+.caseVisual {
+  flex: 1;
+  background: var(--background);
+  min-height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 1px solid var(--border);
+}
+
+@media (min-width: 992px) {
+  .caseVisual {
+    border-bottom: none;
+    border-right: 1px solid var(--border);
+  }
+}
+
+.visualText {
+  font-size: 2rem;
+  font-weight: 600;
+  opacity: 0.1;
+  letter-spacing: 0.2em;
+}
+
+.caseContent {
+  flex: 1.5;
+  padding: 3rem;
+  background: var(--background);
+}
+
+@media (min-width: 992px) {
+  .caseContent {
+    padding: 4rem;
+  }
+}
+
+.caseHeader {
+  margin-bottom: 2rem;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 2rem;
+}
+
+.clientName {
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-muted);
+  margin-bottom: 1rem;
+}
+
+.caseTitle {
+  font-size: 2rem;
+  font-weight: 500;
+  margin-bottom: 2rem;
+  letter-spacing: -0.03em;
+}
+
+.metrics {
+  display: flex;
+  gap: 3rem;
+  flex-wrap: wrap;
+}
+
+.metricItem h4 {
+  font-size: 2.5rem;
+  font-weight: 400;
+  color: var(--foreground);
+  margin-bottom: 0.2rem;
+  letter-spacing: -0.04em;
+}
+
+.metricItem p {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.caseBody h3 {
+  font-size: 1.1rem;
+  margin: 2rem 0 0.8rem;
+  font-weight: 500;
+  color: var(--foreground);
+}
+
+.caseBody p {
+  color: var(--text-muted);
+  line-height: 1.7;
+  font-size: 1rem;
+}
