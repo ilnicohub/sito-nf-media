@@ -224,6 +224,255 @@
   font-size: 0.95rem;
 }
 
+/* AVIVX */
+/* ── AVIVX Section ── */
+.avivxSection {
+  padding: 6rem 0;
+  border-bottom: 1px solid var(--border);
+  background: var(--background);
+  overflow: hidden;
+}
+
+.avivxHeader {
+  max-width: 680px;
+  margin: 0 auto 4rem;
+  text-align: center;
+}
+
+.avivxEyebrow {
+  display: inline-block;
+  color: var(--text-muted);
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  margin-bottom: 1rem;
+}
+
+.avivxTitle {
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 700;
+  letter-spacing: -0.04em;
+  line-height: 1.1;
+  color: var(--foreground);
+  margin-bottom: 1.25rem;
+}
+
+.avivxTitle em {
+  font-style: normal;
+  color: var(--accent-primary);
+}
+
+.avivxDesc {
+  color: var(--text-muted);
+  font-size: 1rem;
+  line-height: 1.7;
+  max-width: 560px;
+  margin: 0 auto;
+}
+
+.avivxSplit {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem;
+  align-items: center;
+}
+
+@media (min-width: 1024px) {
+  .avivxSplit {
+    grid-template-columns: 1fr 1.1fr;
+    gap: 5rem;
+  }
+}
+
+/* Features */
+.avivxFeaturesList {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 2.5rem;
+}
+
+.avivxFeatureItem {
+  display: flex;
+  gap: 1.25rem;
+  align-items: flex-start;
+  padding: 1.5rem 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.avivxFeatureItem:first-child {
+  border-top: 1px solid var(--border);
+}
+
+.avivxFeatureIcon {
+  flex-shrink: 0;
+  color: var(--accent-primary);
+  opacity: 0.85;
+  margin-top: 0.1rem;
+}
+
+.avivxFeatureLabel {
+  display: block;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--foreground);
+  margin-bottom: 0.35rem;
+  letter-spacing: -0.01em;
+}
+
+.avivxFeatureDesc {
+  color: var(--text-muted);
+  font-size: 0.875rem;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* CTA */
+.avivxCta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  align-items: center;
+}
+
+.avivxCtaPrimary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  background: var(--accent-primary);
+  color: var(--background);
+  font-size: 0.9rem;
+  font-weight: 600;
+  border: 1px solid transparent;
+  text-decoration: none;
+  letter-spacing: -0.01em;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.avivxCtaPrimary:hover {
+  opacity: 0.85;
+  transform: translateX(2px);
+}
+
+.avivxCtaSecondary {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.75rem 1.5rem;
+  background: transparent;
+  color: var(--foreground);
+  font-size: 0.9rem;
+  font-weight: 500;
+  border: 1px solid var(--border);
+  text-decoration: none;
+  letter-spacing: -0.01em;
+  transition: border-color 0.2s ease;
+}
+
+.avivxCtaSecondary:hover {
+  border-color: var(--foreground);
+}
+
+/* Screenshots */
+.avivxScreenshotsCol {
+  position: relative;
+  padding-bottom: 2.5rem;
+  padding-left: 0.5rem;
+}
+
+.avivxScreenshotMain {
+  border: 1px solid var(--border);
+  background: rgba(255, 255, 255, 0.03);
+  overflow: hidden;
+}
+
+.avivxBrowserBar {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.65rem 1rem;
+  border-bottom: 1px solid var(--border);
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.avivxDot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.avivxDot:nth-child(1) { background: rgba(255, 95, 87, 0.5); }
+.avivxDot:nth-child(2) { background: rgba(255, 189, 46, 0.5); }
+.avivxDot:nth-child(3) { background: rgba(40, 200, 64, 0.5); }
+
+.avivxUrlBar {
+  flex: 1;
+  font-size: 0.72rem;
+  color: var(--text-muted);
+  text-align: center;
+  font-family: monospace;
+  letter-spacing: 0.02em;
+}
+
+.avivxScreenshot {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+.avivxScreenshotFloat {
+  position: absolute;
+  bottom: 0;
+  left: -1.75rem;
+  width: 46%;
+  min-width: 180px;
+  border: 1px solid var(--border);
+  background: var(--background);
+  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.4);
+  overflow: hidden;
+  z-index: 2;
+}
+
+.avivxStatBadge {
+  position: absolute;
+  top: -1.25rem;
+  right: -1.25rem;
+  background: var(--accent-primary);
+  color: var(--background);
+  padding: 0.75rem 1.1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.1rem;
+  z-index: 3;
+}
+
+.avivxStatNumber {
+  font-size: 1.4rem;
+  font-weight: 700;
+  letter-spacing: -0.05em;
+  line-height: 1;
+}
+
+.avivxStatLabel {
+  font-size: 0.68rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  opacity: 0.75;
+  white-space: nowrap;
+}
+
+@media (max-width: 640px) {
+  .avivxScreenshotFloat {
+    display: none;
+  }
+  .avivxStatBadge {
+    top: 0.5rem;
+    right: 0.5rem;
+    padding: 0.5rem 0.85rem;
+  }
+}
 
 /* Testimonials */
 .testimonialsGrid {
