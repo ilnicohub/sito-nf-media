@@ -200,6 +200,47 @@ export default function Home() {
         </div>
       </section>
 
+
+      {/*VR/AR Section*/}
+      <section className={styles.section}>
+        <div className={styles.container}>
+          <motion.div
+            className={styles.vrHeader}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+          >
+            <h2>Realtà Virtuale e Aumentata</h2>
+            <p>
+              Esplora nuove dimensioni digitali con le nostre soluzioni VR/AR. Dalla progettazione di esperienze immersive alla loro integrazione con il tuo ecosistema digitale, portiamo la tua azienda nel futuro dell'interazione digitale.
+            </p>
+          </motion.div>
+
+          <div className={styles.vrGrid}>
+            <motion.div 
+              className={styles.vrCard}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.1 }}
+            >
+              <h3 className={styles.vrTitle}>Esperienze Immersive</h3>
+              <p className={styles.vrText}>Crea ambienti virtuali coinvolgenti per presentazioni di prodotto, showroom digitali e formazione interattiva.</p>
+            </motion.div>
+            <motion.div 
+              className={styles.vrCard}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.2 }}
+            >
+              <h3 className={styles.vrTitle}>Integrazione Ecosistema</h3>
+              <p className={styles.vrText}>Collega le esperienze VR/AR al tuo sito web, e-commerce o app per un'esperienza utente fluida e coinvolgente.</p>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
 {/* AVIVX */}
 <section className={styles.avivxSection}>
   <div className={styles.container}>
@@ -348,26 +389,6 @@ export default function Home() {
     </div>
   </div>
 </section>
-
-      {/*3D Interactive Section*/}
-      <section className={styles.section}>
-        <div className={styles.container}>
-          <motion.h2 
-            className={styles.sectionTitle}
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-          >
-            Esperienza Interattiva
-          </motion.h2>
-          <p className={styles.sectionDesc}>
-            Esplora il nostro processo creativo attraverso un modello 3D interattivo. Scopri come trasformiamo le idee in soluzioni digitali concrete.
-          </p>
-          <div className={styles.interactive3D}>
-            <Hero3D />
-          </div>
-        </div>
-      </section>
 
       {/* Testimonials Section */}
       <section className={styles.section}>

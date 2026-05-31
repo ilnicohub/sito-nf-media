@@ -225,7 +225,6 @@
 }
 
 /* AVIVX */
-/* ── AVIVX Section ── */
 .avivxSection {
   padding: 6rem 0;
   border-bottom: 1px solid var(--border);
@@ -473,6 +472,70 @@
     padding: 0.5rem 0.85rem;
   }
 }
+
+/* VR/AR Section */
+.vrHeader {
+  max-width: 680px;
+  margin-bottom: 4rem;
+}
+
+.vrHeader h2 {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 500;
+  letter-spacing: -0.04em;
+  line-height: 1.1;
+  margin-bottom: 1.25rem;
+  color: var(--foreground);
+}
+
+.vrHeader p {
+  color: var(--text-muted);
+  font-size: 1.05rem;
+  line-height: 1.7;
+  max-width: 560px;
+}
+
+.vrGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1px;
+  background: var(--border);
+  border: 1px solid var(--border);
+}
+
+@media (min-width: 768px) {
+  .vrGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.vrCard {
+  background: var(--background);
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  transition: background 0.3s ease;
+}
+
+.vrCard:hover {
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.vrTitle {
+  font-size: 1.25rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+  letter-spacing: -0.02em;
+  color: var(--foreground);
+}
+
+.vrCard .vrText {
+  color: var(--text-muted);
+  line-height: 1.6;
+  font-size: 0.95rem;
+}
+
+
 
 /* Testimonials */
 .testimonialsGrid {
