@@ -5,6 +5,7 @@ import Link from "next/link";
 import { Globe, RefreshCw, Code2, Share2, Settings, TrendingUp, Bot, Sparkles} from "lucide-react";
 import styles from "./page.module.css";
 import Hero3D from "@/components/3d/Hero3D";
+import HeadsetVRScene from "@/components/3d/HeadsetVRScene"
 
 export default function Home() {
   const services = [
@@ -215,7 +216,7 @@ export default function Home() {
               Esplora nuove dimensioni digitali con le nostre soluzioni VR/AR. Dalla progettazione di esperienze immersive alla loro integrazione con il tuo ecosistema digitale, portiamo la tua azienda nel futuro dell'interazione digitale.
             </p>
           </motion.div>
-
+        <HeadsetVRScene />
           <div className={styles.vrGrid}>
             <motion.div 
               className={styles.vrCard}
