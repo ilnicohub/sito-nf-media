@@ -9,6 +9,7 @@ export default function CaseStudies() {
     {
       client: "Symblux S.R.L. (Industriale)",
       title: "Miglioramento Comunicazione digitale e presenza online",
+      image: "/case-studies/symblux.webp",
       metrics: [
         { value: "+40%", label: "Contatti tramite sito Web" },
         { value: "+25%", label: "Traffico organico" }
@@ -19,6 +20,7 @@ export default function CaseStudies() {
     {
       client: "FC Calvi Noale (Sportivo)",
       title: "Gestione Social Media e Content Creation",
+      image: "/case-studies/fccalvinoale.webp",
       metrics: [
         { value: "900k+", label: "Visualizzazioni mensili" },
         { value: "+300%", label: "Engagement sui social" }
@@ -29,6 +31,7 @@ export default function CaseStudies() {
     {
       client: "Euroline S.R.L. (Industriale)",
       title: "Sviluppo gestionale ERP su misura",
+      image: "/case-studies/euroline.webp",
       metrics: [
         { value: "-40%", label: "Tempi operativi" },
         { value: "+30%", label: "Efficienza dei processi" }
@@ -39,6 +42,7 @@ export default function CaseStudies() {
     {
       client: "Salone Tamara&Vanessa S.N.C. (Beauty)",
       title: "Miglioramento presenza online e lead generation",
+      image: "/case-studies/tamaraevanessa.webp",
       metrics: [
         { value: "+150%", label: "Richieste di preventivo" },
         { value: "+200%", label: "Visite al sito" }
@@ -57,7 +61,7 @@ export default function CaseStudies() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
         >
-          I Nostri <span className="text-gradient">Progetti</span>
+          I Nostri Progetti
         </motion.h1>
         <motion.p 
           className={styles.subtitle}
@@ -80,7 +84,12 @@ export default function CaseStudies() {
             transition={{ duration: 0.6, delay: idx * 0.1 }}
           >
             <div className={styles.caseVisual}>
-              <div className={styles.visualText}>PROGETTO {idx + 1}</div>
+              <img 
+                src={c.image}
+                alt={c.title}
+                className={styles.caseImage}
+                loading="lazy"
+              />
             </div>
             
             <div className={styles.caseContent}>

@@ -123,7 +123,7 @@ export default function HeadsetVRScene() {
   return (
     <Canvas
       shadows
-      camera={{ position: [0, 0, 5], fov: 45 }}
+      camera={{ position: [0, 0, 2.5], fov: 45 }}
       style={{ width: "100%", height: "500px", background: "rgba(3,3,3,0)" }}
       gl={{ antialias: true, alpha: true }}
     >

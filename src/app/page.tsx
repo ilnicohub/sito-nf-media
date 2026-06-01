@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
-import { Globe, RefreshCw, Code2, Share2, Settings, TrendingUp, Bot, Sparkles} from "lucide-react";
+import { Globe, RefreshCw, Code2, Share2, Settings, TrendingUp, Bot, Sparkles, Eye, Network } from "lucide-react";
 import styles from "./page.module.css";
 import Hero3D from "@/components/3d/Hero3D";
 import HeadsetVRScene from "@/components/3d/HeadsetVRScene"
@@ -225,6 +225,7 @@ export default function Home() {
               viewport={{ once: true }}
               transition={{ delay: 0.1 }}
             >
+              <div className={styles.vrIcon}><Eye size={32} strokeWidth={1.5} /></div>
               <h3 className={styles.vrTitle}>Esperienze Immersive</h3>
               <p className={styles.vrText}>Crea ambienti virtuali coinvolgenti per presentazioni di prodotto, showroom digitali e formazione interattiva.</p>
             </motion.div>
@@ -235,6 +236,7 @@ export default function Home() {
               viewport={{ once: true }}
               transition={{ delay: 0.2 }}
             >
+              <div className={styles.vrIcon}><Network size={32} strokeWidth={1.5} /></div>
               <h3 className={styles.vrTitle}>Integrazione Ecosistema</h3>
               <p className={styles.vrText}>Collega le esperienze VR/AR al tuo sito web, e-commerce o app per un'esperienza utente fluida e coinvolgente.</p>
             </motion.div>
@@ -335,13 +337,13 @@ export default function Home() {
         </ul>
 
         <div className={styles.avivxCta}>
-          <a href="https://www.avivxgestionale.it/" className={styles.avivxCtaPrimary}>
+          <a href="https://www.avivxgestionale.it/" className={styles.avivxCtaPrimary} target="_blank" rel="noopener noreferrer">
             Scopri AVIVX
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
               <path d="M5 12h14M12 5l7 7-7 7" strokeLinecap="round" strokeLinejoin="round" />
             </svg>
           </a>
-          <a href="https://www.avivxgestionale.it/#contatto" className={styles.avivxCtaSecondary}>
+          <a href="https://www.avivxgestionale.it/#contatto" className={styles.avivxCtaSecondary} target="_blank" rel="noopener noreferrer">
             Richiedi una demo
           </a>
         </div>
@@ -368,6 +370,7 @@ export default function Home() {
             className={styles.avivxScreenshot}
             width={760}
             height={480}
+            loading="lazy"
           />
         </div>
 
@@ -378,6 +381,7 @@ export default function Home() {
             className={styles.avivxScreenshot}
             width={340}
             height={220}
+            loading="lazy"
           />
         </div>
 
