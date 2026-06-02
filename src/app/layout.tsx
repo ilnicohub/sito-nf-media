@@ -4,6 +4,7 @@ import "./globals.css";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import BackToTop from "@/components/ui/BackToTop";
+import AnalyticsLoader from "@/components/AnalyticsLoader";
 import CookieBanner from "@/components/ui/CookieBanner";
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -51,6 +52,7 @@ export default function RootLayout({
     <html lang="it" className={`${geistSans.variable} ${geistMono.variable}`}>
       <body>
         <Navbar />
+        <AnalyticsLoader />
         <main style={{ flex: 1, paddingTop: '80px' }}>
           {children}
         </main>

@@ -71,6 +71,12 @@ button {
   background: none;
 }
 
+/* Focus styles for accessibility */
+:focus-visible {
+  outline: 3px solid var(--accent-primary);
+  outline-offset: 3px;
+}
+
 /* Utilità Minimal */
 .glass {
   background: var(--card-bg);

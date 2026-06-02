@@ -2,10 +2,12 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
+import Image from "next/image";
+import dynamic from "next/dynamic";
 import { Globe, RefreshCw, Code2, Share2, Settings, TrendingUp, Bot, Sparkles, Eye, Network } from "lucide-react";
 import styles from "./page.module.css";
 import Hero3D from "@/components/3d/Hero3D";
-import HeadsetVRScene from "@/components/3d/HeadsetVRScene"
+const HeadsetVRScene = dynamic(() => import("@/components/3d/HeadsetVRScene"), { ssr: false, loading: () => <div style={{height:300}} /> });
 
 export default function Home() {
   const services = [
@@ -337,13 +339,13 @@ export default function Home() {
         </ul>
 
         <div className={styles.avivxCta}>
-          <a href="https://www.avivxgestionale.it/" className={styles.avivxCtaPrimary} target="_blank" rel="noopener noreferrer">
+          <a href="https://www.avivxgestionale.it/" className={styles.avivxCtaPrimary} target="_blank" rel="noopener noreferrer" aria-label="Scopri AVIVX - apri in una nuova scheda">
             Scopri AVIVX
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
               <path d="M5 12h14M12 5l7 7-7 7" strokeLinecap="round" strokeLinejoin="round" />
             </svg>
           </a>
-          <a href="https://www.avivxgestionale.it/#contatto" className={styles.avivxCtaSecondary} target="_blank" rel="noopener noreferrer">
+          <a href="https://www.avivxgestionale.it/#contatto" className={styles.avivxCtaSecondary} target="_blank" rel="noopener noreferrer" aria-label="Richiedi una demo AVIVX - apri in una nuova scheda">
             Richiedi una demo
           </a>
         </div>
@@ -364,24 +366,24 @@ export default function Home() {
             <span className={styles.avivxDot} />
             <span className={styles.avivxUrlBar}>avivx.app/dashboard</span>
           </div>
-          <img
+          <Image
             src="/avivx-dashboard.png"
             alt="AVIVX — Dashboard principale"
             className={styles.avivxScreenshot}
             width={760}
             height={480}
-            loading="lazy"
+            sizes="(max-width: 640px) 100vw, 760px"
           />
         </div>
 
         <div className={styles.avivxScreenshotFloat}>
-          <img
+          <Image
             src="/avivx-calendar.png"
             alt="AVIVX — Calendario appuntamenti"
             className={styles.avivxScreenshot}
             width={340}
             height={220}
-            loading="lazy"
+            sizes="(max-width: 640px) 80vw, 340px"
           />
         </div>
 
