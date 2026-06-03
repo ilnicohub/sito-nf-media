@@ -3,9 +3,9 @@
   left: 1rem;
   right: 1rem;
   bottom: 1.25rem;
-  background: var(--background); /* solid dark background */
-  color: var(--foreground);
-  border: 1px solid var(--border);
+  background: #030303;
+  color: #ffffff;
+  border: 1px solid rgba(255,255,255,0.06);
   padding: 1rem;
   z-index: 9999;
   border-radius: 10px;
@@ -21,33 +21,11 @@
 
 .text p {
   margin: 0.25rem 0 0;
-  color: var(--foreground);
-  opacity: 0.9;
+  color: rgba(255,255,255,0.9);
 }
 
-.actions {
-  display: flex;
-  gap: 0.5rem;
-}
+.actions { display:flex; gap:0.5rem }
+.accept { background: #3b82f6; color: #fff; padding:0.5rem 0.9rem; border-radius:8px }
+.reject { background: transparent; color: #fff; border:1px solid rgba(255,255,255,0.08); padding:0.5rem 0.9rem; border-radius:8px }
 
-.accept {
-  background: var(--accent-primary);
-  color: var(--foreground);
-  border: 1px solid transparent;
-  padding: 0.55rem 0.9rem;
-  border-radius: 8px;
-  font-weight: 600;
-}
-
-.reject {
-  background: transparent;
-  color: var(--foreground);
-  border: 1px solid var(--border);
-  padding: 0.55rem 0.9rem;
-  border-radius: 8px;
-}
-
-@media (max-width: 640px) {
-  .content { flex-direction: column; align-items: flex-start; }
-  .actions { width: 100%; justify-content: flex-end; }
-}
+@media (max-width:640px){ .content{flex-direction:column;align-items:flex-start} .actions{width:100%;justify-content:flex-end} }

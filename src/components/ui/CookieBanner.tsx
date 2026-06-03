@@ -5,26 +5,31 @@ import styles from "./CookieBanner.module.css";
 
 export default function CookieBanner() {
   const [visible, setVisible] = useState(false);
-  const [consent, setConsent] = useState<string | null>(null);
 
   useEffect(() => {
-    const stored = localStorage.getItem("nf_cookie_consent");
-    setConsent(stored);
-    if (!stored) setVisible(true);
+    try {
+      const stored = localStorage.getItem("nf_cookie_consent");
+      if (!stored) setVisible(true);
+    } catch (e) {
+      // SSR safety
+    }
   }, []);
 
   function acceptAll() {
-    localStorage.setItem("nf_cookie_consent", "accepted");
-    setConsent("accepted");
+    try {
+      localStorage.setItem("nf_cookie_consent", "accepted");
+    } catch (e) {}
     setVisible(false);
-    // If analytics loader exists, call it
-    // @ts-ignore
-    if (typeof window?.loadAnalytics === "function") window.loadAnalytics();
+    // optional analytics loader
+    if (typeof (window as any)?.loadAnalytics === "function") {
+      (window as any).loadAnalytics();
+    }
   }
 
   function rejectAll() {
-    localStorage.setItem("nf_cookie_consent", "rejected");
-    setConsent("rejected");
+    try {
+      localStorage.setItem("nf_cookie_consent", "rejected");
+    } catch (e) {}
     setVisible(false);
   }
 
