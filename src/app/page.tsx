@@ -217,70 +217,96 @@ export default function Home() {
             </p>
           </motion.div>
         <HeadsetVRScene />
-          <div className={styles.vrGrid}>
+          <div className={styles.aiGrid}>
             <motion.div 
-              className={styles.vrCard}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              className={styles.aiCard}
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
               viewport={{ once: true }}
               transition={{ delay: 0.1 }}
             >
-              <div className={styles.vrIcon}><Eye size={32} strokeWidth={1.5} /></div>
-              <h3 className={styles.vrTitle}>Esperienze Immersive</h3>
-              <p className={styles.vrText}>Crea ambienti virtuali coinvolgenti per presentazioni di prodotto, showroom digitali e formazione interattiva.</p>
+              <div className={styles.aiIcon}><Eye size={32} strokeWidth={1.5} /></div>
+              <h3 className={styles.aiTitle}>Esperienze Immersive</h3>
+              <p className={styles.aiText}>Crea ambienti virtuali coinvolgenti per presentazioni di prodotto, showroom digitali e formazione interattiva.</p>
             </motion.div>
             <motion.div 
-              className={styles.vrCard}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              className={styles.aiCard}
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
               viewport={{ once: true }}
               transition={{ delay: 0.2 }}
             >
-              <div className={styles.vrIcon}><Network size={32} strokeWidth={1.5} /></div>
-              <h3 className={styles.vrTitle}>Integrazione Ecosistema</h3>
-              <p className={styles.vrText}>Collega le esperienze VR/AR al tuo sito web, e-commerce o app per un'esperienza utente fluida e coinvolgente.</p>
+              <div className={styles.aiIcon}><Network size={32} strokeWidth={1.5} /></div>
+              <h3 className={styles.aiTitle}>Integrazione Ecosistema</h3>
+              <p className={styles.aiText}>Collega le esperienze VR/AR al tuo sito web, e-commerce o app per un'esperienza utente fluida e coinvolgente.</p>
             </motion.div>
           </div>
         </div>
       </section>
 
-{/* AVIVX */}
+{/* AVIVX — Flagship Product */}
 <section className={styles.avivxSection}>
+  {/* Background glow orb */}
+  <div className={styles.avivxGlow} aria-hidden="true" />
+
   <div className={styles.container}>
 
     <motion.div
       className={styles.avivxHeader}
-      initial={{ opacity: 0, y: 20 }}
+      initial={{ opacity: 0, y: 24 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
+      transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
     >
-      <span className={styles.avivxEyebrow}>Il nostro prodotto di punta</span>
+      <span className={styles.avivxBadge}>
+        <Sparkles size={14} strokeWidth={2} />
+        AI-Powered
+      </span>
       <h2 className={styles.avivxTitle}>
         Ti presentiamo <em>AVIVX</em>
       </h2>
       <p className={styles.avivxDesc}>
-        Il gestionale su misura progettato specificamente per saloni di
-        parrucchieri e centri estetici. Tutto ciò che serve per gestire il
-        tuo salone, in un'unica piattaforma.
+        Il gestionale definitivo per saloni di parrucchieri e centri estetici.
+        Intelligenza artificiale, automazione e analisi avanzate — tutto in un'unica piattaforma costruita per far crescere il tuo business.
       </p>
+    </motion.div>
+
+    {/* KPI strip */}
+    <motion.div
+      className={styles.avivxKpiStrip}
+      initial={{ opacity: 0, y: 16 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.5, delay: 0.1 }}
+    >
+      {[
+        { value: "+38%", label: "Clienti fidelizzati" },
+        { value: "-60%", label: "Tempo gestione" },
+        { value: "+25%", label: "Ricavi medi" },
+      ].map((kpi) => (
+        <div key={kpi.label} className={styles.avivxKpi}>
+          <span className={styles.avivxKpiValue}>{kpi.value}</span>
+          <span className={styles.avivxKpiLabel}>{kpi.label}</span>
+        </div>
+      ))}
     </motion.div>
 
     <div className={styles.avivxSplit}>
 
-      {/* Testo + features */}
+      {/* Features grid */}
       <motion.div
         initial={{ opacity: 0, x: -24 }}
         whileInView={{ opacity: 1, x: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
       >
-        <ul className={styles.avivxFeaturesList}>
+        <div className={styles.avivxFeaturesGrid}>
           {[
             {
               label: "Appuntamenti intelligenti",
-              desc: "Calendario visivo con promemoria automatici via SMS ed email.",
+              desc: "Calendario visivo con promemoria automatici via SMS ed email. Riduce i no-show fino al 70%.",
               icon: (
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
                   <rect x="3" y="4" width="18" height="18" rx="2" />
                   <path d="M16 2v4M8 2v4M3 10h18" />
                   <path d="M8 14h.01M12 14h.01M16 14h.01M8 18h.01M12 18h.01M16 18h.01" strokeLinecap="round" />
@@ -289,9 +315,9 @@ export default function Home() {
             },
             {
               label: "Inventario & riordino",
-              desc: "Controllo scorte in tempo reale con soglie di alert personalizzabili.",
+              desc: "Controllo scorte in tempo reale con soglie di alert e riordino automatico dai fornitori.",
               icon: (
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
                   <path d="M20 7H4a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2Z" />
                   <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16" />
                 </svg>
@@ -299,9 +325,9 @@ export default function Home() {
             },
             {
               label: "Fatturazione semplificata",
-              desc: "Emetti documenti fiscali e accedi a report dettagliati in pochi click.",
+              desc: "Documenti fiscali, report finanziari e analytics dettagliati in pochi click.",
               icon: (
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
                   <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8Z" />
                   <path d="M14 2v6h6M16 13H8M16 17H8M10 9H8" strokeLinecap="round" />
                 </svg>
@@ -309,9 +335,9 @@ export default function Home() {
             },
             {
               label: "CRM integrato",
-              desc: "Profilo cliente completo, storico trattamenti e campagne fedeltà.",
+              desc: "Profilo cliente completo, storico trattamenti, preferenze e campagne fedeltà automatiche.",
               icon: (
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
                   <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
                   <circle cx="9" cy="7" r="4" />
                   <path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75" />
@@ -319,22 +345,20 @@ export default function Home() {
               ),
             },
           ].map((f, i) => (
-            <motion.li
+            <motion.div
               key={f.label}
-              className={styles.avivxFeatureItem}
+              className={styles.avivxFeatureCard}
               initial={{ opacity: 0, y: 16 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.08, duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
             >
               <span className={styles.avivxFeatureIcon}>{f.icon}</span>
-              <div>
-                <strong className={styles.avivxFeatureLabel}>{f.label}</strong>
-                <p className={styles.avivxFeatureDesc}>{f.desc}</p>
-              </div>
-            </motion.li>
+              <strong className={styles.avivxFeatureLabel}>{f.label}</strong>
+              <p className={styles.avivxFeatureDesc}>{f.desc}</p>
+            </motion.div>
           ))}
-        </ul>
+        </div>
 
         <div className={styles.avivxCta}>
           <a href="https://www.avivxgestionale.it/" className={styles.avivxCtaPrimary} target="_blank" rel="noopener noreferrer">
@@ -344,7 +368,7 @@ export default function Home() {
             </svg>
           </a>
           <a href="https://www.avivxgestionale.it/#contatto" className={styles.avivxCtaSecondary} target="_blank" rel="noopener noreferrer">
-            Richiedi una demo
+            Richiedi una demo gratuita
           </a>
         </div>
       </motion.div>
@@ -357,6 +381,7 @@ export default function Home() {
         viewport={{ once: true }}
         transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
       >
+        <div className={styles.avivxScreenshotGlow} aria-hidden="true" />
         <div className={styles.avivxScreenshotMain}>
           <div className={styles.avivxBrowserBar}>
             <span className={styles.avivxDot} />
@@ -386,8 +411,8 @@ export default function Home() {
         </div>
 
         <div className={styles.avivxStatBadge}>
-          <span className={styles.avivxStatNumber}>+38%</span>
-          <span className={styles.avivxStatLabel}>clienti fidelizzati</span>
+          <Sparkles size={16} strokeWidth={1.5} />
+          <span className={styles.avivxStatNumber}>AI Inside</span>
         </div>
       </motion.div>
 
@@ -432,37 +457,72 @@ export default function Home() {
       </section>
 
       {/* Local SEO / Territory Section */}
-      <section className={styles.section}>
+      <section className={styles.territorySection}>
+        {/* Decorative dot grid background */}
+        <div className={styles.territoryDotGrid} aria-hidden="true">
+          {Array.from({ length: 120 }).map((_, i) => (
+            <span key={i} className={styles.dot} />
+          ))}
+        </div>
+
         <div className={styles.container}>
-          <div className={styles.territoryContent}>
-            <motion.div 
-              className={styles.territoryText}
-              initial={{ opacity: 0, x: -20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-            >
-              <h2>Operatività nel Nord Italia</h2>
-              <p>
-                Il nostro Headquarter è a Treviso. Progettiamo e sviluppiamo da qui l'infrastruttura tecnologica e le campagne marketing per aziende leader in tutto il Nord Italia, garantendo standard qualitativi assoluti.
-              </p>
-            </motion.div>
-            
-            <motion.div 
-              className={styles.territoryStats}
-              initial={{ opacity: 0, x: 20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-            >
-              <div className={styles.statItem}>
-                <h4>150%</h4>
-                <p>Media Incremento ROI</p>
-              </div>
-              <div className={styles.statItem}>
-                <h4>100%</h4>
-                <p>Codice Proprietario</p>
-              </div>
-            </motion.div>
-          </div>
+          {/* Header */}
+          <motion.div
+            className={styles.territoryHeader}
+            initial={{ opacity: 0, y: 24 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
+          >
+            <span className={styles.territoryEyebrow}>Dove operiamo</span>
+            <h2 className={styles.territoryTitle}>
+              Radicati a Treviso.<br />
+              Attivi in tutto il Nord Italia.
+            </h2>
+            <p className={styles.territoryDesc}>
+              Il nostro Headquarter è a Treviso. Progettiamo strategie digitali e infrastrutture tecnologiche per aziende leader da Venezia a Milano, da Torino a Bologna, con standard qualitativi di eccellenza.
+            </p>
+          </motion.div>
+
+          {/* KPI Row */}
+          <motion.div
+            className={styles.territoryKpiRow}
+            initial={{ opacity: 0, y: 24 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
+          >
+            {[
+              { value: "+150%", label: "Media incremento ROI", sub: "sui progetti attivi" },
+              { value: "100%", label: "Codice proprietario", sub: "nessuna dipendenza esterna" },
+              { value: "7+", label: "Aziende partner", sub: "nel Nord Italia" },
+              { value: "48h", label: "Tempo di risposta", sub: "garantito per ogni cliente" },
+            ].map((kpi, i) => (
+              <motion.div
+                key={kpi.label}
+                className={styles.territoryKpiCard}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: 0.15 + i * 0.08, ease: [0.22, 1, 0.36, 1] }}
+              >
+                <span className={styles.territoryKpiValue}>{kpi.value}</span>
+                <span className={styles.territoryKpiLabel}>{kpi.label}</span>
+                <span className={styles.territoryKpiSub}>{kpi.sub}</span>
+              </motion.div>
+            ))}
+          </motion.div>
+
+          {/* Cities text */}
+          <motion.p
+            className={styles.territoryCitiesText}
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.3 }}
+          >
+            Treviso · Venezia · Padova · Vicenza · Verona · Milano · Torino · Bologna · Udine
+          </motion.p>
         </div>
       </section>
     </div>

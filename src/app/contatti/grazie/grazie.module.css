@@ -1,0 +1,137 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: calc(100vh - 80px - 280px); /* Fill screen minus header and footer */
+  padding: 4rem 2rem;
+}
+
+.thanksSection {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  max-width: 640px;
+  width: 100%;
+}
+
+.card {
+  position: relative;
+  background: rgba(255, 255, 255, 0.015);
+  border: 1px solid var(--border);
+  padding: 4rem 3rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(12px);
+}
+
+.glowLine {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: var(--accent-gradient);
+}
+
+.iconWrapper {
+  position: relative;
+  width: 90px;
+  height: 90px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.successIcon {
+  color: var(--accent-primary);
+  position: relative;
+  z-index: 2;
+}
+
+.pulseGlow {
+  position: absolute;
+  width: 70px;
+  height: 70px;
+  background: var(--accent-primary);
+  opacity: 0.15;
+  filter: blur(25px);
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.title {
+  font-size: clamp(1.8rem, 4vw, 2.5rem);
+  font-weight: 500;
+  letter-spacing: -0.04em;
+  line-height: 1.2;
+  margin-bottom: 1.5rem;
+  color: var(--foreground);
+}
+
+.text {
+  color: var(--text-muted);
+  font-size: 1.05rem;
+  line-height: 1.7;
+  margin-bottom: 2.5rem;
+  max-width: 480px;
+}
+
+.slaBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid var(--border);
+  padding: 0.65rem 1.2rem;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin-bottom: 3rem;
+}
+
+.slaIcon {
+  color: var(--accent-primary);
+}
+
+.slaBadge strong {
+  color: var(--foreground);
+}
+
+.actions {
+  display: flex;
+  justify-content: center;
+}
+
+.btnContent {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.btnContent svg {
+  transition: transform 0.2s ease;
+}
+
+.btnContent:hover svg {
+  transform: translateX(4px);
+}
+
+@media (max-width: 640px) {
+  .main {
+    padding: 2rem 1rem;
+  }
+  
+  .card {
+    padding: 3rem 1.5rem;
+  }
+}

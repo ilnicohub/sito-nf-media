@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import styles from "./page.module.css";
 import { Target, Zap, ShieldCheck, Search, PenTool, Terminal, LineChart, TrendingUp } from "lucide-react";
+import InteractiveSatelliteMap from "@/components/map/InteractiveSatelliteMap";
 
 export default function ChiSiamo() {
   const fadeIn = {
@@ -65,7 +66,7 @@ export default function ChiSiamo() {
               <p>Oggi collaboriamo con decine di aziende in tutto il Nord Italia, aiutandole a superare le sfide della trasformazione digitale con soluzioni di livello enterprise e processi strutturati.</p>
             </div>
             <div className={styles.imageBlock}>
-              <div className={styles.placeholder}>TREVISO, IT</div>
+              <InteractiveSatelliteMap />
             </div>
           </motion.div>
         </div>
@@ -78,7 +79,7 @@ export default function ChiSiamo() {
             className={styles.methodHeader}
             {...fadeIn}
           >
-            <h2>Il Metodo <span className={styles.accent}>NF Media</span></h2>
+            <h2>Il Metodo NF Media</h2>
             <p>Un processo ingegneristico testato per minimizzare i rischi e garantire il successo del tuo progetto IT.</p>
           </motion.div>
 
