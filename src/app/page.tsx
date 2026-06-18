@@ -247,45 +247,68 @@ export default function Home() {
 {/* AVIVX — Flagship Product Redesign */}
       <section className={styles.section}>
         <div className={styles.container}>
-          <motion.div 
-            className={`${styles.card} ${styles.avivxCardRedesigned}`}
-            initial={{ opacity: 0, y: 30 }}
+          <motion.h2 
+            className={styles.sectionTitle}
+            initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.8, ease: "easeOut" as const }}
           >
-            <div className={styles.avivxRedesignContent}>
-              <div className={styles.avivxBadgeRedesign}>
-                <Sparkles size={14} /> SaaS Proprietario
-              </div>
-              <h2 className={styles.avivxTitleRedesign}>Ti presentiamo <em>AVIVX</em></h2>
-              <p className={styles.avivxDescRedesign}>
-                Il gestionale definitivo per saloni di parrucchieri e centri estetici. Intelligenza artificiale, automazione e analisi avanzate per semplificare la vita agli imprenditori.
-              </p>
-              
-              <div className={styles.avivxRedesignKpis}>
-                <div className={styles.avivxKpiBlock}>
-                  <strong>+38%</strong>
-                  <span>Clienti fidelizzati</span>
-                </div>
-                <div className={styles.avivxKpiBlock}>
-                  <strong>-60%</strong>
-                  <span>Tempo gestione</span>
-                </div>
-                <div className={styles.avivxKpiBlock}>
-                  <strong>+25%</strong>
-                  <span>Ricavi medi</span>
-                </div>
-              </div>
-              
-              <a href="https://www.avivxgestionale.it/" target="_blank" rel="noopener noreferrer" className="primaryBtn">
-                Scopri la Piattaforma
-              </a>
-            </div>
-            <div className={styles.avivxRedesignVisual}>
-              <img src="/avivx-dashboard.png" alt="AVIVX Dashboard" className={styles.avivxImageRedesign} loading="lazy" />
-            </div>
+            SaaS Proprietario: AVIVX
+          </motion.h2>
+          <p className={styles.sectionDesc}>
+            Il gestionale definitivo per saloni di parrucchieri e centri estetici. Intelligenza artificiale, automazione e analisi avanzate per semplificare la vita agli imprenditori.
+          </p>
+
+          <motion.div 
+             initial={{ opacity: 0, y: 20 }}
+             whileInView={{ opacity: 1, y: 0 }}
+             viewport={{ once: true }}
+             className={styles.avivxHeroImageWrapper}
+          >
+             <img src="/avivx-dashboard.png" alt="AVIVX Dashboard" loading="lazy" />
           </motion.div>
+
+          <div className={styles.aiGrid}>
+            <motion.div 
+              className={styles.aiCard}
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.1 }}
+            >
+              <div className={styles.aiIcon}><Sparkles size={32} strokeWidth={1.5} /></div>
+              <h3 className={styles.aiTitle}>Clienti Fidelizzati</h3>
+              <p className={styles.aiText}>Incremento medio del +38% grazie al CRM integrato e promemoria automatici.</p>
+            </motion.div>
+            <motion.div 
+              className={styles.aiCard}
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.2 }}
+            >
+              <div className={styles.aiIcon}><Bot size={32} strokeWidth={1.5} /></div>
+              <h3 className={styles.aiTitle}>Tempo Gestione</h3>
+              <p className={styles.aiText}>Riduzione del -60% del tempo speso in attività amministrative e riordino magazzino.</p>
+            </motion.div>
+             <motion.div 
+              className={styles.aiCard}
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.3 }}
+            >
+              <div className={styles.aiIcon}><Network size={32} strokeWidth={1.5} /></div>
+              <h3 className={styles.aiTitle}>Ricavi Medi</h3>
+              <p className={styles.aiText}>Aumento del +25% sui ricavi medi grazie ad up-selling suggerito dall'Intelligenza Artificiale.</p>
+            </motion.div>
+          </div>
+
+          <div style={{ textAlign: 'center', marginTop: '3rem' }}>
+             <a href="https://www.avivxgestionale.it/" target="_blank" rel="noopener noreferrer" className="primaryBtn">
+                Scopri la Piattaforma AVIVX
+             </a>
+          </div>
         </div>
       </section>
 
