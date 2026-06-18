@@ -30,7 +30,7 @@ export default function Navbar() {
     <nav className={`${styles.navbar} ${scrolled ? 'glass' : ''}`}>
       <div className={styles.container}>
         <Link href="/" className={styles.logo}>
-          NF MEDIA
+          NF MEDIA LAB
         </Link>
 
         {/* Desktop Menu */}

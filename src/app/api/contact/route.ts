@@ -30,7 +30,7 @@ export async function POST(request: NextRequest) {
 
     // Invio email
     const response = await resend.emails.send({
-      from: "NF Media Contact Form <onboarding@resend.dev>",
+      from: "NF Media Lab Contact Form <onboarding@resend.dev>",
       to: RECIPIENT_EMAIL,
       replyTo: email,
       subject: `Nuovo messaggio di contatto da ${name}`,
@@ -61,7 +61,7 @@ export async function POST(request: NextRequest) {
           <hr style="border: none; border-top: 1px solid #ddd; margin: 20px 0;" />
 
           <p style="font-size: 12px; color: #999;">
-            Questo messaggio è stato inviato tramite il modulo di contatto di NF MEDIA AGENCY
+            Questo messaggio è stato inviato tramite il modulo di contatto di NF MEDIA LAB
           </p>
         </div>
       `,

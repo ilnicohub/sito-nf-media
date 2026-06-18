@@ -26,12 +26,12 @@ export default function TerminiCondizioni() {
         <div className={styles.container}>
           <h2>1. Accettazione dei Termini</h2>
           <p>
-            Accedendo e utilizzando il sito web di NF MEDIA AGENCY, accetti di essere vincolato da questi Termini e Condizioni. Se non accetti questi termini, ti preghiamo di non utilizzare il sito.
+            Accedendo e utilizzando il sito web di NF MEDIA LAB, accetti di essere vincolato da questi Termini e Condizioni. Se non accetti questi termini, ti preghiamo di non utilizzare il sito.
           </p>
 
           <h2>2. Licenza d'Uso</h2>
           <p>
-            NF MEDIA AGENCY ti concede una licenza limitata, non esclusiva e revocabile per accedere e utilizzare il sito esclusivamente per scopi legali e in conformità con questi termini. Non è consentito:
+            NF MEDIA LAB ti concede una licenza limitata, non esclusiva e revocabile per accedere e utilizzare il sito esclusivamente per scopi legali e in conformità con questi termini. Non è consentito:
           </p>
           <ul>
             <li>Riprodurre, duplicare o copiare contenuti senza autorizzazione</li>
@@ -43,12 +43,12 @@ export default function TerminiCondizioni() {
 
           <h2>3. Proprietà Intellettuale</h2>
           <p>
-            Tutti i contenuti del sito, inclusi testi, grafica, loghi, immagini e software, sono proprietà di NF MEDIA AGENCY o dei suoi fornitori e sono protetti dalle leggi sul diritto d'autore. L'utilizzo non autorizzato di tali contenuti è vietato.
+            Tutti i contenuti del sito, inclusi testi, grafica, loghi, immagini e software, sono proprietà di NF MEDIA LAB o dei suoi fornitori e sono protetti dalle leggi sul diritto d'autore. L'utilizzo non autorizzato di tali contenuti è vietato.
           </p>
 
           <h2>4. Limitazione di Responsabilità</h2>
           <p>
-            NF MEDIA AGENCY non è responsabile per:
+            NF MEDIA LAB non è responsabile per:
           </p>
           <ul>
             <li>Danni accidentali, indiretti o consequenziali derivanti dall'utilizzo del sito</li>
@@ -62,7 +62,7 @@ export default function TerminiCondizioni() {
 
           <h2>5. Disclaimer</h2>
           <p>
-            Il sito e i suoi contenuti sono forniti "così come sono" senza alcuna garanzia esplicita o implicita. NF MEDIA AGENCY non garantisce che:
+            Il sito e i suoi contenuti sono forniti "così come sono" senza alcuna garanzia esplicita o implicita. NF MEDIA LAB non garantisce che:
           </p>
           <ul>
             <li>Il sito sia sempre disponibile e funzionante</li>
@@ -72,12 +72,12 @@ export default function TerminiCondizioni() {
 
           <h2>6. Servizi Professionali</h2>
           <p>
-            I servizi offerti da NF MEDIA AGENCY (sviluppo software, web design, marketing, ecc.) sono forniti secondo l'accordo contrattuale specifico. Le condizioni generali di questi Termini sono integrate dai contratti di servizio individuali.
+            I servizi offerti da NF MEDIA LAB (sviluppo software, web design, marketing, ecc.) sono forniti secondo l'accordo contrattuale specifico. Le condizioni generali di questi Termini sono integrate dai contratti di servizio individuali.
           </p>
 
           <h2>7. Modifiche ai Servizi</h2>
           <p>
-            NF MEDIA AGENCY si riserva il diritto di modificare, sospendere o interrompere i servizi in qualsiasi momento, con preavviso quando possibile. Non saremo responsabili per qualsiasi modifica o interruzione.
+            NF MEDIA LAB si riserva il diritto di modificare, sospendere o interrompere i servizi in qualsiasi momento, con preavviso quando possibile. Non saremo responsabili per qualsiasi modifica o interruzione.
           </p>
 
           <h2>8. Pagamenti e Fatturazione</h2>
@@ -88,7 +88,7 @@ export default function TerminiCondizioni() {
             <li>Il pagamento è dovuto come specificato nel contratto</li>
             <li>Le tariffe sono esclusive di imposte e oneri applicabili</li>
             <li>I rimborsi sono soggetti alla politica di rimborso specificata nel contratto</li>
-            <li>NF MEDIA AGENCY si riserva il diritto di sospendere i servizi per mancato pagamento</li>
+            <li>NF MEDIA LAB si riserva il diritto di sospendere i servizi per mancato pagamento</li>
           </ul>
 
           <h2>9. Dati Personali e Privacy</h2>
@@ -98,12 +98,12 @@ export default function TerminiCondizioni() {
 
           <h2>10. Link a Siti Esterni</h2>
           <p>
-            Il sito può contenere link a siti web esterni. NF MEDIA AGENCY non è responsabile per il contenuto, l'accuratezza o la pratica di privacy di siti esterni. L'accesso a siti esterni è a tuo rischio.
+            Il sito può contenere link a siti web esterni. NF MEDIA LAB non è responsabile per il contenuto, l'accuratezza o la pratica di privacy di siti esterni. L'accesso a siti esterni è a tuo rischio.
           </p>
 
           <h2>11. Indennizzo</h2>
           <p>
-            Accetti di indennizzare e proteggere NF MEDIA AGENCY da qualsiasi reclamo, danno, perdita o spesa (inclusi gli onorari legali) derivanti dalla tua violazione di questi Termini o dall'utilizzo del sito.
+            Accetti di indennizzare e proteggere NF MEDIA LAB da qualsiasi reclamo, danno, perdita o spesa (inclusi gli onorari legali) derivanti dalla tua violazione di questi Termini o dall'utilizzo del sito.
           </p>
 
           <h2>12. Legge Applicabile</h2>
@@ -122,7 +122,7 @@ export default function TerminiCondizioni() {
 
           <h2>14. Modifiche ai Termini</h2>
           <p>
-            NF MEDIA AGENCY si riserva il diritto di modificare questi Termini e Condizioni in qualsiasi momento. Le modifiche entreranno in vigore immediatamente dopo la pubblicazione. L'utilizzo continuato del sito dopo le modifiche costituisce accettazione dei nuovi termini.
+            NF MEDIA LAB si riserva il diritto di modificare questi Termini e Condizioni in qualsiasi momento. Le modifiche entreranno in vigore immediatamente dopo la pubblicazione. L'utilizzo continuato del sito dopo le modifiche costituisce accettazione dei nuovi termini.
           </p>
 
           <p className={styles.lastUpdate}>

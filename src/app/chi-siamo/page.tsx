@@ -79,7 +79,7 @@ export default function ChiSiamo() {
             className={styles.methodHeader}
             {...fadeIn}
           >
-            <h2>Il Metodo NF Media</h2>
+            <h2>Il Metodo NF Media Lab</h2>
             <p>Un processo ingegneristico testato per minimizzare i rischi e garantire il successo del tuo progetto IT.</p>
           </motion.div>
 

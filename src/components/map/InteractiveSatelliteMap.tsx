@@ -138,7 +138,7 @@ export default function InteractiveSatelliteMap() {
             <div className={styles.pulseRing2} />
             <div className={styles.beaconDot} />
             <div className={styles.beaconLabel}>
-              <span className={styles.beaconName}>HQ: NF MEDIA</span>
+              <span className={styles.beaconName}>HQ: NF MEDIA LAB</span>
               <span className={styles.beaconCity}>Treviso</span>
             </div>
           </div>

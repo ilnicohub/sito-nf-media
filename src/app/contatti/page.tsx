@@ -137,7 +137,7 @@ ${formData.message}
                   </div>
                   <div>
                     <h4>Headquarter</h4>
-                    <p>Provincia di Treviso, Veneto, Italia</p>
+                    <p>Treviso, Veneto, Italia</p>
                   </div>
                 </div>
                 

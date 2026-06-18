@@ -17,18 +17,18 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://nfmediaagency.it"),
-  title: "NF MEDIA AGENCY | Sviluppo Software e Web Design",
+  title: "NF MEDIA LAB | Sviluppo Software e Web Design",
   description: "Agenzia di Treviso specializzata in Sviluppo Software, Web Design Premium e Strategie Digitali nel Nord Italia.",
   keywords: ["Agenzia Marketing Treviso", "Sviluppo Software Nord Italia", "Creazione Siti Web Treviso"],
   openGraph: {
-    title: "NF MEDIA AGENCY | Sviluppo Software e Web Design",
+    title: "NF MEDIA LAB | Sviluppo Software e Web Design",
     description: "Agenzia di Treviso specializzata in Sviluppo Software, Web Design Premium e Strategie Digitali nel Nord Italia.",
     url: "https://nfmediaagency.it",
-    siteName: "NF MEDIA AGENCY",
+    siteName: "NF MEDIA LAB",
     images: [
       {
         url: "/og-default.svg",
-        alt: "NF MEDIA AGENCY — Sviluppo Software e Web Design",
+        alt: "NF MEDIA LAB — Sviluppo Software e Web Design",
         width: 1200,
         height: 630,
       },
@@ -37,7 +37,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "NF MEDIA AGENCY | Sviluppo Software e Web Design",
+    title: "NF MEDIA LAB | Sviluppo Software e Web Design",
     description: "Agenzia di Treviso specializzata in Sviluppo Software, Web Design Premium e Strategie Digitali nel Nord Italia.",
     images: ["/og-default.svg"],
   },

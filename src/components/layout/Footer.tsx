@@ -9,10 +9,10 @@ export default function Footer() {
         <div className={styles.grid}>
           <div className={styles.col}>
             <Link href="/" className={styles.logo}>
-              NF MEDIA
+              NF MEDIA LAB
             </Link>
             <p className={styles.description}>
-              L'agenzia tech ultra-professionale. Sviluppiamo soluzioni digitali di altissimo livello nel Nord Italia.
+              Laboratorio digitale d'eccellenza. Progettiamo e sviluppiamo soluzioni tecnologiche su misura per far crescere il tuo business.
             </p>
           </div>
           
@@ -50,7 +50,7 @@ export default function Footer() {
         </div>
         
         <div className={styles.bottom}>
-          <p>&copy; {new Date().getFullYear()} NF MEDIA AGENCY. P.IVA 01234567890</p>
+          <p>&copy; {new Date().getFullYear()} NF MEDIA LAB. C.F. FBRNCL01C07C111A | Tel: 3427404958</p>
           <p>Treviso, Italia</p>
         </div>
       </div>
