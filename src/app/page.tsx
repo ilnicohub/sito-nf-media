@@ -244,181 +244,50 @@ export default function Home() {
         </div>
       </section>
 
-{/* AVIVX — Flagship Product */}
-<section className={styles.avivxSection}>
-  {/* Background glow orb */}
-  <div className={styles.avivxGlow} aria-hidden="true" />
-
-  <div className={styles.container}>
-
-    <motion.div
-      className={styles.avivxHeader}
-      initial={{ opacity: 0, y: 24 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true }}
-      transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
-    >
-      <span className={styles.avivxBadge}>
-        <Sparkles size={14} strokeWidth={2} />
-        AI-Powered
-      </span>
-      <h2 className={styles.avivxTitle}>
-        Ti presentiamo <em>AVIVX</em>
-      </h2>
-      <p className={styles.avivxDesc}>
-        Il gestionale definitivo per saloni di parrucchieri e centri estetici.
-        Intelligenza artificiale, automazione e analisi avanzate — tutto in un'unica piattaforma costruita per far crescere il tuo business.
-      </p>
-    </motion.div>
-
-    {/* KPI strip */}
-    <motion.div
-      className={styles.avivxKpiStrip}
-      initial={{ opacity: 0, y: 16 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true }}
-      transition={{ duration: 0.5, delay: 0.1 }}
-    >
-      {[
-        { value: "+38%", label: "Clienti fidelizzati" },
-        { value: "-60%", label: "Tempo gestione" },
-        { value: "+25%", label: "Ricavi medi" },
-      ].map((kpi) => (
-        <div key={kpi.label} className={styles.avivxKpi}>
-          <span className={styles.avivxKpiValue}>{kpi.value}</span>
-          <span className={styles.avivxKpiLabel}>{kpi.label}</span>
+{/* AVIVX — Flagship Product Redesign */}
+      <section className={styles.section}>
+        <div className={styles.container}>
+          <motion.div 
+            className={`${styles.card} ${styles.avivxCardRedesigned}`}
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8, ease: "easeOut" as const }}
+          >
+            <div className={styles.avivxRedesignContent}>
+              <div className={styles.avivxBadgeRedesign}>
+                <Sparkles size={14} /> SaaS Proprietario
+              </div>
+              <h2 className={styles.avivxTitleRedesign}>Ti presentiamo <em>AVIVX</em></h2>
+              <p className={styles.avivxDescRedesign}>
+                Il gestionale definitivo per saloni di parrucchieri e centri estetici. Intelligenza artificiale, automazione e analisi avanzate per semplificare la vita agli imprenditori.
+              </p>
+              
+              <div className={styles.avivxRedesignKpis}>
+                <div className={styles.avivxKpiBlock}>
+                  <strong>+38%</strong>
+                  <span>Clienti fidelizzati</span>
+                </div>
+                <div className={styles.avivxKpiBlock}>
+                  <strong>-60%</strong>
+                  <span>Tempo gestione</span>
+                </div>
+                <div className={styles.avivxKpiBlock}>
+                  <strong>+25%</strong>
+                  <span>Ricavi medi</span>
+                </div>
+              </div>
+              
+              <a href="https://www.avivxgestionale.it/" target="_blank" rel="noopener noreferrer" className="primaryBtn">
+                Scopri la Piattaforma
+              </a>
+            </div>
+            <div className={styles.avivxRedesignVisual}>
+              <img src="/avivx-dashboard.png" alt="AVIVX Dashboard" className={styles.avivxImageRedesign} loading="lazy" />
+            </div>
+          </motion.div>
         </div>
-      ))}
-    </motion.div>
-
-    <div className={styles.avivxSplit}>
-
-      {/* Features grid */}
-      <motion.div
-        initial={{ opacity: 0, x: -24 }}
-        whileInView={{ opacity: 1, x: 0 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
-      >
-        <div className={styles.avivxFeaturesGrid}>
-          {[
-            {
-              label: "Appuntamenti intelligenti",
-              desc: "Calendario visivo con promemoria automatici via SMS ed email. Riduce i no-show fino al 70%.",
-              icon: (
-                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
-                  <rect x="3" y="4" width="18" height="18" rx="2" />
-                  <path d="M16 2v4M8 2v4M3 10h18" />
-                  <path d="M8 14h.01M12 14h.01M16 14h.01M8 18h.01M12 18h.01M16 18h.01" strokeLinecap="round" />
-                </svg>
-              ),
-            },
-            {
-              label: "Inventario & riordino",
-              desc: "Controllo scorte in tempo reale con soglie di alert e riordino automatico dai fornitori.",
-              icon: (
-                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
-                  <path d="M20 7H4a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2Z" />
-                  <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16" />
-                </svg>
-              ),
-            },
-            {
-              label: "Fatturazione semplificata",
-              desc: "Documenti fiscali, report finanziari e analytics dettagliati in pochi click.",
-              icon: (
-                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
-                  <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8Z" />
-                  <path d="M14 2v6h6M16 13H8M16 17H8M10 9H8" strokeLinecap="round" />
-                </svg>
-              ),
-            },
-            {
-              label: "CRM integrato",
-              desc: "Profilo cliente completo, storico trattamenti, preferenze e campagne fedeltà automatiche.",
-              icon: (
-                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
-                  <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
-                  <circle cx="9" cy="7" r="4" />
-                  <path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75" />
-                </svg>
-              ),
-            },
-          ].map((f, i) => (
-            <motion.div
-              key={f.label}
-              className={styles.avivxFeatureCard}
-              initial={{ opacity: 0, y: 16 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: i * 0.08, duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
-            >
-              <span className={styles.avivxFeatureIcon}>{f.icon}</span>
-              <strong className={styles.avivxFeatureLabel}>{f.label}</strong>
-              <p className={styles.avivxFeatureDesc}>{f.desc}</p>
-            </motion.div>
-          ))}
-        </div>
-
-        <div className={styles.avivxCta}>
-          <a href="https://www.avivxgestionale.it/" className={styles.avivxCtaPrimary} target="_blank" rel="noopener noreferrer">
-            Scopri AVIVX
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-              <path d="M5 12h14M12 5l7 7-7 7" strokeLinecap="round" strokeLinejoin="round" />
-            </svg>
-          </a>
-          <a href="https://www.avivxgestionale.it/#contatto" className={styles.avivxCtaSecondary} target="_blank" rel="noopener noreferrer">
-            Richiedi una demo gratuita
-          </a>
-        </div>
-      </motion.div>
-
-      {/* Screenshots */}
-      <motion.div
-        className={styles.avivxScreenshotsCol}
-        initial={{ opacity: 0, x: 24 }}
-        whileInView={{ opacity: 1, x: 0 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
-      >
-        <div className={styles.avivxScreenshotGlow} aria-hidden="true" />
-        <div className={styles.avivxScreenshotMain}>
-          <div className={styles.avivxBrowserBar}>
-            <span className={styles.avivxDot} />
-            <span className={styles.avivxDot} />
-            <span className={styles.avivxDot} />
-            <span className={styles.avivxUrlBar}>avivx.app/dashboard</span>
-          </div>
-          <img
-            src="/avivx-dashboard.png"
-            alt="AVIVX — Dashboard principale"
-            className={styles.avivxScreenshot}
-            width={760}
-            height={480}
-            loading="lazy"
-          />
-        </div>
-
-        <div className={styles.avivxScreenshotFloat}>
-          <img
-            src="/avivx-calendar.png"
-            alt="AVIVX — Calendario appuntamenti"
-            className={styles.avivxScreenshot}
-            width={340}
-            height={220}
-            loading="lazy"
-          />
-        </div>
-
-        <div className={styles.avivxStatBadge}>
-          <Sparkles size={16} strokeWidth={1.5} />
-          <span className={styles.avivxStatNumber}>AI Inside</span>
-        </div>
-      </motion.div>
-
-    </div>
-  </div>
-</section>
+      </section>
 
       {/* Testimonials Section */}
       <section className={styles.section}>
@@ -523,6 +392,67 @@ export default function Home() {
           >
             Treviso · Venezia · Padova · Vicenza · Verona · Milano · Torino · Bologna · Udine
           </motion.p>
+        </div>
+      </section>
+
+      {/* Newsletter Section */}
+      <section className={styles.newsletterSection}>
+        <div className={styles.container}>
+          <motion.div 
+            className={styles.newsletterBox}
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8, ease: "easeOut" as const }}
+          >
+            <div className={styles.newsletterContent}>
+              <h2 className={styles.newsletterTitle}>Vuoi scalare il tuo business?</h2>
+              <p className={styles.newsletterDesc}>
+                Ricevi insight, strategie digitali e casi studio direttamente nella tua casella di posta. Nessun trucco, solo alto valore.
+              </p>
+            </div>
+            <form 
+              className={styles.newsletterForm}
+              onSubmit={async (e) => {
+                e.preventDefault();
+                const btn = (e.target as any).querySelector('button');
+                btn.disabled = true;
+                btn.innerText = 'Iscrizione...';
+                
+                const email = (e.target as any).email.value;
+                try {
+                  await fetch('/api/contact', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ 
+                      name: 'Iscritto Newsletter', 
+                      email: email, 
+                      service: 'Iscrizione Newsletter', 
+                      message: 'Un nuovo utente si è appena iscritto alla newsletter dalla Homepage.' 
+                    })
+                  });
+                  alert("Grazie per esserti iscritto! A presto con i nostri contenuti.");
+                  (e.target as any).reset();
+                } catch (err) {
+                  alert("C'è stato un errore. Riprova più tardi.");
+                } finally {
+                  btn.disabled = false;
+                  btn.innerText = 'Iscriviti Ora';
+                }
+              }}
+            >
+              <input 
+                type="email" 
+                name="email" 
+                placeholder="La tua migliore email" 
+                className={styles.newsletterInput} 
+                required 
+              />
+              <button type="submit" className="primaryBtn">
+                Iscriviti Ora
+              </button>
+            </form>
+          </motion.div>
         </div>
       </section>
     </div>

@@ -851,3 +851,195 @@
   letter-spacing: 0.08em;
   line-height: 2;
 }
+
+/* ── AVIVX Redesign ── */
+.avivxCardRedesigned {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem;
+  padding: 3rem;
+  background: rgba(20, 20, 20, 0.4);
+  backdrop-filter: blur(20px);
+  border: 1px solid var(--border);
+  border-radius: 1.5rem;
+  overflow: hidden;
+  position: relative;
+}
+
+@media (min-width: 900px) {
+  .avivxCardRedesigned {
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+  }
+}
+
+.avivxRedesignContent {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  z-index: 2;
+}
+
+.avivxBadgeRedesign {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.4rem 1rem;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 2rem;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--foreground);
+  margin-bottom: 1.5rem;
+}
+
+.avivxTitleRedesign {
+  font-size: clamp(2rem, 3vw, 3rem);
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  margin-bottom: 1rem;
+}
+
+.avivxTitleRedesign em {
+  font-style: normal;
+  background: linear-gradient(135deg, #fff, #999);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.avivxDescRedesign {
+  color: var(--text-muted);
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+
+.avivxRedesignKpis {
+  display: flex;
+  gap: 2rem;
+  margin-bottom: 2.5rem;
+  flex-wrap: wrap;
+}
+
+.avivxKpiBlock {
+  display: flex;
+  flex-direction: column;
+}
+
+.avivxKpiBlock strong {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--foreground);
+}
+
+.avivxKpiBlock span {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-top: 0.2rem;
+}
+
+.avivxRedesignVisual {
+  position: relative;
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+  border: 1px solid rgba(255,255,255,0.05);
+  transform: perspective(1000px) rotateY(-5deg) scale(1.05);
+  transition: transform 0.5s ease;
+}
+
+.avivxRedesignVisual:hover {
+  transform: perspective(1000px) rotateY(0deg) scale(1.05);
+}
+
+.avivxImageRedesign {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ── Newsletter Section ── */
+.newsletterSection {
+  padding: 4rem 0;
+  position: relative;
+}
+
+.newsletterBox {
+  background: linear-gradient(145deg, rgba(30, 30, 30, 0.6), rgba(15, 15, 15, 0.9));
+  border: 1px solid var(--border);
+  border-radius: 1.5rem;
+  padding: 3rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 2rem;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+
+@media (min-width: 900px) {
+  .newsletterBox {
+    flex-direction: row;
+    text-align: left;
+    justify-content: space-between;
+    padding: 4rem;
+  }
+  .newsletterContent {
+    flex: 1;
+    padding-right: 2rem;
+  }
+  .newsletterForm {
+    flex: 1;
+    width: 100%;
+  }
+}
+
+.newsletterTitle {
+  font-size: clamp(1.8rem, 2.5vw, 2.5rem);
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  margin-bottom: 0.8rem;
+}
+
+.newsletterDesc {
+  color: var(--text-muted);
+  font-size: 1.05rem;
+  line-height: 1.6;
+}
+
+.newsletterForm {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 100%;
+  max-width: 400px;
+}
+
+@media (min-width: 480px) {
+  .newsletterForm {
+    flex-direction: row;
+    max-width: 100%;
+  }
+  .newsletterInput {
+    flex: 1;
+  }
+}
+
+.newsletterInput {
+  background: rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 1rem 1.5rem;
+  border-radius: 0.5rem;
+  color: #fff;
+  font-size: 1rem;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+.newsletterInput:focus {
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
