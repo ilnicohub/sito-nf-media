@@ -454,8 +454,7 @@ export default function Home() {
                       message: 'Un nuovo utente si è appena iscritto alla newsletter dalla Homepage.' 
                     })
                   });
-                  alert("Grazie per esserti iscritto! A presto con i nostri contenuti.");
-                  (e.target as any).reset();
+                  window.location.href = '/newsletter/grazie';
                 } catch (err) {
                   alert("C'è stato un errore. Riprova più tardi.");
                 } finally {
