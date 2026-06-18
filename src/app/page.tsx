@@ -443,6 +443,16 @@ export default function Home() {
                 btn.innerText = 'Iscrizione...';
                 
                 const email = (e.target as any).email.value;
+                
+                // Anti-spam base: previene iscrizioni multiple identiche dallo stesso browser
+                const lastSubscribed = localStorage.getItem('nf_newsletter_email');
+                if (lastSubscribed === email) {
+                  alert("Sei già iscritto alla newsletter con questa email!");
+                  btn.disabled = false;
+                  btn.innerText = 'Iscriviti Ora';
+                  return;
+                }
+                
                 try {
                   await fetch('/api/contact', {
                     method: 'POST',
@@ -454,6 +464,7 @@ export default function Home() {
                       message: 'Un nuovo utente si è appena iscritto alla newsletter dalla Homepage.' 
                     })
                   });
+                  localStorage.setItem('nf_newsletter_email', email);
                   window.location.href = '/newsletter/grazie';
                 } catch (err) {
                   alert("C'è stato un errore. Riprova più tardi.");

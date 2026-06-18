@@ -62,7 +62,7 @@ export default function Grazie() {
             </motion.div>
 
             {/* Unsubscribe notice */}
-            <motion.p style={{ marginTop: '1.5rem', fontSize: '0.85rem', color: 'var(--text-muted)' }} variants={itemVariants}>
+            <motion.p style={{ marginTop: '1.5rem', marginBottom: '2rem', fontSize: '0.85rem', color: 'var(--text-muted)' }} variants={itemVariants}>
               <strong>Come disiscriversi?</strong> Potrai cancellarti in qualsiasi momento semplicemente rispondendo "Unsubscribe" a una delle nostre email, oppure contattandoci a <em>info@nfmedia.it</em>.
             </motion.p>
 
