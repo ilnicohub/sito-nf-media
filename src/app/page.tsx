@@ -1,13 +1,60 @@
 "use client";
 
+import { useState, type FormEvent } from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
-import { Globe, RefreshCw, Code2, Share2, Settings, TrendingUp, Bot, Sparkles, Eye, Network } from "lucide-react";
+import { Globe, RefreshCw, Code2, Share2, Settings, TrendingUp, Bot, Sparkles, Eye, Network, CircleAlert } from "lucide-react";
 import styles from "./page.module.css";
 import Hero3D from "@/components/3d/Hero3D";
 import HeadsetVRScene from "@/components/3d/HeadsetVRScene"
 
 export default function Home() {
+  const [newsletterError, setNewsletterError] = useState("");
+  const [isNewsletterSubmitting, setIsNewsletterSubmitting] = useState(false);
+
+  const handleNewsletterSubmit = async (event: FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+
+    const formData = new FormData(event.currentTarget);
+    const email = String(formData.get("email") ?? "").trim().toLowerCase();
+    const lastSubscribed = localStorage
+      .getItem("nf_newsletter_email")
+      ?.trim()
+      .toLowerCase();
+
+    if (lastSubscribed === email) {
+      setNewsletterError("Sei già iscritto alla newsletter con questa email.");
+      return;
+    }
+
+    setNewsletterError("");
+    setIsNewsletterSubmitting(true);
+
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          name: "Iscritto Newsletter",
+          email,
+          service: "Iscrizione Newsletter",
+          message:
+            "Un nuovo utente si è appena iscritto alla newsletter dalla Homepage.",
+        }),
+      });
+
+      if (!response.ok) {
+        throw new Error("Newsletter subscription failed");
+      }
+
+      localStorage.setItem("nf_newsletter_email", email);
+      window.location.assign("/newsletter/grazie");
+    } catch {
+      setNewsletterError("C'è stato un errore. Riprova più tardi.");
+      setIsNewsletterSubmitting(false);
+    }
+  };
+
   const services = [
     {
       title: "Realizzazione Siti Web",
@@ -436,54 +483,35 @@ export default function Home() {
             </div>
             <form 
               className={styles.newsletterForm}
-              onSubmit={async (e) => {
-                e.preventDefault();
-                const btn = (e.target as any).querySelector('button');
-                btn.disabled = true;
-                btn.innerText = 'Iscrizione...';
-                
-                const email = (e.target as any).email.value;
-                
-                // Anti-spam base: previene iscrizioni multiple identiche dallo stesso browser
-                const lastSubscribed = localStorage.getItem('nf_newsletter_email');
-                if (lastSubscribed === email) {
-                  alert("Sei già iscritto alla newsletter con questa email!");
-                  btn.disabled = false;
-                  btn.innerText = 'Iscriviti Ora';
-                  return;
-                }
-                
-                try {
-                  await fetch('/api/contact', {
-                    method: 'POST',
-                    headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify({ 
-                      name: 'Iscritto Newsletter', 
-                      email: email, 
-                      service: 'Iscrizione Newsletter', 
-                      message: 'Un nuovo utente si è appena iscritto alla newsletter dalla Homepage.' 
-                    })
-                  });
-                  localStorage.setItem('nf_newsletter_email', email);
-                  window.location.href = '/newsletter/grazie';
-                } catch (err) {
-                  alert("C'è stato un errore. Riprova più tardi.");
-                } finally {
-                  btn.disabled = false;
-                  btn.innerText = 'Iscriviti Ora';
-                }
-              }}
+              onSubmit={handleNewsletterSubmit}
+              noValidate={false}
             >
-              <input 
-                type="email" 
-                name="email" 
-                placeholder="La tua migliore email" 
-                className={styles.newsletterInput} 
-                required 
-              />
-              <button type="submit" className="primaryBtn">
-                Iscriviti Ora
-              </button>
+              <div className={styles.newsletterFields}>
+                <input
+                  type="email"
+                  name="email"
+                  placeholder="La tua migliore email"
+                  className={styles.newsletterInput}
+                  aria-invalid={Boolean(newsletterError)}
+                  aria-describedby={newsletterError ? "newsletter-error" : undefined}
+                  onChange={() => newsletterError && setNewsletterError("")}
+                  required
+                />
+                <button type="submit" className="primaryBtn" disabled={isNewsletterSubmitting}>
+                  {isNewsletterSubmitting ? "Iscrizione..." : "Iscriviti Ora"}
+                </button>
+              </div>
+              {newsletterError && (
+                <p
+                  id="newsletter-error"
+                  className={styles.newsletterError}
+                  role="alert"
+                  aria-live="polite"
+                >
+                  <CircleAlert size={17} aria-hidden="true" />
+                  <span>{newsletterError}</span>
+                </p>
+              )}
             </form>
           </motion.div>
         </div>
