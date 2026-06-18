@@ -59,7 +59,7 @@ export default function CaseStudies() {
           className={styles.title}
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
+          transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
         >
           I Nostri Progetti
         </motion.h1>
@@ -67,7 +67,7 @@ export default function CaseStudies() {
           className={styles.subtitle}
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ delay: 0.2, duration: 0.6 }}
+          transition={{ delay: 0.2, duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
         >
           Non parliamo per concetti astratti. Parliamo attraverso l'impatto reale che il nostro software e le nostre strategie generano per i clienti.
         </motion.p>
@@ -81,7 +81,7 @@ export default function CaseStudies() {
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-100px" }}
-            transition={{ duration: 0.6, delay: idx * 0.1 }}
+            transition={{ duration: 0.8, delay: idx * 0.1, ease: [0.22, 1, 0.36, 1] }}
           >
             <div className={styles.caseVisual}>
               <img 
