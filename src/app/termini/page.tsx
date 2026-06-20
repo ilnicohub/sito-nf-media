@@ -117,7 +117,7 @@ export default function TerminiCondizioni() {
           </p>
           <p>
             <strong>Email:</strong> info@nfmedia.it<br />
-            <strong>Indirizzo:</strong> Treviso, Veneto, Italia
+            <strong>Indirizzo:</strong> Via Casoni, 28 Vedelago, Treviso, Veneto, Italia
           </p>
 
           <h2>14. Modifiche ai Termini</h2>

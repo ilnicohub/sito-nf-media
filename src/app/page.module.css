@@ -180,6 +180,59 @@
   font-size: 0.95rem;
 }
 
+/*Social Media Management*/
+/* Social Media Management */
+.socialSection {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+
+.socialGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+@media (min-width: 768px) {
+  .socialGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.socialCard {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid var(--border);
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  transition: background 0.3s ease;
+}
+
+.socialCard:hover {
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.socialIcon {
+  color: var(--accent-primary);
+  margin-bottom: 2rem;
+  opacity: 0.9;
+}
+
+.socialTitle {
+  font-size: 1.25rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+  letter-spacing: -0.02em;
+}
+
+.socialText {
+  color: var(--text-muted);
+  line-height: 1.6;
+  font-size: 0.95rem;
+}
+
 /*Intelligenza Artificiale*/
 .aiSection {
   display: flex;

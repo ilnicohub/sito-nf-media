@@ -40,7 +40,7 @@ export default function Servizi() {
       title: "Social Media Management",
       icon: <TrendingUp size={40} strokeWidth={1.5} />,
       desc: "Trasformiamo l'attenzione in fatturato. Non pubblichiamo post casuali, ma creiamo vere community e funnel di conversione attraverso contenuti nativi.",
-      features: ["Content Strategy", "Video Marketing", "Community Management", "Social Funnels"]
+      features: ["Content Creation", "Content Strategy", "Video Marketing", "Community Management", "Social Funnels"]
     },
     {
       id: "data",

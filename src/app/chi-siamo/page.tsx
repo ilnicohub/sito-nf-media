@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import styles from "./page.module.css";
-import { Target, Zap, ShieldCheck, Search, PenTool, Terminal, LineChart, TrendingUp } from "lucide-react";
+import { Target, Zap, ShieldCheck, Search, PenTool, Terminal, LineChart, TrendingUp, Headset } from "lucide-react";
 import InteractiveSatelliteMap from "@/components/map/InteractiveSatelliteMap";
 
 export default function ChiSiamo() {
@@ -125,6 +125,11 @@ export default function ChiSiamo() {
               <TrendingUp size={32} className={styles.icon} />
               <h3>Scalabilità</h3>
               <p>Le nostre architetture crescono con la tua azienda. Soluzioni pensate oggi che funzionano perfettamente anche quando raddoppierai i tuoi numeri.</p>
+            </motion.div>
+            <motion.div className={styles.valueCard} {...fadeIn} transition={{ delay: 0.5 }}>
+              <Headset size={32} className={styles.icon} />
+              <h3>Sempre al tuo servizio</h3>
+              <p>Non ci limitiamo a consegnare un prodotto e sparire. Siamo al tuo fianco per ottimizzare, aggiornare e far crescere il tuo ecosistema digitale con un assistenza dedicata 24/7.</p>
             </motion.div>
           </div>
         </div>

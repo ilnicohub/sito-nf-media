@@ -26,7 +26,7 @@ export default function PrivacyPolicy() {
         <div className={styles.container}>
           <h2>1. Titolare del Trattamento</h2>
           <p>
-            NF MEDIA LAB (di seguito "il Titolare"), nella persona di Fabrin Niccolò con C.F. FBRNCL01C07C111A, con sede in Treviso (TV), è responsabile del trattamento dei tuoi dati personali.
+            NF MEDIA LAB (di seguito "il Titolare"), nella persona di Fabrin Niccolò con C.F. FBRNCL01C07C111A, con sede in Via Casoni, 28 Vedelago (TV), è responsabile del trattamento dei tuoi dati personali.
           </p>
 
           <h2>2. Tipologia di Dati Raccolti</h2>

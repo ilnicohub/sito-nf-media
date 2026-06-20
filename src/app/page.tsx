@@ -3,7 +3,7 @@
 import { useState, type FormEvent } from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
-import { Globe, RefreshCw, Code2, Share2, Settings, TrendingUp, Bot, Sparkles, Eye, Network, CircleAlert } from "lucide-react";
+import { Globe, RefreshCw, Code2, Share2, Settings, TrendingUp, Bot, Sparkles, Eye, Network, CircleAlert, ChartNoAxesCombined, VideoIcon, Megaphone } from "lucide-react";
 import styles from "./page.module.css";
 import Hero3D from "@/components/3d/Hero3D";
 import HeadsetVRScene from "@/components/3d/HeadsetVRScene"
@@ -141,7 +141,7 @@ export default function Home() {
             animate={{ opacity: 1 }}
             transition={{ delay: 0.2, duration: 0.8 }}
           >
-            Realizziamo siti web, gestionali e strategie di comunicazione per aziende che vogliono scalare nel digitale con soluzioni concrete e risultati misurabili.
+            Sviluppiamo strategie di marketing, comunicazione e soluzioni digitali che aiutano le aziende a crescere, acquisire clienti e ottenere risultati misurabili.
           </motion.p>
           
           <motion.div 
@@ -205,6 +205,65 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/*Social Media Management Section */}
+ <section className={styles.section}>
+  <div className={styles.container}>
+    <motion.h2
+      className={styles.sectionTitle}
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, margin: "-100px" }}
+    >
+      Social Media Management
+    </motion.h2>
+
+    <p className={styles.sectionDesc}>
+      Gestiamo la tua presenza sui social media con strategie mirate,
+      contenuti creativi e campagne pubblicitarie efficaci per aumentare
+      l'engagement e la visibilità del tuo brand.
+    </p>
+
+    <div className={styles.socialSection}>
+      <div className={styles.socialGrid}>
+        <motion.div
+          className={styles.socialCard}
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ delay: 0.1 }}
+        >
+          <div className={styles.socialIcon}>
+            <VideoIcon size={32} strokeWidth={1.5} />
+          </div>
+          <h3 className={styles.socialTitle}>Content Creation</h3>
+          <p className={styles.socialText}>
+            Creiamo contenuti originali e coinvolgenti per i tuoi canali social,
+            aumentando l'interazione con il tuo pubblico.
+          </p>
+        </motion.div>
+
+        <motion.div
+          className={styles.socialCard}
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ delay: 0.2 }}
+        >
+          <div className={styles.socialIcon}>
+            <Megaphone size={32} strokeWidth={1.5} />
+          </div>
+          <h3 className={styles.socialTitle}>Campagne Pubblicitarie</h3>
+          <p className={styles.socialText}>
+            Progettiamo e gestiamo campagne pubblicitarie mirate sui social
+            media per massimizzare il ROI e raggiungere il tuo target di
+            riferimento.
+          </p>
+        </motion.div>
+      </div>
+    </div>
+  </div>
+</section>
 
       {/*Intelligenza Artificiale Section */}
       <section className={styles.section}>
@@ -300,7 +359,7 @@ export default function Home() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
           >
-            SaaS Proprietario: AVIVX
+            Scopri AVIVX
           </motion.h2>
           <p className={styles.sectionDesc}>
             Il gestionale definitivo per saloni di parrucchieri e centri estetici. Intelligenza artificiale, automazione e analisi avanzate per semplificare la vita agli imprenditori.
@@ -312,7 +371,7 @@ export default function Home() {
              viewport={{ once: true }}
              className={styles.avivxHeroImageWrapper}
           >
-             <img src="/avivx-dashboard.png" alt="AVIVX Dashboard" loading="lazy" />
+             <img src="/demo-avivx.jpg" alt="AVIVX Dashboard" loading="lazy" />
           </motion.div>
 
           <div className={styles.aiGrid}>
@@ -349,7 +408,20 @@ export default function Home() {
               <h3 className={styles.aiTitle}>Ricavi Medi</h3>
               <p className={styles.aiText}>Aumento del +25% sui ricavi medi grazie ad up-selling suggerito dall'Intelligenza Artificiale.</p>
             </motion.div>
+
+            <motion.div 
+              className={styles.aiCard}
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.4 }}
+            >
+              <div className={styles.aiIcon}><ChartNoAxesCombined size={32} strokeWidth={1.5} /></div>
+              <h3 className={styles.aiTitle}>ROI Incrementato</h3>
+              <p className={styles.aiText}>Incremento medio del +150% sul ROI delle campagne marketing grazie a strategie data-driven.</p>
+            </motion.div>
           </div>
+
 
           <div style={{ textAlign: 'center', marginTop: '3rem' }}>
              <a href="https://www.avivxgestionale.it/" target="_blank" rel="noopener noreferrer" className="primaryBtn">
