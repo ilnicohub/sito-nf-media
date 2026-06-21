@@ -9,8 +9,10 @@ export default function CaseStudies() {
   const cases = [
     {
       client: "Symblux S.R.L. (Industriale)",
+      sector: "Industria e manifattura",
       title: "Miglioramento Comunicazione digitale e presenza online",
       image: "/case-studies/symblux.webp",
+      services: ["Web design", "SEO", "Content strategy"],
       metrics: [
         { value: "+40%", label: "Contatti tramite sito Web" },
         { value: "+25%", label: "Traffico organico" }
@@ -20,8 +22,10 @@ export default function CaseStudies() {
     },
     {
       client: "FC Calvi Noale (Sportivo)",
+      sector: "Sport e community",
       title: "Gestione Social Media e Content Creation",
       image: "/case-studies/fccalvinoale.webp",
+      services: ["Social strategy", "Video content", "Advertising"],
       metrics: [
         { value: "900k+", label: "Visualizzazioni mensili" },
         { value: "+300%", label: "Engagement sui social" }
@@ -31,8 +35,10 @@ export default function CaseStudies() {
     },
     {
       client: "Euroline S.R.L. (Industriale)",
+      sector: "Software e processi",
       title: "Sviluppo gestionale ERP su misura",
       image: "/case-studies/euroline.webp",
+      services: ["ERP custom", "Automazione", "Integrazioni"],
       metrics: [
         { value: "-40%", label: "Tempi operativi" },
         { value: "+30%", label: "Efficienza dei processi" }
@@ -42,8 +48,10 @@ export default function CaseStudies() {
     },
     {
       client: "Salone Tamara&Vanessa S.N.C. (Beauty)",
+      sector: "Beauty e servizi",
       title: "Miglioramento presenza online e lead generation",
       image: "/case-studies/tamaraevanessa.webp",
+      services: ["Sito web", "Lead generation", "Advertising"],
       metrics: [
         { value: "+150%", label: "Richieste di preventivo" },
         { value: "+200%", label: "Visite al sito" }
@@ -70,29 +78,47 @@ export default function CaseStudies() {
           animate={{ opacity: 1 }}
           transition={{ delay: 0.2, duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
         >
-          Non parliamo per concetti astratti. Parliamo attraverso l'impatto reale che il nostro software e le nostre strategie generano per i clienti.
+          Non parliamo per concetti astratti. Parliamo attraverso l&apos;impatto reale che il nostro software e le nostre strategie generano per i clienti.
         </motion.p>
       </section>
 
       <section className={styles.container}>
         {cases.map((c, idx) => (
-          <motion.div 
-            key={idx}
-            className={styles.caseStudy}
+          <motion.article
+            key={c.client}
+            className={`${styles.caseStudy} ${idx % 2 !== 0 ? styles.caseStudyReverse : ""}`}
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.8, delay: idx * 0.1, ease: [0.22, 1, 0.36, 1] }}
           >
             <div className={styles.caseVisual}>
-              <Image
-                src={c.image}
-                alt={c.title}
-                className={styles.caseImage}
-                width={600}
-                height={1200}
-                sizes="(max-width: 900px) 100vw, 50vw"
-              />
+              <div className={styles.visualTopline}>
+                <span>Case study</span>
+                <span>{String(idx + 1).padStart(2, "0")}</span>
+              </div>
+
+              <div className={styles.visualStage}>
+                <div className={styles.imageFrame}>
+                  <Image
+                    src={c.image}
+                    alt={`Cover del progetto ${c.client}`}
+                    className={styles.caseImage}
+                    width={600}
+                    height={1200}
+                    sizes="(max-width: 991px) 72vw, 360px"
+                  />
+                </div>
+
+                <div className={styles.visualCaption}>
+                  <p>{c.sector}</p>
+                  <div className={styles.serviceTags}>
+                    {c.services.map((service) => (
+                      <span key={service}>{service}</span>
+                    ))}
+                  </div>
+                </div>
+              </div>
             </div>
             
             <div className={styles.caseContent}>
@@ -117,13 +143,14 @@ export default function CaseStudies() {
                 <p>{c.solution}</p>
               </div>
             </div>
-          </motion.div>
+          </motion.article>
         ))}
 
-        <div style={{ textAlign: 'center', marginTop: '6rem' }}>
-          <h2 style={{ fontSize: '2rem', marginBottom: '1.5rem', fontWeight: 500 }}>Vuoi raggiungere questi risultati?</h2>
+        <div className={styles.cta}>
+          <h2>Valutiamo il prossimo progetto</h2>
+          <p>Condividi obiettivi, criticità e priorità della tua azienda.</p>
           <Link href="/contatti" className="primaryBtn">
-            Pianifica una Strategia
+            Richiedi un confronto
           </Link>
         </div>
       </section>

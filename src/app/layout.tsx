@@ -32,6 +32,10 @@ export const metadata: Metadata = {
   creator: "NF Media Lab",
   publisher: "NF Media Lab",
   category: "technology",
+  other: {
+    "msapplication-TileColor": "#030303",
+    "msapplication-TileImage": "/mstile-150x150.png",
+  },
   keywords: [
     "agenzia web Treviso",
     "agenzia marketing Treviso",
@@ -94,7 +98,7 @@ export default function RootLayout({
     "@id": `${siteUrl}/#organization`,
     name: "NF Media Lab",
     url: siteUrl,
-    logo: `${siteUrl}/nf-logo.svg`,
+    logo: `${siteUrl}/icon.png`,
     image: `${siteUrl}/og-default.svg`,
     description:
       "Agenzia digitale di Treviso specializzata in sviluppo software, siti web, SEO, advertising e social media.",

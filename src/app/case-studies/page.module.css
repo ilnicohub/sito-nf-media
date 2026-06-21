@@ -31,27 +31,46 @@
 }
 
 .caseStudy {
-  background: var(--border);
   border: 1px solid var(--border);
   margin-bottom: 6rem;
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: 1fr;
+  overflow: hidden;
+  background: var(--background);
 }
 
 @media (min-width: 992px) {
   .caseStudy {
-    flex-direction: row;
+    grid-template-columns: minmax(390px, 0.9fr) minmax(0, 1.35fr);
+    min-height: 760px;
+  }
+
+  .caseStudyReverse {
+    grid-template-columns: minmax(0, 1.35fr) minmax(390px, 0.9fr);
+  }
+
+  .caseStudyReverse .caseVisual {
+    order: 2;
+    border-right: none;
+    border-left: 1px solid var(--border);
+  }
+
+  .caseStudyReverse .caseContent {
+    order: 1;
   }
 }
 
 .caseVisual {
-  flex: 1;
-  background: var(--background);
-  min-height: 300px;
+  position: relative;
+  min-height: 620px;
+  padding: 1.5rem;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  flex-direction: column;
+  background:
+    radial-gradient(circle at 50% 45%, rgba(59, 130, 246, 0.1), transparent 42%),
+    #070707;
   border-bottom: 1px solid var(--border);
+  overflow: hidden;
 }
 
 @media (min-width: 992px) {
@@ -61,24 +80,94 @@
   }
 }
 
-.visualText {
-  font-size: 2rem;
-  font-weight: 600;
-  opacity: 0.1;
-  letter-spacing: 0.2em;
+.visualTopline {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--border);
+  color: var(--text-muted);
+  font-family: var(--font-mono), monospace;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.visualStage {
+  position: relative;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  padding: 2rem 0 0;
+}
+
+.imageFrame {
+  position: relative;
+  width: min(72%, 330px);
+  aspect-ratio: 1 / 2;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.13);
+  border-radius: 0.9rem;
+  background: #0d0d0d;
+  box-shadow: 0 30px 70px rgba(0, 0, 0, 0.55);
+  transform: rotate(-1.5deg);
+  transition: transform 0.45s ease, box-shadow 0.45s ease;
+}
+
+.caseStudyReverse .imageFrame {
+  transform: rotate(1.5deg);
+}
+
+.caseStudy:hover .imageFrame {
+  transform: rotate(0deg) translateY(-4px);
+  box-shadow: 0 36px 80px rgba(0, 0, 0, 0.65);
 }
 
 .caseImage {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
   display: block;
 }
 
+.visualCaption {
+  width: min(86%, 390px);
+  text-align: center;
+}
+
+.visualCaption > p {
+  margin-bottom: 0.85rem;
+  color: var(--foreground);
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.serviceTags {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.45rem;
+}
+
+.serviceTags span {
+  padding: 0.42rem 0.65rem;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  color: var(--text-muted);
+  font-size: 0.7rem;
+}
+
 .caseContent {
-  flex: 1.5;
   padding: 3rem;
   background: var(--background);
+  align-self: center;
 }
 
 @media (min-width: 992px) {
@@ -140,4 +229,58 @@
   color: var(--text-muted);
   line-height: 1.7;
   font-size: 1rem;
+}
+
+.cta {
+  max-width: 680px;
+  margin: 8rem auto 2rem;
+  text-align: center;
+}
+
+.cta h2 {
+  margin-bottom: 1rem;
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 500;
+  letter-spacing: -0.04em;
+}
+
+.cta p {
+  margin-bottom: 2rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+@media (max-width: 640px) {
+  .container {
+    padding: 4rem 2rem;
+  }
+
+  .caseStudy {
+    margin-bottom: 4rem;
+  }
+
+  .caseVisual {
+    min-height: 540px;
+    padding: 1.25rem;
+  }
+
+  .imageFrame {
+    width: min(76%, 280px);
+  }
+
+  .caseContent {
+    padding: 2rem 1.5rem 2.5rem;
+  }
+
+  .caseTitle {
+    font-size: 1.7rem;
+  }
+
+  .metrics {
+    gap: 1.75rem;
+  }
+
+  .metricItem h4 {
+    font-size: 2rem;
+  }
 }

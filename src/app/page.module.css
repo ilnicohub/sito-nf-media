@@ -1130,14 +1130,28 @@
 
 /* AVIVX Image Wrapper */
 .avivxHeroImageWrapper {
+  width: 100%;
   margin: 3rem auto;
   max-width: 900px;
+  aspect-ratio: 16 / 9;
   border-radius: 1rem;
   overflow: hidden;
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: #081326;
   box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
 }
-.avivxHeroImageWrapper img {
+
+.avivxHeroImage {
   width: 100%;
+  height: auto;
+  max-width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: contain;
   display: block;
+}
+
+@media (max-width: 640px) {
+  .avivxHeroImageWrapper {
+    margin: 2rem auto 3rem;
+    border-radius: 0.75rem;
+  }
 }

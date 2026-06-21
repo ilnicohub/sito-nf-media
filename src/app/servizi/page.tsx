@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Code2, LayoutTemplate, TrendingUp, Users, CheckCircle2 } from "lucide-react";
+import { BarChart3, Code2, LayoutTemplate, Megaphone, Palette, Search, CheckCircle2 } from "lucide-react";
 import styles from "./page.module.css";
 import Link from "next/link";
 
@@ -12,42 +12,54 @@ export default function Servizi() {
       title: "Software Development",
       icon: <Code2 size={40} strokeWidth={1.5} />,
       desc: "Ingegnerizziamo architetture software scalabili e sicure. Sistemi gestionali (ERP/CRM), piattaforme cloud e applicazioni mobile costruite sui più alti standard di mercato.",
-      features: ["Microservizi e Cloud Architecture", "iOS & Android Native", "API Development & Integration", "Automazione Processi"]
+      features: ["Microservizi e Cloud Architecture", "iOS & Android Native", "API Development & Integration", "Automazione Processi"],
+      href: "/servizi/sviluppo-gestionali-su-misura",
+      linkLabel: "Approfondisci il servizio",
     },
     {
       id: "web",
       title: "Web Platforms",
       icon: <LayoutTemplate size={40} strokeWidth={1.5} />,
       desc: "Nessun template. Sviluppiamo piattaforme web ed e-commerce ad alte prestazioni focalizzate sulla user experience (UX) e sulla conversion rate optimization (CRO).",
-      features: ["React & Next.js Ecosystem", "Performance Optimization (CWV)", "E-Commerce Headless", "Design System Custom"]
+      features: ["React & Next.js Ecosystem", "Performance Optimization (CWV)", "E-Commerce Headless", "Design System Custom"],
+      href: "/servizi/realizzazione-siti-web-nord-italia",
+      linkLabel: "Approfondisci il servizio",
     },
     {
       id: "marketing",
       title: "Growth & SEO",
-      icon: <TrendingUp size={40} strokeWidth={1.5} />,
+      icon: <Search size={40} strokeWidth={1.5} />,
       desc: "Trasformiamo il traffico in fatturato. Posizionamento organico leader di settore (SEO) e campagne di acquisizione scalabili (PPC) per aziende ambiziose.",
-      features: ["SEO Enterprise (Local & National)", "Google Ads & Social Ads", "Data Analytics & Tracking", "Marketing Automation"]
+      features: ["SEO Enterprise (Local & National)", "Google Ads & Social Ads", "Data Analytics & Tracking", "Marketing Automation"],
+      href: "/servizi/seo-e-performance-marketing",
+      linkLabel: "Approfondisci il servizio",
     },
     {
       id: "comunicazione",
       title: "Brand Identity",
-      icon: <Users size={40} strokeWidth={1.5} />,
+      icon: <Palette size={40} strokeWidth={1.5} />,
       desc: "Costruiamo l'autorità del tuo marchio. Un'identità visiva e un copywriting incisivo per comunicare in modo inequivocabile il tuo valore differenziante.",
-      features: ["Corporate Identity", "Copywriting Persuasivo", "Digital PR", "Direzione Creativa"]
+      features: ["Corporate Identity", "Copywriting Persuasivo", "Digital PR", "Direzione Creativa"],
+      href: "/servizi/brand-identity-e-comunicazione",
+      linkLabel: "Approfondisci il servizio",
     },
     {
       id: "social",
       title: "Social Media Management",
-      icon: <TrendingUp size={40} strokeWidth={1.5} />,
+      icon: <Megaphone size={40} strokeWidth={1.5} />,
       desc: "Trasformiamo l'attenzione in fatturato. Non pubblichiamo post casuali, ma creiamo vere community e funnel di conversione attraverso contenuti nativi.",
-      features: ["Content Creation", "Content Strategy", "Video Marketing", "Community Management", "Social Funnels"]
+      features: ["Content Creation", "Content Strategy", "Video Marketing", "Community Management", "Social Funnels"],
+      href: "/servizi/social-media-management",
+      linkLabel: "Approfondisci il servizio",
     },
     {
       id: "data",
       title: "Data Analytics",
-      icon: <Code2 size={40} strokeWidth={1.5} />,
+      icon: <BarChart3 size={40} strokeWidth={1.5} />,
       desc: "Senza dati si naviga alla cieca. Implementiamo dashboard e sistemi di tracciamento Server-Side per avere il polso esatto del tuo business.",
-      features: ["Server-Side Tracking", "Data Visualization", "Conversion Rate Optimization", "Business Intelligence"]
+      features: ["Server-Side Tracking", "Data Visualization", "Conversion Rate Optimization", "Business Intelligence"],
+      href: "/servizi/data-analytics-e-tracking",
+      linkLabel: "Approfondisci il servizio",
     }
   ];
 
@@ -74,7 +86,7 @@ export default function Servizi() {
 
       <section className={styles.servicesList}>
         <div className={styles.container}>
-          {services.map((srv, index) => (
+          {services.map((srv) => (
             <div key={srv.id} id={srv.id} className={styles.serviceRow}>
               <motion.div 
                 className={styles.serviceContent}
@@ -90,6 +102,12 @@ export default function Servizi() {
                     <li key={i}><CheckCircle2 size={16} className={styles.check} /> {feat}</li>
                   ))}
                 </ul>
+                {srv.href && (
+                  <Link href={srv.href} className={styles.serviceLink}>
+                    {srv.linkLabel}
+                    <span aria-hidden="true">→</span>
+                  </Link>
+                )}
               </motion.div>
               <motion.div 
                 className={styles.serviceVisual}

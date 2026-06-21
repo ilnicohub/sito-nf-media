@@ -377,11 +377,12 @@ export default function Home() {
              className={styles.avivxHeroImageWrapper}
           >
              <Image
-               src="/demo-avivx.jpg"
-               alt="Dashboard del gestionale AVIVX"
-               width={1280}
-               height={569}
-               sizes="(max-width: 900px) 100vw, 900px"
+               src="/avivx-dashboard.svg"
+               alt="Dashboard vettoriale del gestionale AVIVX"
+               width={1600}
+               height={900}
+               className={styles.avivxHeroImage}
+               sizes="(max-width: 960px) calc(100vw - 2rem), 900px"
              />
           </motion.div>
 

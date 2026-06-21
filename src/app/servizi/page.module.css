@@ -98,6 +98,26 @@
   color: var(--text-muted);
 }
 
+.serviceLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.65rem;
+  margin-top: 2.25rem;
+  padding-bottom: 0.3rem;
+  border-bottom: 1px solid var(--border-hover);
+  font-size: 0.92rem;
+  font-weight: 600;
+}
+
+.serviceLink span {
+  color: var(--accent-primary);
+  transition: transform 0.2s ease;
+}
+
+.serviceLink:hover span {
+  transform: translateX(3px);
+}
+
 .serviceVisual {
   flex: 1;
   display: flex;

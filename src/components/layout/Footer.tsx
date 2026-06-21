@@ -19,11 +19,11 @@ export default function Footer() {
           
           <div className={styles.col}>
             <h4 className={styles.title}>Servizi</h4>
-            <Link href="/servizi#sviluppo" className={styles.link}>Sviluppo Software</Link>
-            <Link href="/servizi#web" className={styles.link}>Creazione Siti Web</Link>
-            <Link href="/servizi#marketing" className={styles.link}>Marketing Digitale</Link>
-            <Link href="/servizi#social" className={styles.link}>Social Media</Link>
-            <Link href="/servizi#comunicazione" className={styles.link}>Comunicazione</Link>
+            <Link href="/servizi/sviluppo-gestionali-su-misura" className={styles.link}>Sviluppo Software</Link>
+            <Link href="/servizi/realizzazione-siti-web-nord-italia" className={styles.link}>Creazione Siti Web</Link>
+            <Link href="/servizi/seo-e-performance-marketing" className={styles.link}>SEO e Advertising</Link>
+            <Link href="/servizi/social-media-management" className={styles.link}>Social Media</Link>
+            <Link href="/servizi/brand-identity-e-comunicazione" className={styles.link}>Brand Identity</Link>
           </div>
 
           <div className={styles.col}>
