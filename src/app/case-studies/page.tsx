@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import styles from "./page.module.css";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function CaseStudies() {
   const cases = [
@@ -84,11 +85,13 @@ export default function CaseStudies() {
             transition={{ duration: 0.8, delay: idx * 0.1, ease: [0.22, 1, 0.36, 1] }}
           >
             <div className={styles.caseVisual}>
-              <img 
+              <Image
                 src={c.image}
                 alt={c.title}
                 className={styles.caseImage}
-                loading="lazy"
+                width={600}
+                height={1200}
+                sizes="(max-width: 900px) 100vw, 50vw"
               />
             </div>
             

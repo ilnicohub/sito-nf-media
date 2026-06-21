@@ -5,6 +5,7 @@ import { useState } from "react";
 import { useRouter } from "next/navigation";
 import { Send, Mail, MapPin, Check } from "lucide-react";
 import styles from "./page.module.css";
+import { trackEvent } from "@/lib/analytics";
 
 const PROJECT_CATEGORIES = [
   "Sviluppo Software",
@@ -85,6 +86,10 @@ ${formData.message}
       }
 
       setFormData({ name: "", email: "", phone: "", message: "" });
+      trackEvent("generate_lead", {
+        lead_source: "contact_form",
+        service: selectedCategory,
+      });
       
       // Reindirizzamento alla pagina di ringraziamento (Grazie)
       router.push("/contatti/grazie");

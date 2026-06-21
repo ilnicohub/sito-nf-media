@@ -5,6 +5,7 @@ import { usePathname } from "next/navigation";
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import styles from "./Navbar.module.css";
+import BrandLogo from "./BrandLogo";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -29,8 +30,8 @@ export default function Navbar() {
   return (
     <nav className={`${styles.navbar} ${scrolled ? 'glass' : ''}`}>
       <div className={styles.container}>
-        <Link href="/" className={styles.logo}>
-          NF MEDIA LAB
+        <Link href="/" className={styles.logo} aria-label="NF Media Lab - Home">
+          <BrandLogo compact priority />
         </Link>
 
         {/* Desktop Menu */}
@@ -50,7 +51,7 @@ export default function Navbar() {
         </div>
 
         {/* Mobile Toggle */}
-        <button className={styles.mobileToggle} onClick={() => setIsOpen(!isOpen)} aria-label="Toggle menu">
+        <button className={styles.mobileToggle} onClick={() => setIsOpen(!isOpen)} aria-label={isOpen ? "Chiudi menu" : "Apri menu"}>
           {isOpen ? <X size={24} /> : <Menu size={24} />}
         </button>
       </div>

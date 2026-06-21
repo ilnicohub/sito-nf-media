@@ -3,10 +3,12 @@
 import { useState, type FormEvent } from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
+import Image from "next/image";
 import { Globe, RefreshCw, Code2, Share2, Settings, TrendingUp, Bot, Sparkles, Eye, Network, CircleAlert, ChartNoAxesCombined, VideoIcon, Megaphone } from "lucide-react";
 import styles from "./page.module.css";
 import Hero3D from "@/components/3d/Hero3D";
 import HeadsetVRScene from "@/components/3d/HeadsetVRScene"
+import { trackEvent } from "@/lib/analytics";
 
 export default function Home() {
   const [newsletterError, setNewsletterError] = useState("");
@@ -48,6 +50,9 @@ export default function Home() {
       }
 
       localStorage.setItem("nf_newsletter_email", email);
+      trackEvent("sign_up", {
+        method: "newsletter_homepage",
+      });
       window.location.assign("/newsletter/grazie");
     } catch {
       setNewsletterError("C'è stato un errore. Riprova più tardi.");
@@ -371,7 +376,13 @@ export default function Home() {
              viewport={{ once: true }}
              className={styles.avivxHeroImageWrapper}
           >
-             <img src="/demo-avivx.jpg" alt="AVIVX Dashboard" loading="lazy" />
+             <Image
+               src="/demo-avivx.jpg"
+               alt="Dashboard del gestionale AVIVX"
+               width={1280}
+               height={569}
+               sizes="(max-width: 900px) 100vw, 900px"
+             />
           </motion.div>
 
           <div className={styles.aiGrid}>

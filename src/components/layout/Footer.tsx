@@ -1,6 +1,7 @@
 import Link from "next/link";
 import styles from "./Footer.module.css";
 import { MapPin, Mail, Phone } from "lucide-react";
+import BrandLogo from "./BrandLogo";
 
 export default function Footer() {
   return (
@@ -8,11 +9,11 @@ export default function Footer() {
       <div className={styles.container}>
         <div className={styles.grid}>
           <div className={styles.col}>
-            <Link href="/" className={styles.logo}>
-              NF MEDIA LAB
+            <Link href="/" className={styles.logo} aria-label="NF Media Lab - Home">
+              <BrandLogo />
             </Link>
             <p className={styles.description}>
-              Laboratorio digitale d'eccellenza. Progettiamo e sviluppiamo soluzioni tecnologiche su misura per far crescere il tuo business.
+              Laboratorio digitale d&apos;eccellenza. Progettiamo e sviluppiamo soluzioni tecnologiche su misura per far crescere il tuo business.
             </p>
           </div>
           

@@ -1,36 +1,40 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useSyncExternalStore } from "react";
 import styles from "./CookieBanner.module.css";
 
-export default function CookieBanner() {
-  const [visible, setVisible] = useState(false);
+const CONSENT_KEY = "nf_cookie_consent";
+const CONSENT_EVENT = "nf-cookie-consent";
 
-  useEffect(() => {
-    try {
-      const stored = localStorage.getItem("nf_cookie_consent");
-      if (!stored) setVisible(true);
-    } catch (e) {
-      // SSR safety
-    }
-  }, []);
+function subscribe(callback: () => void) {
+  window.addEventListener("storage", callback);
+  window.addEventListener(CONSENT_EVENT, callback);
+
+  return () => {
+    window.removeEventListener("storage", callback);
+    window.removeEventListener(CONSENT_EVENT, callback);
+  };
+}
+
+function getSnapshot() {
+  return localStorage.getItem(CONSENT_KEY) === null;
+}
+
+export default function CookieBanner() {
+  const visible = useSyncExternalStore(subscribe, getSnapshot, () => false);
 
   function acceptAll() {
     try {
-      localStorage.setItem("nf_cookie_consent", "accepted");
-    } catch (e) {}
-    setVisible(false);
-    // optional analytics loader
-    if (typeof (window as any)?.loadAnalytics === "function") {
-      (window as any).loadAnalytics();
-    }
+      localStorage.setItem(CONSENT_KEY, "accepted");
+      window.dispatchEvent(new Event(CONSENT_EVENT));
+    } catch {}
   }
 
   function rejectAll() {
     try {
-      localStorage.setItem("nf_cookie_consent", "rejected");
-    } catch (e) {}
-    setVisible(false);
+      localStorage.setItem(CONSENT_KEY, "rejected");
+      window.dispatchEvent(new Event(CONSENT_EVENT));
+    } catch {}
   }
 
   if (!visible) return null;
@@ -42,7 +46,7 @@ export default function CookieBanner() {
           <strong>Usiamo cookie per migliorare la tua esperienza</strong>
           <p>
             Utilizziamo cookie tecnici e, previo consenso, cookie per analytics e
-            miglioramento dei servizi. Puoi accettare o rifiutare l'uso di cookie
+            miglioramento dei servizi. Puoi accettare o rifiutare l&apos;uso di cookie
             non essenziali.
           </p>
         </div>
