@@ -109,7 +109,7 @@
   font-size: 1.6rem;
   font-weight: 700;
   color: var(--foreground);
-  opacity: 0.3;
+  opacity: 0.62;
   letter-spacing: -0.05em;
   transition: opacity 0.3s ease;
   white-space: nowrap;
@@ -721,15 +721,18 @@
   color: var(--foreground);
 }
 
-.authorInfo h4 {
+.authorName {
+  color: var(--foreground);
   font-size: 1rem;
   font-weight: 500;
-  margin-bottom: 0.2rem;
+  margin: 0 0 0.2rem;
+  line-height: 1.2;
 }
 
-.authorInfo p {
+.authorRole {
   color: var(--text-muted);
   font-size: 0.85rem;
+  margin: 0;
   text-transform: uppercase;
   letter-spacing: 0.05em;
 }

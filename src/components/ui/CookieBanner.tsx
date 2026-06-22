@@ -40,11 +40,17 @@ export default function CookieBanner() {
   if (!visible) return null;
 
   return (
-    <div className={styles.banner} role="dialog" aria-live="polite">
+    <div
+      className={styles.banner}
+      role="dialog"
+      aria-modal="false"
+      aria-labelledby="cookie-banner-title"
+      aria-describedby="cookie-banner-description"
+    >
       <div className={styles.content}>
         <div className={styles.text}>
-          <strong>Usiamo cookie per migliorare la tua esperienza</strong>
-          <p>
+          <strong id="cookie-banner-title">Usiamo cookie per migliorare la tua esperienza</strong>
+          <p id="cookie-banner-description">
             Utilizziamo cookie tecnici e, previo consenso, cookie per analytics e
             miglioramento dei servizi. Puoi accettare o rifiutare l&apos;uso di cookie
             non essenziali.

@@ -122,16 +122,15 @@ export default function HeadsetVRScene() {
 
   return (
     <Canvas
-      shadows
       camera={{ position: [0, 0, 4], fov: 45 }}
       style={{ width: "100%", height: "500px", background: "rgba(3,3,3,0)" }}
-      gl={{ antialias: true, alpha: true }}
+      dpr={[1, 1.25]}
+      gl={{ antialias: false, alpha: true, powerPreference: "low-power" }}
     >
       {/* Luce principale frontale */}
       <directionalLight
         position={[3, 4, 5]}
         intensity={3}
-        castShadow
       />
       {/* Luce di riempimento laterale */}
       <directionalLight

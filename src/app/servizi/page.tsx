@@ -86,47 +86,120 @@ export default function Servizi() {
 
       <section className={styles.servicesList}>
         <div className={styles.container}>
-          {services.map((srv) => (
-            <div key={srv.id} id={srv.id} className={styles.serviceRow}>
+          {services.map((srv, index) => (
+            <motion.div
+              key={srv.id}
+              id={srv.id}
+              className={styles.serviceRow}
+              initial={{ opacity: 0, y: 48 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-80px" }}
+              transition={{
+                duration: 0.75,
+                delay: index * 0.05,
+                ease: [0.22, 1, 0.36, 1],
+              }}
+            >
               <motion.div 
                 className={styles.serviceContent}
-                initial={{ opacity: 0 }}
-                whileInView={{ opacity: 1 }}
+                initial={{ opacity: 0, x: -28 }}
+                whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true, margin: "-100px" }}
+                transition={{ duration: 0.65, delay: 0.08 }}
               >
-                <div className={styles.iconWrapper}>{srv.icon}</div>
-                <h2>{srv.title}</h2>
-                <p className={styles.desc}>{srv.desc}</p>
-                <ul className={styles.featureList}>
-                  {srv.features.map((feat, i) => (
-                    <li key={i}><CheckCircle2 size={16} className={styles.check} /> {feat}</li>
+                <motion.div
+                  className={styles.iconWrapper}
+                  initial={{ opacity: 0, scale: 0.8 }}
+                  whileInView={{ opacity: 0.8, scale: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.45, delay: 0.15 }}
+                >
+                  {srv.icon}
+                </motion.div>
+                <motion.h2
+                  initial={{ opacity: 0, y: 16 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.5, delay: 0.18 }}
+                >
+                  {srv.title}
+                </motion.h2>
+                <motion.p
+                  className={styles.desc}
+                  initial={{ opacity: 0, y: 12 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.5, delay: 0.23 }}
+                >
+                  {srv.desc}
+                </motion.p>
+                <motion.ul
+                  className={styles.featureList}
+                  initial="hidden"
+                  whileInView="visible"
+                  viewport={{ once: true }}
+                  variants={{
+                    hidden: {},
+                    visible: { transition: { staggerChildren: 0.07 } },
+                  }}
+                >
+                  {srv.features.map((feat) => (
+                    <motion.li
+                      key={feat}
+                      variants={{
+                        hidden: { opacity: 0, x: -10 },
+                        visible: { opacity: 1, x: 0 },
+                      }}
+                    >
+                      <CheckCircle2 size={16} className={styles.check} /> {feat}
+                    </motion.li>
                   ))}
-                </ul>
+                </motion.ul>
                 {srv.href && (
-                  <Link href={srv.href} className={styles.serviceLink}>
+                  <motion.div
+                    initial={{ opacity: 0 }}
+                    whileInView={{ opacity: 1 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: 0.45 }}
+                  >
+                    <Link href={srv.href} className={styles.serviceLink}>
                     {srv.linkLabel}
                     <span aria-hidden="true">→</span>
-                  </Link>
+                    </Link>
+                  </motion.div>
                 )}
               </motion.div>
               <motion.div 
                 className={styles.serviceVisual}
-                initial={{ opacity: 0 }}
-                whileInView={{ opacity: 1 }}
+                initial={{ opacity: 0, x: 30 }}
+                whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true, margin: "-100px" }}
+                transition={{ duration: 0.7, delay: 0.12 }}
               >
-                <div className={styles.visualPlaceholder}>
+                <motion.div
+                  className={styles.visualPlaceholder}
+                  initial={{ opacity: 0, letterSpacing: "0.35em" }}
+                  whileInView={{ opacity: 0.2, letterSpacing: "0.2em" }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.8, delay: 0.25 }}
+                >
                   {srv.title.toUpperCase()}
-                </div>
+                </motion.div>
               </motion.div>
-            </div>
+            </motion.div>
           ))}
         </div>
       </section>
       
       <section className={styles.ctaSection}>
         <div className={styles.container}>
-          <div className={styles.ctaBox}>
+          <motion.div
+            className={styles.ctaBox}
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.7 }}
+          >
             <h2>Inizia il Tuo Progetto</h2>
             <p>Prenota una consulenza strategica per analizzare le tue necessità.</p>
             <div style={{ marginTop: "2rem" }}>
@@ -134,7 +207,7 @@ export default function Servizi() {
                 Parla con un Esperto
               </Link>
             </div>
-          </div>
+          </motion.div>
         </div>
       </section>
     </div>

@@ -6,8 +6,8 @@ import Link from "next/link";
 import Image from "next/image";
 import { Globe, RefreshCw, Code2, Share2, Settings, TrendingUp, Bot, Sparkles, Eye, Network, CircleAlert, ChartNoAxesCombined, VideoIcon, Megaphone } from "lucide-react";
 import styles from "./page.module.css";
-import Hero3D from "@/components/3d/Hero3D";
-import HeadsetVRScene from "@/components/3d/HeadsetVRScene"
+import LazyHero3D from "@/components/3d/LazyHero3D";
+import LazyHeadsetScene from "@/components/3d/LazyHeadsetScene";
 import { trackEvent } from "@/lib/analytics";
 
 export default function Home() {
@@ -128,17 +128,12 @@ export default function Home() {
     <div className={styles.main}>
       {/* Hero Section */}
       <section className={styles.hero}>
-        <Hero3D />
+        <LazyHero3D />
         
         <div className={styles.heroContent}>
-          <motion.h1 
-            className={styles.title}
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, ease: "easeOut" }}
-          >
+          <h1 className={styles.title}>
             Ingegneria <span className="text-gradient">Digitale</span>
-          </motion.h1>
+          </h1>
           
           <motion.p 
             className={styles.subtitle}
@@ -327,7 +322,7 @@ export default function Home() {
               Esplora nuove dimensioni digitali con le nostre soluzioni VR/AR. Dalla progettazione di esperienze immersive alla loro integrazione con il tuo ecosistema digitale, portiamo la tua azienda nel futuro dell'interazione digitale.
             </p>
           </motion.div>
-        <HeadsetVRScene />
+        <LazyHeadsetScene />
           <div className={styles.aiGrid}>
             <motion.div 
               className={styles.aiCard}
@@ -469,8 +464,8 @@ export default function Home() {
                 <div className={styles.author}>
                   <div className={styles.authorAvatar}>{test.initial}</div>
                   <div className={styles.authorInfo}>
-                    <h4>{test.author}</h4>
-                    <p>{test.role}</p>
+                    <p className={styles.authorName}>{test.author}</p>
+                    <p className={styles.authorRole}>{test.role}</p>
                   </div>
                 </div>
               </motion.div>

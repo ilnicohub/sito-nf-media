@@ -1,0 +1,32 @@
+.heroScene {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.heroFallback {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: min(62vw, 620px);
+  aspect-ratio: 1;
+  border: 1px solid rgba(59, 130, 246, 0.16);
+  transform: translate(-50%, -50%) rotate(18deg);
+  opacity: 0.5;
+  clip-path: polygon(50% 0%, 95% 25%, 82% 78%, 50% 100%, 12% 75%, 4% 24%);
+}
+
+.headsetScene,
+.headsetFallback {
+  width: 100%;
+  min-height: 500px;
+}
+
+.headsetFallback {
+  background: radial-gradient(
+    circle at center,
+    rgba(59, 130, 246, 0.08),
+    transparent 38%
+  );
+}

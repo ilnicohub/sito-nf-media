@@ -92,14 +92,26 @@ export default function CaseStudies() {
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.8, delay: idx * 0.1, ease: [0.22, 1, 0.36, 1] }}
           >
-            <div className={styles.caseVisual}>
+            <motion.div
+              className={styles.caseVisual}
+              initial={{ opacity: 0, x: idx % 2 === 0 ? -34 : 34 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true, margin: "-80px" }}
+              transition={{ duration: 0.7, delay: 0.1 }}
+            >
               <div className={styles.visualTopline}>
                 <span>Case study</span>
                 <span>{String(idx + 1).padStart(2, "0")}</span>
               </div>
 
               <div className={styles.visualStage}>
-                <div className={styles.imageFrame}>
+                <motion.div
+                  className={styles.imageFrame}
+                  initial={{ opacity: 0, scale: 0.92, rotate: idx % 2 === 0 ? -4 : 4 }}
+                  whileInView={{ opacity: 1, scale: 1, rotate: idx % 2 === 0 ? -1.5 : 1.5 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.75, delay: 0.2 }}
+                >
                   <Image
                     src={c.image}
                     alt={`Cover del progetto ${c.client}`}
@@ -108,7 +120,7 @@ export default function CaseStudies() {
                     height={1200}
                     sizes="(max-width: 991px) 72vw, 360px"
                   />
-                </div>
+                </motion.div>
 
                 <div className={styles.visualCaption}>
                   <p>{c.sector}</p>
@@ -119,40 +131,65 @@ export default function CaseStudies() {
                   </div>
                 </div>
               </div>
-            </div>
+            </motion.div>
             
-            <div className={styles.caseContent}>
+            <motion.div
+              className={styles.caseContent}
+              initial={{ opacity: 0, x: idx % 2 === 0 ? 34 : -34 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true, margin: "-80px" }}
+              transition={{ duration: 0.7, delay: 0.16 }}
+            >
               <div className={styles.caseHeader}>
                 <p className={styles.clientName}>{c.client}</p>
                 <h2 className={styles.caseTitle}>{c.title}</h2>
                 <div className={styles.metrics}>
                   {c.metrics.map((m, i) => (
-                    <div key={i} className={styles.metricItem}>
-                      <h4>{m.value}</h4>
+                    <motion.div
+                      key={m.label}
+                      className={styles.metricItem}
+                      initial={{ opacity: 0, y: 16 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      viewport={{ once: true }}
+                      transition={{ duration: 0.5, delay: 0.28 + i * 0.1 }}
+                    >
+                      <p className={styles.metricValue}>{m.value}</p>
                       <p>{m.label}</p>
-                    </div>
+                    </motion.div>
                   ))}
                 </div>
               </div>
               
-              <div className={styles.caseBody}>
+              <motion.div
+                className={styles.caseBody}
+                initial={{ opacity: 0, y: 18 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.55, delay: 0.34 }}
+              >
                 <h3>La Sfida</h3>
                 <p>{c.problem}</p>
                 
                 <h3>La Soluzione Ingegneristica</h3>
                 <p>{c.solution}</p>
-              </div>
-            </div>
+              </motion.div>
+            </motion.div>
           </motion.article>
         ))}
 
-        <div className={styles.cta}>
+        <motion.div
+          className={styles.cta}
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.7 }}
+        >
           <h2>Valutiamo il prossimo progetto</h2>
           <p>Condividi obiettivi, criticità e priorità della tua azienda.</p>
           <Link href="/contatti" className="primaryBtn">
             Richiedi un confronto
           </Link>
-        </div>
+        </motion.div>
       </section>
     </div>
   );

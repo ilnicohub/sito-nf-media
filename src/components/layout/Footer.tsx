@@ -18,7 +18,7 @@ export default function Footer() {
           </div>
           
           <div className={styles.col}>
-            <h4 className={styles.title}>Servizi</h4>
+            <h2 className={styles.title}>Servizi</h2>
             <Link href="/servizi/sviluppo-gestionali-su-misura" className={styles.link}>Sviluppo Software</Link>
             <Link href="/servizi/realizzazione-siti-web-nord-italia" className={styles.link}>Creazione Siti Web</Link>
             <Link href="/servizi/seo-e-performance-marketing" className={styles.link}>SEO e Advertising</Link>
@@ -27,14 +27,14 @@ export default function Footer() {
           </div>
 
           <div className={styles.col}>
-            <h4 className={styles.title}>Legale</h4>
+            <h2 className={styles.title}>Legale</h2>
             <Link href="/privacy" className={styles.link}>Privacy Policy</Link>
             <Link href="/cookie" className={styles.link}>Cookie Policy</Link>
             <Link href="/termini" className={styles.link}>Termini e Condizioni</Link>
           </div>
 
           <div className={styles.col}>
-            <h4 className={styles.title}>Contatti</h4>
+            <h2 className={styles.title}>Contatti</h2>
             <div className={styles.contactItem}>
               <MapPin size={16} className={styles.icon} />
               <span>Treviso, Veneto</span>
