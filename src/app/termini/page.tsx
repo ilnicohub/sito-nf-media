@@ -116,7 +116,7 @@ export default function TerminiCondizioni() {
             Per qualsiasi questione legale o controversia relativa a questi Termini, contatta:
           </p>
           <p>
-            <strong>Email:</strong> info@nfmedia.it<br />
+            <strong>Email:</strong> info@nfmedialab.it<br />
             <strong>Indirizzo:</strong> Via Casoni, 28 Vedelago, Treviso, Veneto, Italia
           </p>
 

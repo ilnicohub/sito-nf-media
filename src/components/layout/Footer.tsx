@@ -41,7 +41,7 @@ export default function Footer() {
             </div>
             <div className={styles.contactItem}>
               <Mail size={16} className={styles.icon} />
-              <a href="mailto:info@nfmedia.it">info@nfmedia.it</a>
+              <a href="mailto:info@nfmedialab.it">info@nfmedialab.it</a>
             </div>
             <div className={styles.contactItem}>
               <Phone size={16} className={styles.icon} />

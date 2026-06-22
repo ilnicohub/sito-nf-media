@@ -4,7 +4,8 @@ import { NextRequest, NextResponse } from "next/server";
 const resend = new Resend(process.env.RESEND_API_KEY);
 
 const RECIPIENT_EMAIL =
-  process.env.CONTACT_FORM_EMAIL || "info@nfmediaagency.com";
+  process.env.CONTACT_FORM_EMAIL || "info@nfmedialab.it";
+const FROM_EMAIL = "NF Media Lab <info@nfmedialab.it>";
 
 export async function POST(request: NextRequest) {
   try {
@@ -30,7 +31,7 @@ export async function POST(request: NextRequest) {
 
     // Invio email
     const response = await resend.emails.send({
-      from: "NF Media Lab Contact Form <onboarding@resend.dev>",
+      from: FROM_EMAIL,
       to: RECIPIENT_EMAIL,
       replyTo: email,
       subject: `Nuovo messaggio di contatto da ${name}`,

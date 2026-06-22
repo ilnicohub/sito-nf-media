@@ -152,7 +152,7 @@ ${formData.message}
                   </div>
                   <div>
                     <h4>Nuove Richieste</h4>
-                    <p>info@nfmedia.it</p>
+                    <a href="mailto:info@nfmedialab.it">info@nfmedialab.it</a>
                   </div>
                 </div>
                 
@@ -162,7 +162,9 @@ ${formData.message}
                   </div>
                   <div>
                     <h4>Supporto Clienti</h4>
-                    <p>supporto@nfmedia.it</p>
+                    <a href="mailto:supporto@nfmedialab.it">
+                      supporto@nfmedialab.it
+                    </a>
                   </div>
                 </div>
               </div>

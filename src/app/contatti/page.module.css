@@ -103,10 +103,19 @@
   letter-spacing: 0.08em;
 }
 
-.infoItem p {
+.infoItem p,
+.infoItem a {
   color: var(--foreground);
   font-size: 1.05rem;
   line-height: 1.4;
+}
+
+.infoItem a {
+  transition: color 0.25s ease;
+}
+
+.infoItem a:hover {
+  color: var(--accent-primary);
 }
 
 /* Form block */

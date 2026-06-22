@@ -86,7 +86,7 @@ export default function PrivacyPolicy() {
             Per esercitare uno qualsiasi dei diritti sopra elencati, contattaci a:
           </p>
           <p>
-            <strong>Email:</strong> info@nfmedia.it<br />
+            <strong>Email:</strong> info@nfmedialab.it<br />
             <strong>Indirizzo:</strong> Treviso, Veneto, Italia
           </p>
 

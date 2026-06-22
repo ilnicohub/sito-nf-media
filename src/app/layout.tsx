@@ -102,7 +102,7 @@ export default function RootLayout({
     image: `${siteUrl}/og-default.svg`,
     description:
       "Agenzia digitale di Treviso specializzata in sviluppo software, siti web, SEO, advertising e social media.",
-    email: "info@nfmedia.it",
+    email: "info@nfmedialab.it",
     telephone: "+393427404958",
     address: {
       "@type": "PostalAddress",
@@ -132,7 +132,7 @@ export default function RootLayout({
     contactPoint: {
       "@type": "ContactPoint",
       telephone: "+393427404958",
-      email: "info@nfmedia.it",
+      email: "info@nfmedialab.it",
       contactType: "sales",
       availableLanguage: ["Italian"],
       areaServed: "IT",
