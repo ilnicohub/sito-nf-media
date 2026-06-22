@@ -7,7 +7,7 @@ import BackToTop from "@/components/ui/BackToTop";
 import CookieBanner from "@/components/ui/CookieBanner";
 import GoogleAnalytics from "@/components/analytics/GoogleAnalytics";
 
-const siteUrl = "https://nfmedialab.it";
+const siteUrl = "https://www.nfmedialab.it";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
