@@ -3,6 +3,42 @@ import styles from "./Footer.module.css";
 import { MapPin, Mail, Phone } from "lucide-react";
 import BrandLogo from "./BrandLogo";
 
+function InstagramIcon() {
+  return (
+    <svg
+      aria-hidden="true"
+      className={styles.icon}
+      fill="none"
+      height="16"
+      viewBox="0 0 24 24"
+      width="16"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <rect
+        height="18"
+        rx="5"
+        stroke="currentColor"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth="2"
+        width="18"
+        x="3"
+        y="3"
+      />
+      <circle
+        cx="12"
+        cy="12"
+        r="4"
+        stroke="currentColor"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth="2"
+      />
+      <circle cx="17.5" cy="6.5" fill="currentColor" r="1.2" />
+    </svg>
+  );
+}
+
 export default function Footer() {
   return (
     <footer className={styles.footer}>
@@ -46,6 +82,17 @@ export default function Footer() {
             <div className={styles.contactItem}>
               <Phone size={16} className={styles.icon} />
               <a href="tel:+393427404958">+39 3427404958</a>
+            </div>
+            <div className={styles.contactItem}>
+              <InstagramIcon />
+              <a
+                href="https://www.instagram.com/nfmedialab/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Profilo Instagram NF Media Lab"
+              >
+                Instagram
+              </a>
             </div>
           </div>
         </div>
