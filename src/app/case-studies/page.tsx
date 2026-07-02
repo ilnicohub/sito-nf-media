@@ -6,6 +6,17 @@ import Link from "next/link";
 import Image from "next/image";
 
 export default function CaseStudies() {
+  const logos = [
+    "FC CALVI NOALE",
+    "SALONE TAMARA&VANESSA S.N.C.",
+    "CABO STAMPI S.R.L.",
+    "ITALSAMPLE S.R.L.",
+    "SYMBLUX S.R.L.",
+    "EUROLINE S.R.L.",
+    "ALUPRO S.P.A.",
+  ];
+  const marqueeLogos = [...logos, ...logos];
+
   const cases = [
     {
       client: "Symblux S.R.L. (Industriale)",
@@ -80,6 +91,17 @@ export default function CaseStudies() {
         >
           Non parliamo per concetti astratti. Parliamo attraverso l&apos;impatto reale che il nostro software e le nostre strategie generano per i clienti.
         </motion.p>
+      </section>
+
+      <section className={styles.tickerSection}>
+        <p className={styles.tickerTitle}>Scelti dalle migliori aziende del Nord Italia</p>
+        <div className={styles.tickerContainer}>
+          <div className={styles.tickerTrack}>
+            {marqueeLogos.map((logo, index) => (
+              <div key={index} className={styles.tickerItem}>{logo}</div>
+            ))}
+          </div>
+        </div>
       </section>
 
       <section className={styles.container}>

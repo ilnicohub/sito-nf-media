@@ -24,6 +24,63 @@
   line-height: 1.6;
 }
 
+.tickerSection {
+  padding: 4rem 0;
+  border-bottom: 1px solid var(--border);
+  background: var(--background);
+  overflow: hidden;
+}
+
+.tickerTitle {
+  text-align: center;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 3rem;
+}
+
+.tickerContainer {
+  display: flex;
+  width: max-content;
+  animation: scroll 40s linear infinite;
+}
+
+.tickerContainer:hover {
+  animation-play-state: paused;
+}
+
+.tickerTrack {
+  display: flex;
+  gap: 5rem;
+  padding: 0 2.5rem;
+  align-items: center;
+}
+
+.tickerItem {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--foreground);
+  opacity: 0.62;
+  letter-spacing: -0.05em;
+  transition: opacity 0.3s ease;
+  white-space: nowrap;
+}
+
+.tickerItem:hover {
+  opacity: 1;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
 .container {
   max-width: 1200px;
   margin: 0 auto;
