@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import styles from "./page.module.css";
 import Link from "next/link";
 import Image from "next/image";
+import { caseStudies } from "@/data/caseStudies";
 
 export default function CaseStudies() {
   const logos = [
@@ -16,61 +17,6 @@ export default function CaseStudies() {
     "ALUPRO S.P.A.",
   ];
   const marqueeLogos = [...logos, ...logos];
-
-  const cases = [
-    {
-      client: "Symblux S.R.L. (Industriale)",
-      sector: "Industria e manifattura",
-      title: "Miglioramento Comunicazione digitale e presenza online",
-      image: "/case-studies/symblux.webp",
-      services: ["Web design", "SEO", "Content strategy"],
-      metrics: [
-        { value: "+40%", label: "Contatti tramite sito Web" },
-        { value: "+25%", label: "Traffico organico" }
-      ],
-      problem: "Symblux, azienda leader nel settore industriale, aveva un sito web obsoleto e non performante che non riusciva a generare contatti qualificati. La comunicazione digitale era frammentata e inefficace, con un posizionamento SEO praticamente inesistente.",
-      solution: "Abbiamo progettato e sviluppato un nuovo sito web moderno, responsive e ottimizzato SEO. Abbiamo implementato una strategia di content marketing focalizzata su case studies e blog post tecnici, oltre a ottimizzare la struttura del sito per migliorare l'indicizzazione sui motori di ricerca."
-    },
-    {
-      client: "FC Calvi Noale (Sportivo)",
-      sector: "Sport e community",
-      title: "Gestione Social Media e Content Creation",
-      image: "/case-studies/fccalvinoale.webp",
-      services: ["Social strategy", "Video content", "Advertising"],
-      metrics: [
-        { value: "900k+", label: "Visualizzazioni mensili" },
-        { value: "+300%", label: "Engagement sui social" }
-      ],
-      problem: "Il club sportivo aveva una presenza sui social media praticamente inesistente, con contenuti poco coinvolgenti e una strategia di comunicazione assente. Questo limitava la crescita della fanbase e l'engagement dei tifosi.",
-      solution: "Abbiamo creato una strategia di social media marketing completa, con contenuti originali e coinvolgenti (video highlights, interviste, dietro le quinte). Abbiamo gestito le campagne pubblicitarie sui social per aumentare la visibilità e l'engagement, portando a una crescita esponenziale della fanbase online."
-    },
-    {
-      client: "Euroline S.R.L. (Industriale)",
-      sector: "Software e processi",
-      title: "Sviluppo gestionale ERP su misura",
-      image: "/case-studies/euroline.webp",
-      services: ["ERP custom", "Automazione", "Integrazioni"],
-      metrics: [
-        { value: "-40%", label: "Tempi operativi" },
-        { value: "+30%", label: "Efficienza dei processi" }
-      ],
-      problem: "Euroline, azienda di produzione industriale, utilizzava processi gestionali obsoleti e frammentati che causavano inefficienze operative e difficoltà nella gestione dei dati. Non esisteva un sistema centralizzato per monitorare le operazioni quotidiane.",
-      solution: "Abbiamo sviluppato un sistema ERP su misura per le esigenze specifiche di Euroline, integrando moduli per la gestione degli ordini, l'inventario, la contabilità e il CRM. Il nuovo sistema ha centralizzato tutte le operazioni, migliorando significativamente l'efficienza e riducendo i tempi operativi."
-    },
-    {
-      client: "Salone Tamara&Vanessa S.N.C. (Beauty)",
-      sector: "Beauty e servizi",
-      title: "Miglioramento presenza online e lead generation",
-      image: "/case-studies/tamaraevanessa.webp",
-      services: ["Sito web", "Lead generation", "Advertising"],
-      metrics: [
-        { value: "+150%", label: "Richieste di preventivo" },
-        { value: "+200%", label: "Visite al sito" }
-      ],
-      problem: "Il salone di bellezza aveva un sito web datato e non ottimizzato, con una presenza online debole che non riusciva a generare contatti qualificati. La strategia di marketing digitale era praticamente inesistente.",
-      solution: "Abbiamo progettato un nuovo sito web moderno e ottimizzato per la conversione. Abbiamo implementato una strategia di marketing digitale focalizzata su campagne pubblicitarie sui social media e Google Ads, oltre a ottimizzare il sito per i motori di ricerca."
-    }
-  ];
 
   return (
     <div className={styles.main}>
@@ -105,7 +51,7 @@ export default function CaseStudies() {
       </section>
 
       <section className={styles.container}>
-        {cases.map((c, idx) => (
+        {caseStudies.map((c, idx) => (
           <motion.article
             key={c.client}
             className={`${styles.caseStudy} ${idx % 2 !== 0 ? styles.caseStudyReverse : ""}`}
@@ -164,7 +110,7 @@ export default function CaseStudies() {
             >
               <div className={styles.caseHeader}>
                 <p className={styles.clientName}>{c.client}</p>
-                <h2 className={styles.caseTitle}>{c.title}</h2>
+                <h2 className={styles.caseTitle}>{c.listingTitle}</h2>
                 <div className={styles.metrics}>
                   {c.metrics.map((m, i) => (
                     <motion.div
@@ -194,6 +140,12 @@ export default function CaseStudies() {
                 
                 <h3>La Soluzione Ingegneristica</h3>
                 <p>{c.solution}</p>
+                <Link
+                  href={`/case-studies/${c.slug}`}
+                  className={styles.caseLink}
+                >
+                  Leggi il case study
+                </Link>
               </motion.div>
             </motion.div>
           </motion.article>

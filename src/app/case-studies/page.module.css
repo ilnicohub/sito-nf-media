@@ -289,6 +289,35 @@
   font-size: 1rem;
 }
 
+.caseLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 2rem;
+  padding-bottom: 0.45rem;
+  border-bottom: 1px solid var(--border-hover);
+  color: var(--foreground);
+  font-size: 0.9rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+.caseLink::after {
+  content: "→";
+  color: var(--accent-primary);
+  transition: transform 0.2s ease;
+}
+
+.caseLink:hover {
+  border-color: var(--accent-primary);
+  color: var(--accent-primary);
+}
+
+.caseLink:hover::after {
+  transform: translateX(4px);
+}
+
 .cta {
   max-width: 680px;
   margin: 8rem auto 2rem;
