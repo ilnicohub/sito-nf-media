@@ -12,7 +12,7 @@ export default function Servizi() {
       title: "Software Development",
       icon: <Code2 size={40} strokeWidth={1.5} />,
       desc: "Ingegnerizziamo architetture software scalabili e sicure. Sistemi gestionali (ERP/CRM), piattaforme cloud e applicazioni mobile costruite sui più alti standard di mercato.",
-      features: ["Microservizi e Cloud Architecture", "iOS & Android Native", "API Development & Integration", "Automazione Processi"],
+      features: ["Microservizi e Cloud Architecture", "Progressive Web App (PWA)", "API Development & Integration", "Automazione Processi"],
       href: "/servizi/sviluppo-gestionali-su-misura",
       linkLabel: "Approfondisci il servizio",
     },
