@@ -29,6 +29,82 @@ export type CaseStudyDetail = {
 
 export const caseStudies: CaseStudyDetail[] = [
   {
+    slug: "italsample-redesign-campagne",
+    client: "Italsample S.R.L.",
+    shortClient: "Italsample",
+    sector: "Campionari ed editoria tessile",
+    title: "Restyling web e strategie di acquisizione per leader storico nella progettazione campionari",
+    listingTitle: "Evoluzione digitale per eccellenza manifatturiera",
+    image: "/case-studies/italsample.webp",
+    services: ["Web design", "Campagne advertising", "Content creation"],
+    metrics: [
+      {
+        value: "+45%",
+        label: "Traffico in 30 giorni",
+        detail: "Incremento rapido delle sessioni web grazie all'ottimizzazione e all'avvio di campagne mirate.",
+        chartLabel: "Crescita traffico",
+        chartValue: 45,
+      },
+      {
+        value: "+20%",
+        label: "Qualità dei lead",
+        detail: "Miglioramento del conversion rate nei primi 30 giorni dal lancio del nuovo ecosistema digitale.",
+        chartLabel: "Conversion Rate",
+        chartValue: 20,
+      },
+    ],
+    problem:
+      "Con oltre 40 anni di esperienza, Italsample trasforma ogni campionario in un vero progetto di design che fonde estetica, artigianalità e tecnologia. Tuttavia, la loro struttura digitale non rifletteva più questa storica eccellenza e non era ottimizzata per la lead generation. Il sito necessitava di un restyling profondo per valorizzare il loro metodo progettuale, mentre l'advertising richiedeva una spinta strategica per attrarre traffico qualificato.",
+    solution:
+      "In un solo mese abbiamo avviato un restyling completo dell'esperienza web, supportato dalla creazione di contenuti visivi dedicati. Parallelamente, abbiamo strutturato campagne di acquisizione per massimizzare subito le prestazioni e iniziare a raccogliere risultati tangibili sin dalle prime settimane.",
+    heroIntro:
+      "Un progetto digitale costruito per esaltare oltre 40 anni di eccellenza nella progettazione e confezionamento di campionari, unendo il restyling web all'ottimizzazione immediata delle campagne.",
+    overview:
+      "Lavorare con una realtà storica richiede di trasmettere immediatamente l'altissimo valore dei loro prodotti. Abbiamo riorganizzato la presentazione aziendale online per riflettere il loro metodo rigoroso, migliorato i flussi di navigazione e indirizzato nuovo traffico tramite campagne studiate ad hoc, ottenendo riscontri eccellenti in soli 30 giorni.",
+    workDone: [
+      {
+        title: "Redesign dell'esperienza web",
+        description:
+          "Abbiamo modernizzato il sito, rendendolo più chiaro, veloce e orientato all'acquisizione contatti.",
+      },
+      {
+        title: "Ottimizzazione campagne e advertising",
+        description:
+          "Sono state lanciate nuove campagne con messaggi più mirati per aumentare la pertinenza del traffico in entrata.",
+      },
+      {
+        title: "Creazione contenuti digitali",
+        description:
+          "Abbiamo prodotto asset visivi per migliorare la presentazione dei servizi e dare forza alle pagine chiave del sito.",
+      },
+    ],
+    impact: [
+      {
+        title: "Crescita immediata del traffico",
+        description:
+          "L'ottimizzazione SEO di base e le campagne hanno portato a un aumento sensibile delle visite nel primo mese.",
+      },
+      {
+        title: "Immagine più moderna e professionale",
+        description:
+          "Il restyling ha allineato il valore percepito sul web all'effettiva qualità artigianale dell'azienda.",
+      },
+      {
+        title: "Maggiori opportunità commerciali",
+        description:
+          "Flussi di contatto semplificati hanno permesso di iniziare ad acquisire lead di maggiore qualità.",
+      },
+    ],
+    stack: ["Sito web", "Campagne Adv", "UI/UX Design", "Content strategy", "Analytics"],
+    relatedServices: [
+      { label: "Realizzazione siti web", href: "/servizi/realizzazione-siti-web-nord-italia" },
+      { label: "SEO e performance marketing", href: "/servizi/seo-e-performance-marketing" },
+      { label: "Brand identity e comunicazione", href: "/servizi/brand-identity-e-comunicazione" },
+    ],
+    nextStep:
+      "Desideri rinnovare il tuo sito e ottenere risultati concreti in tempi rapidi? Possiamo valutare insieme la strategia più adatta al tuo settore.",
+  },
+  {
     slug: "symblux-comunicazione-digitale",
     client: "Symblux S.R.L.",
     shortClient: "Symblux",
