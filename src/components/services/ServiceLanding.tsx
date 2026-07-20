@@ -59,8 +59,8 @@ type ServiceLandingProps = {
   intro: string;
   benefits: Array<{ title: string; description: string; icon: ServiceIcon }>;
   process: Array<{ title: string; description: string }>;
-  idealFor: string[];
-  faq: Array<{ question: string; answer: string }>;
+  idealFor?: string[];
+  faq?: Array<{ question: string; answer: string }>;
 };
 
 const icons = {
@@ -105,7 +105,7 @@ export default function ServiceLanding({
     transition: { duration: 0.7, ease: "easeOut" as const },
   };
 
-  const faqJsonLd = {
+  const faqJsonLd = faq && faq.length > 0 ? {
     "@context": "https://schema.org",
     "@type": "FAQPage",
     mainEntity: faq.map((item) => ({
@@ -116,16 +116,18 @@ export default function ServiceLanding({
         text: item.answer,
       },
     })),
-  };
+  } : null;
 
   return (
     <div className={styles.main}>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(faqJsonLd).replace(/</g, "\\u003c"),
-        }}
-      />
+      {faqJsonLd && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(faqJsonLd).replace(/</g, "\\u003c"),
+          }}
+        />
+      )}
 
       <section className={styles.hero}>
         <div className={styles.container}>
@@ -219,74 +221,78 @@ export default function ServiceLanding({
               </div>
             </motion.div>
 
-            <motion.aside className={styles.idealBox} {...fadeUp}>
-              <p className={styles.eyebrow}>Per chi è pensato</p>
-              <h2>È la scelta giusta se vuoi:</h2>
-              <ul>
-                {idealFor.map((item) => (
-                  <li key={item}>
-                    <CheckCircle2 size={17} aria-hidden="true" />
-                    {item}
-                  </li>
-                ))}
-              </ul>
-            </motion.aside>
+            {idealFor && idealFor.length > 0 && (
+              <motion.aside className={styles.idealBox} {...fadeUp}>
+                <p className={styles.eyebrow}>Per chi è pensato</p>
+                <h2>È la scelta giusta se vuoi:</h2>
+                <ul>
+                  {idealFor.map((item) => (
+                    <li key={item}>
+                      <CheckCircle2 size={17} aria-hidden="true" />
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+              </motion.aside>
+            )}
           </div>
         </div>
       </section>
 
-      <section className={styles.section}>
-        <div className={styles.container}>
-          <motion.div className={styles.sectionHeading} {...fadeUp}>
-            <p className={styles.eyebrow}>Aspetti operativi</p>
-            <h2>Domande strategiche prima di avviare il progetto</h2>
-          </motion.div>
-          <div className={styles.faqList}>
-            {faq.map((item, index) => (
-              <motion.div
-                className={`${styles.faqItem} ${openFaq === index ? styles.faqItemOpen : ""}`}
-                key={item.question}
-                initial={{ opacity: 0, y: 12 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.45, delay: index * 0.07 }}
-              >
-                <button
-                  type="button"
-                  className={styles.faqTrigger}
-                  aria-expanded={openFaq === index}
-                  aria-controls={`faq-panel-${index}`}
-                  onClick={() => setOpenFaq(openFaq === index ? null : index)}
+      {faq && faq.length > 0 && (
+        <section className={styles.section}>
+          <div className={styles.container}>
+            <motion.div className={styles.sectionHeading} {...fadeUp}>
+              <p className={styles.eyebrow}>Aspetti operativi</p>
+              <h2>Domande strategiche prima di avviare il progetto</h2>
+            </motion.div>
+            <div className={styles.faqList}>
+              {faq.map((item, index) => (
+                <motion.div
+                  className={`${styles.faqItem} ${openFaq === index ? styles.faqItemOpen : ""}`}
+                  key={item.question}
+                  initial={{ opacity: 0, y: 12 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.45, delay: index * 0.07 }}
                 >
-                  <span className={styles.faqNumber}>
-                    {String(index + 1).padStart(2, "0")}
-                  </span>
-                  <span>{item.question}</span>
-                  <ChevronDown
-                    size={20}
-                    className={styles.faqChevron}
-                    aria-hidden="true"
-                  />
-                </button>
-                <AnimatePresence initial={false}>
-                  {openFaq === index && (
-                    <motion.div
-                      id={`faq-panel-${index}`}
-                      className={styles.faqPanel}
-                      initial={{ height: 0, opacity: 0 }}
-                      animate={{ height: "auto", opacity: 1 }}
-                      exit={{ height: 0, opacity: 0 }}
-                      transition={{ duration: 0.3, ease: "easeInOut" }}
-                    >
-                      <p>{item.answer}</p>
-                    </motion.div>
-                  )}
-                </AnimatePresence>
-              </motion.div>
-            ))}
+                  <button
+                    type="button"
+                    className={styles.faqTrigger}
+                    aria-expanded={openFaq === index}
+                    aria-controls={`faq-panel-${index}`}
+                    onClick={() => setOpenFaq(openFaq === index ? null : index)}
+                  >
+                    <span className={styles.faqNumber}>
+                      {String(index + 1).padStart(2, "0")}
+                    </span>
+                    <span>{item.question}</span>
+                    <ChevronDown
+                      size={20}
+                      className={styles.faqChevron}
+                      aria-hidden="true"
+                    />
+                  </button>
+                  <AnimatePresence initial={false}>
+                    {openFaq === index && (
+                      <motion.div
+                        id={`faq-panel-${index}`}
+                        className={styles.faqPanel}
+                        initial={{ height: 0, opacity: 0 }}
+                        animate={{ height: "auto", opacity: 1 }}
+                        exit={{ height: 0, opacity: 0 }}
+                        transition={{ duration: 0.3, ease: "easeInOut" }}
+                      >
+                        <p>{item.answer}</p>
+                      </motion.div>
+                    )}
+                  </AnimatePresence>
+                </motion.div>
+              ))}
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
+      )}
 
       <section className={styles.cta}>
         <div className={styles.container}>

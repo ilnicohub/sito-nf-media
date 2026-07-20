@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import styles from "./page.module.css";
 import { Target, Zap, ShieldCheck, Search, PenTool, Terminal, LineChart, TrendingUp, Headset } from "lucide-react";
 import InteractiveSatelliteMap from "@/components/map/InteractiveSatelliteMap";
+import Link from "next/link";
 
 export default function ChiSiamo() {
   const fadeIn = {
@@ -99,6 +100,18 @@ export default function ChiSiamo() {
               </motion.div>
             ))}
           </div>
+
+          <motion.div 
+            style={{ textAlign: "center", marginTop: "3rem" }}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.4, duration: 0.6 }}
+          >
+            <Link href="/metodo" className={styles.methodLink}>
+              Scopri il nostro metodo
+            </Link>
+          </motion.div>
         </div>
       </section>
 
