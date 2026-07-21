@@ -35,13 +35,14 @@
 }
 
 .eyebrow {
-  margin-bottom: 1rem;
-  color: var(--accent-primary);
+  color: var(--text-muted);
   font-family: var(--font-mono), monospace;
-  font-size: 0.75rem;
+  font-size: 0.72rem;
   font-weight: 700;
   letter-spacing: 0.12em;
+  line-height: 1.45;
   text-transform: uppercase;
+  margin-bottom: 0.5rem;
 }
 
 .hero h1 {
@@ -308,10 +309,6 @@
   align-items: flex-start;
   justify-content: space-between;
   gap: 2rem;
-  padding: clamp(2rem, 5vw, 4rem);
-  border: 1px solid var(--border);
-  border-radius: 1rem;
-  background: var(--card-bg);
 }
 
 .ctaContent > div {
@@ -372,3 +369,4 @@
     gap: 1.35rem;
   }
 }
+

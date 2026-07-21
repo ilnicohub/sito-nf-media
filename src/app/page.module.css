@@ -1066,6 +1066,40 @@
   line-height: 1.6;
 }
 
+.newsletterBlogLink {
+  margin-top: 1.25rem;
+  font-size: 1.05rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+@media (min-width: 900px) {
+  .newsletterBlogLink {
+    justify-content: flex-start;
+  }
+}
+
+.inlineBlogLink {
+  color: var(--accent-primary);
+  text-decoration: none;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  transition: opacity 0.2s ease;
+}
+
+.inlineBlogLink:hover {
+  opacity: 0.75;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
 .newsletterForm {
   display: flex;
   flex-direction: column;

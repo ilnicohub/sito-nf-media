@@ -559,6 +559,12 @@ export default function Home() {
               <p className={styles.newsletterDesc}>
                 Ricevi insight, strategie digitali e casi studio direttamente nella tua casella di posta. Nessun trucco, solo alto valore.
               </p>
+              <div className={styles.newsletterBlogLink}>
+                <span>Oppure esplora il nostro</span>
+                <Link href="/blog" className={styles.inlineBlogLink}>
+                  Blog e Insights →
+                </Link>
+              </div>
             </div>
             <form 
               className={styles.newsletterForm}
