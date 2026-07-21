@@ -142,7 +142,13 @@
 
 /* ── CTA Section ── */
 .cta {
-  padding: clamp(4rem, 8vw, 7rem) 0;
+  padding: clamp(4rem, 8vw, 7rem) 2rem;
+}
+
+@media (max-width: 640px) {
+  .cta {
+    padding: clamp(4rem, 8vw, 7rem) 1.5rem;
+  }
 }
 
 .ctaContent {
@@ -186,17 +192,6 @@
   .ctaContent {
     flex-direction: row;
     align-items: center;
-  }
-}
-
-.ctaBtn {
-  width: 100%;
-  text-align: center;
-}
-
-@media (min-width: 760px) {
-  .ctaBtn {
-    width: auto;
   }
 }
 
