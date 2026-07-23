@@ -22,7 +22,7 @@ export const posts: Post[] = [
   category: "Sviluppo Web",
   date: "23 Luglio 2026",
   readTime: "8 min",
-  image: "/blog/blog-pwa.webp",
+  image: "/blog/blog-pwa.jpg",
   intro: "Le Progressive Web App (PWA) rappresentano una valida alternativa alle applicazioni native per molte aziende. Offrono prestazioni elevate, costi di sviluppo inferiori e possono essere installate direttamente dal browser, senza passare dagli store. Scopri vantaggi, limiti e quando scegliere una PWA.",
   content: [
     {
