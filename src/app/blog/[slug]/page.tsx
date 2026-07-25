@@ -113,7 +113,7 @@ export default async function BlogPost({ params }: Props) {
             <div>
               <p className={styles.eyebrow}>Prossimo passo</p>
               <h2>Un progetto simile può partire anche dalla tua azienda</h2>
-              <p>Desideri rinnovare il tuo sito e ottenere risultati concreti in tempi rapidi? Possiamo valutare insieme la strategia più adatta al tuo settore.</p>
+              <p>Vuoi capire se questa strategia è adatta al tuo settore? Analizziamo insieme la tua situazione attuale e i risultati concreti che potresti ottenere.</p>
             </div>
             <Link href="/contatti" className="primaryBtn">
               Richiedi un confronto

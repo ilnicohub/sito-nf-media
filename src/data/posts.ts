@@ -16,7 +16,138 @@ export type Post = {
 };
 
 export const posts: Post[] = [
+  {
+  slug: "sito-web-non-converte-7-errori-cro",
+  title: "Sito Web che Non Converte? 7 Errori che Stanno Facendo Perdere Clienti alla Tua Azienda",
+  category: "Sviluppo Web",
+  date: "25 Luglio 2026",
+  readTime: "7 min",
+  image: "/blog/blog-conversione-sito-web.webp",
+  intro: "Avere traffico sul sito non basta se non si traduce in contatti. Analizziamo i 7 errori più frequenti che impediscono a un sito web di convertire i visitatori in clienti, e le soluzioni concrete per correggerli.",
+  content: [
     {
+      type: "p",
+      value: "Molte aziende arrivano da noi con lo stesso problema: il sito riceve visite, a volte anche in crescita mese su mese, ma il numero di richieste di contatto resta piatto. È una delle situazioni più fraintese nel marketing digitale, perché porta spesso a conclusioni sbagliate: 'serve più traffico', 'dobbiamo fare più pubblicità', 'il problema è il posizionamento su Google'."
+    },
+    {
+      type: "p",
+      value: "Nella maggior parte dei casi, invece, il problema non è a monte ma a valle: il sito riceve utenti in target, ma qualcosa nel percorso tra l'atterraggio sulla pagina e il click su 'invia richiesta' li fa desistere. In ottica di Conversion Rate Optimization (CRO), questo si chiama friction point: un punto di attrito che interrompe il percorso naturale dell'utente verso l'azione desiderata."
+    },
+    {
+      type: "p",
+      value: "Prima di aumentare il budget pubblicitario o investire ulteriormente in SEO, ha senso chiedersi: il sito che sto portando le persone a visitare è effettivamente costruito per convertire? Ecco i 7 errori che troviamo più spesso durante le nostre analisi tecniche, e cosa comportano realmente."
+    },
+    {
+      type: "h2",
+      value: "1. La proposta di valore non è verificabile nei primi secondi"
+    },
+    {
+      type: "p",
+      value: "Non è solo una questione di 'capire cosa fai in 5 secondi', come si legge spesso. Il problema tecnico è più specifico: se il primo schermo (above the fold) richiede all'utente di scorrere o interpretare per capire il beneficio concreto dell'offerta, il tasso di abbandono aumenta prima ancora che il contenuto sottostante venga letto. Gli strumenti di heatmap e scroll-tracking mostrano costantemente che una quota rilevante degli utenti non supera il primo schermo su siti con homepage poco chiare."
+    },
+    {
+      type: "p",
+      value: "La soluzione non è un semplice restyling grafico, ma una gerarchia di contenuto pensata: un titolo che dichiara il risultato per il cliente (non la tecnologia o il processo), un sottotitolo che rimuove un'obiezione comune, e un'azione primaria visibile senza necessità di scroll."
+    },
+    {
+      type: "h2",
+      value: "2. Call to action multiple e in competizione tra loro"
+    },
+    {
+      type: "p",
+      value: "Un errore comune, spesso motivato dalla buona intenzione di 'dare più opzioni all'utente', è inserire più CTA con pari peso visivo nella stessa pagina: 'Chiamaci', 'Scrivici', 'Scarica la brochure', 'Richiedi preventivo'. Quando le opzioni competono senza una gerarchia chiara, il carico cognitivo aumenta e la probabilità che l'utente non scelga nessuna azione cresce, non diminuisce."
+    },
+    {
+      type: "p",
+      value: "La correzione richiede una scelta editoriale, non solo grafica: definire un'unica azione primaria per pagina, coerente con l'intento di chi arriva su quella pagina specifica, e relegare le alternative a un ruolo secondario, visivamente meno dominante."
+    },
+    {
+      type: "h2",
+      value: "3. Performance tecniche sotto la soglia di tolleranza"
+    },
+    {
+      type: "p",
+      value: "Le metriche Core Web Vitals di Google — in particolare LCP (Largest Contentful Paint) e INP (Interaction to Next Paint) — non sono solo un fattore di ranking SEO, ma un indicatore diretto dell'esperienza utente. Un sito che supera i 2.5 secondi di caricamento del contenuto principale inizia a perdere una quota misurabile di utenti prima ancora che la pagina sia interamente renderizzata, soprattutto su connessioni mobile non ottimali."
+    },
+    {
+      type: "p",
+      value: "Nella nostra esperienza, gli interventi con il miglior rapporto tra sforzo e risultato riguardano quasi sempre la compressione e il formato delle immagini, l'eliminazione di script di terze parti non essenziali e la scelta di un'infrastruttura di hosting adeguata al traffico reale del sito."
+    },
+    {
+      type: "h2",
+      value: "4. Assenza di prova sociale contestuale"
+    },
+    {
+      type: "p",
+      value: "Recensioni e loghi cliente inseriti genericamente in una sezione 'Testimonianze' a fondo pagina hanno un impatto limitato, perché l'utente li incontra quando ha già preso (o quasi) la sua decisione. La prova sociale funziona meglio quando è contestuale: una recensione pertinente vicino alla descrizione del servizio a cui si riferisce, un dato numerico verificabile accanto alla promessa che sta rafforzando."
+    },
+    {
+      type: "p",
+      value: "Non si tratta di aggiungere più testimonianze, ma di posizionarle nei punti esatti in cui l'utente sta valutando se fidarsi o abbandonare."
+    },
+    {
+      type: "h2",
+      value: "5. Form di contatto con eccesso di attrito"
+    },
+    {
+      type: "p",
+      value: "Ogni campo obbligatorio aggiuntivo in un modulo di contatto introduce un costo psicologico per l'utente, soprattutto prima che si sia costruita fiducia sufficiente. Chiedere budget, dettagli di progetto o numero di dipendenti già nel primo contatto è uno degli errori più costosi perché facilmente evitabile: quelle informazioni si possono raccogliere in una call di qualificazione successiva, non nel form iniziale."
+    },
+    {
+      type: "p",
+      value: "Un form ridotto a nome, contatto e messaggio libero, con un microcopy che spiega cosa succede dopo l'invio (tempi di risposta, prossimo passo), riduce sensibilmente l'abbandono rispetto a un form lungo e non commentato."
+    },
+    {
+      type: "h2",
+      value: "6. Esperienza mobile trattata come secondaria"
+    },
+    {
+      type: "p",
+      value: "In Italia il traffico web da mobile ha superato quello da desktop, attestandosi poco sopra il 51% secondo i dati StatCounter più recenti. Non è più un canale 'aggiuntivo' da verificare a fine progetto, ma il contesto d'uso primario da cui partire in fase di progettazione."
+    },
+    {
+      type: "p",
+      value: "Un sito 'responsive' che si limita a ridimensionare gli elementi non è la stessa cosa di un sito progettato mobile-first: quest'ultimo ripensa gerarchia dei contenuti, dimensione delle aree cliccabili e lunghezza dei form specificamente per l'uso da smartphone, non come adattamento successivo della versione desktop."
+    },
+    {
+      type: "h2",
+      value: "7. Contenuti scollegati dalla strategia SEO"
+    },
+    {
+      type: "p",
+      value: "Un sito ottimizzato per la conversione ma privo di una struttura SEO coerente converte bene solo il traffico che già riceve, ma non riesce a intercettare nuova domanda organica. Il problema opposto — un sito ben posizionato ma con un'esperienza di conversione debole — porta invece traffico che poi si disperde. I due aspetti vanno progettati insieme, non aggiunti l'uno dopo l'altro."
+    },
+    {
+      type: "h2",
+      value: "Conversione: un processo di misurazione, non un intervento una tantum"
+    },
+    {
+      type: "p",
+      value: "Nessuno di questi errori si risolve con un intervento isolato e definitivo. Il CRO è per natura un processo iterativo: si formulano ipotesi, si misurano i comportamenti reali degli utenti (con strumenti di analytics e heatmap), si interviene sui punti di attrito identificati, e si verifica l'effetto della modifica prima di procedere oltre."
+    },
+    {
+      type: "h2",
+      value: "NF Media Lab: analisi e ottimizzazione del tuo sito web"
+    },
+    {
+      type: "p",
+      value: "In NF Media Lab affrontiamo la conversione come parte integrante dello sviluppo web, non come un servizio a parte da aggiungere a sito già pubblicato. Ogni progetto che realizziamo — sia esso un sito aziendale, un e-commerce o un portale clienti — viene costruito considerando fin dall'inizio performance tecniche, struttura SEO ed esperienza utente come elementi interdipendenti."
+    },
+    {
+      type: "p",
+      value: "Se il tuo sito esistente riceve traffico ma fatica a generare contatti qualificati, possiamo analizzare dove si sta perdendo la conversione lungo il percorso dell'utente e intervenire sui punti specifici che stanno realmente impattando i risultati."
+    },
+    {
+      type: "h3",
+      value: "Vuoi capire dove il tuo sito sta perdendo clienti?"
+    },
+    {
+      type: "p",
+      value: "Contattaci per un'analisi del tuo sito web: individueremo insieme i punti di attrito reali nel percorso di conversione e ti proporremo interventi mirati, prioritizzati in base all'impatto atteso sul tuo business."
+    }
+  ]
+ },
+  {
   slug: "pwa-vantaggi-rispetto-app-native",
   title: "PWA: vantaggi rispetto alle app native e quando convengono davvero",
   category: "Sviluppo Web",
