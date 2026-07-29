@@ -37,8 +37,9 @@ export default function PrenotaPage() {
     setIsSuccess(true);
   };
 
-  const getIcsDataUrl = () => {
-    if (!bookingData) return "#";
+  const handleAddToCalendar = (e: React.MouseEvent) => {
+    e.preventDefault();
+    if (!bookingData) return;
     
     const date = new Date(bookingData.date);
     const [hours, minutes] = bookingData.time.split(":");
@@ -69,7 +70,15 @@ export default function PrenotaPage() {
       "END:VCALENDAR"
     ].join("\\n");
 
-    return `data:text/calendar;charset=utf-8,${encodeURIComponent(icsContent)}`;
+    const blob = new Blob([icsContent], { type: 'text/calendar;charset=utf-8' });
+    const url = window.URL.createObjectURL(blob);
+    const link = document.createElement('a');
+    link.href = url;
+    link.setAttribute('download', 'videocall-nfmedialab.ics');
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+    window.URL.revokeObjectURL(url);
   };
 
   const fadeIn = {
@@ -141,9 +150,9 @@ export default function PrenotaPage() {
                     <Link href="/" className={styles.homeBtn}>
                       Torna alla Home
                     </Link>
-                    <a href={getIcsDataUrl()} download="videocall-nfmedialab.ics" className={styles.calendarBtnSuccess}>
+                    <button onClick={handleAddToCalendar} className={styles.calendarBtnSuccess}>
                       <Calendar size={18} /> Aggiungi al Calendario
-                    </a>
+                    </button>
                   </div>
                 </div>
               </motion.div>

@@ -205,6 +205,20 @@
   gap: 1.5rem;
 }
 
+@media (max-width: 640px) {
+  .successActions {
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
+  }
+
+  .homeBtn,
+  .calendarBtnSuccess {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
 .homeBtn {
   display: inline-flex;
   align-items: center;
