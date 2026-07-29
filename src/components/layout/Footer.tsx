@@ -1,6 +1,6 @@
 import Link from "next/link";
 import styles from "./Footer.module.css";
-import { MapPin, Mail, Phone } from "lucide-react";
+import { MapPin, Mail, Phone, Calendar } from "lucide-react";
 import BrandLogo from "./BrandLogo";
 
 function InstagramIcon() {
@@ -82,6 +82,10 @@ export default function Footer() {
             <div className={styles.contactItem}>
               <Phone size={16} className={styles.icon} />
               <a href="tel:+393427404958">+39 3427404958</a>
+            </div>
+            <div className={styles.contactItem}>
+              <Calendar size={16} className={styles.icon} />
+              <Link href="/prenota">Prenota una Call</Link>
             </div>
             <div className={styles.contactItem}>
               <InstagramIcon />

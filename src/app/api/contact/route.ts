@@ -1,5 +1,6 @@
 import { Resend } from "resend";
 import { NextRequest, NextResponse } from "next/server";
+import { checkRateLimit } from "@/lib/rate-limit";
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 
@@ -9,7 +10,23 @@ const FROM_EMAIL = "NF Media Lab <info@nfmedialab.it>";
 
 export async function POST(request: NextRequest) {
   try {
-    const { name, email, message } = await request.json();
+    const { name, email, message, botCheck } = await request.json();
+
+    // 1. Honeypot check (Se il campo invisibile è compilato, è un bot)
+    if (botCheck) {
+      // Fingiamo successo per confondere il bot senza inviare nulla
+      return NextResponse.json({ success: true, message: "Email inviata con successo", id: "fake_id" });
+    }
+
+    // 2. Rate Limiting per IP
+    const ip = request.headers.get("x-forwarded-for") || "unknown";
+    const rateLimitResult = checkRateLimit(ip, 5, 60000); // Max 5 messaggi al minuto
+    if (!rateLimitResult.success) {
+      return NextResponse.json(
+        { error: "Troppe richieste. Riprova più tardi." },
+        { status: 429 }
+      );
+    }
 
     // Validazione base
     if (!name || !email || !message) {

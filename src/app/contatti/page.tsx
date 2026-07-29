@@ -3,7 +3,8 @@
 import { motion } from "framer-motion";
 import { useState } from "react";
 import { useRouter } from "next/navigation";
-import { Send, Mail, MapPin, Check } from "lucide-react";
+import { Send, Mail, MapPin, Check, Calendar } from "lucide-react";
+import Link from "next/link";
 import styles from "./page.module.css";
 import { trackEvent } from "@/lib/analytics";
 
@@ -18,7 +19,7 @@ const PROJECT_CATEGORIES = [
 export default function Contatti() {
   const router = useRouter();
   
-  const [formData, setFormData] = useState({ name: "", email: "", phone: "", message: "" });
+  const [formData, setFormData] = useState({ name: "", email: "", phone: "", message: "", botCheck: "" });
   const [selectedCategory, setSelectedCategory] = useState(PROJECT_CATEGORIES[0]);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
@@ -59,6 +60,13 @@ export default function Contatti() {
     setLoading(true);
     setError("");
 
+    // Honeypot check on client
+    if (formData.botCheck) {
+      setLoading(false);
+      router.push("/contatti/grazie");
+      return;
+    }
+
     // Costruiamo il messaggio combinato contenente la categoria del progetto e il numero di telefono
     const combinedMessage = `
 [Categoria Progetto]: ${selectedCategory}
@@ -75,7 +83,8 @@ ${formData.message}
         body: JSON.stringify({
           name: formData.name,
           email: formData.email,
-          message: combinedMessage
+          message: combinedMessage,
+          botCheck: formData.botCheck
         }),
       });
 
@@ -85,7 +94,7 @@ ${formData.message}
         throw new Error(data.error || "Errore nell'invio del messaggio");
       }
 
-      setFormData({ name: "", email: "", phone: "", message: "" });
+      setFormData({ name: "", email: "", phone: "", message: "", botCheck: "" });
       trackEvent("generate_lead", {
         lead_source: "contact_form",
         service: selectedCategory,
@@ -180,6 +189,10 @@ ${formData.message}
               <div className={styles.formGlowOrb} />
               
               <form onSubmit={handleSubmit}>
+                <div style={{ display: 'none' }} aria-hidden="true">
+                  <label htmlFor="botCheck">Non compilare questo campo se sei umano</label>
+                  <input type="text" id="botCheck" value={formData.botCheck} onChange={handleChange} tabIndex={-1} autoComplete="off" />
+                </div>
                 <motion.div 
                   className={styles.formFields}
                   variants={formContainerVariants}
@@ -292,6 +305,23 @@ ${formData.message}
                   </motion.div>
                 </motion.div>
               </form>
+              
+              {/* Promo Prenotazione Call */}
+              <motion.div 
+                className={styles.bookingPromo} 
+                initial={{ opacity: 0, y: 15 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.4 }}
+              >
+                <div className={styles.bookingPromoContent}>
+                  <h3>Vuoi parlarne di persona?</h3>
+                  <p>In alternativa, puoi prenotare direttamente una video call gratuita di 30 minuti nei giorni e orari in cui siamo disponibili.</p>
+                  <Link href="/prenota" className={styles.bookingBtn}>
+                    Prenota una Call 
+                    <Calendar size={14} className={styles.bookingIcon} />
+                  </Link>
+                </div>
+              </motion.div>
             </motion.div>
 
           </div>

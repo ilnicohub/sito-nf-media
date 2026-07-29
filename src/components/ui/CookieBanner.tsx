@@ -1,66 +1,65 @@
 "use client";
 
-import { useSyncExternalStore } from "react";
+import { useState, useEffect } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import styles from "./CookieBanner.module.css";
-
-const CONSENT_KEY = "nf_cookie_consent";
-const CONSENT_EVENT = "nf-cookie-consent";
-
-function subscribe(callback: () => void) {
-  window.addEventListener("storage", callback);
-  window.addEventListener(CONSENT_EVENT, callback);
-
-  return () => {
-    window.removeEventListener("storage", callback);
-    window.removeEventListener(CONSENT_EVENT, callback);
-  };
-}
-
-function getSnapshot() {
-  return localStorage.getItem(CONSENT_KEY) === null;
-}
+import Link from "next/link";
 
 export default function CookieBanner() {
-  const visible = useSyncExternalStore(subscribe, getSnapshot, () => false);
+  const [isVisible, setIsVisible] = useState(false);
 
-  function acceptAll() {
+  useEffect(() => {
+    // Check if user has already consented
+    const consent = localStorage.getItem("nf_cookie_consent");
+    if (!consent) {
+      setIsVisible(true);
+    }
+  }, []);
+
+  const handleAccept = async () => {
+    localStorage.setItem("nf_cookie_consent", "true");
+    setIsVisible(false);
+
+    // Save consent to DB anonymously
     try {
-      localStorage.setItem(CONSENT_KEY, "accepted");
-      window.dispatchEvent(new Event(CONSENT_EVENT));
-    } catch {}
-  }
+      await fetch("/api/cookie-consent", {
+        method: "POST",
+      });
+    } catch (e) {
+      console.error("Error saving consent", e);
+    }
+  };
 
-  function rejectAll() {
-    try {
-      localStorage.setItem(CONSENT_KEY, "rejected");
-      window.dispatchEvent(new Event(CONSENT_EVENT));
-    } catch {}
-  }
-
-  if (!visible) return null;
+  const handleDecline = () => {
+    localStorage.setItem("nf_cookie_consent", "false");
+    setIsVisible(false);
+  };
 
   return (
-    <div
-      className={styles.banner}
-      role="dialog"
-      aria-modal="false"
-      aria-labelledby="cookie-banner-title"
-      aria-describedby="cookie-banner-description"
-    >
-      <div className={styles.content}>
-        <div className={styles.text}>
-          <strong id="cookie-banner-title">Usiamo cookie per migliorare la tua esperienza</strong>
-          <p id="cookie-banner-description">
-            Utilizziamo cookie tecnici e, previo consenso, cookie per analytics e
-            miglioramento dei servizi. Puoi accettare o rifiutare l&apos;uso di cookie
-            non essenziali.
-          </p>
-        </div>
-        <div className={styles.actions}>
-          <button className={styles.reject} onClick={rejectAll}>Rifiuta</button>
-          <button className={styles.accept} onClick={acceptAll}>Accetta tutti</button>
-        </div>
-      </div>
-    </div>
+    <AnimatePresence>
+      {isVisible && (
+        <motion.div
+          className={styles.cookieBanner}
+          initial={{ y: 100, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          exit={{ y: 100, opacity: 0 }}
+          transition={{ duration: 0.5, ease: "easeOut" }}
+        >
+          <div className={styles.cookieContent}>
+            <div className={styles.cookieText}>
+              <h4>Rispettiamo la tua privacy</h4>
+              <p>
+                Utilizziamo i cookie per offrirti la migliore esperienza sul nostro sito web, per l'analisi del traffico e per le nostre strategie di marketing. 
+                Puoi leggere i dettagli nella nostra <Link href="/privacy-policy">Privacy Policy</Link>.
+              </p>
+            </div>
+            <div className={styles.cookieActions}>
+              <button onClick={handleDecline} className={styles.declineBtn}>Rifiuta</button>
+              <button onClick={handleAccept} className={styles.acceptBtn}>Accetta Tutti</button>
+            </div>
+          </div>
+        </motion.div>
+      )}
+    </AnimatePresence>
   );
 }
