@@ -37,48 +37,12 @@ export default function PrenotaPage() {
     setIsSuccess(true);
   };
 
-  const handleAddToCalendar = (e: React.MouseEvent) => {
-    e.preventDefault();
-    if (!bookingData) return;
-    
-    const date = new Date(bookingData.date);
-    const [hours, minutes] = bookingData.time.split(":");
-    
-    const pad = (n: number) => n.toString().padStart(2, "0");
-    const yyyy = date.getFullYear();
-    const mm = pad(date.getMonth() + 1);
-    const dd = pad(date.getDate());
-    
-    const startHour = parseInt(hours, 10);
-    const startStr = `${yyyy}${mm}${dd}T${pad(startHour)}${minutes}00`;
-    
-    const endDate = new Date(date);
-    endDate.setHours(startHour, parseInt(minutes, 10) + 30);
-    const endStr = `${yyyy}${mm}${dd}T${pad(endDate.getHours())}${pad(endDate.getMinutes())}00`;
-    
-    const icsContent = [
-      "BEGIN:VCALENDAR",
-      "VERSION:2.0",
-      "PRODID:-//NF Media Lab//Booking//IT",
-      "BEGIN:VEVENT",
-      `UID:${new Date().getTime()}@nfmedialab.it`,
-      `DTSTART;TZID=Europe/Rome:${startStr}`,
-      `DTEND;TZID=Europe/Rome:${endStr}`,
-      "SUMMARY:Video Call con NF Media Lab",
-      "DESCRIPTION:Video Call conoscitiva con il team di NF Media Lab.\\n\\nA breve riceverai il link di invito via email.",
-      "END:VEVENT",
-      "END:VCALENDAR"
-    ].join("\\n");
-
-    const blob = new Blob([icsContent], { type: 'text/calendar;charset=utf-8' });
-    const url = window.URL.createObjectURL(blob);
-    const link = document.createElement('a');
-    link.href = url;
-    link.setAttribute('download', 'videocall-nfmedialab.ics');
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-    window.URL.revokeObjectURL(url);
+  const getCalendarLink = () => {
+    if (!bookingData) return "#";
+    // Encode components to handle spaces and special chars securely
+    const encodedDate = encodeURIComponent(bookingData.date);
+    const encodedTime = encodeURIComponent(bookingData.time);
+    return `/api/calendar?date=${encodedDate}&time=${encodedTime}`;
   };
 
   const fadeIn = {
@@ -150,9 +114,9 @@ export default function PrenotaPage() {
                     <Link href="/" className={styles.homeBtn}>
                       Torna alla Home
                     </Link>
-                    <button onClick={handleAddToCalendar} className={styles.calendarBtnSuccess}>
+                    <a href={getCalendarLink()} download className={styles.calendarBtnSuccess}>
                       <Calendar size={18} /> Aggiungi al Calendario
-                    </button>
+                    </a>
                   </div>
                 </div>
               </motion.div>
