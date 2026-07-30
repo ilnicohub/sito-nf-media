@@ -1,12 +1,40 @@
 "use client";
 
+import { useState } from "react";
 import { motion } from "framer-motion";
 import styles from "./page.module.css";
 import Link from "next/link";
 import Image from "next/image";
 import { posts } from "@/data/posts";
+import { ArrowLeft, ArrowRight } from "lucide-react";
 
 export default function BlogIndex() {
+  const [currentPage, setCurrentPage] = useState(1);
+  const postsPerPage = 6;
+  
+  const totalPages = Math.ceil(posts.length / postsPerPage);
+  
+  const indexOfLastPost = currentPage * postsPerPage;
+  const indexOfFirstPost = indexOfLastPost - postsPerPage;
+  const currentPosts = posts.slice(indexOfFirstPost, indexOfLastPost);
+
+  const handleNextPage = () => {
+    if (currentPage < totalPages) {
+      setCurrentPage((prev) => prev + 1);
+      setTimeout(() => {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      }, 100);
+    }
+  };
+
+  const handlePrevPage = () => {
+    if (currentPage > 1) {
+      setCurrentPage((prev) => prev - 1);
+      setTimeout(() => {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      }, 100);
+    }
+  };
   return (
     <div className={styles.main}>
       <section className={styles.header}>
@@ -30,7 +58,7 @@ export default function BlogIndex() {
 
       <section className={styles.container}>
         <div className={styles.grid}>
-          {posts.map((post, idx) => (
+          {currentPosts.map((post, idx) => (
             <motion.article
               key={post.slug}
               className={styles.card}
@@ -68,6 +96,28 @@ export default function BlogIndex() {
             </motion.article>
           ))}
         </div>
+
+        {totalPages > 1 && (
+          <div className={styles.pagination}>
+            <button 
+              className={styles.pageButton} 
+              onClick={handlePrevPage} 
+              disabled={currentPage === 1}
+            >
+              <ArrowLeft size={18} /> Precedente
+            </button>
+            <span className={styles.pageInfo}>
+              Pagina {currentPage} di {totalPages}
+            </span>
+            <button 
+              className={styles.pageButton} 
+              onClick={handleNextPage} 
+              disabled={currentPage === totalPages}
+            >
+              Successiva <ArrowRight size={18} />
+            </button>
+          </div>
+        )}
       </section>
     </div>
   );
