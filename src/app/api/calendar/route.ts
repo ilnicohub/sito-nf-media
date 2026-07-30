@@ -10,20 +10,19 @@ export async function GET(request: NextRequest) {
   }
 
   try {
-    const date = new Date(dateStr);
+    // dateStr is formatted as YYYY-MM-DD from the client
+    const [yyyy, mm, dd] = dateStr.split("-");
     const [hours, minutes] = timeStr.split(":");
     
-    const pad = (n: number) => n.toString().padStart(2, "0");
-    const yyyy = date.getFullYear();
-    const mm = pad(date.getMonth() + 1);
-    const dd = pad(date.getDate());
-    
     const startHour = parseInt(hours, 10);
-    const startStr = `${yyyy}${mm}${dd}T${pad(startHour)}${minutes}00`;
+    const startMinute = parseInt(minutes, 10);
+    const startStr = `${yyyy}${mm}${dd}T${hours.padStart(2, "0")}${minutes.padStart(2, "0")}00`;
     
-    const endDate = new Date(date);
-    endDate.setHours(startHour, parseInt(minutes, 10) + 30);
-    const endStr = `${yyyy}${mm}${dd}T${pad(endDate.getHours())}${pad(endDate.getMinutes())}00`;
+    // Calculate end time (30 mins later)
+    const endDate = new Date(2000, 0, 1, startHour, startMinute + 30);
+    const endHour = endDate.getHours().toString().padStart(2, "0");
+    const endMin = endDate.getMinutes().toString().padStart(2, "0");
+    const endStr = `${yyyy}${mm}${dd}T${endHour}${endMin}00`;
     
     const icsContent = [
       "BEGIN:VCALENDAR",

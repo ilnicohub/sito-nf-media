@@ -35,14 +35,18 @@ export default function PrenotaPage() {
   const handleSuccess = (data: any) => {
     setBookingData(data);
     setIsSuccess(true);
+    window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
   const getCalendarLink = () => {
     if (!bookingData) return "#";
-    // Encode components to handle spaces and special chars securely
-    const encodedDate = encodeURIComponent(bookingData.date);
+    
+    const dateObj = new Date(bookingData.date);
+    const pad = (n: number) => n.toString().padStart(2, "0");
+    const formattedDate = `${dateObj.getFullYear()}-${pad(dateObj.getMonth() + 1)}-${pad(dateObj.getDate())}`;
+    
     const encodedTime = encodeURIComponent(bookingData.time);
-    return `/api/calendar?date=${encodedDate}&time=${encodedTime}`;
+    return `/api/calendar?date=${formattedDate}&time=${encodedTime}`;
   };
 
   const fadeIn = {
