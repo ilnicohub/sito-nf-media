@@ -35,7 +35,10 @@ export default function PrenotaPage() {
   const handleSuccess = (data: any) => {
     setBookingData(data);
     setIsSuccess(true);
-    window.scrollTo({ top: 0, behavior: "smooth" });
+    // Timeout needed for iOS Safari to wait for DOM update before scrolling
+    setTimeout(() => {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }, 100);
   };
 
   const getCalendarLink = () => {
