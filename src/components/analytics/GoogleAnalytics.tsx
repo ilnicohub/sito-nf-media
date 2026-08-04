@@ -34,7 +34,24 @@ export default function GoogleAnalytics({
 
   useEffect(() => {
     const syncConsent = () => {
-      setHasConsent(localStorage.getItem(CONSENT_KEY) === "accepted");
+      const consentStr = localStorage.getItem(CONSENT_KEY);
+      if (consentStr === "all" || consentStr === "true") {
+        setHasConsent(true);
+        return;
+      }
+      
+      const prefsStr = localStorage.getItem("nf_cookie_prefs");
+      if (prefsStr) {
+        try {
+          const prefs = JSON.parse(prefsStr);
+          if (prefs.analytics) {
+            setHasConsent(true);
+            return;
+          }
+        } catch (e) {}
+      }
+      
+      setHasConsent(false);
     };
 
     syncConsent();

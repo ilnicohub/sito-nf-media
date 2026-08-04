@@ -560,8 +560,8 @@ export default function Home() {
                 Ricevi insight, strategie digitali e casi studio direttamente nella tua casella di posta. Nessun trucco, solo alto valore.
               </p>
               <div className={styles.newsletterBlogLink}>
-                <span>Oppure esplora il nostro</span>
-                <Link href="/blog" className={styles.inlineBlogLink}>
+                <span>Oppure esplora i nostri articoli:</span>
+                <Link href="/blog" className="secondaryBtn">
                   Blog e Insights →
                 </Link>
               </div>

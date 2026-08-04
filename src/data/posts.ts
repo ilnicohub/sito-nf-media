@@ -17,6 +17,129 @@ export type Post = {
 
 export const posts: Post[] = [
   {
+  slug: "perche-la-tua-azienda-non-compare-su-google",
+  title: "Perché la Tua Azienda non Compare su Google? Le 7 Cause che Ti Stanno Facendo Perdere Clienti",
+  category: "SEO",
+  date: "4 Agosto 2026",
+  readTime: "8 min",
+  image: "/blog/perche-non-compaio-su-google.webp",
+  intro: "Molti imprenditori si pongono la stessa domanda: \"Perché la mia azienda non compare su Google?\" La risposta, nella maggior parte dei casi, non dipende da un solo fattore. Un sito lento, l'assenza di una strategia SEO, una scheda Google Business incompleta, contenuti poco utili o il mancato adattamento ai nuovi sistemi di intelligenza artificiale possono ridurre drasticamente la visibilità online. In questa guida analizziamo le principali cause che impediscono alla tua azienda di essere trovata dai potenziali clienti e come risolverle.",
+  content: [
+    {
+      type: "p",
+      value: "Oggi essere presenti online non significa semplicemente avere un sito web. Ogni giorno migliaia di persone cercano su Google prodotti e servizi nella propria zona, ma solo poche aziende riescono a comparire tra i primi risultati. Se il tuo sito riceve poche visite o non genera richieste di contatto, probabilmente esistono alcuni problemi che stanno limitando la tua visibilità."
+    },
+    {
+      type: "p",
+      value: "Google valuta centinaia di fattori prima di decidere quali aziende mostrare nei risultati di ricerca. Negli ultimi anni, inoltre, l'arrivo dell'intelligenza artificiale ha cambiato ulteriormente il modo in cui le informazioni vengono selezionate e presentate agli utenti."
+    },
+    {
+      type: "h2",
+      value: "1. Il tuo sito è troppo lento"
+    },
+    {
+      type: "p",
+      value: "La velocità di caricamento è uno degli aspetti più importanti sia per gli utenti sia per Google. Un sito che impiega diversi secondi ad aprirsi aumenta il tasso di abbandono e offre un'esperienza negativa ai visitatori."
+    },
+    {
+      type: "p",
+      value: "Le cause possono essere molteplici: immagini troppo pesanti, hosting di bassa qualità, codice non ottimizzato, plugin inutili o tecnologie obsolete. Un sito moderno deve caricarsi rapidamente su desktop e soprattutto su smartphone."
+    },
+    {
+      type: "h2",
+      value: "2. La SEO è assente o è stata fatta male"
+    },
+    {
+      type: "p",
+      value: "Molte aziende investono nella realizzazione del sito web ma trascurano completamente la SEO (Search Engine Optimization). Senza una struttura tecnica corretta, pagine ottimizzate e contenuti studiati sulle reali ricerche degli utenti, Google difficilmente comprenderà di cosa si occupa la tua attività."
+    },
+    {
+      type: "p",
+      value: "Una buona strategia SEO comprende l'analisi delle keyword, l'ottimizzazione dei titoli e delle meta description, URL ben strutturati, heading corretti, collegamenti interni, performance elevate e contenuti realmente utili per gli utenti."
+    },
+    {
+      type: "h2",
+      value: "3. Hai trascurato Google Business Profile"
+    },
+    {
+      type: "p",
+      value: "Per tutte le aziende che operano a livello locale, la scheda Google Business Profile rappresenta uno degli strumenti più importanti. È spesso il primo elemento che un potenziale cliente vede quando cerca un'attività nella propria zona."
+    },
+    {
+      type: "p",
+      value: "Una scheda incompleta, non aggiornata o priva di foto, servizi, descrizione e informazioni corrette riduce notevolmente le possibilità di comparire nel cosiddetto 'Local Pack', la sezione con le mappe e le attività locali che Google mostra sopra ai risultati tradizionali."
+    },
+    {
+      type: "h2",
+      value: "4. Il tuo sito non pubblica contenuti utili"
+    },
+    {
+      type: "p",
+      value: "Google premia i siti che dimostrano competenza e aiutano realmente gli utenti. Se il tuo sito contiene solamente poche pagine istituzionali e non viene aggiornato nel tempo, sarà molto difficile competere con aziende che pubblicano regolarmente guide, articoli e approfondimenti."
+    },
+    {
+      type: "p",
+      value: "Un blog aziendale permette di intercettare nuove ricerche, rispondere alle domande dei potenziali clienti e aumentare progressivamente l'autorevolezza del dominio."
+    },
+    {
+      type: "h2",
+      value: "5. Non sei ottimizzato per AI Overview"
+    },
+    {
+      type: "p",
+      value: "Le nuove AI Overview di Google stanno cambiando il modo in cui gli utenti trovano le informazioni. Sempre più spesso, invece di visualizzare immediatamente i classici risultati, Google genera una risposta basata sui contenuti considerati più affidabili."
+    },
+    {
+      type: "p",
+      value: "Per aumentare le probabilità di essere citati è necessario creare contenuti chiari, ben strutturati, aggiornati, autorevoli e capaci di rispondere in modo diretto alle domande degli utenti. La qualità delle informazioni è oggi più importante che mai."
+    },
+    {
+      type: "h2",
+      value: "6. Stai ignorando la GEO (Generative Engine Optimization)"
+    },
+    {
+      type: "p",
+      value: "Oltre alla SEO tradizionale, sta assumendo sempre maggiore importanza la GEO (Generative Engine Optimization), cioè l'ottimizzazione dei contenuti per i motori di ricerca basati sull'intelligenza artificiale come ChatGPT, Gemini, Copilot e Perplexity."
+    },
+    {
+      type: "p",
+      value: "Le aziende che producono contenuti approfonditi, ben organizzati e supportati da informazioni affidabili hanno maggiori possibilità di essere utilizzate come fonte dalle piattaforme AI. Prepararsi oggi significa costruire un vantaggio competitivo per i prossimi anni."
+    },
+    {
+      type: "h2",
+      value: "7. Hai poche recensioni o una reputazione debole"
+    },
+    {
+      type: "p",
+      value: "Le recensioni rappresentano un importante segnale di fiducia sia per Google sia per i potenziali clienti. Un'attività con molte recensioni positive, aggiornate e autentiche trasmette maggiore autorevolezza rispetto a un'azienda con poche valutazioni o recensioni datate."
+    },
+    {
+      type: "p",
+      value: "Incoraggiare i clienti soddisfatti a lasciare una recensione, rispondere ai feedback e mantenere una reputazione online positiva contribuisce a migliorare la visibilità locale e ad aumentare il tasso di conversione."
+    },
+    {
+      type: "h2",
+      value: "La visibilità online è il risultato di una strategia"
+    },
+    {
+      type: "p",
+      value: "Nella maggior parte dei casi non esiste un singolo problema che impedisce ad un'azienda di comparire su Google. È la combinazione di fattori tecnici, strategici e di contenuto a determinare il posizionamento nei risultati di ricerca."
+    },
+    {
+      type: "p",
+      value: "Velocità del sito, SEO tecnica, Google Business Profile, produzione di contenuti, ottimizzazione per AI Overview, strategie GEO e gestione della reputazione lavorano insieme per aumentare la visibilità e generare nuove opportunità di business."
+    },
+    {
+      type: "h2",
+      value: "Richiedi un audit gratuito"
+    },
+    {
+      type: "p",
+      value: "Vuoi capire perché il tuo sito non sta ottenendo i risultati che dovrebbe? <strong>In NF Media Lab offriamo un audit gratuito del tuo sito web e della tua presenza online.</strong> Analizzeremo velocità, SEO, Google Business Profile, contenuti, performance e opportunità di miglioramento, fornendoti un report con indicazioni concrete per aumentare la tua visibilità su Google e trasformare più visitatori in clienti."
+    }
+  ]
+  },
+  {
   slug: "quanto-costa-realizzare-un-sito-web-professionale",
   title: "Quanto Costa Realizzare un Sito Web Professionale nel 2026? Guida Completa ai Prezzi",
   category: "Sviluppo Web",
