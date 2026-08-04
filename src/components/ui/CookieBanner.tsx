@@ -14,6 +14,7 @@ export default function CookieBanner() {
   useEffect(() => {
     // Check if user has already consented
     const consent = localStorage.getItem("nf_cookie_consent");
+    const consentDate = localStorage.getItem("nf_cookie_date");
     const prefsStr = localStorage.getItem("nf_cookie_prefs");
     
     if (prefsStr) {
@@ -22,7 +23,10 @@ export default function CookieBanner() {
       } catch(e) {}
     }
     
-    if (!consent) {
+    const SIX_MONTHS_MS = 180 * 24 * 60 * 60 * 1000;
+    const isExpired = consentDate ? (Date.now() - parseInt(consentDate, 10) > SIX_MONTHS_MS) : false;
+    
+    if (!consent || isExpired) {
       setIsVisible(true);
     }
   }, []);
@@ -43,6 +47,7 @@ export default function CookieBanner() {
     const prefs = { analytics: true, marketing: true };
     localStorage.setItem("nf_cookie_consent", "all");
     localStorage.setItem("nf_cookie_prefs", JSON.stringify(prefs));
+    localStorage.setItem("nf_cookie_date", Date.now().toString());
     setIsVisible(false);
     window.dispatchEvent(new Event("nf-cookie-consent"));
     await saveConsentToServer("all", prefs);
@@ -52,6 +57,7 @@ export default function CookieBanner() {
     const prefs = { analytics: false, marketing: false };
     localStorage.setItem("nf_cookie_consent", "none");
     localStorage.setItem("nf_cookie_prefs", JSON.stringify(prefs));
+    localStorage.setItem("nf_cookie_date", Date.now().toString());
     setIsVisible(false);
     window.dispatchEvent(new Event("nf-cookie-consent"));
     await saveConsentToServer("none", prefs);
@@ -60,6 +66,7 @@ export default function CookieBanner() {
   const handleSavePreferences = async () => {
     localStorage.setItem("nf_cookie_consent", "custom");
     localStorage.setItem("nf_cookie_prefs", JSON.stringify(preferences));
+    localStorage.setItem("nf_cookie_date", Date.now().toString());
     setIsVisible(false);
     window.dispatchEvent(new Event("nf-cookie-consent"));
     await saveConsentToServer("custom", preferences);

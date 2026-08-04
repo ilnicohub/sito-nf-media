@@ -60,9 +60,9 @@ export default function CookiePolicy() {
             Puoi gestire i cookie in diversi modi:
           </p>
           <ul>
-            <li><strong>Tramite il banner della privacy:</strong> seleziona le preferenze al primo accesso o ripristinale in qualsiasi momento</li>
-            <li><strong>Tramite le impostazioni del browser:</strong> la maggior parte dei browser consente di bloccare i cookie</li>
-            <li><strong>Opt-out Google Analytics:</strong> scarica l'estensione browser Google Analytics Opt-Out</li>
+            <li><strong>Tramite l'icona del cookie in basso a sinistra:</strong> cliccando sul bottone flottante puoi riaprire il pannello delle preferenze in qualsiasi momento.</li>
+            <li><strong>Tramite le impostazioni del browser:</strong> la maggior parte dei browser consente di bloccare i cookie alla radice.</li>
+            <li><strong>Opt-out Google Analytics:</strong> scarica l'estensione browser ufficiale "Google Analytics Opt-Out".</li>
           </ul>
           <p>
             <strong>Nota:</strong> disabilitare i cookie tecnici potrebbe compromettere il funzionamento del sito.
@@ -93,13 +93,14 @@ export default function CookiePolicy() {
 
           <h2>8. Consenso ai Cookie</h2>
           <p>
-            Al primo accesso al sito, ti presenteremo un banner che ti chiede di acconsentire ai cookie non tecnici. Puoi:
+            Al primo accesso al sito, ti presenteremo un banner che ti chiede di acconsentire ai cookie non tecnici. Puoi decidere di accettare tutto, rifiutare tutto (lasciando attivi solo i necessari) o personalizzare nel dettaglio (Analytics, Marketing).
           </p>
-          <ul>
-            <li>Accettare tutti i cookie</li>
-            <li>Personalizzare le tue preferenze</li>
-            <li>Rifiutare cookie non tecnici</li>
-          </ul>
+          <p>
+            Il tuo consenso viene registrato in modo sicuro e anonimizzato (tramite hashing del tuo IP) sul nostro server per fini legali (Proof of Consent), per dimostrare in caso di controlli che abbiamo raccolto regolarmente la tua scelta.
+          </p>
+          <p>
+            Il banner non ti verrà riproposto ogni volta che cambi pagina. Memorizziamo la tua scelta per <strong>6 mesi</strong>. Allo scadere dei 6 mesi, ti verrà richiesto automaticamente di rinnovare o modificare le tue preferenze. Puoi comunque cambiarle prima dei 6 mesi tramite il bottone a forma di cookie.
+          </p>
 
           <h2>9. Modifiche a Questa Cookie Policy</h2>
           <p>
