@@ -93,7 +93,7 @@ export default function Home() {
     }
   ];
 
-  const logos = ["FC CALVI NOALE", "SALONE TAMARA&VANESSA S.N.C.", "CABO STAMPI S.R.L.", "ITALSAMPLE S.R.L.","SYMBLUX S.R.L." ,"EUROLINE S.R.L.", "ALUPRO S.P.A."];
+  const logos = ["FC CALVI NOALE", "SALONE TAMARA&VANESSA S.N.C.", "CABO STAMPI S.R.L.", "ITALSAMPLE S.R.L.","SYMBLUX S.R.L." ,"EUROLINE S.R.L."];
   // Duplicate for seamless infinite scroll
   const marqueeLogos = [...logos, ...logos];
 
