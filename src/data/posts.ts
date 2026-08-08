@@ -17,6 +17,73 @@ export type Post = {
 
 export const posts: Post[] = [
   {
+    slug: "automazione-marketing-agosto-ferie-aziendali",
+    title: "La tua azienda chiude ad Agosto? Non fare questo errore (Ti costa caro)",
+    category: "Marketing Automation",
+    date: "8 Agosto 2026",
+    readTime: "3 min",
+    image: "/blog/automazione-marketing-agosto.webp",
+    intro: "Agosto in Italia: serrande abbassate, cartelli con scritto 'Chiuso per ferie' e il business che si congela fino a settembre. Per decenni ha funzionato così, ma nel mercato digitale di oggi, spegnere i motori è l'errore più costoso che tu possa commettere.",
+    content: [
+      {
+        type: "p",
+        value: "Mentre tu (giustamente) ti godi il meritato riposo, i tuoi potenziali clienti non smettono di scrollare i social sotto l'ombrellone. Hanno più tempo libero del solito."
+      },
+      {
+        type: "p",
+        value: "Se sparisci dai radar per 30 giorni, stai letteralmente regalando fatturato ai tuoi concorrenti."
+      },
+      {
+        type: "h2",
+        value: "Il tuo miglior dipendente non va in ferie"
+      },
+      {
+        type: "p",
+        value: "La buona notizia? Non devi restare in ufficio. Ecco i 3 step per avere un sistema digitale che lavora per te mentre sei in spiaggia:"
+      },
+      {
+        type: "h3",
+        value: "1. Piano Social Automatizzato"
+      },
+      {
+        type: "p",
+        value: "Invece del silenzio stampa, programma a luglio i tuoi post per tutto agosto. L'azienda sembrerà viva, attiva e sul pezzo."
+      },
+      {
+        type: "h3",
+        value: "2. Campagne Ads Sempreverdi"
+      },
+      {
+        type: "p",
+        value: "Ad agosto la concorrenza pubblicitaria crolla. I tuoi competitor spengono le inserzioni, il che significa che tu puoi acquisire contatti a costi molto più bassi."
+      },
+      {
+        type: "h3",
+        value: "3. Risposte 100% Automatiche"
+      },
+      {
+        type: "p",
+        value: "Un potenziale cliente ti scrive a Ferragosto? Nessun problema. Un risponditore automatico raccoglie la sua richiesta e una sequenza email inizia a 'scaldarlo' in automatico."
+      },
+      {
+        type: "h2",
+        value: "Trova i clienti pronti a settembre"
+      },
+      {
+        type: "p",
+        value: "Chi riapre a settembre partendo da zero, passerà settimane a cercare di riavviare un motore freddo. Chi ha lasciato le automazioni accese ad agosto, a settembre troverà una lista di clienti già pronti per comprare."
+      },
+      {
+        type: "p",
+        value: "Il digitale è l'unico dipendente che lavora 24 ore su 24 e non chiede mai le ferie. Usalo."
+      },
+      {
+        type: "p",
+        value: "Non regalare agosto ai tuoi competitor. In NF Media Lab costruiamo ecosistemi digitali automatizzati che generano contatti mentre tu riposi. Contattaci ora per impostare il tuo sistema prima di preparare le valigie!"
+      }
+    ]
+  },
+  {
   slug: "perche-la-tua-azienda-non-compare-su-google",
   title: "Perché la Tua Azienda non Compare su Google? Le 7 Cause che Ti Stanno Facendo Perdere Clienti",
   category: "SEO",
