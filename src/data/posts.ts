@@ -17,6 +17,165 @@ export type Post = {
 
 export const posts: Post[] = [
   {
+    slug: "come-comparire-azienda-chatgpt-google-ai-2026",
+    title: "Come Far Comparire la Tua Azienda su ChatGPT e Google AI nel 2026",
+    category: "SEO & GEO",
+    date: "10 Agosto 2026",
+    readTime: "5 min",
+    image: "/blog/comparire-azienda-chatgpt-google-ai.webp",
+    intro: "Il modo in cui le persone cercano aziende, prodotti e servizi online sta cambiando. Sempre più utenti utilizzano ChatGPT e gli strumenti di intelligenza artificiale integrati nei motori di ricerca per trovare informazioni, confrontare soluzioni e scegliere a chi affidarsi.",
+    content: [
+      {
+        type: "p",
+        value: "Fino a pochi anni fa essere visibili online significava soprattutto comparire tra i risultati di Google. Oggi un potenziale cliente può invece chiedere direttamente a un'intelligenza artificiale quale azienda scegliere, quali professionisti operano nella propria zona o quale soluzione sia più adatta alle proprie esigenze."
+      },
+      {
+        type: "p",
+        value: "La domanda da porsi, quindi, non è più soltanto \"la mia azienda compare su Google?\", ma anche: \"la mia azienda è sufficientemente riconoscibile online da essere trovata e compresa dai nuovi sistemi di ricerca basati sull'AI?\"."
+      },
+      {
+        type: "h2",
+        value: "Come fa ChatGPT a conoscere la tua azienda?"
+      },
+      {
+        type: "p",
+        value: "Non esiste un pulsante che permette di registrare un'azienda su ChatGPT e comparire automaticamente nelle sue risposte. La visibilità di un brand dipende da un insieme di informazioni e segnali presenti online."
+      },
+      {
+        type: "p",
+        value: "Il sito web, i contenuti pubblicati, le citazioni su altre fonti, i backlink, le recensioni, la presenza locale e la chiarezza delle informazioni aziendali contribuiscono a costruire l'identità digitale di un'impresa."
+      },
+      {
+        type: "p",
+        value: "Se online non è chiaro chi sei, cosa fai, quali servizi offri e in quale settore operi, diventa più difficile essere riconosciuto non soltanto dai sistemi AI, ma anche dai motori di ricerca tradizionali."
+      },
+      {
+        type: "h2",
+        value: "SEO e GEO: cosa cambia con l'intelligenza artificiale?"
+      },
+      {
+        type: "p",
+        value: "Con la crescita della ricerca basata sull'intelligenza artificiale si parla sempre più spesso di GEO, Generative Engine Optimization: un insieme di strategie pensate per rendere brand e contenuti più facilmente comprensibili e rilevanti anche all'interno degli ecosistemi di ricerca generativa."
+      },
+      {
+        type: "p",
+        value: "Questo non significa che la SEO tradizionale sia diventata inutile. Un sito tecnicamente valido, contenuti realmente utili, una struttura chiara e una buona autorevolezza online continuano a rappresentare elementi fondamentali."
+      },
+      {
+        type: "p",
+        value: "La vera evoluzione consiste nel costruire una presenza digitale efficace sia per i motori di ricerca sia per i nuovi strumenti AI."
+      },
+      {
+        type: "h2",
+        value: "5 cose da fare per aumentare la visibilità della tua azienda nell'AI"
+      },
+      {
+        type: "h3",
+        value: "1. Rendi chiaro chi sei e cosa fai"
+      },
+      {
+        type: "p",
+        value: "Il tuo sito dovrebbe spiegare immediatamente quali servizi offre l'azienda, a chi si rivolge e quali problemi risolve. Informazioni generiche o poco approfondite rendono più difficile associare il brand alle ricerche realmente interessanti per il tuo business."
+      },
+      {
+        type: "h3",
+        value: "2. Pubblica contenuti che rispondono a domande reali"
+      },
+      {
+        type: "p",
+        value: "Guide, approfondimenti, confronti e casi studio permettono di rispondere alle domande che i potenziali clienti fanno ogni giorno su Google e agli assistenti AI."
+      },
+      {
+        type: "p",
+        value: "Un blog aziendale ben costruito può quindi diventare uno strumento importante per aumentare progressivamente autorevolezza e visibilità."
+      },
+      {
+        type: "h3",
+        value: "3. Costruisci autorevolezza fuori dal tuo sito"
+      },
+      {
+        type: "p",
+        value: "Non conta solamente ciò che dici della tua azienda sul tuo sito. Citazioni su portali affidabili, backlink di qualità, partner, directory di settore e altre fonti esterne possono contribuire a rafforzare la presenza e la credibilità del brand online."
+      },
+      {
+        type: "h3",
+        value: "4. Cura Google Business Profile e le recensioni"
+      },
+      {
+        type: "p",
+        value: "Per le attività che lavorano a livello locale è fondamentale mantenere aggiornate le informazioni su Google Business Profile e costruire nel tempo una reputazione basata su recensioni autentiche."
+      },
+      {
+        type: "p",
+        value: "Nome, servizi, contatti, sito web e informazioni aziendali dovrebbero inoltre essere coerenti sulle diverse piattaforme."
+      },
+      {
+        type: "h3",
+        value: "5. Assicurati che il sito sia tecnicamente ottimizzato"
+      },
+      {
+        type: "p",
+        value: "Velocità, utilizzo da smartphone, indicizzazione, sitemap, struttura delle pagine, heading, collegamenti interni e dati strutturati aiutano i motori di ricerca a comprendere correttamente i contenuti del sito."
+      },
+      {
+        type: "p",
+        value: "Una buona base tecnica rimane essenziale anche nell'era dell'intelligenza artificiale."
+      },
+      {
+        type: "h2",
+        value: "La tua azienda compare già su ChatGPT?"
+      },
+      {
+        type: "p",
+        value: "Puoi fare un semplice test. Apri ChatGPT e prova a cercare il servizio che offri senza utilizzare il nome della tua azienda."
+      },
+      {
+        type: "p",
+        value: "Ad esempio: \"Qual è il miglior ristorante di pesce a Padova?\", \"Chi ripara caldaie a domicilio nella mia zona?\" oppure \"Quale studio commercialista consigli per una piccola impresa?\"."
+      },
+      {
+        type: "p",
+        value: "La tua azienda viene menzionata? Compaiono invece alcuni tuoi concorrenti? E quando il tuo brand viene citato, le informazioni riportate sono corrette?"
+      },
+      {
+        type: "p",
+        value: "Sono domande semplici che possono offrire una prima indicazione di quanto la tua azienda sia riconoscibile nel nuovo ecosistema della ricerca online."
+      },
+      {
+        type: "h2",
+        value: "È possibile garantire di comparire su ChatGPT?"
+      },
+      {
+        type: "p",
+        value: "No. Nessuna agenzia può garantire che un'azienda venga sempre citata o consigliata da ChatGPT, Google AI o altri sistemi generativi. Diffida quindi da chi promette posizionamenti garantiti nelle risposte dell'intelligenza artificiale."
+      },
+      {
+        type: "p",
+        value: "Quello su cui è possibile lavorare concretamente è la qualità della presenza digitale dell'azienda: sito web, SEO, contenuti, autorevolezza, reputazione e presenza su fonti esterne."
+      },
+      {
+        type: "p",
+        value: "L'obiettivo è rendere il brand più facile da trovare, comprendere e riconoscere."
+      },
+      {
+        type: "h2",
+        value: "La ricerca online sta cambiando: la tua azienda è pronta?"
+      },
+      {
+        type: "p",
+        value: "ChatGPT e la ricerca basata sull'intelligenza artificiale non rendono inutili sito web e SEO. Al contrario, aumentano l'importanza di avere una presenza digitale solida, autorevole e ben strutturata."
+      },
+{
+        type: "p",
+        value: "Capire come viene interpretata oggi la tua azienda online è il primo passo per individuare eventuali criticità e costruire una strategia capace di aumentare la visibilità sia sui motori di ricerca tradizionali sia nei nuovi ecosistemi basati sull'intelligenza artificiale."
+      },
+      {
+        type: "p",
+        value: "In NF Media Lab aiutiamo le aziende a costruire una presenza digitale solida, capace di farsi trovare non solo su Google ma anche da ChatGPT e dai nuovi motori di ricerca AI. Contattaci per scoprire come viene percepita oggi la tua azienda online e cosa puoi migliorare fin da subito."
+      }
+    ]
+  }
+  ,{
     slug: "automazione-marketing-agosto-ferie-aziendali",
     title: "La tua azienda chiude ad Agosto? Non fare questo errore (Ti costa caro)",
     category: "Marketing Automation",
