@@ -17,7 +17,7 @@ const collaboration = [
   {
     icon: Building2,
     title: "Una sede reale",
-    text: "NF Media Lab ha sede a Treviso. È da qui che coordiniamo strategia, design, sviluppo e attività di crescita.",
+    text: "NF Media Lab ha sede a Vedelago, in provincia di Treviso. È da qui che coordiniamo strategia, design, sviluppo e attività di crescita.",
   },
   {
     icon: Handshake,
@@ -39,7 +39,7 @@ export default function TerritoryHub() {
           Dove operiamo
         </motion.p>
         <motion.h1 initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}>
-          Radicati a Treviso.<br />Operativi nel Nord Italia.
+          Radicati a Vedelago, Treviso.<br />Operativi nel Nord Italia.
         </motion.h1>
         <motion.p className={styles.heroIntro} initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.2, duration: 0.8, ease: [0.22, 1, 0.36, 1] }}>
           Affianchiamo aziende di territori diversi con un metodo che combina confronto diretto, competenze specialistiche e continuità operativa.
@@ -60,7 +60,7 @@ export default function TerritoryHub() {
           <motion.div className={styles.sectionHeading} {...reveal}>
             <p className={styles.eyebrow}>Territori principali</p>
             <h2>Aree in cui operiamo</h2>
-            <p>La nostra sede rimane a Treviso. Le regioni seguenti rappresentano le aree in cui proponiamo e gestiamo i nostri servizi, anche attraverso collaborazioni a distanza.</p>
+            <p>La nostra sede è a Vedelago, in provincia di Treviso. Le regioni seguenti rappresentano le aree in cui proponiamo e gestiamo i nostri servizi, anche attraverso collaborazioni a distanza.</p>
           </motion.div>
 
           <div className={styles.territoryList}>

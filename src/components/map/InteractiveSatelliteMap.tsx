@@ -28,7 +28,7 @@ export default function InteractiveSatelliteMap() {
   const [scale, setScale] = useState(1.0);
   
   // Coordinate correnti in tempo reale basate sulla posizione di drag e zoom
-  const [coords, setCoords] = useState({ lat: 45.6669, lon: 12.2431 });
+  const [coords, setCoords] = useState({ lat: 45.6714566, lon: 12.0071169 });
 
   // 1. Gestione dello zoom tramite mouse wheel attivo (per evitare passive warning e bloccare lo scroll pagina)
   useEffect(() => {
@@ -57,14 +57,14 @@ export default function InteractiveSatelliteMap() {
     const unsubscribeX = x.on("change", (latestX) => {
       setCoords((prev) => ({
         ...prev,
-        lon: 12.2431 - (latestX / scale) * 0.0000858,
+        lon: 12.0071169 - (latestX / scale) * 0.0000858,
       }));
     });
     
     const unsubscribeY = y.on("change", (latestY) => {
       setCoords((prev) => ({
         ...prev,
-        lat: 45.6669 + (latestY / scale) * 0.000065,
+        lat: 45.6714566 + (latestY / scale) * 0.000065,
       }));
     });
 
@@ -74,9 +74,9 @@ export default function InteractiveSatelliteMap() {
     };
   }, [x, y, scale]);
 
-  // Generiamo una griglia 5x5 di tile satellitari Esri centrate su Treviso (Z=14, X=8748, Y=5850)
+  // Griglia 5x5 di tile satellitari Esri centrata sulla sede di Vedelago.
   const tiles: { url: string; xOffset: number; yOffset: number }[] = [];
-  const centralX = 8748;
+  const centralX = 8738;
   const centralY = 5850;
   const tileSize = 256;
 
@@ -132,14 +132,14 @@ export default function InteractiveSatelliteMap() {
             ))}
           </div>
 
-          {/* 2. Beacon della sede principale a Treviso (glowing) */}
+          {/* Beacon della sede di Vedelago */}
           <div className={styles.hqBeacon} style={{ transform: "translate(-50%, -50%)" }}>
             <div className={styles.pulseRing} />
             <div className={styles.pulseRing2} />
             <div className={styles.beaconDot} />
             <div className={styles.beaconLabel}>
               <span className={styles.beaconName}>HQ: NF MEDIA LAB</span>
-              <span className={styles.beaconCity}>Treviso</span>
+              <span className={styles.beaconCity}>Vedelago (TV)</span>
             </div>
           </div>
         </motion.div>
@@ -219,7 +219,7 @@ export default function InteractiveSatelliteMap() {
         <button 
           className={styles.controlButton} 
           onClick={handleReset} 
-          title="Centra su Treviso HQ e ripristina zoom"
+          title="Centra sulla sede di Vedelago e ripristina lo zoom"
         >
           <RotateCcw size={14} />
           <span className={styles.controlBtnText}>RESET</span>

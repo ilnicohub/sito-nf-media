@@ -88,20 +88,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "monthly" as const,
       priority: 0.75,
     })),
-    {
-      url: `${siteUrl}/privacy`,
-      changeFrequency: "yearly",
-      priority: 0.2,
-    },
-    {
-      url: `${siteUrl}/cookie`,
-      changeFrequency: "yearly",
-      priority: 0.2,
-    },
-    {
-      url: `${siteUrl}/termini`,
-      changeFrequency: "yearly",
-      priority: 0.2,
-    },
   ];
 }

@@ -87,7 +87,7 @@ export default function PrivacyPolicy() {
           </p>
           <p>
             <strong>Email:</strong> info@nfmedialab.it<br />
-            <strong>Indirizzo:</strong> Treviso, Veneto, Italia
+            <strong>Indirizzo:</strong> Via Casoni, 28, Vedelago (TV), Veneto, Italia
           </p>
 
           <h2>8. Modifiche alla Privacy Policy</h2>

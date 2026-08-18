@@ -21,7 +21,7 @@ export default function RealizzazioneSitiWebNordItalia() {
     <ServiceLanding
       eyebrow="Web agency per il Nord Italia"
       title="Realizzazione siti web per aziende del Nord Italia"
-      intro="Dalla sede di Treviso affianchiamo aziende in Veneto, Lombardia, Piemonte, Emilia-Romagna e Friuli-Venezia Giulia con siti su misura progettati per comunicare autorevolezza e generare opportunità commerciali."
+      intro="Dalla sede di Vedelago, in provincia di Treviso, affianchiamo aziende in Veneto, Lombardia, Piemonte, Emilia-Romagna e Friuli-Venezia Giulia con siti su misura progettati per comunicare autorevolezza e generare opportunità commerciali."
       benefits={[
         {
           title: "Design su misura",

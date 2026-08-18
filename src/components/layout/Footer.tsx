@@ -73,7 +73,7 @@ export default function Footer() {
             <h2 className={styles.title}>Contatti</h2>
             <div className={styles.contactItem}>
               <MapPin size={16} className={styles.icon} />
-              <span>Treviso, Veneto</span>
+              <span>Vedelago (TV), Veneto</span>
             </div>
             <div className={styles.contactItem}>
               <Mail size={16} className={styles.icon} />
@@ -103,7 +103,7 @@ export default function Footer() {
         
         <div className={styles.bottom}>
           <p>&copy; {new Date().getFullYear()} NF MEDIA LAB. C.F. FBRNCL01C07C111A</p>
-          <p>Treviso, Italia</p>
+          <p>Vedelago, Treviso, Italia</p>
         </div>
       </div>
     </footer>

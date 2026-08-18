@@ -22,11 +22,11 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "NF Media Lab | Agenzia Web, Software e Marketing a Treviso",
+    default: "NF Media Lab | Agenzia Web a Vedelago e Treviso",
     template: "%s | NF Media Lab",
   },
   description:
-    "Agenzia digitale a Treviso per sviluppo software, siti web, SEO, Google Ads e social media. Trasformiamo il digitale in contatti e crescita misurabile.",
+    "Agenzia digitale con sede a Vedelago, in provincia di Treviso: siti web, software, SEO, Google Ads e social media orientati alla crescita.",
   applicationName: "NF Media Lab",
   authors: [{ name: "NF Media Lab", url: siteUrl }],
   creator: "NF Media Lab",
@@ -38,6 +38,7 @@ export const metadata: Metadata = {
   },
   keywords: [
     "agenzia web Treviso",
+    "agenzia web Vedelago",
     "agenzia marketing Treviso",
     "sviluppo software Treviso",
     "realizzazione siti web Treviso",
@@ -62,7 +63,7 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: "NF Media Lab | Agenzia Web, Software e Marketing a Treviso",
+    title: "NF Media Lab | Agenzia Web a Vedelago e Treviso",
     description:
       "Sviluppo software, siti web e strategie di acquisizione clienti per aziende del Nord Italia.",
     url: siteUrl,
@@ -80,7 +81,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "NF Media Lab | Agenzia Web, Software e Marketing a Treviso",
+    title: "NF Media Lab | Agenzia Web a Vedelago e Treviso",
     description:
       "Sviluppo software, siti web e strategie di acquisizione clienti per aziende del Nord Italia.",
     images: ["/og-default.svg"],
@@ -101,16 +102,18 @@ export default function RootLayout({
     logo: `${siteUrl}/icon.png`,
     image: `${siteUrl}/og-default.svg`,
     description:
-      "Agenzia digitale di Treviso specializzata in sviluppo software, siti web, SEO, advertising e social media.",
+      "Agenzia digitale con sede a Vedelago, in provincia di Treviso, specializzata in sviluppo software, siti web, SEO, advertising e social media.",
     email: "info@nfmedialab.it",
     telephone: "+393427404958",
     address: {
       "@type": "PostalAddress",
-      addressLocality: "Treviso",
+      streetAddress: "Via Casoni, 28",
+      addressLocality: "Vedelago",
       addressRegion: "Veneto",
       addressCountry: "IT",
     },
     areaServed: [
+      "Vedelago",
       "Treviso",
       "Venezia",
       "Padova",

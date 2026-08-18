@@ -494,11 +494,11 @@ export default function Home() {
           >
             <span className={styles.territoryEyebrow}>Dove operiamo</span>
             <h2 className={styles.territoryTitle}>
-              Radicati a Treviso.<br />
+              Radicati a Vedelago, Treviso.<br />
               Attivi in tutto il Nord Italia.
             </h2>
             <p className={styles.territoryDesc}>
-              Il nostro Headquarter è a Treviso. Progettiamo strategie digitali e infrastrutture tecnologiche per aziende leader da Venezia a Milano, da Torino a Bologna, con standard qualitativi di eccellenza.
+              Il nostro Headquarter è a Vedelago, in provincia di Treviso. Progettiamo strategie digitali e infrastrutture tecnologiche per aziende da Venezia a Milano, da Torino a Bologna, con standard qualitativi elevati.
             </p>
           </motion.div>
 
@@ -539,7 +539,7 @@ export default function Home() {
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.3 }}
           >
-            Treviso · Venezia · Padova · Vicenza · Verona · Milano · Torino · Bologna · Udine
+            Vedelago · Treviso · Venezia · Padova · Vicenza · Verona · Milano · Torino · Bologna · Udine
           </motion.p>
         </div>
       </section>

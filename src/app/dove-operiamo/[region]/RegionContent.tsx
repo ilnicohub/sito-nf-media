@@ -86,7 +86,7 @@ export default function RegionContent({ region }: { region: Region }) {
             <ul>
               <li><CheckCircle2 size={18} /> Nessun preventivo standard</li>
               <li><CheckCircle2 size={18} /> Primo confronto senza impegno</li>
-              <li><CheckCircle2 size={18} /> Referente diretto dalla sede di Treviso</li>
+              <li><CheckCircle2 size={18} /> Referente diretto dalla sede in provincia di Treviso</li>
             </ul>
           </motion.div>
 

@@ -16,15 +16,15 @@ export const regions: Region[] = [
   {
     slug: "veneto",
     name: "Veneto",
-    shortDescription: "Il territorio in cui siamo radicati, da Treviso alle principali province venete.",
+    shortDescription: "Il territorio in cui siamo radicati, da Vedelago e Treviso alle principali province venete.",
     title: "Soluzioni digitali per aziende del Veneto",
-    intro: "Dalla sede di Treviso affianchiamo imprese venete che vogliono trasformare sito, software, dati e marketing in strumenti concreti di crescita.",
+    intro: "Dalla sede di Vedelago, in provincia di Treviso, affianchiamo imprese venete che vogliono trasformare sito, software, dati e marketing in strumenti concreti di crescita.",
     contextTitle: "Digitale costruito per il tessuto imprenditoriale veneto",
     context: [
       "Il Veneto unisce distretti manifatturieri, imprese esportatrici, servizi, commercio e turismo. Realtà molto diverse condividono però la stessa necessità: comunicare il proprio valore, rendere efficienti i processi e acquisire opportunità in mercati sempre più competitivi.",
       "Lavorare dal territorio ci permette di comprendere dinamiche, tempi decisionali e ambizioni delle PMI locali. Partiamo dagli obiettivi aziendali e progettiamo ecosistemi digitali misurabili, senza separare tecnologia, comunicazione e acquisizione clienti.",
     ],
-    cities: ["Belluno", "Padova", "Rovigo", "Treviso", "Venezia", "Verona", "Vicenza"],
+    cities: ["Belluno", "Padova", "Rovigo", "Treviso", "Vedelago", "Venezia", "Verona", "Vicenza"],
     sectors: [
       { title: "Manifattura e industria", description: "Siti B2B, cataloghi, piattaforme e sistemi digitali capaci di valorizzare competenze tecniche e reti commerciali." },
       { title: "Turismo e servizi", description: "Esperienze digitali chiare, strategie di acquisizione e strumenti per trasformare interesse e ricerche in prenotazioni o contatti." },
@@ -36,7 +36,7 @@ export const regions: Region[] = [
       { title: "Efficienza", description: "Integrare software e automazioni nei processi che rallentano vendite, operations e assistenza." },
     ],
     faq: [
-      { question: "Dove ha sede NF Media Lab?", answer: "La sede di NF Media Lab è a Treviso. Collaboriamo con aziende in tutte le province del Veneto attraverso incontri in presenza e un processo operativo digitale." },
+      { question: "Dove ha sede NF Media Lab?", answer: "La sede di NF Media Lab è a Vedelago, in provincia di Treviso. Collaboriamo con aziende in tutte le province del Veneto attraverso incontri in presenza e un processo operativo digitale." },
       { question: "Lavorate anche con aziende fuori Treviso?", answer: "Sì. Seguiamo progetti in tutto il Veneto e nel Nord Italia, organizzando il lavoro in base alle esigenze del cliente e alla complessità del progetto." },
       { question: "Quali servizi offrite alle PMI venete?", answer: "Sviluppo siti e piattaforme, software gestionali, SEO, advertising, social media, brand identity, analytics e sistemi di tracciamento." },
     ],
@@ -50,7 +50,7 @@ export const regions: Region[] = [
     contextTitle: "Tecnologia e comunicazione per un territorio aperto ai mercati",
     context: [
       "Il Friuli-Venezia Giulia concentra competenze industriali, logistiche, artigianali e scientifiche in un territorio naturalmente orientato agli scambi. Per molte imprese la presenza digitale deve parlare contemporaneamente a clienti locali, reti B2B e mercati esteri.",
-      "Costruiamo sistemi che rendono più chiara l'offerta, facilitano il lavoro commerciale e permettono di misurare l'origine delle opportunità, con un processo coordinato dalla nostra sede di Treviso.",
+      "Costruiamo sistemi che rendono più chiara l'offerta, facilitano il lavoro commerciale e permettono di misurare l'origine delle opportunità, con un processo coordinato dalla nostra sede di Vedelago, in provincia di Treviso.",
     ],
     cities: ["Gorizia", "Monfalcone", "Pordenone", "Sacile", "Trieste", "Udine"],
     sectors: [
@@ -64,7 +64,7 @@ export const regions: Region[] = [
       { title: "Misurazione", description: "Capire quali attività generano contatti qualificati e supportano realmente la rete vendita." },
     ],
     faq: [
-      { question: "Operate direttamente in Friuli-Venezia Giulia?", answer: "Sì. Seguiamo aziende della regione dalla sede di Treviso, combinando incontri pianificati e collaborazione digitale continuativa." },
+      { question: "Operate direttamente in Friuli-Venezia Giulia?", answer: "Sì. Seguiamo aziende della regione dalla sede di Vedelago, in provincia di Treviso, combinando incontri pianificati e collaborazione digitale continuativa." },
       { question: "Realizzate progetti B2B e multilingua?", answer: "Sì. Strutturiamo piattaforme e contenuti pensando a cicli commerciali B2B, mercati internazionali e successive evoluzioni multilingua." },
       { question: "È possibile partire da un audit del sistema attuale?", answer: "Sì. Possiamo analizzare sito, tracciamento, acquisizione e processi prima di definire priorità e investimento." },
     ],
@@ -120,7 +120,7 @@ export const regions: Region[] = [
       { title: "Performance commerciale", description: "Collegare investimento, canali e conversioni a KPI condivisi con marketing e vendite." },
     ],
     faq: [
-      { question: "Seguite aziende di Milano e della Lombardia dalla sede di Treviso?", answer: "Sì. Il nostro processo è progettato per collaborazioni interregionali, con momenti strategici condivisi e gestione operativa digitale." },
+      { question: "Seguite aziende di Milano e della Lombardia dalla sede di Vedelago?", answer: "Sì. Il nostro processo è progettato per collaborazioni interregionali, con momenti strategici condivisi e gestione operativa digitale." },
       { question: "Potete collaborare con team marketing interni?", answer: "Sì. Possiamo lavorare come partner specialistico insieme a marketing, commerciale, IT e fornitori già presenti." },
       { question: "Lavorate su piattaforme esistenti?", answer: "Valutiamo architettura, performance e vincoli del sistema esistente prima di proporre ottimizzazione, integrazione o riprogettazione." },
     ],
@@ -148,7 +148,7 @@ export const regions: Region[] = [
       { title: "Crescita misurabile", description: "Costruire sistemi in cui traffico, richieste e opportunità possano essere letti insieme." },
     ],
     faq: [
-      { question: "Operate con aziende dell'Emilia-Romagna?", answer: "Sì. Seguiamo progetti nel Nord Italia dalla sede di Treviso, con un modello di collaborazione adatto anche a team distribuiti." },
+      { question: "Operate con aziende dell'Emilia-Romagna?", answer: "Sì. Seguiamo progetti nel Nord Italia dalla sede di Vedelago, in provincia di Treviso, con un modello di collaborazione adatto anche a team distribuiti." },
       { question: "Sviluppate software e integrazioni su misura?", answer: "Sì. Analizziamo processi, utenti e sistemi coinvolti prima di progettare gestionali, applicazioni e integrazioni." },
       { question: "È possibile unire sito, SEO e tracciamento?", answer: "Sì. È il nostro approccio preferito quando l'obiettivo è generare opportunità e attribuire correttamente i risultati ai diversi canali." },
     ],
