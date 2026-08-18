@@ -125,9 +125,18 @@
 }
 
 .methodCard {
+  padding: 1.5rem;
+  border: 1px solid transparent;
   background: var(--background);
   position: relative;
   z-index: 1;
+  transition: background 0.3s ease, border-color 0.3s ease, transform 0.3s ease;
+}
+
+.methodCard:hover {
+  border-color: var(--border-hover);
+  background: rgba(255, 255, 255, 0.025);
+  transform: translateY(-3px);
 }
 
 .methodIcon {
@@ -171,7 +180,21 @@
 }
 
 .valueCard {
+  padding: 1.5rem;
+  border: 1px solid transparent;
   text-align: left;
+  transition: background 0.3s ease, border-color 0.3s ease, transform 0.3s ease;
+}
+
+.valueCard:hover {
+  border-color: var(--border-hover);
+  background: rgba(255, 255, 255, 0.025);
+  transform: translateY(-3px);
+}
+
+@media (hover: none) {
+  .methodCard:hover,
+  .valueCard:hover { transform: none; }
 }
 
 .icon {

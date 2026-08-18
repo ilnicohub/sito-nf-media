@@ -321,6 +321,29 @@ textarea.input {
   display: flex;
 }
 
+.privacyDisclaimer {
+  max-width: 420px;
+  margin-top: 1rem;
+  color: var(--text-muted);
+  font-size: 0.72rem;
+  line-height: 1.55;
+}
+
+.privacyDisclaimer a {
+  color: var(--foreground);
+  font-weight: 600;
+  text-decoration: underline;
+  text-decoration-color: var(--accent-primary);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.22em;
+  transition: color 0.2s ease, text-decoration-color 0.2s ease;
+}
+
+.privacyDisclaimer a:hover {
+  color: var(--accent-primary);
+  text-decoration-color: currentColor;
+}
+
 .submitBtn {
   background: #ffffff;
   color: #000000;

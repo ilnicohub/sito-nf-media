@@ -292,16 +292,19 @@ ${formData.message}
                   
                   {/* Bottone di invio */}
                   <motion.div className={styles.submitContainer} variants={formItemVariants}>
-                    <button type="submit" className={styles.submitBtn} disabled={loading}>
-                      {loading ? (
-                        <span>Invio in corso...</span>
-                      ) : (
-                        <span className={styles.submitBtnContent}>
-                          Invia Progetto
-                          <Send size={14} className={styles.sendIcon} />
-                        </span>
-                      )}
-                    </button>
+                    <div>
+                      <button type="submit" className={styles.submitBtn} disabled={loading}>
+                        {loading ? (
+                          <span>Invio in corso...</span>
+                        ) : (
+                          <span className={styles.submitBtnContent}>
+                            Invia Progetto
+                            <Send size={14} className={styles.sendIcon} />
+                          </span>
+                        )}
+                      </button>
+                      <p className={styles.privacyDisclaimer}>Inviando accetti il trattamento dei dati secondo la <Link href="/privacy">privacy policy</Link>.</p>
+                    </div>
                   </motion.div>
                 </motion.div>
               </form>
