@@ -1,122 +1,53 @@
-"use client";
-
-import { useState } from "react";
-import { motion } from "framer-motion";
+import type { Metadata } from "next";
 import styles from "./page.module.css";
 import Link from "next/link";
-import Image from "next/image";
 import { posts } from "@/data/posts";
 import { ArrowLeft, ArrowRight } from "lucide-react";
+import BlogHeader from "./BlogHeader";
+import BlogGrid from "./BlogGrid";
 
-export default function BlogIndex() {
-  const [currentPage, setCurrentPage] = useState(1);
-  const postsPerPage = 6;
-  
+const postsPerPage = 6;
+
+type Props = { searchParams: Promise<{ page?: string | string[] }> };
+
+export async function generateMetadata({ searchParams }: Props): Promise<Metadata> {
+  const requestedPage = Number((await searchParams).page ?? "1");
+  const currentPage = Number.isInteger(requestedPage) && requestedPage > 1 ? requestedPage : 1;
+  const canonical = currentPage === 1 ? "/blog" : `/blog?page=${currentPage}`;
+
+  return {
+    title: currentPage === 1 ? "Blog: SEO, Web e Marketing" : `Blog: SEO, Web e Marketing — Pagina ${currentPage}`,
+    description: "Guide pratiche su SEO, siti web, software e marketing digitale per trasformare la visibilità online in richieste commerciali.",
+    alternates: { canonical },
+    openGraph: {
+      title: currentPage === 1 ? "Blog NF Media Lab" : `Blog NF Media Lab — Pagina ${currentPage}`,
+      description: "Strategie e guide per aumentare visibilità, traffico qualificato e conversioni.",
+      url: canonical,
+      type: "website",
+    },
+  };
+}
+
+export default async function BlogIndex({ searchParams }: Props) {
   const totalPages = Math.ceil(posts.length / postsPerPage);
-  
-  const indexOfLastPost = currentPage * postsPerPage;
-  const indexOfFirstPost = indexOfLastPost - postsPerPage;
-  const currentPosts = posts.slice(indexOfFirstPost, indexOfLastPost);
+  const requestedPage = Number((await searchParams).page ?? "1");
+  const currentPage = Number.isInteger(requestedPage) ? Math.min(Math.max(requestedPage, 1), totalPages) : 1;
+  const currentPosts = posts.slice((currentPage - 1) * postsPerPage, currentPage * postsPerPage);
+  const pageHref = (page: number) => (page === 1 ? "/blog" : `/blog?page=${page}`);
 
-  const handleNextPage = () => {
-    if (currentPage < totalPages) {
-      setCurrentPage((prev) => prev + 1);
-      setTimeout(() => {
-        window.scrollTo({ top: 0, behavior: "smooth" });
-      }, 100);
-    }
-  };
-
-  const handlePrevPage = () => {
-    if (currentPage > 1) {
-      setCurrentPage((prev) => prev - 1);
-      setTimeout(() => {
-        window.scrollTo({ top: 0, behavior: "smooth" });
-      }, 100);
-    }
-  };
   return (
     <div className={styles.main}>
-      <section className={styles.header}>
-        <motion.h1 
-          className={styles.title}
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
-        >
-          Insights & Blog
-        </motion.h1>
-        <motion.p 
-          className={styles.subtitle}
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 0.2, duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
-        >
-          Approfondimenti, strategie e visioni sul futuro del software, dell’intelligenza artificiale e del marketing digitale.
-        </motion.p>
-      </section>
+      <BlogHeader />
 
       <section className={styles.container}>
-        <div className={styles.grid}>
-          {currentPosts.map((post, idx) => (
-            <motion.article
-              key={post.slug}
-              className={styles.card}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-50px" }}
-              transition={{ duration: 0.7, delay: idx * 0.1, ease: [0.22, 1, 0.36, 1] }}
-            >
-              <Link href={`/blog/${post.slug}`} className={styles.imageLink}>
-                <div className={styles.imageWrapper}>
-                  <Image
-                    src={post.image}
-                    alt={post.title}
-                    fill
-                    className={styles.image}
-                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                  />
-                  <div className={styles.categoryBadge}>{post.category}</div>
-                </div>
-              </Link>
-              <div className={styles.content}>
-                <div className={styles.meta}>
-                  <span>{post.date}</span>
-                  <span className={styles.dot}>•</span>
-                  <span>{post.readTime} di lettura</span>
-                </div>
-                <Link href={`/blog/${post.slug}`} className={styles.titleLink}>
-                  <h2 className={styles.postTitle}>{post.title}</h2>
-                </Link>
-                <p className={styles.intro}>{post.intro}</p>
-                <Link href={`/blog/${post.slug}`} className={styles.readMore}>
-                  Leggi l'articolo
-                </Link>
-              </div>
-            </motion.article>
-          ))}
-        </div>
+        <BlogGrid posts={currentPosts} />
 
         {totalPages > 1 && (
-          <div className={styles.pagination}>
-            <button 
-              className={styles.pageButton} 
-              onClick={handlePrevPage} 
-              disabled={currentPage === 1}
-            >
-              <ArrowLeft size={18} /> Precedente
-            </button>
-            <span className={styles.pageInfo}>
-              Pagina {currentPage} di {totalPages}
-            </span>
-            <button 
-              className={styles.pageButton} 
-              onClick={handleNextPage} 
-              disabled={currentPage === totalPages}
-            >
-              Successiva <ArrowRight size={18} />
-            </button>
-          </div>
+          <nav className={styles.pagination} aria-label="Paginazione del blog">
+            {currentPage > 1 ? <Link className={styles.pageButton} href={pageHref(currentPage - 1)}><ArrowLeft size={18} /> Precedente</Link> : <span className={`${styles.pageButton} ${styles.disabled}`}><ArrowLeft size={18} /> Precedente</span>}
+            <span className={styles.pageInfo}>Pagina {currentPage} di {totalPages}</span>
+            {currentPage < totalPages ? <Link className={styles.pageButton} href={pageHref(currentPage + 1)}>Successiva <ArrowRight size={18} /></Link> : <span className={`${styles.pageButton} ${styles.disabled}`}>Successiva <ArrowRight size={18} /></span>}
+          </nav>
         )}
       </section>
     </div>

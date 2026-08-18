@@ -1,6 +1,7 @@
 import type { MetadataRoute } from "next";
 import { caseStudies } from "@/data/caseStudies";
 import { posts } from "@/data/posts";
+import { regions } from "@/data/regions";
 
 const siteUrl = "https://www.nfmedialab.it";
 
@@ -77,6 +78,16 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "monthly",
       priority: 0.8,
     },
+    {
+      url: `${siteUrl}/dove-operiamo`,
+      changeFrequency: "monthly",
+      priority: 0.8,
+    },
+    ...regions.map((region) => ({
+      url: `${siteUrl}/dove-operiamo/${region.slug}`,
+      changeFrequency: "monthly" as const,
+      priority: 0.75,
+    })),
     {
       url: `${siteUrl}/privacy`,
       changeFrequency: "yearly",

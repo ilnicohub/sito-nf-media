@@ -185,6 +185,10 @@
   font-weight: 500;
   cursor: pointer;
   transition: all 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
 }
 
 .pageButton:hover:not(:disabled) {
@@ -192,7 +196,8 @@
   border-color: var(--foreground);
 }
 
-.pageButton:disabled {
+.pageButton:disabled,
+.disabled {
   opacity: 0.3;
   cursor: not-allowed;
 }

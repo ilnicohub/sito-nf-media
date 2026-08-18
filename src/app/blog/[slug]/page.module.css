@@ -140,6 +140,86 @@
   margin-top: 1rem;
 }
 
+.related {
+  padding: clamp(5rem, 9vw, 8rem) 2rem;
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  background: rgba(255, 255, 255, 0.01);
+}
+
+.related h2 {
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 500;
+  letter-spacing: -0.04em;
+  margin-bottom: 2rem;
+}
+
+.relatedGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  border-top: 1px solid var(--border);
+  border-left: 1px solid var(--border);
+}
+
+.relatedCard {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  min-height: 190px;
+  padding: clamp(1.75rem, 4vw, 2.5rem);
+  border-right: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  background: var(--background);
+  color: var(--foreground);
+  text-decoration: none;
+  transition: background 0.25s ease, opacity 0.2s ease;
+}
+
+.relatedCard:hover {
+  background: rgba(255, 255, 255, 0.025);
+  opacity: 1;
+}
+
+.relatedCard span {
+  color: var(--accent-primary);
+  font-size: 0.78rem;
+  font-weight: 600;
+  font-family: var(--font-mono), monospace;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.relatedCard strong {
+  max-width: 34ch;
+  font-size: 1.2rem;
+  font-weight: 500;
+  line-height: 1.35;
+  letter-spacing: -0.025em;
+}
+
+@media (min-width: 720px) {
+  .relatedGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .relatedGrid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .related {
+    padding-right: 1.5rem;
+    padding-left: 1.5rem;
+  }
+
+  .relatedCard {
+    min-height: 150px;
+  }
+}
+
 /* ── CTA Section ── */
 .cta {
   padding: clamp(4rem, 8vw, 7rem) 2rem;
@@ -194,5 +274,3 @@
     align-items: center;
   }
 }
-
-

@@ -30,15 +30,17 @@
   display: inline-flex;
   align-items: center;
   flex-shrink: 0;
+  position: relative;
+  z-index: 2;
 }
 
 .desktopMenu {
   display: none;
   align-items: center;
-  gap: 2.5rem;
+  gap: 2rem;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1180px) {
   .desktopMenu {
     display: flex;
   }
@@ -51,38 +53,114 @@
   transition: color 0.2s;
 }
 
+button.navLink { display: inline-flex; align-items: center; gap: .35rem; font-family: inherit; }
+.desktopDropdown { position: relative; padding: 1rem 0; }
+.desktopSubmenu { position: absolute; top: calc(100% - .35rem); left: 50%; width: 280px; padding: .6rem; display: flex; flex-direction: column; gap: .15rem; background: rgba(7,7,7,.98); border: 1px solid var(--border-hover); border-radius: .85rem; box-shadow: 0 24px 70px rgba(0,0,0,.5); opacity: 0; visibility: hidden; pointer-events: none; transform: translate(-50%, 8px); transition: opacity .2s ease, transform .2s ease, visibility .2s ease; }
+.desktopDropdown:not(.desktopDropdownSuppressed):hover .desktopSubmenu,
+.desktopDropdownOpen:not(.desktopDropdownSuppressed) .desktopSubmenu { opacity: 1; visibility: visible; pointer-events: auto; transform: translate(-50%, 0); }
+.desktopDropdown > .navLink svg { transition: transform .2s ease; }
+.desktopDropdownOpen > .navLink svg { transform: rotate(180deg); }
+.desktopSubmenu a { padding: .75rem .85rem; border-radius: .5rem; color: var(--text-muted); font-size: .86rem; }
+.desktopSubmenu a:hover, .desktopSubmenu .activeSubmenu { opacity: 1; color: var(--foreground); background: rgba(255,255,255,.05); }
+.desktopSubmenu .submenuOverview { display: flex; justify-content: space-between; align-items: center; margin-bottom: .25rem; padding-bottom: .85rem; color: var(--foreground); border-bottom: 1px solid var(--border); border-radius: 0; }
+.submenuOverview small { color: var(--text-muted); font-size: .7rem; }
+
 .navLink:hover, .navLink.active {
   color: var(--foreground);
 }
 
 .mobileToggle {
   display: block;
+  position: relative;
+  z-index: 2;
+  width: 44px;
+  height: 44px;
+  color: var(--foreground);
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1180px) {
   .mobileToggle {
     display: none;
   }
 }
 
 .mobileMenu {
-  position: absolute;
-  top: 100%;
-  left: 0;
-  right: 0;
-  padding: 1.5rem 2rem;
+  position: fixed;
+  inset: 0;
+  z-index: 1;
+  display: flex;
+  background: #030303;
+  overscroll-behavior: contain;
+  touch-action: none;
+}
+
+.mobileMenuInner {
+  width: 100%;
+  min-height: 100dvh;
+  padding: 7rem 1.5rem 2rem;
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
-  background: #030303;
-  border-bottom: 1px solid var(--border);
+  align-items: center;
+  justify-content: center;
+  gap: clamp(2rem, 6vh, 3.5rem);
+  text-align: center;
+}
+
+.mobilePanel { width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: clamp(2rem, 6vh, 3.5rem); }
+
+.mobileLinks {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: clamp(0.65rem, 2vh, 1.25rem);
 }
 
 .mobileLink {
   font-weight: 500;
   color: var(--text-muted);
+  font-size: clamp(2rem, 9vw, 3.25rem);
+  line-height: 1.05;
+  letter-spacing: -0.055em;
+  transition: color 0.2s ease;
+}
+
+.mobileSubmenuTrigger { display: inline-flex; align-items: center; justify-content: center; gap: .55rem; font-family: inherit; }
+.mobileSubmenuTrigger svg { transform: rotate(-90deg); }
+.mobileBack { display: inline-flex; align-items: center; gap: .5rem; padding: .65rem 1rem; color: var(--text-muted); border: 1px solid var(--border); border-radius: 999px; font-size: .82rem; }
+.regionLinks .mobileLink { font-size: clamp(1.55rem, 7vw, 2.6rem); }
+
+.mobileLink:hover {
+  color: var(--foreground);
+  opacity: 1;
 }
 
 .mobileLink.active {
   color: var(--foreground);
+}
+
+.mobileCta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 180px;
+  padding: 0.9rem 1.8rem;
+  border-radius: 999px;
+  background: var(--foreground);
+  color: var(--background);
+  font-weight: 600;
+}
+
+@media (max-height: 700px) {
+  .mobileMenuInner {
+    gap: 1.5rem;
+    padding-top: 5.5rem;
+  }
+
+  .mobileLinks {
+    gap: 0.55rem;
+  }
+
+  .mobileLink {
+    font-size: clamp(1.65rem, 7vh, 2.4rem);
+  }
 }

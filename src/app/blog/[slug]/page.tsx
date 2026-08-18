@@ -3,7 +3,29 @@ import Image from "next/image";
 import Link from "next/link";
 import styles from "./page.module.css";
 import { posts } from "@/data/posts";
+import { caseStudies } from "@/data/caseStudies";
 import type { Metadata } from "next";
+
+const siteUrl = "https://www.nfmedialab.it";
+const serviceByCategory: Record<string, { label: string; href: string }> = {
+  SEO: { label: "SEO e performance marketing", href: "/servizi/seo-e-performance-marketing" },
+  "SEO & GEO": { label: "SEO e performance marketing", href: "/servizi/seo-e-performance-marketing" },
+  "Sviluppo Web": { label: "Realizzazione siti web", href: "/servizi/realizzazione-siti-web-nord-italia" },
+  "Social Media": { label: "Social media management", href: "/servizi/social-media-management" },
+  Software: { label: "Sviluppo gestionali su misura", href: "/servizi/sviluppo-gestionali-su-misura" },
+  Digitalizzazione: { label: "Sviluppo gestionali su misura", href: "/servizi/sviluppo-gestionali-su-misura" },
+  "Marketing Automation": { label: "Data analytics e tracking", href: "/servizi/data-analytics-e-tracking" },
+  "Digital Strategy": { label: "SEO e performance marketing", href: "/servizi/seo-e-performance-marketing" },
+};
+
+function toIsoDate(date: string) {
+  const months: Record<string, string> = {
+    Gennaio: "01", Febbraio: "02", Marzo: "03", Aprile: "04", Maggio: "05", Giugno: "06",
+    Luglio: "07", Agosto: "08", Settembre: "09", Ottobre: "10", Novembre: "11", Dicembre: "12",
+  };
+  const [day, month, year] = date.split(" ");
+  return `${year}-${months[month]}-${day.padStart(2, "0")}`;
+}
 
 type Props = {
   params: Promise<{ slug: string }>;
@@ -18,12 +40,15 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   }
 
   return {
-    title: `${post.title} | Blog NF Media Lab`,
+    title: post.title,
     description: post.intro,
+    alternates: { canonical: `/blog/${post.slug}` },
     openGraph: {
       title: post.title,
       description: post.intro,
       type: "article",
+      url: `/blog/${post.slug}`,
+      publishedTime: toIsoDate(post.date),
       images: [post.image],
     },
   };
@@ -43,8 +68,38 @@ export default async function BlogPost({ params }: Props) {
     notFound();
   }
 
+  const relatedPosts = posts
+    .filter((candidate) => candidate.slug !== post.slug)
+    .sort((a, b) => Number(b.category === post.category) - Number(a.category === post.category))
+    .slice(0, 3);
+  const relatedService = serviceByCategory[post.category] ?? serviceByCategory["Digital Strategy"];
+  const relatedCaseStudy = caseStudies.find((study) =>
+    study.relatedServices.some((service) => service.href === relatedService.href),
+  ) ?? caseStudies[0];
+  const articleUrl = `${siteUrl}/blog/${post.slug}`;
+  const articleJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    headline: post.title,
+    description: post.intro,
+    image: `${siteUrl}${post.image}`,
+    datePublished: toIsoDate(post.date),
+    dateModified: toIsoDate(post.date),
+    mainEntityOfPage: { "@type": "WebPage", "@id": articleUrl },
+    author: { "@type": "Organization", name: "NF Media Lab", url: siteUrl },
+    publisher: {
+      "@type": "Organization",
+      name: "NF Media Lab",
+      logo: { "@type": "ImageObject", url: `${siteUrl}/icon.png` },
+    },
+  };
+
   return (
     <article className={styles.main}>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd).replace(/</g, "\\u003c") }}
+      />
       <header className={styles.header}>
         <div className={styles.container}>
           <Link href="/blog" className={styles.backLink}>
@@ -107,6 +162,29 @@ export default async function BlogPost({ params }: Props) {
         </div>
       </div>
 
+      <section className={styles.related} aria-labelledby="related-title">
+        <div className={styles.container}>
+          <p className={styles.eyebrow}>Approfondisci</p>
+          <h2 id="related-title">Risorse collegate</h2>
+          <div className={styles.relatedGrid}>
+            {relatedPosts.map((relatedPost) => (
+              <Link key={relatedPost.slug} href={`/blog/${relatedPost.slug}`} className={styles.relatedCard}>
+                <span>{relatedPost.category}</span>
+                <strong>{relatedPost.title}</strong>
+              </Link>
+            ))}
+            <Link href={relatedService.href} className={styles.relatedCard}>
+              <span>Servizio</span>
+              <strong>{relatedService.label}</strong>
+            </Link>
+            <Link href={`/case-studies/${relatedCaseStudy.slug}`} className={styles.relatedCard}>
+              <span>Case study</span>
+              <strong>{relatedCaseStudy.listingTitle}</strong>
+            </Link>
+          </div>
+        </div>
+      </section>
+
       <section className={styles.cta}>
         <div className={styles.container}>
           <div className={styles.ctaContent}>
@@ -124,4 +202,3 @@ export default async function BlogPost({ params }: Props) {
     </article>
   );
 }
-

@@ -1,0 +1,79 @@
+.main { display: flex; flex-direction: column; background: var(--background); }
+.container { width: min(1200px, calc(100% - 4rem)); margin: 0 auto; }
+.statementSection { padding: clamp(5rem,9vw,8rem) 0; border-bottom: 1px solid var(--border); }
+.statementSection p { max-width: 1050px; font-size: clamp(2.2rem,5vw,4.8rem); font-weight: 500; line-height: 1.08; letter-spacing: -.05em; }
+.editorialIntro { max-width: 1080px; }
+.editorialIntro > .eyebrow { font-size: .72rem; line-height: 1.4; letter-spacing: .12em; }
+.territoryList { border-top: 1px solid var(--border); }
+.territoryRow { display: grid; grid-template-columns: 44px 1fr; gap: 1.25rem; align-items: start; padding: clamp(2rem,4vw,3.25rem) 0; border-bottom: 1px solid var(--border); }
+.territoryNumber { padding-top: .45rem; color: var(--accent-primary); font-family: var(--font-mono),monospace; font-size: .72rem; letter-spacing: .1em; }
+.territoryName h2 { font-size: clamp(1.65rem,3vw,2.5rem); }
+.territoryCities { display: flex; flex-wrap: wrap; gap: .4rem .8rem; margin-top: .85rem; color: var(--text-muted); font-size: .75rem; }
+.territoryCities span:not(:last-child)::after { content: "·"; margin-left: .8rem; color: var(--border-hover); }
+.territoryRow > p { grid-column: 2; max-width: 620px; color: var(--text-muted); line-height: 1.7; }
+.territoryRow > a { grid-column: 2; display: inline-flex; align-items: center; gap: .55rem; width: max-content; font-size: .88rem; }
+.territoryRow > a svg { transition: transform .25s ease; }
+.territoryRow:hover > a { opacity: 1; color: var(--foreground); }
+.territoryRow:hover > a svg { transform: translate(3px,-3px); }
+.modelGrid { display: grid; grid-template-columns: 1fr; border-top: 1px solid var(--border); border-left: 1px solid var(--border); }
+.modelCard { min-height: 280px; padding: clamp(2rem,4vw,3rem); border-right: 1px solid var(--border); border-bottom: 1px solid var(--border); background: var(--background); transition: background .3s ease; }
+.modelCard:hover { background: rgba(255,255,255,.02); }
+.modelCard h3 { margin-bottom: .85rem; font-size: 1.3rem; }
+.modelCard p { color: var(--text-muted); line-height: 1.7; }
+.modelCard > svg { margin-bottom: 4rem; color: var(--accent-primary); }
+.hero { padding: clamp(8rem, 13vw, 11rem) 2rem clamp(5rem, 9vw, 7rem); text-align: center; border-bottom: 1px solid var(--border); }
+.hero h1 { max-width: 1050px; margin: 0 auto 1.75rem; font-size: clamp(3rem, 7vw, 6rem); letter-spacing: -0.055em; }
+.heroIntro { max-width: 780px; margin: 0 auto; color: var(--text-muted); font-size: clamp(1.05rem, 2vw, 1.3rem); line-height: 1.7; }
+.eyebrow { margin-bottom: 1rem; color: var(--text-muted); font-family: var(--font-mono), monospace; font-size: 0.72rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; }
+.heroActions { display: flex; justify-content: center; flex-wrap: wrap; gap: 1rem; margin-top: 2.5rem; }
+.section, .sectionMuted { padding: clamp(5rem, 9vw, 8rem) 0; border-bottom: 1px solid var(--border); }
+.sectionMuted { background: rgba(255,255,255,.01); }
+.sectionHeading { max-width: 740px; margin-bottom: 3rem; }
+.sectionHeading h2, .twoColumns h2, .ctaBox h2 { font-size: clamp(2rem, 4vw, 3.5rem); letter-spacing: -0.045em; }
+.sectionHeading > p:not(.eyebrow), .longText p, .infoCard p, .priority p, .faqList p, .ctaBox p:not(.eyebrow) { color: var(--text-muted); line-height: 1.7; }
+.sectionHeading > p:not(.eyebrow) { margin-top: 1rem; font-size: 1.05rem; }
+.regionGrid { display: grid; grid-template-columns: 1fr; border-top: 1px solid var(--border); border-left: 1px solid var(--border); }
+.regionCard { min-height: 300px; height: 100%; padding: clamp(2rem, 4vw, 3rem); display: flex; flex-direction: column; border-right: 1px solid var(--border); border-bottom: 1px solid var(--border); transition: background .25s ease; }
+.regionCard:hover { opacity: 1; background: rgba(255,255,255,.02); }
+.cardIndex, .infoCard > span { color: var(--accent-primary); font-family: var(--font-mono), monospace; font-size: .75rem; letter-spacing: .1em; }
+.regionCard h2 { margin: auto 0 1rem; font-size: clamp(1.7rem, 3vw, 2.4rem); }
+.regionCard p { min-height: 3.4em; color: var(--text-muted); line-height: 1.65; }
+.cardLink { margin-top: 2rem; display: flex; align-items: center; justify-content: space-between; font-size: .9rem; }
+.cardLink svg { transition: transform .25s ease; }
+.regionCard:hover .cardLink svg { transform: translate(3px,-3px); }
+.twoColumns { display: grid; gap: 3rem; }
+.longText { max-width: 680px; }
+.longText p + p { margin-top: 1.5rem; }
+.infoGrid { display: grid; grid-template-columns: 1fr; border-top: 1px solid var(--border); border-left: 1px solid var(--border); }
+.infoCard { min-height: 250px; padding: clamp(2rem, 4vw, 3rem); border-right: 1px solid var(--border); border-bottom: 1px solid var(--border); background: var(--background); transition: background .3s ease; }
+.infoCard:hover { background: rgba(255,255,255,.02); }
+.infoCard h3 { margin: 3.5rem 0 .8rem; font-size: 1.35rem; }
+.priorityGrid { display: grid; gap: 1rem; }
+.priority { display: flex; gap: 1rem; padding: 1.5rem; border: 1px solid var(--border); background: var(--card-bg); transition: background .3s ease, border-color .3s ease, transform .3s ease; }
+.priority:hover { background: rgba(255,255,255,.04); border-color: var(--border-hover); transform: translateY(-3px); }
+.priority svg { flex-shrink: 0; color: var(--accent-primary); }
+.priority h3 { margin-bottom: .5rem; }
+.cities { margin-top: 4rem; padding-top: 2rem; border-top: 1px solid var(--border); }
+.cities > div { display: flex; flex-wrap: wrap; gap: .65rem; }
+.cities span { padding: .55rem .85rem; border: 1px solid var(--border); border-radius: 999px; color: var(--text-muted); font-size: .85rem; transition: color .25s ease, border-color .25s ease, background .25s ease, transform .25s ease, box-shadow .25s ease; }
+.cities span:hover { box-shadow: 0 8px 26px rgba(59,130,246,.1); }
+.serviceLinks { display: grid; grid-template-columns: 1fr; border-top: 1px solid var(--border); border-left: 1px solid var(--border); }
+.serviceLinks a { min-height: 120px; padding: 1.75rem; display: flex; align-items: center; justify-content: space-between; gap: 1rem; border-right: 1px solid var(--border); border-bottom: 1px solid var(--border); font-size: 1.1rem; transition: background .25s ease; }
+.serviceLinks a:hover { opacity: 1; background: rgba(255,255,255,.025); }
+.serviceLinks svg { transition: transform .25s ease; }
+.serviceLinks a:hover svg { transform: translateX(4px); }
+.faqList { display: flex; flex-direction: column; }
+.faqList article { padding: 2rem 0; display: grid; gap: 1rem; border-top: 1px solid var(--border); }
+.faqList h3, .faqList p { transition: color .25s ease; }
+.faqList article:hover h3 { color: var(--accent-primary); }
+.faqList article:last-child { border-bottom: 1px solid var(--border); }
+.faqList h3 { font-size: 1.15rem; }
+.cta { padding: clamp(5rem, 9vw, 8rem) 0; }
+.ctaBox { padding: clamp(2rem, 5vw, 4rem); display: flex; flex-direction: column; align-items: flex-start; gap: 2rem; border: 1px solid var(--border); border-radius: 1rem; background: var(--card-bg); }
+.ctaBox > div { max-width: 760px; }
+.ctaBox p:not(.eyebrow) { margin-top: 1rem; }
+@media (min-width: 720px) { .regionGrid, .infoGrid, .serviceLinks { grid-template-columns: repeat(2,1fr); } .priorityGrid { grid-template-columns: repeat(3,1fr); } .faqList article { grid-template-columns: minmax(260px,.8fr) 1.2fr; gap: 3rem; } .modelGrid { grid-template-columns: repeat(3,1fr); } }
+@media (min-width: 900px) { .twoColumns { grid-template-columns: .85fr 1.15fr; gap: 6rem; } .ctaBox { flex-direction: row; align-items: center; justify-content: space-between; } }
+@media (min-width: 900px) { .territoryRow { grid-template-columns: 50px minmax(230px,.75fr) minmax(300px,1fr) auto; align-items: center; } .territoryRow > p,.territoryRow > a { grid-column: auto; } }
+@media (min-width: 1024px) { .regionGrid { grid-template-columns: repeat(3,1fr); } .infoGrid,.serviceLinks { grid-template-columns: repeat(3,1fr); } }
+@media (max-width: 640px) { .container { width: min(100% - 3rem, 1200px); } .hero { padding-right: 1.5rem; padding-left: 1.5rem; text-align: left; } .heroIntro { margin-left: 0; } .heroActions { justify-content: flex-start; } .regionCard { min-height: 250px; } }
