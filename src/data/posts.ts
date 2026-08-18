@@ -17,6 +17,400 @@ export type Post = {
 
 export const posts: Post[] = [
 {
+  slug: "quanto-investire-marketing-digitale-pmi",
+
+  title: "Quanto Dovrebbe Investire una PMI nel Marketing Digitale?",
+
+  category: "Digital Strategy",
+
+  date: "18 Agosto 2026",
+
+  readTime: "5 min",
+
+  image: "/blog/investimento-marketing-digitale-pmi.webp",
+
+  intro: "Quanto dovrebbe investire un'azienda nel marketing digitale? Non esiste una cifra valida per tutte le PMI. Il budget corretto dipende dagli obiettivi, dal settore, dalla situazione di partenza e soprattutto dai risultati che l'azienda vuole ottenere. Prima di decidere quanto spendere è quindi necessario capire dove e perché investire.",
+
+  content: [
+    {
+      type: "p",
+      value: "Stabilire il budget da destinare al marketing è una delle decisioni più complesse per una piccola o media impresa. Investire troppo poco può rendere difficile ottenere risultati significativi, mentre aumentare la spesa senza una strategia non garantisce automaticamente una crescita."
+    },
+    {
+      type: "p",
+      value: "Il punto di partenza non dovrebbe quindi essere una cifra scelta casualmente, ma una domanda molto più importante: quali risultati deve contribuire a generare il marketing per l'azienda?"
+    },
+
+    {
+      type: "h2",
+      value: "Non esiste un budget marketing uguale per tutte le aziende"
+    },
+    {
+      type: "p",
+      value: "Due imprese con dimensioni simili possono avere esigenze completamente differenti. Un'attività locale che vuole aumentare le prenotazioni nella propria zona non necessita necessariamente della stessa strategia di un'azienda B2B che vuole generare contatti commerciali in tutta Italia."
+    },
+    {
+      type: "p",
+      value: "Settore, concorrenza, area geografica, valore medio del cliente, margini, ciclo di vendita e obiettivi influenzano il tipo di investimento necessario."
+    },
+    {
+      type: "p",
+      value: "Per questo utilizzare esclusivamente una percentuale del fatturato come regola universale può essere troppo semplicistico. Può rappresentare un riferimento iniziale, ma deve essere inserito nel contesto specifico dell'impresa."
+    },
+
+    {
+      type: "h2",
+      value: "Parti dagli obiettivi, non dai canali"
+    },
+    {
+      type: "p",
+      value: "Uno degli errori più comuni è decidere prima lo strumento e soltanto successivamente chiedersi cosa dovrebbe ottenere."
+    },
+    {
+      type: "p",
+      value: "Aprire un profilo TikTok, iniziare una campagna Google Ads o investire nella SEO non dovrebbe essere una scelta dettata semplicemente dal fatto che un determinato canale è popolare."
+    },
+    {
+      type: "p",
+      value: "Prima è necessario stabilire l'obiettivo: aumentare la notorietà del brand, generare richieste di preventivo, acquisire prenotazioni, vendere online, entrare in un nuovo mercato oppure migliorare la fidelizzazione dei clienti."
+    },
+    {
+      type: "p",
+      value: "Solo dopo è possibile individuare i canali più adatti e distribuire correttamente il budget."
+    },
+
+    {
+      type: "h2",
+      value: "Dove può investire una PMI?"
+    },
+    {
+      type: "p",
+      value: "Il marketing digitale comprende attività molto differenti. Sito web, SEO, Google Ads, social media, Meta Ads, produzione di contenuti, email marketing e strumenti di automazione possono svolgere funzioni diverse all'interno della strategia."
+    },
+    {
+      type: "p",
+      value: "Questo non significa che ogni azienda debba essere presente ovunque. Al contrario, per una PMI può essere molto più efficace concentrare inizialmente le risorse sui canali maggiormente collegati ai propri clienti e agli obiettivi commerciali."
+    },
+
+    {
+      type: "h2",
+      value: "Sito web e SEO: costruire un asset nel tempo"
+    },
+    {
+      type: "p",
+      value: "Investire nel sito e nella SEO significa lavorare su una presenza digitale che può continuare a generare opportunità nel tempo. Pagine servizi, contenuti utili, performance tecniche e posizionamento organico contribuiscono a costruire progressivamente visibilità."
+    },
+    {
+      type: "p",
+      value: "La SEO richiede generalmente continuità e non dovrebbe essere valutata esclusivamente sulla base dei risultati delle prime settimane. Il vantaggio è la possibilità di costruire nel tempo un canale di acquisizione organico legato alle ricerche dei potenziali clienti."
+    },
+
+    {
+      type: "h2",
+      value: "Advertising: ottenere visibilità più rapidamente"
+    },
+    {
+      type: "p",
+      value: "Google Ads e le campagne sui social permettono invece di acquistare visibilità e raggiungere pubblici specifici in tempi più rapidi."
+    },
+    {
+      type: "p",
+      value: "Il budget pubblicitario, però, non è l'unico elemento da considerare. Strategia, targeting, creatività, landing page e monitoraggio delle conversioni possono fare una grande differenza sull'efficacia delle campagne."
+    },
+    {
+      type: "p",
+      value: "Aumentare semplicemente la spesa pubblicitaria senza correggere eventuali problemi nel percorso di conversione può significare aumentare i costi senza ottenere un miglioramento proporzionale dei risultati."
+    },
+
+    {
+      type: "h2",
+      value: "Social Media: presenza o strategia?"
+    },
+    {
+      type: "p",
+      value: "Per molte aziende i social rappresentano il principale punto di contatto digitale con il pubblico. Anche in questo caso, però, essere presenti non significa necessariamente avere una strategia."
+    },
+    {
+      type: "p",
+      value: "Produzione di contenuti, pianificazione editoriale, video, community, campagne pubblicitarie e analisi dei risultati richiedono risorse differenti."
+    },
+    {
+      type: "p",
+      value: "L'investimento dovrebbe quindi essere proporzionato al ruolo che i social devono svolgere all'interno del percorso commerciale dell'azienda."
+    },
+
+    {
+      type: "h2",
+      value: "Non dividere il budget in parti uguali"
+    },
+    {
+      type: "p",
+      value: "Destinare la stessa quantità di risorse a sito, SEO, social e advertising può sembrare una scelta equilibrata, ma non necessariamente è quella più efficace."
+    },
+    {
+      type: "p",
+      value: "Un'azienda potrebbe avere un sito già molto performante ma una scarsa visibilità. Un'altra potrebbe generare molto traffico ma avere un sito incapace di convertire. Un'altra ancora potrebbe dipendere quasi esclusivamente dal passaparola."
+    },
+    {
+      type: "p",
+      value: "Il budget dovrebbe essere distribuito partendo dai punti deboli e dalle opportunità reali, non seguendo una formula prestabilita."
+    },
+
+    {
+      type: "h2",
+      value: "Quanto vale un nuovo cliente per la tua azienda?"
+    },
+    {
+      type: "p",
+      value: "Per valutare correttamente un investimento marketing è importante conoscere anche il valore economico di un cliente."
+    },
+    {
+      type: "p",
+      value: "Un'attività in cui il cliente effettua un singolo acquisto di valore contenuto ha dinamiche molto diverse da un'azienda che acquisisce contratti pluriennali o clienti che effettuano acquisti ricorrenti."
+    },
+    {
+      type: "p",
+      value: "Conoscere margine, valore medio della vendita e valore del cliente nel tempo permette di ragionare in maniera più concreta su quanto sia sostenibile investire per acquisirlo."
+    },
+
+    {
+      type: "h2",
+      value: "Misurare il ritorno dell'investimento"
+    },
+    {
+      type: "p",
+      value: "Un budget marketing dovrebbe essere accompagnato da strumenti che permettano di misurare ciò che sta producendo."
+    },
+    {
+      type: "p",
+      value: "Traffico, lead, richieste di preventivo, prenotazioni, vendite e costo di acquisizione possono aiutare a capire quali attività stanno contribuendo maggiormente agli obiettivi."
+    },
+    {
+      type: "p",
+      value: "Non tutte le attività hanno però un ritorno immediatamente misurabile. Brand awareness, contenuti e SEO possono produrre valore anche nel medio e lungo periodo. Per questo è importante utilizzare indicatori coerenti con la funzione di ogni canale."
+    },
+
+    {
+      type: "h2",
+      value: "Meglio partire con poco o investire subito?"
+    },
+    {
+      type: "p",
+      value: "Non esiste una risposta valida per qualsiasi impresa. In molti casi può essere utile partire da un progetto ben definito, misurare i risultati e aumentare progressivamente l'investimento sulle attività che dimostrano maggiore potenziale."
+    },
+    {
+      type: "p",
+      value: "Partire con un budget limitato non significa però distribuire poche risorse su molti canali contemporaneamente. Concentrare l'investimento su alcune priorità può rendere più semplice ottenere dati utili e capire cosa funziona."
+    },
+
+    {
+      type: "h2",
+      value: "Il vero problema non è quanto spendi, ma come investi"
+    },
+    {
+      type: "p",
+      value: "Un budget elevato senza obiettivi, misurazione e strategia può essere meno efficace di un investimento più contenuto ma concentrato sulle attività corrette."
+    },
+    {
+      type: "p",
+      value: "Per una PMI la priorità dovrebbe essere costruire un sistema sostenibile: individuare dove si trovano i potenziali clienti, scegliere i canali più adatti, misurare i risultati e migliorare progressivamente l'investimento."
+    },
+
+    {
+      type: "h2",
+      value: "Da dove dovrebbe partire la tua azienda?"
+    },
+    {
+      type: "p",
+      value: "Prima di definire un budget è utile analizzare ciò che esiste già: sito web, posizionamento su Google, social media, campagne attive, reputazione online, strumenti di tracciamento e processo commerciale."
+    },
+    {
+      type: "p",
+      value: "Questa analisi permette di capire quali attività hanno maggiore priorità e dove un investimento potrebbe produrre più valore."
+    },
+    {
+      type: "p",
+      value: "In NF Media Lab sviluppiamo strategie digitali partendo dagli obiettivi e dalla situazione reale dell'azienda, integrando marketing, comunicazione, SEO, sviluppo web e tecnologia. Se vuoi capire dove avrebbe più senso concentrare il budget digitale della tua azienda, contattaci per parlarci del tuo progetto."
+    }
+  ]
+  }
+  ,{
+  slug: "come-aumentare-richieste-preventivo-sito-web",
+
+  title: "Come Aumentare le Richieste di Preventivo dal Tuo Sito Web",
+
+  category: "Sviluppo Web",
+
+  date: "17 Agosto 2026",
+
+  readTime: "5 min",
+
+  image: "/blog/aumentare-richieste-preventivo-sito-web.webp",
+
+  intro: "Il tuo sito riceve visite ma genera poche richieste di preventivo? Avere traffico non significa automaticamente acquisire nuovi clienti. Per trasformare un visitatore in un contatto servono pagine chiare, una proposta credibile e un percorso capace di accompagnare l'utente verso l'azione.",
+
+  content: [
+    {
+      type: "p",
+      value: "Molte aziende investono nella realizzazione di un sito web concentrandosi soprattutto sull'aspetto grafico. Un design professionale è importante, ma da solo non basta a trasformare il sito in uno strumento commerciale."
+    },
+    {
+      type: "p",
+      value: "Quando le visite aumentano ma le richieste rimangono poche, è necessario capire cosa accade tra l'ingresso dell'utente e il momento in cui dovrebbe contattare l'azienda."
+    },
+    {
+      type: "p",
+      value: "Il problema può dipendere dal traffico che arriva sul sito, dalla struttura delle pagine, dai contenuti, dalla fiducia percepita o semplicemente da un percorso di contatto troppo complicato."
+    },
+
+    {
+      type: "h2",
+      value: "1. Fai capire immediatamente cosa offre la tua azienda"
+    },
+    {
+      type: "p",
+      value: "Una persona che arriva sul sito dovrebbe riuscire a capire in pochi secondi cosa offre l'azienda, a chi si rivolge e perché dovrebbe continuare a navigare."
+    },
+    {
+      type: "p",
+      value: "Titoli generici, slogan poco chiari o testi che parlano molto dell'azienda senza spiegare quale problema risolve possono creare confusione. La homepage e le pagine principali devono comunicare rapidamente il valore dell'offerta."
+    },
+
+    {
+      type: "h2",
+      value: "2. Crea una pagina specifica per ogni servizio importante"
+    },
+    {
+      type: "p",
+      value: "Concentrare tutti i servizi in una singola pagina può rendere difficile approfondire ciò che interessa realmente al potenziale cliente."
+    },
+    {
+      type: "p",
+      value: "Una pagina dedicata permette invece di spiegare il servizio, presentare i benefici, rispondere ai dubbi più frequenti e mostrare esempi o progetti pertinenti. È utile sia per l'utente sia per la visibilità del sito sui motori di ricerca."
+    },
+
+    {
+      type: "h2",
+      value: "3. Dai al visitatore un motivo per fidarsi"
+    },
+    {
+      type: "p",
+      value: "Prima di richiedere un preventivo, soprattutto per servizi con un valore economico importante, le persone cercano elementi che riducano l'incertezza."
+    },
+    {
+      type: "p",
+      value: "Progetti realizzati, casi studio, testimonianze autentiche, informazioni chiare sull'azienda e risultati documentabili possono contribuire a costruire fiducia."
+    },
+    {
+      type: "p",
+      value: "Dire di offrire un servizio professionale è semplice. Mostrare concretamente come si è lavorato e quali problemi sono stati risolti è molto più efficace."
+    },
+
+    {
+      type: "h2",
+      value: "4. Rendi semplice il contatto"
+    },
+    {
+      type: "p",
+      value: "Se una persona decide di contattarti, non dovrebbe essere costretta a cercare per diversi minuti un numero di telefono, un indirizzo email o il modulo corretto."
+    },
+    {
+      type: "p",
+      value: "Le call to action devono essere visibili e coerenti con il percorso dell'utente. Richiedi un preventivo, parlaci del tuo progetto o prenota una consulenza sono esempi di azioni che spiegano chiaramente cosa succederà dopo il click."
+    },
+    {
+      type: "p",
+      value: "Anche i moduli dovrebbero richiedere inizialmente solo le informazioni realmente necessarie. Un form eccessivamente lungo può diventare un ostacolo proprio nel momento più importante."
+    },
+
+    {
+      type: "h2",
+      value: "5. Controlla l'esperienza da smartphone"
+    },
+    {
+      type: "p",
+      value: "Una parte importante delle visite può arrivare da smartphone. Per questo non basta che il sito sia semplicemente visualizzabile da mobile."
+    },
+    {
+      type: "p",
+      value: "Testi difficili da leggere, pulsanti troppo piccoli, elementi che si spostano durante il caricamento o moduli scomodi da compilare possono ridurre sensibilmente la qualità dell'esperienza."
+    },
+    {
+      type: "p",
+      value: "Il percorso che porta alla richiesta di contatto deve quindi essere verificato anche su dispositivi mobili."
+    },
+
+    {
+      type: "h2",
+      value: "6. La velocità del sito conta"
+    },
+    {
+      type: "p",
+      value: "Un sito lento può perdere utenti ancora prima di avere la possibilità di presentare l'azienda. Immagini troppo pesanti, codice non ottimizzato, script inutili e infrastrutture poco performanti possono aumentare i tempi di caricamento."
+    },
+    {
+      type: "p",
+      value: "La velocità non è solamente una questione tecnica: influenza direttamente l'esperienza dell'utente e può avere un ruolo anche nella visibilità organica."
+    },
+
+    {
+      type: "h2",
+      value: "7. Assicurati di attirare le persone giuste"
+    },
+    {
+      type: "p",
+      value: "Aumentare il numero di visitatori non serve se il traffico non è composto da persone potenzialmente interessate ai prodotti o ai servizi dell'azienda."
+    },
+    {
+      type: "p",
+      value: "SEO, campagne pubblicitarie e contenuti devono essere costruiti partendo dal pubblico che si vuole raggiungere. Cento visite qualificate possono avere molto più valore commerciale di migliaia di accessi provenienti da ricerche non pertinenti."
+    },
+
+    {
+      type: "h2",
+      value: "8. Misura cosa fanno realmente gli utenti"
+    },
+    {
+      type: "p",
+      value: "Senza dati è difficile capire dove intervenire. Strumenti di web analytics possono aiutare a osservare quali pagine ricevono traffico, da quali canali arrivano gli utenti e quali azioni vengono completate."
+    },
+    {
+      type: "p",
+      value: "È particolarmente importante tracciare le conversioni: invio di moduli, richieste di contatto, telefonate, prenotazioni o altre azioni rilevanti per il business."
+    },
+    {
+      type: "p",
+      value: "In questo modo il sito può essere migliorato sulla base del comportamento reale degli utenti e non soltanto di impressioni."
+    },
+
+    {
+      type: "h2",
+      value: "Più traffico o più conversioni?"
+    },
+    {
+      type: "p",
+      value: "Le due cose non sono in contrasto. Un progetto digitale efficace dovrebbe lavorare sia sull'acquisizione di traffico qualificato sia sulla capacità del sito di trasformarlo in opportunità commerciali."
+    },
+    {
+      type: "p",
+      value: "Prima di investire esclusivamente per aumentare le visite è quindi utile verificare cosa accade agli utenti che già raggiungono il sito. Se il percorso non funziona, portare più persone sulla stessa esperienza potrebbe non risolvere il problema."
+    },
+
+    {
+      type: "h2",
+      value: "Il tuo sito genera realmente opportunità per l'azienda?"
+    },
+    {
+      type: "p",
+      value: "Un sito aziendale non dovrebbe essere considerato solamente una vetrina online. Se progettato correttamente può diventare un punto di incontro tra le persone che stanno cercando una soluzione e l'azienda che può offrirla."
+    },
+    {
+      type: "p",
+      value: "In NF Media Lab sviluppiamo e analizziamo siti web partendo dagli obiettivi dell'azienda, integrando design, performance, SEO e strategia digitale. Se il tuo sito riceve poche richieste o vuoi capire quali elementi possono essere migliorati, contattaci per parlarci del tuo progetto."
+    }
+  ]
+}
+,{
   slug: "perche-concorrenti-compaiono-prima-google",
 
   title: "Perché i Tuoi Concorrenti Compaiono Prima di Te su Google?",
