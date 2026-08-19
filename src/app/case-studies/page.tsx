@@ -6,6 +6,13 @@ import Link from "next/link";
 import Image from "next/image";
 import { caseStudies } from "@/data/caseStudies";
 
+const featuredSlug = "fc-calvi-noale-campagna-nuove-divise";
+const orderedCaseStudies = [...caseStudies].sort((first, second) => {
+  if (first.slug === featuredSlug) return -1;
+  if (second.slug === featuredSlug) return 1;
+  return 0;
+});
+
 export default function CaseStudies() {
   const logos = [
     "FC CALVI NOALE",
@@ -51,9 +58,9 @@ export default function CaseStudies() {
       </section>
 
       <section className={styles.container}>
-        {caseStudies.map((c, idx) => (
+        {orderedCaseStudies.map((c, idx) => (
           <motion.article
-            key={c.client}
+            key={c.slug}
             className={`${styles.caseStudy} ${idx % 2 !== 0 ? styles.caseStudyReverse : ""}`}
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}

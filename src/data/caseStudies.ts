@@ -191,11 +191,11 @@ export const caseStudies: CaseStudyDetail[] = [
     services: ["Social strategy", "Video content", "Advertising"],
     metrics: [
       {
-        value: "900k+",
-        label: "Visualizzazioni mensili",
-        detail: "Copertura mensile ottenuta grazie a contenuti più continui, riconoscibili e coerenti con il pubblico.",
-        chartLabel: "Reach video",
-        chartValue: 90,
+        value: "1,5M",
+        label: "Visualizzazioni in 30 giorni",
+        detail: "Visualizzazioni generate nell'ultimo periodo monitorato grazie a contenuti continui, riconoscibili e coerenti con il pubblico.",
+        chartLabel: "Volume views",
+        chartValue: 100,
       },
       {
         value: "+300%",
@@ -255,6 +255,82 @@ export const caseStudies: CaseStudyDetail[] = [
     ],
     nextStep:
       "Se vuoi trasformare i canali social della tua realtà in uno strumento più riconoscibile e costante, possiamo costruire una linea editoriale adatta al tuo pubblico.",
+  },
+  {
+    slug: "fc-calvi-noale-campagna-nuove-divise",
+    client: "FC Calvi Noale",
+    shortClient: "FC Calvi Noale",
+    sector: "Comunicazione sportiva · Noale, Venezia",
+    title: "Campagna social e shooting a Noale per il lancio delle nuove divise",
+    listingTitle: "Campagna social e shooting per il lancio kit a Noale",
+    image: "/case-studies/shooting_calvi_noale.webp",
+    services: ["Creative direction", "Shooting fotografico", "Social campaign"],
+    metrics: [
+      {
+        value: "50k+",
+        label: "Visualizzazioni nella prima settimana",
+        detail: "Oltre 50.000 visualizzazioni complessive ottenute, nei primi sette giorni, dai soli post dedicati alla presentazione delle nuove divise. Un risultato ancora in crescita, con contenuti che continuano a generare attenzione.",
+        chartLabel: "Visibilità",
+        chartValue: 86,
+      },
+      {
+        value: "4",
+        label: "Tipologie di kit raccontate",
+        detail: "Home, Away, Third Kit e divise dei portieri presentati attraverso un racconto visivo unitario.",
+        chartLabel: "Gamma kit",
+        chartValue: 100,
+      },
+    ],
+    problem:
+      "La presentazione delle nuove divise non doveva limitarsi a mostrare un prodotto. FC Calvi Noale aveva l'opportunità di trasformare il lancio dei kit in un momento identitario, capace di rafforzare il rapporto con Noale e con la provincia di Venezia, coinvolgere la community e offrire nuova visibilità a sponsor e partner.",
+    solution:
+      "Abbiamo ideato una campagna social costruita attorno al legame tra club e territorio. Lo shooting fotografico è stato realizzato nel centro di Noale, in provincia di Venezia, portando Home, Away, Third Kit e divise dei portieri fuori dal campo e dentro i luoghi della città. Il materiale prodotto è diventato il fulcro di una sequenza di contenuti coordinati, progettati per creare attesa, presentare ogni kit e accompagnare il pubblico verso la richiesta di acquisto.",
+    heroIntro:
+      "Una campagna di comunicazione sportiva realizzata a Noale, in provincia di Venezia, che ha trasformato il lancio delle nuove divise in un racconto di appartenenza, collegando il club alla città, alla community e al valore dei partner.",
+    overview:
+      "Il progetto ha unito direzione creativa, shooting fotografico a Noale e distribuzione social. Ogni uscita è stata pensata come parte di un unico lancio: riconoscibile, progressivo e capace di dare spazio sia all'identità del club sia alle opportunità commerciali legate al merchandising e alle sponsorizzazioni sportive nel territorio veneziano.",
+    workDone: [
+      {
+        title: "Concept creativo e narrazione territoriale",
+        description:
+          "Abbiamo costruito il concept attorno a Noale, scegliendo il centro cittadino come scenario per rendere immediato il legame tra squadra, tifosi e territorio della provincia di Venezia.",
+      },
+      {
+        title: "Shooting dei nuovi kit",
+        description:
+          "La produzione ha raccontato in modo coordinato Home, Away, Third Kit e divise dei portieri, creando una base visiva coerente per tutti i contenuti della campagna.",
+      },
+      {
+        title: "Lancio e distribuzione social",
+        description:
+          "I contenuti sono stati organizzati in una sequenza editoriale capace di generare attenzione, valorizzare i dettagli delle maglie e sostenere le richieste di acquisto.",
+      },
+    ],
+    impact: [
+      {
+        title: "Oltre 50.000 visualizzazioni in 7 giorni",
+        description:
+          "Nella sola prima settimana di pubblicazione, i post dedicati alla presentazione delle divise hanno superato complessivamente le 50.000 visualizzazioni. Il dato continua a evolvere mentre i contenuti restano attivi sui canali del club.",
+      },
+      {
+        title: "Più interesse commerciale",
+        description:
+          "La campagna ha contribuito ad aumentare le richieste di acquisto dei kit, trasformando la presentazione in un'attività utile anche al merchandising del club.",
+      },
+      {
+        title: "Più valore per territorio e partner",
+        description:
+          "L'ambientazione nel centro di Noale ha rafforzato il posizionamento locale del club nella provincia di Venezia e creato un contesto di comunicazione più rilevante anche per sponsor e possibili partner.",
+      },
+    ],
+    stack: ["Creative direction", "Shooting fotografico", "Content production", "Social storytelling", "Campaign analytics"],
+    relatedServices: [
+      { label: "Social media management", href: "/servizi/social-media-management" },
+      { label: "Brand identity e comunicazione", href: "/servizi/brand-identity-e-comunicazione" },
+      { label: "Data analytics e tracking", href: "/servizi/data-analytics-e-tracking" },
+    ],
+    nextStep:
+      "Se vuoi trasformare un lancio di prodotto, una partnership o un momento chiave del tuo brand in una campagna capace di generare attenzione e opportunità, possiamo costruire insieme concept, contenuti e distribuzione.",
   },
   {
     slug: "euroline-gestionale-su-misura",
