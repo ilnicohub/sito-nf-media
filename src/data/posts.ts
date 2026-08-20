@@ -17,6 +17,201 @@ export type Post = {
 
 export const posts: Post[] = [
 {
+  slug: "come-scegliere-agenzia-web",
+
+  title: "Come Scegliere un’Agenzia Web: 10 Criteri per Affidare il Tuo Progetto",
+
+  category: "Digital Strategy",
+
+  date: "20 Agosto 2026",
+
+  readTime: "8 min",
+
+  image: "/blog/come-scegliere-agenzia-web.webp",
+
+  intro: "Come scegliere un'agenzia web realmente adatta alla propria azienda? Portfolio e prezzo non bastano. Prima di affidare un sito, un e-commerce o una piattaforma digitale è necessario valutare metodo, competenze, obiettivi, proprietà del progetto e capacità di misurare i risultati. Questa guida raccoglie i criteri e le domande più utili per prendere una decisione consapevole.",
+
+  content: [
+    {
+      type: "p",
+      value: "Scegliere un'agenzia web significa affidare a un partner una parte importante della presenza, della reputazione e spesso del processo commerciale dell'azienda. Il risultato non sarà soltanto un insieme di pagine: influenzerà il modo in cui potenziali clienti, collaboratori e partner percepiscono il brand."
+    },
+    {
+      type: "p",
+      value: "Per questo la scelta non dovrebbe dipendere esclusivamente dal preventivo più basso, dall'impatto visivo del portfolio o dalla promessa di consegnare in tempi molto brevi. Serve capire come l'agenzia ragiona, quali responsabilità assume e in che modo collega il progetto agli obiettivi aziendali."
+    },
+
+    {
+      type: "h2",
+      value: "1. Parte dagli obiettivi o direttamente dalla grafica?"
+    },
+    {
+      type: "p",
+      value: "Un partner serio dovrebbe iniziare facendo domande. Quali clienti vuoi raggiungere? Quali servizi hanno maggiore valore? Come arrivano oggi le richieste? Quali problemi presenta il sito attuale? Che ruolo deve avere il digitale nel processo commerciale?"
+    },
+    {
+      type: "p",
+      value: "Se la conversazione parte immediatamente da colori, animazioni e numero di pagine, manca ancora il contesto necessario per progettare una soluzione efficace. La grafica è importante, ma dovrebbe rendere più chiara una strategia, non sostituirla."
+    },
+
+    {
+      type: "h2",
+      value: "2. Il preventivo spiega davvero cosa verrà realizzato?"
+    },
+    {
+      type: "p",
+      value: "Due offerte con prezzi differenti possono includere attività completamente diverse. Analisi, architettura dei contenuti, UX design, copywriting, sviluppo, SEO, tracciamento, formazione e assistenza richiedono competenze e tempi specifici."
+    },
+    {
+      type: "p",
+      value: "Un buon preventivo dovrebbe chiarire almeno obiettivi, perimetro del lavoro, fasi, responsabilità, tecnologie, contenuti inclusi, numero di revisioni, tempistiche, modalità di collaudo e attività successive alla pubblicazione. Una cifra senza perimetro è difficile da confrontare e può generare costi inattesi durante il progetto."
+    },
+
+    {
+      type: "h2",
+      value: "3. I case study mostrano risultati o soltanto immagini?"
+    },
+    {
+      type: "p",
+      value: "Un portfolio dimostra sensibilità estetica, ma un case study dovrebbe raccontare anche il problema iniziale, le decisioni prese e l'impatto prodotto. Non tutti i risultati devono essere percentuali spettacolari: possono riguardare maggiore chiarezza, richieste più qualificate, processi semplificati, tempi operativi ridotti o una presenza digitale più credibile."
+    },
+    {
+      type: "p",
+      value: "Chiedi all'agenzia di spiegare un progetto simile al tuo: quali vincoli ha incontrato, perché ha scelto una determinata soluzione e come ha verificato il risultato. Puoi consultare anche i nostri <a href=\"/case-studies\">case study</a> per vedere come colleghiamo attività e obiettivi."
+    },
+
+    {
+      type: "h2",
+      value: "4. Chi lavorerà concretamente al progetto?"
+    },
+    {
+      type: "p",
+      value: "È utile sapere chi sarà il referente e quali professionalità verranno coinvolte. Strategia, design, sviluppo, contenuti, SEO e advertising sono ambiti collegati, ma non intercambiabili. Una singola persona può coordinare il lavoro senza necessariamente possedere la stessa profondità in ogni disciplina."
+    },
+    {
+      type: "p",
+      value: "Domanda inoltre se alcune attività verranno affidate all'esterno, come sarà gestita la comunicazione e chi avrà la responsabilità finale sulla qualità. Non è un problema collaborare con specialisti: il problema nasce quando ruoli e responsabilità non sono trasparenti."
+    },
+
+    {
+      type: "h2",
+      value: "5. Il sito sarà davvero di proprietà dell'azienda?"
+    },
+    {
+      type: "p",
+      value: "Prima di firmare, chiarisci proprietà di dominio, hosting, codice, account, contenuti, licenze e dati. L'azienda dovrebbe poter accedere agli strumenti essenziali e sapere cosa accade in caso di conclusione della collaborazione."
+    },
+    {
+      type: "p",
+      value: "Verifica anche la presenza di canoni obbligatori, vincoli della piattaforma, licenze ricorrenti e costi per esportare o trasferire il progetto. Una soluzione apparentemente economica può diventare limitante se crea una dipendenza difficile da interrompere."
+    },
+
+    {
+      type: "h2",
+      value: "6. SEO e contenuti vengono considerati fin dall'inizio?"
+    },
+    {
+      type: "p",
+      value: "La SEO non dovrebbe essere un'aggiunta inserita pochi giorni prima della pubblicazione. Struttura delle pagine, gerarchia dei titoli, URL, collegamenti interni, prestazioni e contenuti influenzano il modo in cui Google comprende il sito."
+    },
+    {
+      type: "p",
+      value: "Chiedi quali ricerche dovrà intercettare ogni pagina, come verranno gestiti redirect e metadata e chi si occuperà dei testi. Un sito visivamente curato ma privo di una struttura informativa può essere difficile da trovare e ancora più difficile da far crescere."
+    },
+
+    {
+      type: "h2",
+      value: "7. Prestazioni, mobile e accessibilità fanno parte del progetto?"
+    },
+    {
+      type: "p",
+      value: "Il sito dovrebbe essere progettato per funzionare bene sui dispositivi reali, non soltanto sul monitor utilizzato durante la presentazione. Velocità, leggibilità, navigazione mobile, stabilità del layout e semplicità dei moduli incidono sull'esperienza e sulle conversioni."
+    },
+    {
+      type: "p",
+      value: "Domanda come verranno testati browser, smartphone, form, collegamenti, performance e requisiti di accessibilità. È inoltre utile capire chi interverrà se un problema emerge dopo il lancio."
+    },
+
+    {
+      type: "h2",
+      value: "8. È previsto il tracciamento delle conversioni?"
+    },
+    {
+      type: "p",
+      value: "Pubblicare un sito senza misurare le azioni importanti rende difficile capire se stia contribuendo agli obiettivi aziendali. Visualizzazioni e durata delle visite non bastano: servono eventi collegati a richieste, prenotazioni, telefonate, download o acquisti."
+    },
+    {
+      type: "p",
+      value: "Chiedi se verranno configurati strumenti come GA4 e Search Console, quali conversioni saranno monitorate e come verrà rispettato il consenso dell'utente. Il tracciamento dovrebbe essere definito prima dello sviluppo, non improvvisato dopo la pubblicazione."
+    },
+
+    {
+      type: "h2",
+      value: "9. Come vengono gestiti tempi, revisioni e comunicazione?"
+    },
+    {
+      type: "p",
+      value: "Molti progetti rallentano non per problemi tecnici, ma per responsabilità poco chiare. È importante conoscere le fasi di approvazione, i materiali richiesti al cliente, la frequenza degli aggiornamenti e il modo in cui vengono raccolti i feedback."
+    },
+    {
+      type: "p",
+      value: "Un processo professionale rende visibili priorità, decisioni e dipendenze. Non elimina ogni imprevisto, ma permette di affrontarlo senza perdere il controllo del progetto."
+    },
+
+    {
+      type: "h2",
+      value: "10. Cosa succede dopo la pubblicazione?"
+    },
+    {
+      type: "p",
+      value: "La messa online non coincide necessariamente con la fine del lavoro. Nelle settimane successive possono emergere dati, nuove esigenze, opportunità SEO e punti di attrito che non erano osservabili prima."
+    },
+    {
+      type: "p",
+      value: "Chiarisci se sono previsti monitoraggio, manutenzione, aggiornamenti, backup, assistenza e momenti di revisione. L'obiettivo non deve essere aggiungere attività ricorrenti senza motivo, ma sapere chi proteggerà e farà evolvere l'investimento."
+    },
+
+    {
+      type: "h2",
+      value: "Le domande da fare prima di scegliere"
+    },
+    {
+      type: "p",
+      value: "Prima di affidare il progetto, prova a ottenere risposte chiare a queste domande: quale problema aziendale deve risolvere il sito? Chi seguirà strategia, design e sviluppo? Cosa è incluso nel preventivo? Chi possiederà dominio, account e codice? Come verranno gestite SEO, contenuti e performance? Quali azioni saranno misurate? Come funzionano revisioni, collaudo e assistenza?"
+    },
+    {
+      type: "p",
+      value: "Non serve che ogni agenzia utilizzi lo stesso metodo. Serve però che sappia spiegare il proprio, motivare le decisioni e definire ciò di cui sarà responsabile. Risposte vaghe in fase commerciale tendono a diventare problemi durante il progetto."
+    },
+
+    {
+      type: "h2",
+      value: "Agenzia web o freelance: quale soluzione scegliere?"
+    },
+    {
+      type: "p",
+      value: "Non esiste una risposta valida in assoluto. Un freelance può essere la scelta corretta per un'attività circoscritta, con un perimetro chiaro e poche competenze da coordinare. Un'agenzia diventa più utile quando il progetto richiede strategia, design, sviluppo, contenuti, SEO, advertising o continuità operativa."
+    },
+    {
+      type: "p",
+      value: "La decisione dovrebbe dipendere dalla complessità, dal rischio, dagli obiettivi e dal livello di responsabilità richiesto, non dal nome della struttura. Valuta le persone, il metodo e la capacità di seguire il progetto nel tempo."
+    },
+
+    {
+      type: "h2",
+      value: "Quando ha senso richiedere un confronto"
+    },
+    {
+      type: "p",
+      value: "Un primo confronto è utile quando sai che il sito attuale non rappresenta più l'azienda, genera poche richieste, è difficile da aggiornare oppure deve supportare una nuova fase commerciale. Non è necessario arrivare con una soluzione già definita: è più importante portare obiettivi, criticità e priorità."
+    },
+    {
+      type: "p",
+      value: "In NF Media Lab progettiamo <a href=\"/servizi/realizzazione-siti-web-nord-italia\">siti web e piattaforme digitali</a> partendo dal ruolo che devono avere nel business. Se stai valutando un nuovo progetto o vuoi confrontare correttamente le alternative, possiamo analizzare insieme situazione attuale, obiettivi e perimetro del lavoro prima di formulare una proposta."
+    }
+  ]
+},
+{
   slug: "quanto-investire-marketing-digitale-pmi",
 
   title: "Quanto Dovrebbe Investire una PMI nel Marketing Digitale?",
@@ -2059,4 +2254,3 @@ export const posts: Post[] = [
     ]
   }
 ];
-
