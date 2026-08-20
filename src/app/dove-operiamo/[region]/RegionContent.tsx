@@ -105,7 +105,7 @@ export default function RegionContent({ region }: { region: Region }) {
             {error && <p className={styles.formError} role="alert">{error}</p>}
             <div className={styles.formFooter}>
               <p>Inviando accetti il trattamento dei dati secondo la <Link href="/privacy">privacy policy</Link>.</p>
-              <button type="submit" className={styles.leadSubmit} disabled={loading}>{loading ? "Invio in corso…" : <>Invia la richiesta <Send size={15} /></>}</button>
+              <button type="submit" className={styles.leadSubmit} disabled={loading}>{loading ? "Invio in corso…" : <>Invia richiesta <Send size={15} /></>}</button>
             </div>
           </motion.form>
         </div>
@@ -149,6 +149,7 @@ export default function RegionContent({ region }: { region: Region }) {
             <Link href="/servizi/sviluppo-gestionali-su-misura">Software su misura <ArrowRight size={18} /></Link>
             <Link href="/servizi/seo-e-performance-marketing">SEO e performance <ArrowRight size={18} /></Link>
             <Link href="/servizi/social-media-management">Social media management <ArrowRight size={18} /></Link>
+            <Link href="/servizi/intelligenza-artificiale-per-aziende">Intelligenza artificiale <ArrowRight size={18} /></Link>
             <Link href="/servizi/data-analytics-e-tracking">Analytics e tracking <ArrowRight size={18} /></Link>
           </motion.div>
         </div>

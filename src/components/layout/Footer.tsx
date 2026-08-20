@@ -59,6 +59,7 @@ export default function Footer() {
             <Link href="/servizi/realizzazione-siti-web-nord-italia" className={styles.link}>Creazione Siti Web</Link>
             <Link href="/servizi/seo-e-performance-marketing" className={styles.link}>SEO e Advertising</Link>
             <Link href="/servizi/social-media-management" className={styles.link}>Social Media</Link>
+            <Link href="/servizi/intelligenza-artificiale-per-aziende" className={styles.link}>Intelligenza Artificiale</Link>
             <Link href="/servizi/brand-identity-e-comunicazione" className={styles.link}>Brand Identity</Link>
           </div>
 

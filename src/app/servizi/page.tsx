@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { BarChart3, Code2, LayoutTemplate, Megaphone, Palette, Search, CheckCircle2 } from "lucide-react";
+import { BarChart3, Bot, Code2, LayoutTemplate, Megaphone, Palette, Search, CheckCircle2 } from "lucide-react";
 import styles from "./page.module.css";
 import Link from "next/link";
 
@@ -50,6 +50,15 @@ export default function Servizi() {
       desc: "Trasformiamo l'attenzione in fatturato. Non pubblichiamo post casuali, ma creiamo vere community e funnel di conversione attraverso contenuti nativi.",
       features: ["Content Creation", "Content Strategy", "Video Marketing", "Community Management", "Social Funnels"],
       href: "/servizi/social-media-management",
+      linkLabel: "Approfondisci il servizio",
+    },
+    {
+      id: "ai",
+      title: "Intelligenza Artificiale",
+      icon: <Bot size={40} strokeWidth={1.5} />,
+      desc: "Valutiamo dove l’AI può migliorare davvero processi, accesso alle informazioni e operatività, integrandola negli strumenti aziendali con controllo e obiettivi misurabili.",
+      features: ["Analisi di Fattibilità", "Assistenti Aziendali", "Automazione Documentale", "Integrazione con CRM e Gestionali"],
+      href: "/servizi/intelligenza-artificiale-per-aziende",
       linkLabel: "Approfondisci il servizio",
     },
     {

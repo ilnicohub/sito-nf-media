@@ -70,6 +70,7 @@
   color: var(--foreground);
   font-family: inherit;
   font-size: 1rem;
+  font-weight: 400;
   transition: all 0.25s ease;
   border-radius: 0;
 }
@@ -83,6 +84,9 @@
 
 .input::placeholder {
   color: rgba(255, 255, 255, 0.15);
+  font-size: 0.95rem;
+  font-weight: 400;
+  opacity: 1;
 }
 
 .honeypot {

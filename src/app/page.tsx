@@ -304,6 +304,17 @@ export default function Home() {
               <p className={styles.aiText}>Offri esperienze su misura ai tuoi clienti con strategie di personalizzazione basate su AI.</p>
             </motion.div>
           </div>
+          <motion.div
+            className={styles.aiAction}
+            initial={{ opacity: 0, y: 16 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.3, duration: 0.55 }}
+          >
+            <Link href="/servizi/intelligenza-artificiale-per-aziende" className="primaryBtn">
+              Scopri le soluzioni AI per aziende
+            </Link>
+          </motion.div>
         </div>
       </section>
 

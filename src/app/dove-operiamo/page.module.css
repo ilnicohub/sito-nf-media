@@ -74,11 +74,13 @@
 .leadForm > *:not(.formGlowOrb) { position: relative; z-index: 1; }
 .formGlowOrb { position: absolute; z-index: 0; top: -100px; right: -100px; width: 300px; height: 300px; border-radius: 50%; background: var(--accent-primary); opacity: .06; filter: blur(80px); pointer-events: none; }
 .formRow { display: grid; gap: 1.4rem; }
-.leadForm label { display: grid; gap: .55rem; color: var(--text-muted); font-size: .75rem; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; }
-.leadForm input,.leadForm textarea { width: 100%; padding: .9rem 0; border: 0; border-bottom: 1px solid var(--border); border-radius: 0; outline: 0; background: transparent; color: var(--foreground); font: inherit; font-size: 1rem; letter-spacing: 0; text-transform: none; transition: border-color .25s ease,box-shadow .25s ease; }
+.leadForm label { display: grid; gap: .6rem; color: var(--text-muted); font-size: .78rem; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; transition: color .25s ease; }
+.leadForm label:focus-within { color: var(--accent-primary); }
+.leadForm input,.leadForm textarea { width: 100%; padding: .8rem 0; border: 0; border-bottom: 1px solid var(--border); border-radius: 0; outline: 0; background: transparent; color: var(--foreground); font-family: inherit; font-size: 1rem; font-weight: 400; letter-spacing: 0; text-transform: none; transition: border-color .25s ease,box-shadow .25s ease; }
+.leadForm input:hover,.leadForm textarea:hover { border-bottom-color: var(--border-hover); }
 .leadForm textarea { resize: vertical; line-height: 1.6; }
 .leadForm input:focus,.leadForm textarea:focus { border-color: var(--accent-primary); box-shadow: 0 1px 0 var(--accent-primary); }
-.leadForm input::placeholder,.leadForm textarea::placeholder { color: rgba(255,255,255,.22); }
+.leadForm input::placeholder,.leadForm textarea::placeholder { color: rgba(255,255,255,.15); font-size: .95rem; font-weight: 400; opacity: 1; }
 .formFooter { display: flex; flex-direction: column; align-items: flex-start; gap: 1.25rem; }
 .formFooter > p { max-width: 360px; color: var(--text-muted); font-size: .72rem; line-height: 1.55; }
 .formFooter > p a { color: var(--foreground); font-weight: 600; text-decoration: underline; text-decoration-color: var(--accent-primary); text-decoration-thickness: 1px; text-underline-offset: .22em; transition: color .2s ease,text-decoration-color .2s ease; }

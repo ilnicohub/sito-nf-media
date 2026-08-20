@@ -61,6 +61,10 @@ type ServiceLandingProps = {
   process: Array<{ title: string; description: string }>;
   idealFor?: string[];
   faq?: Array<{ question: string; answer: string }>;
+  primaryCtaLabel?: string;
+  finalCtaTitle?: string;
+  finalCtaText?: string;
+  finalCtaLabel?: string;
 };
 
 const icons = {
@@ -95,6 +99,10 @@ export default function ServiceLanding({
   process,
   idealFor,
   faq,
+  primaryCtaLabel = "Parla con un consulente",
+  finalCtaTitle = "Valutiamo insieme il progetto",
+  finalCtaText = "Condividi obiettivi, vincoli e priorità. Ti restituiamo una prima valutazione tecnica e strategica.",
+  finalCtaLabel = "Richiedi un confronto",
 }: ServiceLandingProps) {
   const [openFaq, setOpenFaq] = useState<number | null>(0);
 
@@ -154,7 +162,7 @@ export default function ServiceLanding({
               transition={{ delay: 0.35, duration: 0.7 }}
             >
               <Link href="/contatti" className="primaryBtn">
-                Parla con un consulente
+                {primaryCtaLabel}
               </Link>
               <Link href="/case-studies" className="secondaryBtn">
                 Consulta i case study
@@ -299,14 +307,11 @@ export default function ServiceLanding({
           <motion.div className={styles.ctaContent} {...fadeUp}>
             <div>
               <p className={styles.eyebrow}>Confronto iniziale</p>
-              <h2>Valutiamo insieme il progetto</h2>
-              <p>
-                Condividi obiettivi, vincoli e priorità. Ti restituiamo una prima
-                valutazione tecnica e strategica.
-              </p>
+              <h2>{finalCtaTitle}</h2>
+              <p>{finalCtaText}</p>
             </div>
             <Link href="/contatti" className="primaryBtn">
-              Richiedi un confronto
+              {finalCtaLabel}
             </Link>
           </motion.div>
         </div>
