@@ -7,6 +7,8 @@ export type PostContentBlock =
 export type Post = {
   slug: string;
   title: string;
+  seoTitle?: string;
+  seoDescription?: string;
   category: string;
   date: string;
   readTime: string;
@@ -16,6 +18,200 @@ export type Post = {
 };
 
 export const posts: Post[] = [
+{
+  slug: "esperti-ai-veneto-friuli-venezia-giulia",
+
+  title: "Esperti di AI in Veneto e Friuli Venezia Giulia: Come Integrare l’Intelligenza Artificiale in Azienda",
+
+  seoTitle: "Esperti AI in Veneto e Friuli Venezia Giulia",
+
+  seoDescription: "Cerchi esperti AI in Veneto o Friuli Venezia Giulia? Scopri come integrare l’intelligenza artificiale nei processi aziendali in modo concreto e sicuro.",
+
+  category: "Intelligenza Artificiale",
+
+  date: "21 Agosto 2026",
+
+  readTime: "9 min",
+
+  image: "/blog/esperti-ai-veneto-friuli-venezia-giulia.webp",
+
+  intro: "Cerchi esperti di AI in Veneto o Friuli Venezia Giulia per capire come integrare l’intelligenza artificiale nella tua azienda? Prima di scegliere strumenti o sviluppare una soluzione, è necessario valutare processi, dati, obiettivi, sicurezza e sostenibilità del progetto. In questa guida vediamo dove l’AI può creare valore concreto e come riconoscere un partner capace di accompagnare l’implementazione.",
+
+  content: [
+    {
+      type: "p",
+      value: "L’interesse delle imprese del Veneto e del Friuli Venezia Giulia verso l’intelligenza artificiale sta crescendo, ma tra una sperimentazione interessante e un progetto realmente utile esiste una differenza importante. Integrare l’AI non significa aggiungere un chatbot al sito o acquistare l’ennesimo software: significa individuare un problema aziendale preciso e verificare se dati, processi e tecnologie permettono di risolverlo in modo affidabile."
+    },
+    {
+      type: "p",
+      value: "Per un’azienda di Treviso, Venezia, Padova, Vicenza, Verona, Belluno e Rovigo, oppure di Pordenone, Udine, Gorizia e Trieste, lavorare con un partner che conosce il territorio può facilitare il confronto con le persone coinvolte, la comprensione dei processi e il coordinamento con fornitori e strumenti già utilizzati. La vicinanza, però, non basta: servono metodo, competenze di sviluppo e la capacità di dire anche quando l’intelligenza artificiale non è la soluzione corretta."
+    },
+
+    {
+      type: "h2",
+      value: "Cosa può fare concretamente l’AI per un’azienda?"
+    },
+    {
+      type: "p",
+      value: "Le applicazioni più interessanti non partono dalla tecnologia, ma dalle attività che oggi richiedono troppo tempo, generano errori o rendono difficile accedere alle informazioni. L’obiettivo non dovrebbe essere «usare l’AI», bensì migliorare un processo con risultati osservabili."
+    },
+    {
+      type: "h3",
+      value: "Assistenti aziendali basati sulla conoscenza interna"
+    },
+    {
+      type: "p",
+      value: "Manuali, procedure, listini, documentazione tecnica e risposte commerciali possono essere distribuiti tra cartelle, email e software differenti. Un assistente aziendale può aiutare il personale a trovare più rapidamente le informazioni autorizzate, indicando le fonti e rispettando ruoli e permessi."
+    },
+    {
+      type: "h3",
+      value: "Elaborazione di documenti e richieste"
+    },
+    {
+      type: "p",
+      value: "L’AI può supportare classificazione, estrazione e organizzazione di dati provenienti da moduli, preventivi, ordini, email e documenti. Il valore nasce quando queste informazioni entrano in un flusso controllato, vengono verificate dove necessario e raggiungono il gestionale o il reparto corretto."
+    },
+    {
+      type: "h3",
+      value: "Supporto a vendite e assistenza clienti"
+    },
+    {
+      type: "p",
+      value: "Una soluzione ben progettata può preparare sintesi, suggerire risposte, qualificare richieste e rendere più veloce il passaggio delle informazioni. Non dovrebbe però inventare condizioni commerciali, prendere decisioni delicate o nascondere al cliente i propri limiti: le eccezioni devono arrivare alle persone competenti."
+    },
+    {
+      type: "h3",
+      value: "Analisi, reporting e automazione dei flussi"
+    },
+    {
+      type: "p",
+      value: "Dati provenienti da CRM, gestionali, e-commerce e strumenti di marketing possono essere trasformati in riepiloghi e indicatori più accessibili. In altri casi l’AI può intervenire all’interno di un’automazione più ampia, collegando software e persone senza sostituire i controlli essenziali."
+    },
+
+    {
+      type: "h2",
+      value: "Quando l’intelligenza artificiale non è la scelta migliore"
+    },
+    {
+      type: "p",
+      value: "Non tutti i problemi richiedono un modello di intelligenza artificiale. Se il processo segue regole stabili e completamente prevedibili, una normale automazione può essere più economica, trasparente e affidabile. Se i dati sono incompleti, disordinati o non utilizzabili, può essere necessario intervenire prima sull’organizzazione delle informazioni."
+    },
+    {
+      type: "p",
+      value: "Anche un processo che cambia continuamente o non ha responsabilità definite difficilmente migliora grazie alla sola tecnologia. Un consulente AI serio dovrebbe confrontare sempre più alternative: configurazione di strumenti esistenti, integrazione tramite API, automazione tradizionale, sviluppo software su misura oppure AI."
+    },
+
+    {
+      type: "h2",
+      value: "Il primo passo: una valutazione di fattibilità AI"
+    },
+    {
+      type: "p",
+      value: "Prima di formulare un preventivo attendibile occorre comprendere cosa succede oggi in azienda. Quali persone utilizzano il processo? Da dove arrivano i dati? Quali sistemi devono comunicare? Quanto costa l’attività manuale? Quali errori sono accettabili e quali no? Chi deve approvare il risultato?"
+    },
+    {
+      type: "p",
+      value: "La valutazione iniziale serve a definire il caso d’uso, individuare vincoli tecnici e organizzativi, stimare complessità e rischi e stabilire come misurare il beneficio. Se mancano le condizioni necessarie, è preferibile scoprirlo prima di investire in uno sviluppo completo."
+    },
+    {
+      type: "p",
+      value: "Per questo abbiamo strutturato un servizio dedicato all’<a href=\"/servizi/intelligenza-artificiale-per-aziende\">intelligenza artificiale per aziende</a> che parte dalla fattibilità e non dalla vendita di una soluzione predefinita."
+    },
+
+    {
+      type: "h2",
+      value: "Come si sviluppa un progetto AI professionale"
+    },
+    {
+      type: "h3",
+      value: "1. Analisi del processo e degli obiettivi"
+    },
+    {
+      type: "p",
+      value: "Si mappano attività, persone, strumenti, volumi e criticità. L’obiettivo deve essere traducibile in un risultato verificabile, come ridurre il tempo necessario per consultare documenti o velocizzare la gestione iniziale delle richieste."
+    },
+    {
+      type: "h3",
+      value: "2. Verifica di dati, integrazioni e sicurezza"
+    },
+    {
+      type: "p",
+      value: "Si controllano disponibilità e qualità dei dati, possibilità di collegamento con CRM o gestionali, autorizzazioni, riservatezza e modalità di trattamento. Questa fase determina gran parte dell’affidabilità futura della soluzione."
+    },
+    {
+      type: "h3",
+      value: "3. Prototipo su un perimetro controllato"
+    },
+    {
+      type: "p",
+      value: "Quando il caso d’uso lo richiede, una prova circoscritta permette di verificare qualità delle risposte, limiti, costi operativi e reale utilità per gli utenti prima di estendere il progetto. Un prototipo non deve essere una semplice demo: deve rispondere a criteri di valutazione definiti."
+    },
+    {
+      type: "h3",
+      value: "4. Integrazione, controllo e miglioramento"
+    },
+    {
+      type: "p",
+      value: "Dopo la validazione, la soluzione viene inserita nei flussi reali. Si definiscono ruoli, registri, gestione degli errori, passaggi di approvazione e monitoraggio. Prestazioni e qualità devono essere controllate anche dopo il rilascio, perché dati e necessità aziendali evolvono."
+    },
+
+    {
+      type: "h2",
+      value: "Privacy, sicurezza e supervisione umana"
+    },
+    {
+      type: "p",
+      value: "Un progetto AI può coinvolgere informazioni aziendali, documenti interni o dati personali. È quindi necessario stabilire quali dati possono essere utilizzati, dove vengono elaborati, per quanto tempo vengono conservati, chi può accedervi e quali fornitori intervengono nel sistema."
+    },
+    {
+      type: "p",
+      value: "La supervisione umana deve essere proporzionata al rischio. Una bozza interna e una decisione con effetti su clienti o collaboratori non richiedono lo stesso livello di controllo. Il progetto deve distinguere chiaramente suggerimenti, automazioni e decisioni, assegnando responsabilità comprensibili."
+    },
+
+    {
+      type: "h2",
+      value: "Come scegliere esperti di AI in Veneto e Friuli Venezia Giulia"
+    },
+    {
+      type: "p",
+      value: "La scelta non dovrebbe basarsi su una presentazione spettacolare o sulla quantità di termini tecnici utilizzati. Un partner affidabile deve comprendere processi aziendali e sviluppo software, spiegare limiti e dipendenze, definire il trattamento dei dati e proporre un percorso graduale."
+    },
+    {
+      type: "p",
+      value: "Durante il primo incontro, chiedi quale problema verrà risolto, perché è necessaria l’AI, quali alternative sono state considerate, come sarà misurata la qualità, chi controllerà gli output e cosa accadrà se il sistema non raggiunge i risultati attesi. Chiedi inoltre a chi appartengono dati, configurazioni e codice e quali costi ricorrenti dipendono da servizi esterni."
+    },
+    {
+      type: "p",
+      value: "Operare in <a href=\"/dove-operiamo/veneto\">Veneto</a> e <a href=\"/dove-operiamo/friuli-venezia-giulia\">Friuli Venezia Giulia</a> consente di affiancare imprese manifatturiere, realtà commerciali, servizi professionali e organizzazioni del territorio con incontri diretti quando utili. Il progetto, tuttavia, deve rimanere documentato e gestibile anche a distanza: metodo e continuità contano più della sola prossimità geografica."
+    },
+
+    {
+      type: "h2",
+      value: "Quanto costa implementare l’AI in azienda?"
+    },
+    {
+      type: "p",
+      value: "Non esiste un prezzo unico. Un assistente limitato a una base documentale ha un perimetro diverso da un sistema collegato a più applicazioni aziendali. Incidono qualità e volume dei dati, numero di integrazioni, requisiti di sicurezza, interfacce, controlli, volumi di utilizzo e necessità di manutenzione."
+    },
+    {
+      type: "p",
+      value: "Un percorso corretto separa valutazione, eventuale prototipo e implementazione. In questo modo l’azienda può decidere sulla base di evidenze, senza impegnarsi subito in un progetto esteso e senza confondere il costo della tecnologia con il valore economico del problema risolto."
+    },
+
+    {
+      type: "h2",
+      value: "Da dove iniziare con un progetto AI in Veneto o Friuli Venezia Giulia"
+    },
+    {
+      type: "p",
+      value: "Il punto di partenza migliore è scegliere un solo processo rilevante, raccogliere esempi reali e coinvolgere le persone che lo gestiscono ogni giorno. Non serve arrivare al primo confronto con la soluzione già decisa: servono il problema, gli strumenti utilizzati, i dati disponibili e il risultato che si vorrebbe ottenere."
+    },
+    {
+      type: "p",
+      value: "NF Media Lab affianca aziende del Veneto e del Friuli Venezia Giulia nell’analisi e nell’implementazione di soluzioni AI integrate con software e processi esistenti. Se vuoi capire se il tuo progetto è tecnicamente ed economicamente sensato, <a href=\"/contatti\">richiedi una valutazione iniziale</a>: confronteremo obiettivi, vincoli e alternative prima di proporti qualsiasi sviluppo."
+    }
+  ]
+},
 {
   slug: "come-scegliere-agenzia-web",
 

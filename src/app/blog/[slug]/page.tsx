@@ -15,6 +15,7 @@ const serviceByCategory: Record<string, { label: string; href: string }> = {
   Software: { label: "Sviluppo gestionali su misura", href: "/servizi/sviluppo-gestionali-su-misura" },
   Digitalizzazione: { label: "Sviluppo gestionali su misura", href: "/servizi/sviluppo-gestionali-su-misura" },
   "Marketing Automation": { label: "Data analytics e tracking", href: "/servizi/data-analytics-e-tracking" },
+  "Intelligenza Artificiale": { label: "Intelligenza artificiale per aziende", href: "/servizi/intelligenza-artificiale-per-aziende" },
   "Digital Strategy": { label: "SEO e performance marketing", href: "/servizi/seo-e-performance-marketing" },
 };
 
@@ -40,12 +41,12 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   }
 
   return {
-    title: post.title,
-    description: post.intro,
+    title: post.seoTitle ?? post.title,
+    description: post.seoDescription ?? post.intro,
     alternates: { canonical: `/blog/${post.slug}` },
     openGraph: {
-      title: post.title,
-      description: post.intro,
+      title: post.seoTitle ?? post.title,
+      description: post.seoDescription ?? post.intro,
       type: "article",
       url: `/blog/${post.slug}`,
       publishedTime: toIsoDate(post.date),
