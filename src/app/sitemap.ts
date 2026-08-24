@@ -2,6 +2,7 @@ import type { MetadataRoute } from "next";
 import { caseStudies } from "@/data/caseStudies";
 import { posts } from "@/data/posts";
 import { regions } from "@/data/regions";
+import { cityLandings, getCityUrl } from "@/data/cityLandings";
 
 const siteUrl = "https://www.nfmedialab.it";
 
@@ -69,6 +70,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.9,
     },
     {
+      url: `${siteUrl}/prenota`,
+      changeFrequency: "monthly",
+      priority: 0.9,
+    },
+    {
       url: `${siteUrl}/blog`,
       changeFrequency: "weekly",
       priority: 0.9,
@@ -90,6 +96,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
     ...regions.map((region) => ({
       url: `${siteUrl}/dove-operiamo/${region.slug}`,
+      changeFrequency: "monthly" as const,
+      priority: 0.75,
+    })),
+    ...cityLandings.map((city) => ({
+      url: `${siteUrl}${getCityUrl(city)}`,
       changeFrequency: "monthly" as const,
       priority: 0.75,
     })),

@@ -2,6 +2,7 @@ import Link from "next/link";
 import styles from "./Footer.module.css";
 import { MapPin, Mail, Phone, Calendar } from "lucide-react";
 import BrandLogo from "./BrandLogo";
+import { cityLandings, getCityUrl } from "@/data/cityLandings";
 
 function InstagramIcon() {
   return (
@@ -40,6 +41,10 @@ function InstagramIcon() {
 }
 
 export default function Footer() {
+  const sortedCities = [...cityLandings].sort((first, second) =>
+    first.name.localeCompare(second.name, "it"),
+  );
+
   return (
     <footer className={styles.footer}>
       <div className={styles.container}>
@@ -61,6 +66,13 @@ export default function Footer() {
             <Link href="/servizi/social-media-management" className={styles.link}>Social Media</Link>
             <Link href="/servizi/intelligenza-artificiale-per-aziende" className={styles.link}>Intelligenza Artificiale</Link>
             <Link href="/servizi/brand-identity-e-comunicazione" className={styles.link}>Brand Identity</Link>
+          </div>
+
+          <div className={styles.col}>
+            <h2 className={styles.title}>Territori</h2>
+            {sortedCities.map((city) => (
+              <Link href={getCityUrl(city)} className={styles.link} key={city.slug}>{city.footerLabel}</Link>
+            ))}
           </div>
 
           <div className={styles.col}>

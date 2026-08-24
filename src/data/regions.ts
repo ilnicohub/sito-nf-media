@@ -24,7 +24,7 @@ export const regions: Region[] = [
       "Il Veneto unisce distretti manifatturieri, imprese esportatrici, servizi, commercio e turismo. Realtà molto diverse condividono però la stessa necessità: comunicare il proprio valore, rendere efficienti i processi e acquisire opportunità in mercati sempre più competitivi.",
       "Lavorare dal territorio ci permette di comprendere dinamiche, tempi decisionali e ambizioni delle PMI locali. Partiamo dagli obiettivi aziendali e progettiamo ecosistemi digitali misurabili, senza separare tecnologia, comunicazione e acquisizione clienti.",
     ],
-    cities: ["Belluno", "Padova", "Rovigo", "Treviso", "Vedelago", "Venezia", "Verona", "Vicenza"],
+    cities: ["Belluno", "Castelfranco Veneto", "Noale", "Padova", "Rovigo", "Treviso", "Vedelago", "Venezia", "Verona", "Vicenza"],
     sectors: [
       { title: "Manifattura e industria", description: "Siti B2B, cataloghi, piattaforme e sistemi digitali capaci di valorizzare competenze tecniche e reti commerciali." },
       { title: "Turismo e servizi", description: "Esperienze digitali chiare, strategie di acquisizione e strumenti per trasformare interesse e ricerche in prenotazioni o contatti." },

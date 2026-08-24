@@ -18,6 +18,15 @@
   cursor: grab;
 }
 
+.mapCanvas {
+  position: absolute;
+  inset: 0;
+}
+
+.mapCanvas :global(.maplibregl-canvas) {
+  filter: contrast(1.04) saturate(1.08);
+}
+
 .mapViewport:active {
   cursor: grabbing;
 }
@@ -61,6 +70,14 @@
   left: 640px;
   top: 640px;
   z-index: 10;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  pointer-events: none;
+}
+
+.mapBeacon {
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -392,6 +409,21 @@
   z-index: 10;
 }
 
+.attribution {
+  position: absolute;
+  left: 1rem;
+  bottom: 3.75rem;
+  z-index: 10;
+  padding: 0.28rem 0.45rem;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(3, 5, 8, 0.78);
+  color: rgba(255, 255, 255, 0.68);
+  font-family: var(--font-mono), monospace;
+  font-size: 0.55rem;
+  letter-spacing: 0.03em;
+  backdrop-filter: blur(4px);
+}
+
 .controlButton {
   background: rgba(3, 5, 8, 0.85);
   border: 1px solid rgba(0, 217, 255, 0.35);
@@ -428,4 +460,14 @@
 
 .controlBtnText {
   letter-spacing: 0.05em;
+}
+
+@media (max-width: 640px) {
+  .mapWrapper { min-height: 330px; }
+  .gpsPanel { top: 0.75rem; right: 0.75rem; }
+  .statusPanel { display: none; }
+  .compassScalePanel { left: 0.75rem; bottom: 0.75rem; }
+  .controlsBox { right: 0.75rem; bottom: 0.75rem; }
+  .attribution { left: 0.75rem; bottom: 3.5rem; }
+  .beaconLabel { max-width: 190px; text-align: center; }
 }
