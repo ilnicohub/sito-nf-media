@@ -235,7 +235,7 @@ export const cityLandings: CityLanding[] = [
         client: "Cabo Stampi S.R.L.",
         title: "Sito e marketing riprogettati per aumentare le opportunità",
         description: "Un intervento coordinato sulla presenza digitale e sull’acquisizione, costruito intorno agli obiettivi commerciali dell’azienda.",
-        metric: "+150% nelle richieste di preventivo in tre mesi",
+        metric: "+60% nelle richieste di preventivo in tre mesi",
       },
       {
         client: "Salone Tamara&Vanessa S.N.C.",
