@@ -20,7 +20,7 @@ export async function generateMetadata({ searchParams }: Props): Promise<Metadat
     description: "Guide pratiche su SEO, siti web, software e marketing digitale per trasformare la visibilità online in richieste commerciali.",
     alternates: { canonical },
     openGraph: {
-      title: currentPage === 1 ? "Blog NF Media Lab" : `Blog NF Media Lab — Pagina ${currentPage}`,
+      title: currentPage === 1 ? "NF Media Lab | Blog" : `NF Media Lab | Blog — Pagina ${currentPage}`,
       description: "Strategie e guide per aumentare visibilità, traffico qualificato e conversioni.",
       url: canonical,
       type: "website",

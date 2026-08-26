@@ -3,13 +3,13 @@ import ServiceLanding from "@/components/services/ServiceLanding";
 
 export const metadata: Metadata = {
   title: {
-    absolute: "Sviluppo Gestionali su Misura | NF Media Lab",
+    absolute: "NF Media Lab | Sviluppo Gestionali su Misura",
   },
   description:
     "Sviluppo di software gestionali, CRM ed ERP su misura per automatizzare processi, centralizzare dati e ridurre attività manuali.",
   alternates: { canonical: "/servizi/sviluppo-gestionali-su-misura" },
   openGraph: {
-    title: "Sviluppo Gestionali su Misura | NF Media Lab",
+    title: "NF Media Lab | Sviluppo Gestionali su Misura",
     description:
       "Software gestionale personalizzato per processi aziendali più semplici, integrati e misurabili.",
     url: "/servizi/sviluppo-gestionali-su-misura",

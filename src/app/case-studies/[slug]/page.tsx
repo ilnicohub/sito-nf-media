@@ -26,13 +26,15 @@ export async function generateMetadata({
   }
 
   return {
-    title: `${caseStudy.shortClient}: ${caseStudy.title} | NF Media Lab`,
+    title: {
+      absolute: `NF Media Lab | ${caseStudy.shortClient}: ${caseStudy.title}`,
+    },
     description: caseStudy.heroIntro,
     alternates: {
       canonical: `/case-studies/${caseStudy.slug}`,
     },
     openGraph: {
-      title: `${caseStudy.shortClient}: ${caseStudy.title}`,
+      title: `NF Media Lab | ${caseStudy.shortClient}: ${caseStudy.title}`,
       description: caseStudy.heroIntro,
       url: `/case-studies/${caseStudy.slug}`,
       images: [

@@ -3,13 +3,13 @@ import ServiceLanding from "@/components/services/ServiceLanding";
 
 export const metadata: Metadata = {
   title: {
-    absolute: "Realizzazione Siti Web nel Nord Italia | NF Media Lab",
+    absolute: "NF Media Lab | Realizzazione Siti Web nel Nord Italia",
   },
   description:
     "Realizzazione siti web per aziende del Nord Italia: piattaforme veloci, autorevoli e progettate per generare contatti commerciali qualificati.",
   alternates: { canonical: "/servizi/realizzazione-siti-web-nord-italia" },
   openGraph: {
-    title: "Realizzazione Siti Web nel Nord Italia | NF Media Lab",
+    title: "NF Media Lab | Realizzazione Siti Web nel Nord Italia",
     description:
       "Siti web professionali e orientati alla lead generation per aziende del Nord Italia.",
     url: "/servizi/realizzazione-siti-web-nord-italia",

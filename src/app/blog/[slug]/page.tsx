@@ -28,6 +28,13 @@ function toIsoDate(date: string) {
   return `${year}-${months[month]}-${day.padStart(2, "0")}`;
 }
 
+function getMetadataTitle(title: string) {
+  return title
+    .replace(/^NF Media Lab\s*[|–—-]\s*/i, "")
+    .replace(/\s*[|–—-]\s*NF Media Lab$/i, "")
+    .trim();
+}
+
 type Props = {
   params: Promise<{ slug: string }>;
 };
@@ -40,12 +47,14 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     return { title: "Post non trovato" };
   }
 
+  const metadataTitle = getMetadataTitle(post.seoTitle ?? post.title);
+
   return {
-    title: post.seoTitle ?? post.title,
+    title: metadataTitle,
     description: post.seoDescription ?? post.intro,
     alternates: { canonical: `/blog/${post.slug}` },
     openGraph: {
-      title: post.seoTitle ?? post.title,
+      title: `NF Media Lab | ${metadataTitle}`,
       description: post.seoDescription ?? post.intro,
       type: "article",
       url: `/blog/${post.slug}`,

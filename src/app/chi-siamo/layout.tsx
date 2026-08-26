@@ -6,7 +6,7 @@ export const metadata: Metadata = {
     "Conosci NF Media Lab, agenzia digitale a Treviso che unisce strategia, sviluppo software, web design e marketing orientato ai risultati.",
   alternates: { canonical: "/chi-siamo" },
   openGraph: {
-    title: "Agenzia Digitale a Treviso | NF Media Lab",
+    title: "NF Media Lab | Agenzia Digitale a Treviso",
     description:
       "Tecnologia, design e marketing per costruire crescita digitale misurabile.",
     url: "/chi-siamo",

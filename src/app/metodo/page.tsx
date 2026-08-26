@@ -3,13 +3,13 @@ import ServiceLanding from "@/components/services/ServiceLanding";
 
 export const metadata: Metadata = {
   title: {
-    absolute: "Il Nostro Metodo | NF Media Lab",
+    absolute: "NF Media Lab | Il Nostro Metodo",
   },
   description:
     "Scopri come lavoriamo. Dalla prima call esplorativa all'accesso esclusivo alla piattaforma NF Media Lab Partners per monitorare lo stato dei lavori.",
   alternates: { canonical: "/metodo" },
   openGraph: {
-    title: "Il Nostro Metodo | NF Media Lab",
+    title: "NF Media Lab | Il Nostro Metodo",
     description:
       "Trasparenza, qualità e controllo costante in ogni progetto digitale.",
     url: "/metodo",

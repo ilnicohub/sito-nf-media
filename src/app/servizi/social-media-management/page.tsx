@@ -2,12 +2,12 @@ import type { Metadata } from "next";
 import ServiceLanding from "@/components/services/ServiceLanding";
 
 export const metadata: Metadata = {
-  title: { absolute: "Social Media Management | NF Media Lab" },
+  title: { absolute: "NF Media Lab | Social Media Management" },
   description:
     "Gestione social media, content strategy, video e community management per costruire autorevolezza e generare opportunità commerciali.",
   alternates: { canonical: "/servizi/social-media-management" },
   openGraph: {
-    title: "Social Media Management | NF Media Lab",
+    title: "NF Media Lab | Social Media Management",
     description:
       "Strategia, contenuti e gestione dei canali social collegati agli obiettivi reali dell’azienda.",
     url: "/servizi/social-media-management",

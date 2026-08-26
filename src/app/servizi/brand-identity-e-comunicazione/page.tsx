@@ -2,12 +2,12 @@ import type { Metadata } from "next";
 import ServiceLanding from "@/components/services/ServiceLanding";
 
 export const metadata: Metadata = {
-  title: { absolute: "Brand Identity e Comunicazione | NF Media Lab" },
+  title: { absolute: "NF Media Lab | Brand Identity e Comunicazione" },
   description:
     "Brand identity, direzione creativa e comunicazione per costruire un’identità riconoscibile, autorevole e coerente su ogni canale.",
   alternates: { canonical: "/servizi/brand-identity-e-comunicazione" },
   openGraph: {
-    title: "Brand Identity e Comunicazione | NF Media Lab",
+    title: "NF Media Lab | Brand Identity e Comunicazione",
     description:
       "Strategia di marca, identità visiva e contenuti per comunicare valore in modo chiaro e distintivo.",
     url: "/servizi/brand-identity-e-comunicazione",

@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Richiesta ricevuta",
+  title: { absolute: "NF Media Lab | Richiesta ricevuta" },
   robots: { index: false, follow: false },
 };
 

@@ -17,7 +17,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     title: region.title,
     description: region.intro,
     alternates: { canonical: `/dove-operiamo/${region.slug}` },
-    openGraph: { title: region.title, description: region.intro, url: `/dove-operiamo/${region.slug}` },
+    openGraph: { title: `NF Media Lab | ${region.title}`, description: region.intro, url: `/dove-operiamo/${region.slug}` },
   };
 }
 

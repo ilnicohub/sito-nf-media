@@ -6,7 +6,7 @@ export const metadata: Metadata = {
     "Parlaci del tuo progetto. Richiedi una consulenza per software, siti web, SEO, advertising, social media e automazione AI.",
   alternates: { canonical: "/contatti" },
   openGraph: {
-    title: "Richiedi una Consulenza Digitale | NF Media Lab",
+    title: "NF Media Lab | Richiedi una Consulenza Digitale",
     description:
       "Raccontaci i tuoi obiettivi e ricevi una proposta su misura per far crescere la tua azienda.",
     url: "/contatti",

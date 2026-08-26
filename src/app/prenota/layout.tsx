@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   description: "Prenota una video call con NF Media Lab per confrontarti su siti web, software, SEO, advertising e social media.",
   alternates: { canonical: "/prenota" },
   openGraph: {
-    title: "Prenota una Consulenza Digitale | NF Media Lab",
+    title: "NF Media Lab | Prenota una Consulenza Digitale",
     description: "Scegli giorno e orario per un primo confronto sul tuo progetto digitale.",
     url: "/prenota",
   },

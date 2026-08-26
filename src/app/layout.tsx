@@ -23,7 +23,7 @@ export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
     default: "NF Media Lab | Agenzia Web a Vedelago e Treviso",
-    template: "%s | NF Media Lab",
+    template: "NF Media Lab | %s",
   },
   description:
     "Agenzia digitale con sede a Vedelago, in provincia di Treviso: siti web, software, SEO, Google Ads e social media orientati alla crescita.",

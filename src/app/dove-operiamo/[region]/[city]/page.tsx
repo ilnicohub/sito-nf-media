@@ -19,7 +19,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     title: city.title,
     description: city.description,
     alternates: { canonical: url },
-    openGraph: { title: city.title, description: city.description, url },
+    openGraph: { title: `NF Media Lab | ${city.title}`, description: city.description, url },
   };
 }
 

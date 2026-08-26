@@ -2,12 +2,12 @@ import type { Metadata } from "next";
 import ServiceLanding from "@/components/services/ServiceLanding";
 
 export const metadata: Metadata = {
-  title: { absolute: "SEO e Performance Marketing | NF Media Lab" },
+  title: { absolute: "NF Media Lab | SEO e Performance Marketing" },
   description:
     "Strategie SEO, Google Ads e performance marketing per aumentare visibilità, acquisire contatti qualificati e misurare il ritorno degli investimenti.",
   alternates: { canonical: "/servizi/seo-e-performance-marketing" },
   openGraph: {
-    title: "SEO e Performance Marketing | NF Media Lab",
+    title: "NF Media Lab | SEO e Performance Marketing",
     description:
       "Acquisizione organica e campagne advertising guidate da dati e obiettivi commerciali.",
     url: "/servizi/seo-e-performance-marketing",

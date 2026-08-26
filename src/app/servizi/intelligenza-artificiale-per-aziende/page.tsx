@@ -3,7 +3,7 @@ import ServiceLanding from "@/components/services/ServiceLanding";
 
 export const metadata: Metadata = {
   title: {
-    absolute: "Intelligenza Artificiale per Aziende | NF Media Lab",
+    absolute: "NF Media Lab | Intelligenza Artificiale per Aziende",
   },
   description:
     "Analisi di fattibilità, automazioni e soluzioni AI integrate nei processi aziendali per ridurre attività manuali, valorizzare dati e migliorare l'efficienza.",
@@ -11,7 +11,7 @@ export const metadata: Metadata = {
     canonical: "/servizi/intelligenza-artificiale-per-aziende",
   },
   openGraph: {
-    title: "Intelligenza Artificiale per Aziende | NF Media Lab",
+    title: "NF Media Lab | Intelligenza Artificiale per Aziende",
     description:
       "Valutiamo e integriamo soluzioni AI nei processi aziendali solo quando producono un vantaggio concreto, controllabile e misurabile.",
     url: "/servizi/intelligenza-artificiale-per-aziende",

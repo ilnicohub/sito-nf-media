@@ -2,12 +2,12 @@ import type { Metadata } from "next";
 import ServiceLanding from "@/components/services/ServiceLanding";
 
 export const metadata: Metadata = {
-  title: { absolute: "Data Analytics e Tracking | NF Media Lab" },
+  title: { absolute: "NF Media Lab | Data Analytics e Tracking" },
   description:
     "Data analytics, tracking delle conversioni e dashboard per misurare marketing, lead e performance aziendali con dati affidabili.",
   alternates: { canonical: "/servizi/data-analytics-e-tracking" },
   openGraph: {
-    title: "Data Analytics e Tracking | NF Media Lab",
+    title: "NF Media Lab | Data Analytics e Tracking",
     description:
       "Tracciamento, dashboard e business intelligence per decisioni commerciali basate su dati verificabili.",
     url: "/servizi/data-analytics-e-tracking",
