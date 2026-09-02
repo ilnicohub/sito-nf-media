@@ -6,32 +6,46 @@ import styles from "./CookieBanner.module.css";
 import Link from "next/link";
 import { Cookie } from "lucide-react";
 
+type CookiePreferences = {
+  analytics: boolean;
+  marketing: boolean;
+};
+
 export default function CookieBanner() {
   const [isVisible, setIsVisible] = useState(false);
   const [showPreferences, setShowPreferences] = useState(false);
-  const [preferences, setPreferences] = useState({ analytics: false, marketing: false });
+  const [preferences, setPreferences] = useState<CookiePreferences>({ analytics: false, marketing: false });
+
+  const syncPreferencesFromStorage = () => {
+    const consent = localStorage.getItem("nf_cookie_consent");
+    const prefsStr = localStorage.getItem("nf_cookie_prefs");
+
+    if (!prefsStr) {
+      if (consent === "all" || consent === "true") {
+        setPreferences({ analytics: true, marketing: true });
+      }
+      return;
+    }
+
+    try {
+      setPreferences(JSON.parse(prefsStr));
+    } catch {}
+  };
 
   useEffect(() => {
     // Check if user has already consented
     const consent = localStorage.getItem("nf_cookie_consent");
     const consentDate = localStorage.getItem("nf_cookie_date");
-    const prefsStr = localStorage.getItem("nf_cookie_prefs");
-    
-    if (prefsStr) {
-      try {
-        setPreferences(JSON.parse(prefsStr));
-      } catch(e) {}
-    }
     
     const SIX_MONTHS_MS = 180 * 24 * 60 * 60 * 1000;
     const isExpired = consentDate ? (Date.now() - parseInt(consentDate, 10) > SIX_MONTHS_MS) : false;
     
     if (!consent || isExpired) {
-      setIsVisible(true);
+      window.setTimeout(() => setIsVisible(true), 0);
     }
   }, []);
 
-  const saveConsentToServer = async (consentType: string, prefs: any) => {
+  const saveConsentToServer = async (consentType: string, prefs: CookiePreferences) => {
     try {
       await fetch("/api/cookie-consent", { 
         method: "POST",
@@ -48,6 +62,7 @@ export default function CookieBanner() {
     localStorage.setItem("nf_cookie_consent", "all");
     localStorage.setItem("nf_cookie_prefs", JSON.stringify(prefs));
     localStorage.setItem("nf_cookie_date", Date.now().toString());
+    setPreferences(prefs);
     setIsVisible(false);
     window.dispatchEvent(new Event("nf-cookie-consent"));
     await saveConsentToServer("all", prefs);
@@ -58,6 +73,7 @@ export default function CookieBanner() {
     localStorage.setItem("nf_cookie_consent", "none");
     localStorage.setItem("nf_cookie_prefs", JSON.stringify(prefs));
     localStorage.setItem("nf_cookie_date", Date.now().toString());
+    setPreferences(prefs);
     setIsVisible(false);
     window.dispatchEvent(new Event("nf-cookie-consent"));
     await saveConsentToServer("none", prefs);
@@ -93,12 +109,15 @@ export default function CookieBanner() {
                 <div className={styles.cookieText}>
                   <h4>Rispettiamo la tua privacy</h4>
                   <p>
-                    Utilizziamo i cookie per offrirti la migliore esperienza sul nostro sito web, per l'analisi del traffico e per le nostre strategie di marketing. 
+                    Utilizziamo i cookie per offrirti la migliore esperienza sul nostro sito web, per l&apos;analisi del traffico e per le nostre strategie di marketing.
                     Puoi leggere i dettagli nella nostra <Link href="/privacy">Privacy Policy</Link> e <Link href="/cookie">Cookie Policy</Link>.
                   </p>
                 </div>
                 <div className={styles.cookieActions}>
-                  <button onClick={() => setShowPreferences(true)} className={styles.declineBtn}>Preferenze</button>
+                  <button onClick={() => {
+                    syncPreferencesFromStorage();
+                    setShowPreferences(true);
+                  }} className={styles.declineBtn}>Preferenze</button>
                   <button onClick={handleDecline} className={styles.declineBtn}>Rifiuta</button>
                   <button onClick={handleAcceptAll} className={styles.acceptBtn}>Accetta Tutti</button>
                 </div>
@@ -155,6 +174,7 @@ export default function CookieBanner() {
       <button 
         className={styles.floatingCookieBtn} 
         onClick={() => {
+          syncPreferencesFromStorage();
           setIsVisible(true);
           setShowPreferences(true);
         }}
