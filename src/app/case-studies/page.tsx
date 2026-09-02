@@ -21,7 +21,6 @@ export default function CaseStudies() {
     "ITALSAMPLE S.R.L.",
     "SYMBLUX S.R.L.",
     "EUROLINE S.R.L.",
-    "ALUPRO S.P.A.",
   ];
   const marqueeLogos = [...logos, ...logos];
 
