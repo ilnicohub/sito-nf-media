@@ -484,6 +484,157 @@ export const caseStudies: CaseStudyDetail[] = [
     nextStep:
       "Se vuoi rendere sito, social e campagne più utili alla raccolta di richieste, possiamo partire da un'analisi del percorso attuale.",
   },
+  {
+
+    slug: "cabo-srl-seo-borgoricco",
+
+    client: "CABO S.R.L.",
+
+    shortClient: "CABO",
+
+    sector: "Industria · Borgoricco, Padova",
+
+    title: "Come abbiamo aumentato la visibilità organica di CABO S.R.L. su Google",
+
+    listingTitle: "Più visibilità su Google per un'azienda industriale del territorio",
+
+    image: "/case-studies/cabosrl.webp",
+
+    services: ["SEO on-page", "Content strategy", "Ottimizzazione tecnica"],
+
+    metrics: [
+
+      {
+
+        value: "+70%",
+
+        label: "Traffico organico",
+
+        detail: "Crescita del traffico proveniente dalla ricerca organica dopo l'avvio delle attività SEO.",
+
+        chartLabel: "Traffico SEO",
+
+        chartValue: 70,
+
+      },
+
+      {
+
+        value: "Top 10",
+
+        label: "Keyword strategiche",
+
+        detail: "Ingresso nella prima pagina di Google per ricerche rilevanti per il settore e il territorio.",
+
+        chartLabel: "Posizionamento",
+
+        chartValue: 80,
+
+      },
+
+    ],
+
+    problem:
+
+      "CABO S.R.L., azienda industriale con sede a Borgoricco, in provincia di Padova, partiva da una presenza organica limitata. Il sito era online, ma non riusciva a intercettare in modo efficace le ricerche degli utenti interessati ai servizi dell'azienda, sia a livello territoriale sia di settore. La struttura delle pagine, i contenuti e diversi elementi SEO non erano ancora organizzati secondo una strategia precisa.",
+
+    solution:
+
+      "Abbiamo sviluppato un percorso SEO strutturato, partendo dall'analisi delle ricerche più rilevanti per il settore e per il territorio di riferimento. Il lavoro ha coinvolto l'ottimizzazione delle pagine esistenti, la revisione dei contenuti, dei meta-dati e della struttura tecnica del sito, con l'obiettivo di aumentare progressivamente la visibilità organica e intercettare un traffico più qualificato. Il progetto è tuttora in corso e i primi risultati mostrano una crescita concreta.",
+
+    heroIntro:
+
+      "Un percorso SEO strutturato per aumentare la visibilità di CABO S.R.L. su Google e migliorare la presenza dell'azienda nelle ricerche rilevanti per il proprio settore e territorio.",
+
+    overview:
+
+      "Per un'azienda B2B, essere presenti nei risultati di ricerca significa creare nuove opportunità di contatto e rendere più semplice per potenziali clienti e partner trovare l'azienda. Il progetto CABO è partito dall'analisi della situazione esistente, individuando le principali aree di intervento: pagine poco ottimizzate, contenuti non sufficientemente orientati alle ricerche degli utenti e una copertura limitata delle query legate al territorio e al settore. Da questa analisi abbiamo definito un piano di lavoro progressivo, orientato a risultati misurabili.",
+
+    workDone: [
+
+      {
+
+        title: "Analisi delle ricerche e strategia SEO",
+
+        description:
+
+          "Abbiamo analizzato le principali query legate ai servizi di CABO e al territorio di riferimento, con particolare attenzione a Borgoricco, Padova e al mercato del Nord-Est. Da questa analisi è stata definita una strategia di posizionamento e una struttura dei contenuti più coerente con le opportunità di ricerca.",
+
+      },
+
+      {
+
+        title: "Ottimizzazione on-page e contenuti",
+
+        description:
+
+          "Abbiamo rivisto titoli, meta description, testi, heading e struttura delle pagine per rendere i contenuti più pertinenti rispetto alle ricerche degli utenti e più facilmente interpretabili dai motori di ricerca.",
+
+      },
+
+      {
+
+        title: "Ottimizzazione tecnica",
+
+        description:
+
+          "Siamo intervenuti sugli elementi tecnici che influenzano la scansione e l'indicizzazione del sito, migliorando struttura degli URL, gerarchia dei contenuti e organizzazione complessiva delle pagine.",
+
+      },
+
+    ],
+
+    impact: [
+
+      {
+
+        title: "Più traffico dalla ricerca organica",
+
+        description:
+
+          "Dopo l'avvio delle attività, il sito ha registrato una crescita del traffico proveniente da Google, iniziando a intercettare ricerche che in precedenza generavano una presenza molto limitata o assente.",
+
+      },
+
+      {
+
+        title: "Maggiore presenza nelle ricerche locali",
+
+        description:
+
+          "CABO ha iniziato a guadagnare visibilità per ricerche legate al territorio di Borgoricco e della provincia di Padova, rafforzando la propria presenza digitale nell'area in cui opera.",
+
+      },
+
+      {
+
+        title: "Una struttura SEO pronta a crescere",
+
+        description:
+
+          "L'ottimizzazione realizzata costituisce una base solida per le attività future, permettendo di sviluppare nuovi contenuti, intercettare ulteriori keyword e ampliare progressivamente la visibilità organica.",
+
+      },
+
+    ],
+
+    stack: ["SEO on-page", "Keyword research", "Ottimizzazione tecnica", "Content strategy", "Analytics"],
+
+    relatedServices: [
+
+      { label: "SEO e performance marketing", href: "/servizi/seo-e-performance-marketing" },
+
+      { label: "Realizzazione siti web", href: "/servizi/realizzazione-siti-web-nord-italia" },
+
+      { label: "Data analytics e tracking", href: "/servizi/data-analytics-e-tracking" },
+
+    ],
+
+    nextStep:
+
+      "Vuoi capire quanto è visibile la tua azienda su Google? Analizziamo il tuo sito, le principali opportunità di ricerca e gli interventi che possono generare maggiore valore.",
+
+  },
 ];
 
 export function getCaseStudy(slug: string) {

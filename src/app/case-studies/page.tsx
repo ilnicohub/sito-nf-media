@@ -6,12 +6,20 @@ import Link from "next/link";
 import Image from "next/image";
 import { caseStudies } from "@/data/caseStudies";
 
-const featuredSlug = "fc-calvi-noale-campagna-nuove-divise";
-const orderedCaseStudies = [...caseStudies].sort((first, second) => {
-  if (first.slug === featuredSlug) return -1;
-  if (second.slug === featuredSlug) return 1;
-  return 0;
-});
+const ORDER = [
+  "cabo-srl-seo-borgoricco",
+  "fc-calvi-noale-campagna-nuove-divise",
+  "symblux-comunicazione-digitale",
+  "italsample-redesign-campagne",
+  "salone-tamara-vanessa-lead-generation",
+  "fc-calvi-noale-social-media",
+  "euroline-gestionale-su-misura",
+];
+
+const orderedCaseStudies = [
+  ...ORDER.map((slug) => caseStudies.find((c) => c.slug === slug)).filter(Boolean),
+  ...caseStudies.filter((c) => !ORDER.includes(c.slug)),
+] as typeof caseStudies;
 
 export default function CaseStudies() {
   const logos = [
