@@ -167,7 +167,7 @@ export default function CaseStudyDetail({ caseStudy }: CaseStudyDetailProps) {
           <motion.div className={styles.sectionHeading} {...fadeUp}>
             <p className={styles.eyebrow}>Lavoro svolto</p>
             <h2>Interventi concreti, non attività isolate</h2>
-            <p>{caseStudy.overview}</p>
+            <p dangerouslySetInnerHTML={{ __html: caseStudy.overview }} />
           </motion.div>
 
           <div className={styles.workGrid}>

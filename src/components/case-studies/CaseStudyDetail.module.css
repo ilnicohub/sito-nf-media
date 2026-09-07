@@ -379,3 +379,15 @@
     gap: 1.35rem;
   }
 }
+
+.sectionHeading p a {
+  color: var(--accent-primary);
+  text-decoration: none;
+  font-weight: 500;
+  transition: opacity 0.2s ease;
+}
+
+.sectionHeading p a:hover {
+  opacity: 0.8;
+  text-decoration: underline;
+}

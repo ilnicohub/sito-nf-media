@@ -8,6 +8,7 @@ import { caseStudies } from "@/data/caseStudies";
 
 const ORDER = [
   "cabo-srl-seo-borgoricco",
+  "fc-calvi-noale-nuovo-sito-web",
   "fc-calvi-noale-campagna-nuove-divise",
   "symblux-comunicazione-digitale",
   "italsample-redesign-campagne",
