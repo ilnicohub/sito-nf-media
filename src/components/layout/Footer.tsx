@@ -115,7 +115,7 @@ export default function Footer() {
         </div>
         
         <div className={styles.bottom}>
-          <p>&copy; {new Date().getFullYear()} NF MEDIA LAB. C.F. FBRNCL01C07C111A</p>
+          <p>&copy; {new Date().getFullYear()} NF MEDIA LAB di Fabrin Niccolò - P.IVA 05640760269</p>
           <p>Vedelago, Treviso, Italia</p>
         </div>
       </div>

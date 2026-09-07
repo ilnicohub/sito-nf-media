@@ -143,7 +143,7 @@ export default function RootLayout({
   };
 
   return (
-    <html lang="it" className={`${geistSans.variable} ${geistMono.variable}`}>
+    <html lang="it" className={`${geistSans.variable} ${geistMono.variable}`} data-scroll-behavior="smooth">
       <body>
         <script
           type="application/ld+json"
