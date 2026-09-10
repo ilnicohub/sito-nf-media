@@ -66,6 +66,7 @@ export default function Footer() {
             <Link href="/servizi/social-media-management" className={styles.link}>Social Media</Link>
             <Link href="/servizi/intelligenza-artificiale-per-aziende" className={styles.link}>Intelligenza Artificiale</Link>
             <Link href="/servizi/brand-identity-e-comunicazione" className={styles.link}>Brand Identity</Link>
+            <Link href="/servizi/comunicazione-sportiva" className={styles.link}>Comunicazione Sportiva</Link>
           </div>
 
           <div className={styles.col}>

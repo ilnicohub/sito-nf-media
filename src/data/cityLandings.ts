@@ -37,11 +37,11 @@ export const cityLandings: CityLanding[] = [
     footerLabel: "Noale e Miranese",
     regionSlug: "veneto",
     regionName: "Veneto",
-    title: "Agenzia digitale per aziende e realtà di Noale",
+    title: "Agenzia Digitale, Web Agency e Comunicazione a Noale",
     description:
-      "Strategia digitale, siti web, social media, advertising e soluzioni software per aziende e organizzazioni di Noale e del territorio veneziano.",
+      "Cerchi una web agency o un'agenzia di comunicazione a Noale? Strategia digitale, siti web, social media e advertising per aziende del territorio.",
     intro:
-      "Operiamo concretamente a Noale e affianchiamo imprese, attività e organizzazioni che vogliono trasformare comunicazione, tecnologia e contenuti in risultati misurabili.",
+      "Come web agency e agenzia di comunicazione attiva a Noale, affianchiamo imprese e organizzazioni che vogliono trasformare tecnologia e contenuti in risultati misurabili.",
     contextTitle: "Un partner digitale che conosce Noale e il suo territorio",
     context: [
       "Lavorare a Noale significa conoscere da vicino il rapporto tra attività locali, comunità, associazioni e imprese che operano anche oltre i confini cittadini. La presenza digitale deve essere credibile sul territorio e, allo stesso tempo, pronta a raggiungere pubblici più ampi.",
@@ -87,11 +87,11 @@ export const cityLandings: CityLanding[] = [
     footerLabel: "Castelfranco Veneto e Castellana",
     regionSlug: "veneto",
     regionName: "Veneto",
-    title: "Agenzia digitale per aziende di Castelfranco Veneto",
+    title: "Agenzia Digitale, Web Agency e Comunicazione a Castelfranco Veneto",
     description:
-      "Siti web, software gestionali, SEO, advertising e comunicazione per aziende di Castelfranco Veneto e della Castellana.",
+      "La tua web agency e agenzia di comunicazione a Castelfranco Veneto. Siti web, software gestionali, SEO e advertising per aziende della Castellana.",
     intro:
-      "Dalla vicina sede di Vedelago supportiamo aziende di Castelfranco Veneto con progetti digitali costruiti per semplificare processi, comunicare competenze e generare opportunità.",
+      "Operando come web agency e agenzia di comunicazione dalla vicina sede di Vedelago, supportiamo le aziende di Castelfranco Veneto con progetti digitali per generare opportunità.",
     contextTitle: "Digitale e processi per le imprese della Castellana",
     context: [
       "Castelfranco Veneto è un riferimento naturale per imprese, servizi e attività della Castellana. In questo contesto il digitale deve saper sostenere sia la relazione con il territorio sia processi commerciali e operativi che coinvolgono clienti, reparti e mercati differenti.",
@@ -130,11 +130,11 @@ export const cityLandings: CityLanding[] = [
     footerLabel: "Treviso e provincia",
     regionSlug: "veneto",
     regionName: "Veneto",
-    title: "Agenzia digitale a Treviso per progetti misurabili",
+    title: "Agenzia Digitale, Web Agency e Comunicazione a Treviso",
     description:
-      "Agenzia digitale in provincia di Treviso per siti web, SEO, social media, software su misura, advertising, analytics e soluzioni AI.",
+      "Web agency e agenzia di comunicazione in provincia di Treviso per siti web, SEO, social media, software su misura, advertising e soluzioni AI.",
     intro:
-      "Dalla sede di Vedelago affianchiamo aziende di Treviso e provincia con strategia, tecnologia e comunicazione coordinate intorno a obiettivi commerciali e operativi.",
+      "Dalla nostra sede di Vedelago operiamo come web agency e agenzia di comunicazione per aziende di Treviso, unendo tecnologia e strategia ai tuoi obiettivi commerciali.",
     contextTitle: "Un’agenzia digitale radicata nella provincia di Treviso",
     context: [
       "Essere presenti in provincia di Treviso ci permette di lavorare vicino a imprenditori e team, comprendere rapidamente processi e priorità e organizzare incontri nei momenti che richiedono confronto diretto.",
@@ -164,11 +164,11 @@ export const cityLandings: CityLanding[] = [
     footerLabel: "Venezia e provincia",
     regionSlug: "veneto",
     regionName: "Veneto",
-    title: "Agenzia digitale per aziende di Venezia e provincia",
+    title: "Agenzia Digitale, Web Agency e Comunicazione a Venezia",
     description:
-      "Strategia digitale, siti web, advertising, contenuti e lead generation per aziende di Venezia, Jesolo, del litorale e della provincia.",
+      "Cerchi una web agency o agenzia di comunicazione a Venezia? Strategia digitale, siti web e lead generation per aziende del litorale e della provincia.",
     intro:
-      "Affianchiamo aziende e organizzazioni di Venezia, Jesolo e del territorio provinciale con progetti digitali capaci di valorizzare competenze, identità e relazioni commerciali.",
+      "Come web agency e agenzia di comunicazione per Venezia, Jesolo e provincia, creiamo progetti digitali capaci di valorizzare le tue competenze e generare relazioni commerciali.",
     contextTitle: "Comunicazione e tecnologia per il territorio veneziano",
     context: [
       "Venezia e la sua provincia riuniscono manifattura, servizi, turismo, commercio e realtà con una forte identità territoriale. Da Mestre a Jesolo e alle località del litorale, la presenza digitale deve adattarsi a pubblici, stagionalità e cicli di vendita molto diversi, senza perdere chiarezza e riconoscibilità.",
@@ -208,11 +208,11 @@ export const cityLandings: CityLanding[] = [
     footerLabel: "Padova e provincia",
     regionSlug: "veneto",
     regionName: "Veneto",
-    title: "Agenzia digitale per aziende e attività di Padova",
+    title: "Agenzia Digitale, Web Agency e Comunicazione a Padova",
     description:
-      "Siti web, marketing, lead generation, social media e soluzioni digitali per aziende, servizi e attività locali di Padova e provincia.",
+      "La tua web agency e agenzia di comunicazione a Padova. Siti web, marketing, lead generation e social media per aziende, servizi e attività locali.",
     intro:
-      "Supportiamo imprese e attività di Padova nel costruire una presenza digitale più credibile, acquisire richieste e coordinare sito, contenuti, campagne e misurazione.",
+      "Siamo una web agency e agenzia di comunicazione attiva a Padova, specializzata nell'aiutare imprese e attività locali ad acquisire richieste attraverso siti web e campagne.",
     contextTitle: "Strategie digitali adattate a imprese e attività padovane",
     context: [
       "A Padova convivono imprese strutturate, servizi professionali, attività locali e realtà orientate a mercati più ampi. Per questo non esiste una strategia digitale unica: una realtà B2B e un’attività rivolta al consumatore richiedono messaggi, canali e percorsi di conversione differenti.",
@@ -264,11 +264,11 @@ export const cityLandings: CityLanding[] = [
     footerLabel: "Pordenone e Friuli occidentale",
     regionSlug: "friuli-venezia-giulia",
     regionName: "Friuli-Venezia Giulia",
-    title: "Partner digitale per aziende di Pordenone",
+    title: "Agenzia Digitale, Web Agency e Comunicazione a Pordenone",
     description:
-      "Siti web, software, SEO, advertising, analytics e intelligenza artificiale per aziende di Pordenone e del Friuli occidentale.",
+      "Web agency e agenzia di comunicazione per aziende di Pordenone. Siti web, software, SEO, advertising e intelligenza artificiale nel Friuli occidentale.",
     intro:
-      "Affianchiamo aziende di Pordenone con tecnologia, comunicazione e acquisizione coordinate per rendere più chiara l’offerta e più efficienti i processi.",
+      "Operiamo come web agency e agenzia di comunicazione per le aziende di Pordenone unendo tecnologia, comunicazione e acquisizione per rendere più efficienti i processi.",
     contextTitle: "Progetti digitali per imprese di Pordenone e del Friuli occidentale",
     context: [
       "Le aziende di Pordenone che operano in filiere B2B o mercati più ampi hanno bisogno di strumenti digitali capaci di comunicare competenze tecniche, supportare il commerciale e adattarsi all’evoluzione dei processi.",
@@ -298,11 +298,11 @@ export const cityLandings: CityLanding[] = [
     footerLabel: "Udine e territorio friulano",
     regionSlug: "friuli-venezia-giulia",
     regionName: "Friuli-Venezia Giulia",
-    title: "Agenzia digitale per aziende di Udine",
+    title: "Agenzia Digitale, Web Agency e Comunicazione a Udine",
     description:
-      "Strategia digitale, siti web, SEO, comunicazione, software e automazioni per aziende di Udine e del territorio friulano.",
+      "La tua web agency e agenzia di comunicazione a Udine. Siti web, SEO, software e automazioni per imprese orientate al risultato nel territorio friulano.",
     intro:
-      "Supportiamo aziende di Udine nel rendere più riconoscibile la propria offerta, acquisire opportunità e costruire strumenti digitali adatti a processi e mercati differenti.",
+      "In qualità di web agency e agenzia di comunicazione, supportiamo le aziende di Udine nell'acquisire opportunità online e costruire strumenti digitali adatti a ogni mercato.",
     contextTitle: "Strategia e tecnologia per imprese del territorio udinese",
     context: [
       "Per un’azienda di Udine la presenza digitale può dover sostenere contemporaneamente relazioni locali, cicli commerciali B2B e mercati esterni. Questo richiede una struttura chiara, contenuti credibili e strumenti capaci di evolvere nel tempo.",

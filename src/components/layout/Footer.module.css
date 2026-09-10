@@ -94,4 +94,13 @@
   font-size: 0.85rem;
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.25rem;
+}
+
+@media (max-width: 767px) {
+  .bottom {
+    flex-direction: column;
+    gap: 0.35rem;
+  }
 }

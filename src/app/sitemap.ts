@@ -45,6 +45,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.8,
     },
     {
+      url: `${siteUrl}/servizi/comunicazione-sportiva`,
+      changeFrequency: "monthly",
+      priority: 0.8,
+    },
+    {
       url: `${siteUrl}/servizi/intelligenza-artificiale-per-aziende`,
       changeFrequency: "monthly",
       priority: 0.9,

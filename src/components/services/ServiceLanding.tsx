@@ -113,6 +113,20 @@ export default function ServiceLanding({
     transition: { duration: 0.7, ease: "easeOut" as const },
   };
 
+  
+  const siteUrl = "https://www.nfmedialab.it";
+  const serviceJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    name: title,
+    description: intro,
+    provider: {
+      "@type": "Organization",
+      name: "NF Media Lab",
+      url: siteUrl
+    }
+  };
+
   const faqJsonLd = faq && faq.length > 0 ? {
     "@context": "https://schema.org",
     "@type": "FAQPage",
@@ -126,14 +140,15 @@ export default function ServiceLanding({
     })),
   } : null;
 
+  const jsonLdArray = faqJsonLd ? [serviceJsonLd, faqJsonLd] : [serviceJsonLd];
+
+
   return (
     <div className={styles.main}>
-      {faqJsonLd && (
+      {jsonLdArray && (
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify(faqJsonLd).replace(/</g, "\\u003c"),
-          }}
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdArray).replace(/</g, "\\u003c") }}
         />
       )}
 
