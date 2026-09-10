@@ -59,7 +59,7 @@ export default function NotFound() {
             Torna alla Home
           </Link>
           <Link href="/servizi" className="secondaryBtn">
-            <span style={{ display: "flex", alignItems: "center", gap: "0.5rem" }}>
+            <span style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: "0.5rem", width: "100%" }}>
               Scopri i Servizi <ArrowRight size={16} />
             </span>
           </Link>
