@@ -18,6 +18,88 @@ export type Post = {
 };
 
 export const posts: Post[] = [
+
+{
+  slug: "lead-generation-b2b-veneto-aziende-manifatturiere",
+  title: "Lead Generation B2B in Veneto: Come le Aziende Manifatturiere e Industriali Trovano Clienti Online",
+  seoTitle: "Lead Generation B2B in Veneto per Aziende Manifatturiere",
+  seoDescription: "Il passaparola non basta più. Scopri come le aziende industriali e manifatturiere del Veneto trovano nuovi clienti qualificati online grazie alla Lead Generation.",
+  category: "Lead Generation",
+  date: "18 Settembre 2026",
+  readTime: "3 min",
+  image: "/blog/lead_generation_B2B_Veneto.webp",
+  intro: "Per le PMI e l'industria veneta il passaparola e le fiere di settore non bastano più. Il 70% dei buyer cerca fornitori online. Ecco come un'azienda B2B può sfruttare il digitale per generare contatti qualificati.",
+  content: [
+    {
+      type: "h2",
+      value: "Il Veneto, l'industria e il limite del passaparola"
+    },
+    {
+      type: "p",
+      value: "Le province di Treviso, Vicenza, Padova e Venezia rappresentano uno dei poli produttivi più forti d'Europa. Per decenni, le aziende manifatturiere e industriali venete sono cresciute e hanno prosperato affidandosi quasi esclusivamente al passaparola storico, all'affidabilità tecnica, alla rete di agenti e alle grandi fiere di settore."
+    },
+    {
+      type: "p",
+      value: "Oggi, però, i processi di acquisto sono profondamente cambiati, anche e soprattutto nel B2B. I dati dimostrano che oltre il 70% del processo decisionale di un buyer aziendale avviene online, in totale autonomia, ben prima di alzare il telefono o parlare con un commerciale. Se la tua azienda non è visibile e non comunica solidità esattamente nel momento in cui un potenziale cliente cerca una lavorazione, un macchinario o un servizio specifico, perderai l'opportunità a favore di un concorrente (magari anche meno competente di te)."
+    },
+    {
+      type: "h2",
+      value: "Perché il vecchio sito \"vetrina\" ti fa perdere contratti"
+    },
+    {
+      type: "p",
+      value: "Molte PMI manifatturiere hanno siti web ormai obsoleti, lenti, non navigabili da mobile e pensati 10 anni fa solo come un semplice \"biglietto da visita\" aziendale. Un buyer tecnico o un responsabile acquisti che atterra su un sito del genere non trova le specifiche chiare, non capisce immediatamente il vostro vero valore aggiunto e, inevitabilmente, torna indietro su Google."
+    },
+    {
+      type: "p",
+      value: "Nel B2B moderno, il sito web non deve essere una vetrina statica, ma un vero e proprio <strong>strumento di lavoro</strong>. Deve presentare i servizi e le lavorazioni in modo impeccabile, mostrare le vostre certificazioni, dare prova della vostra capacità produttiva tramite casi studio e, soprattutto, facilitare al massimo l'utente qualificato nel richiedere un preventivo o un incontro."
+    },
+    {
+      type: "h2",
+      value: "Come funziona la Lead Generation B2B nel settore industriale?"
+    },
+    {
+      type: "p",
+      value: "A differenza del B2C (dove si punta a vendere a migliaia di consumatori), nel B2B non servono milioni di visite generiche al sito. Quello che serve è il <strong>traffico iper-qualificato</strong>. La strategia di Lead Generation che applichiamo per le aziende del comparto industriale si basa su tre pilastri fondamentali:"
+    },
+    {
+      type: "h3",
+      value: "1. Intercettare la domanda consapevole (SEO)"
+    },
+    {
+      type: "p",
+      value: "Ottimizziamo il posizionamento del sito sui motori di ricerca per parole chiave estremamente tecniche e specifiche del vostro settore (ad esempio: \"lavorazioni meccaniche di precisione CNC conto terzi\", \"stampi per materie plastiche su misura\", \"fornitura valvole industriali\"). L'obiettivo è semplice: quando un'azienda ha un'esigenza e la cerca, voi dovete comparire tra i primissimi risultati."
+    },
+    {
+      type: "h3",
+      value: "2. Costruire autorevolezza e abbattere la diffidenza"
+    },
+    {
+      type: "p",
+      value: "Prima di affidarvi una commessa importante, i buyer studiano chi siete. Avere una presenza strutturata (che spesso include un <a href=\"/servizi/social-media-management\">utilizzo strategico di LinkedIn</a>) e pubblicare contenuti tecnici o casi di successo sul vostro sito crea fiducia istantanea e accorcia drasticamente i tempi decisionali."
+    },
+    {
+      type: "h3",
+      value: "3. Convertire l'interesse in richieste commerciali (CRO)"
+    },
+    {
+      type: "p",
+      value: "Non basta avere traffico: bisogna saperlo raccogliere. Ogni pagina che descrive una vostra lavorazione o servizio deve avere percorsi chiari e moduli di contatto ottimizzati per spingere l'utente a richiedere una quotazione tecnica o a prenotare un appuntamento esplorativo con il vostro team."
+    },
+    {
+      type: "h2",
+      value: "Il vantaggio di un partner digitale sul territorio veneto"
+    },
+    {
+      type: "p",
+      value: "Comprendere le dinamiche della produzione e tradurre competenze tecniche complesse in flussi di contatti online non è da tutti. Noi di NF Media Lab operiamo da Vedelago (Treviso), lavorando a stretto contatto con le realtà del Veneto. Conosciamo questo tessuto produttivo e crediamo nel valore del confronto diretto."
+    },
+    {
+      type: "p",
+      value: "Siete pronti a trasformare il vostro sito da costo fisso a rete commerciale attiva H24? <a href=\"/contatti\">Contattateci per una prima valutazione del vostro posizionamento digitale e scopriamo insieme i margini di miglioramento della vostra azienda.</a>"
+    }
+  ]
+},
 {
   slug: "esperti-ai-veneto-friuli-venezia-giulia",
 
@@ -636,7 +718,7 @@ export const posts: Post[] = [
 
   readTime: "5 min",
 
-  image: "/blog/aumentare-richieste-preventivo-sito-web.webp",
+  image: "/blog/lead_generation_B2B_Veneto.webp",
 
   intro: "Il tuo sito riceve visite ma genera poche richieste di preventivo? Avere traffico non significa automaticamente acquisire nuovi clienti. Per trasformare un visitatore in un contatto servono pagine chiare, una proposta credibile e un percorso capace di accompagnare l'utente verso l'azione.",
 
