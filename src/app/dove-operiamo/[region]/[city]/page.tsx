@@ -18,6 +18,17 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return {
     title: city.title,
     description: city.description,
+    keywords: [
+      `web agency ${city.name}`,
+      `agenzia di comunicazione ${city.name}`,
+      `agenzia comunicazione ${city.name}`,
+      `realizzazione siti web ${city.name}`,
+      `creazione siti web ${city.name}`,
+      `agenzia digitale ${city.name}`,
+      `gestione social media ${city.name}`,
+      `SEO ${city.name}`,
+      `sviluppo software ${city.name}`,
+    ],
     alternates: { canonical: url },
     openGraph: { title: `NF Media Lab | ${city.title}`, description: city.description, url },
   };
@@ -41,6 +52,22 @@ export default async function CityPage({ params }: Props) {
       isPartOf: { "@id": `${siteUrl}/#website` },
       about: { "@id": `${siteUrl}/#organization` },
       spatialCoverage: { "@type": "City", name: city.name },
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "ProfessionalService",
+      name: `NF Media Lab - ${city.title}`,
+      description: city.description,
+      url: cityUrl,
+      areaServed: {
+        "@type": "City",
+        name: city.name,
+      },
+      provider: {
+        "@type": "Organization",
+        name: "NF Media Lab",
+        url: siteUrl,
+      },
     },
     {
       "@context": "https://schema.org",

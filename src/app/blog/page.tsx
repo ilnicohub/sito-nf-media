@@ -18,6 +18,14 @@ export async function generateMetadata({ searchParams }: Props): Promise<Metadat
   return {
     title: currentPage === 1 ? "Blog: SEO, Web e Marketing" : `Blog: SEO, Web e Marketing — Pagina ${currentPage}`,
     description: "Guide pratiche su SEO, siti web, software e marketing digitale per trasformare la visibilità online in richieste commerciali.",
+    keywords: [
+      "blog marketing digitale",
+      "guide SEO Treviso",
+      "costo sito web",
+      "social media per aziende",
+      "lead generation PMI",
+      "consigli web agency",
+    ],
     alternates: { canonical },
     openGraph: {
       title: currentPage === 1 ? "NF Media Lab | Blog" : `NF Media Lab | Blog — Pagina ${currentPage}`,

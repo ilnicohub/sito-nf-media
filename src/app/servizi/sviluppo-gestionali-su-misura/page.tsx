@@ -7,6 +7,7 @@ export const metadata: Metadata = {
   },
   description:
     "Sviluppo di software gestionali, CRM ed ERP su misura per automatizzare processi, centralizzare dati e ridurre attività manuali.",
+  keywords: ["software gestionale su misura", "sviluppo software aziendale", "CRM personalizzato", "ERP su misura", "software gestionale Treviso", "sviluppo gestionali"],
   alternates: { canonical: "/servizi/sviluppo-gestionali-su-misura" },
   openGraph: {
     title: "NF Media Lab | Sviluppo Gestionali su Misura",

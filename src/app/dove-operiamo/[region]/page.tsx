@@ -16,6 +16,13 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return {
     title: region.title,
     description: region.intro,
+    keywords: [
+      `web agency ${region.name}`,
+      `agenzia web ${region.name}`,
+      `sviluppo software ${region.name}`,
+      `realizzazione siti web ${region.name}`,
+      `agenzia digitale ${region.name}`,
+    ],
     alternates: { canonical: `/dove-operiamo/${region.slug}` },
     openGraph: { title: `NF Media Lab | ${region.title}`, description: region.intro, url: `/dove-operiamo/${region.slug}` },
   };

@@ -394,6 +394,8 @@ export const posts: Post[] = [
   slug: "come-scegliere-agenzia-web",
 
   title: "Come Scegliere un’Agenzia Web: 10 Criteri per Affidare il Tuo Progetto",
+  seoTitle: "Come Scegliere un'Agenzia Web: 10 Criteri Essenziali",
+  seoDescription: "Scopri i 10 criteri per scegliere l'agenzia web giusta per la tua azienda. Guida pratica per valutare competenze, metodo e affidabilità.",
 
   category: "Digital Strategy",
 
@@ -589,6 +591,8 @@ export const posts: Post[] = [
   slug: "quanto-investire-marketing-digitale-pmi",
 
   title: "Quanto Dovrebbe Investire una PMI nel Marketing Digitale?",
+  seoTitle: "Quanto Investire nel Marketing Digitale per una PMI",
+  seoDescription: "Budget marketing digitale per PMI: quanto investire, dove allocare il budget e come misurare il ritorno. Guida pratica per imprenditori.",
 
   category: "Digital Strategy",
 
@@ -807,6 +811,8 @@ export const posts: Post[] = [
   slug: "come-aumentare-richieste-preventivo-sito-web",
 
   title: "Come Aumentare le Richieste di Preventivo dal Tuo Sito Web",
+  seoTitle: "Come Aumentare le Richieste di Preventivo dal Sito Web",
+  seoDescription: "Il tuo sito non genera contatti? Ecco le strategie concrete per trasformare i visitatori in richieste di preventivo qualificate.",
 
   category: "Sviluppo Web",
 
@@ -983,6 +989,8 @@ export const posts: Post[] = [
   slug: "perche-concorrenti-compaiono-prima-google",
 
   title: "Perché i Tuoi Concorrenti Compaiono Prima di Te su Google?",
+  seoTitle: "Perché i Concorrenti Compaiono Prima di Te su Google",
+  seoDescription: "Scopri perché i tuoi concorrenti si posizionano meglio su Google e quali azioni concrete puoi intraprendere per superarli.",
 
   category: "SEO & GEO",
 
@@ -1179,6 +1187,8 @@ export const posts: Post[] = [
   slug: "quanto-costa-gestione-social-media-azienda-2026",
 
   title: "Quanto Costa la Gestione Social Media per un'Azienda nel 2026?",
+  seoTitle: "Costo Gestione Social Media Aziendale nel 2026",
+  seoDescription: "Quanto costa la gestione social media per un'azienda nel 2026? Prezzi, cosa include il servizio e come scegliere il giusto investimento.",
 
   category: "Social Media",
 
@@ -1687,6 +1697,8 @@ export const posts: Post[] = [
   {
   slug: "perche-la-tua-azienda-non-compare-su-google",
   title: "Perché la Tua Azienda non Compare su Google? Le 7 Cause che Ti Stanno Facendo Perdere Clienti",
+  seoTitle: "Azienda non Compare su Google? Le 7 Cause Principali",
+  seoDescription: "La tua azienda non compare su Google? Ecco le 7 cause più comuni e come risolverle per tornare visibile ai tuoi potenziali clienti.",
   category: "SEO",
   date: "4 Agosto 2026",
   readTime: "8 min",
@@ -1810,6 +1822,8 @@ export const posts: Post[] = [
   {
   slug: "quanto-costa-realizzare-un-sito-web-professionale",
   title: "Quanto Costa Realizzare un Sito Web Professionale nel 2026? Guida Completa ai Prezzi",
+  seoTitle: "Quanto Costa un Sito Web Professionale nel 2026",
+  seoDescription: "Guida ai prezzi per realizzare un sito web professionale nel 2026. Costi reali, cosa li influenza e come ottenere il massimo dal budget.",
   category: "Sviluppo Web",
   date: "30 Luglio 2026",
   readTime: "7 min",
@@ -2065,6 +2079,8 @@ export const posts: Post[] = [
   {
   slug: "sito-web-non-converte-7-errori-cro",
   title: "Sito Web che Non Converte? 7 Errori che Stanno Facendo Perdere Clienti alla Tua Azienda",
+  seoTitle: "Sito Web che Non Converte? 7 Errori da Correggere",
+  seoDescription: "Il tuo sito ha traffico ma non genera contatti? Scopri i 7 errori più comuni che impediscono al tuo sito web di convertire i visitatori in clienti.",
   category: "Sviluppo Web",
   date: "25 Luglio 2026",
   readTime: "7 min",
@@ -2196,6 +2212,8 @@ export const posts: Post[] = [
   {
   slug: "pwa-vantaggi-rispetto-app-native",
   title: "PWA: vantaggi rispetto alle app native e quando convengono davvero",
+  seoTitle: "PWA vs App Nativa: Vantaggi e Quando Conviene",
+  seoDescription: "Progressive Web App o app nativa? Confronto completo su costi, prestazioni e vantaggi per capire quale soluzione conviene alla tua azienda.",
   category: "Sviluppo Web",
   date: "23 Luglio 2026",
   readTime: "8 min",
@@ -2342,6 +2360,8 @@ export const posts: Post[] = [
   }, {
     slug: "digitalizzazione-pmi-guida-trasformazione-digitale-aziendale",
     title: "Digitalizzare una PMI: guida alla trasformazione digitale aziendale nel 2026",
+    seoTitle: "Digitalizzare una PMI: Guida alla Trasformazione Digitale",
+    seoDescription: "Come digitalizzare una PMI nel 2026: dalla strategia agli strumenti concreti per automatizzare processi e ridurre i costi operativi.",
     category: "Digitalizzazione",
     date: "22 Luglio 2026",
     readTime: "7 min",
@@ -2465,6 +2485,8 @@ export const posts: Post[] = [
   {
     slug: "avivx-gestionale-per-parrucchieri",
     title: "AvivX: Il Software Gestionale Definitivo per Parrucchieri e Saloni",
+    seoTitle: "AvivX: Software Gestionale per Parrucchieri e Saloni",
+    seoDescription: "AvivX è il gestionale completo per parrucchieri e saloni: appuntamenti, magazzino, fidelity e marketing automatizzato in un'unica piattaforma.",
     category: "Software",
     date: "21 Luglio 2026",
     readTime: "5 min",
@@ -2520,6 +2542,8 @@ export const posts: Post[] = [
   {
     slug: "social-media-per-aziende-guida-strategica",
     title: "Social Media per Aziende: la Guida Strategica per Attrarre Clienti nel 2026",
+    seoTitle: "Social Media per Aziende: Guida Strategica 2026",
+    seoDescription: "Come usare i social media per attrarre clienti nel 2026. Strategia, piattaforme, contenuti e metriche per aziende che vogliono risultati concreti.",
     category: "Social Media",
     date: "21 Luglio 2026",
     readTime: "6 min",
@@ -2599,6 +2623,8 @@ export const posts: Post[] = [
   {
     slug: "limportanza-di-un-software-gestionale-su-misura",
     title: "Perché la tua azienda ha bisogno di un gestionale su misura",
+    seoTitle: "Perché Serve un Gestionale su Misura per la Tua Azienda",
+    seoDescription: "Excel e fogli condivisi non bastano più. Scopri perché un software gestionale personalizzato può trasformare l'efficienza della tua azienda.",
     category: "Software",
     date: "20 Luglio 2026",
     readTime: "3 min",

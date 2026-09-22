@@ -7,6 +7,7 @@ export const metadata: Metadata = {
   },
   description:
     "Analisi di fattibilità, automazioni e soluzioni AI integrate nei processi aziendali per ridurre attività manuali, valorizzare dati e migliorare l'efficienza.",
+  keywords: ["intelligenza artificiale per aziende", "AI aziendale", "automazione AI", "consulenza intelligenza artificiale", "integrazione AI processi aziendali", "esperti AI Veneto"],
   alternates: {
     canonical: "/servizi/intelligenza-artificiale-per-aziende",
   },

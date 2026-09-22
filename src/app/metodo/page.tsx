@@ -7,6 +7,12 @@ export const metadata: Metadata = {
   },
   description:
     "Scopri come lavoriamo. Dalla prima call esplorativa all'accesso esclusivo alla piattaforma NF Media Lab Partners per monitorare lo stato dei lavori.",
+  keywords: [
+    "metodo di lavoro agenzia web",
+    "sviluppo software metodo",
+    "processo realizzazione siti web",
+    "trasparenza agenzia digitale",
+  ],
   alternates: { canonical: "/metodo" },
   openGraph: {
     title: "NF Media Lab | Il Nostro Metodo",

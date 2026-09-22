@@ -52,6 +52,13 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return {
     title: metadataTitle,
     description: post.seoDescription ?? post.intro,
+    keywords: [
+      post.category,
+      metadataTitle,
+      "NF Media Lab",
+      "guida",
+      "approfondimento",
+    ],
     alternates: { canonical: `/blog/${post.slug}` },
     openGraph: {
       title: `NF Media Lab | ${metadataTitle}`,

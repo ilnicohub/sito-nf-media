@@ -71,10 +71,11 @@ export const metadata: Metadata = {
     locale: "it_IT",
     images: [
       {
-        url: "/og-default.svg",
-        alt: "NF Media Lab — Sviluppo Software, Web Design e Marketing",
+        url: "/og-default.png",
+        alt: "NF Media Lab — Sviluppo Software, Siti Web e Strategie Digitali",
         width: 1200,
         height: 630,
+        type: "image/png",
       },
     ],
     type: "website",
@@ -84,7 +85,7 @@ export const metadata: Metadata = {
     title: "NF Media Lab | Agenzia Web a Vedelago e Treviso",
     description:
       "Sviluppo software, siti web e strategie di acquisizione clienti per aziende del Nord Italia.",
-    images: ["/og-default.svg"],
+    images: ["/og-default.png"],
   },
 };
 

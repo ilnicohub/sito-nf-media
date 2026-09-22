@@ -8,6 +8,7 @@ export const metadata: Metadata = {
   },
   description:
     "Agenzia di comunicazione sportiva per società di calcio, basket, pallavolo e sport in generale. Siti web, social media, contenuti e strategie per nuove iscrizioni, sponsor e visibilità del club.",
+  keywords: ["comunicazione sportiva", "agenzia comunicazione sportiva", "marketing sportivo", "comunicazione società sportive", "social media club sportivi", "sito web società sportiva", "agenzia marketing sportivo", "comunicazione digitale sport"],
   alternates: { canonical: "/servizi/comunicazione-sportiva" },
   openGraph: {
     title:

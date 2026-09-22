@@ -5,6 +5,7 @@ export const metadata: Metadata = {
   title: { absolute: "NF Media Lab | Social Media Management" },
   description:
     "Gestione social media, content strategy, video e community management per costruire autorevolezza e generare opportunità commerciali.",
+  keywords: ["gestione social media", "social media management", "social media per aziende", "gestione Instagram aziendale", "gestione LinkedIn aziendale", "agenzia social media"],
   alternates: { canonical: "/servizi/social-media-management" },
   openGraph: {
     title: "NF Media Lab | Social Media Management",

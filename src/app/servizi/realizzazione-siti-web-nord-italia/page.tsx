@@ -7,6 +7,7 @@ export const metadata: Metadata = {
   },
   description:
     "Realizzazione siti web per aziende del Nord Italia: piattaforme veloci, autorevoli e progettate per generare contatti commerciali qualificati.",
+  keywords: ["realizzazione siti web", "creazione sito web aziendale", "siti web per aziende", "web agency Nord Italia", "sito web professionale", "sviluppo siti web Treviso"],
   alternates: { canonical: "/servizi/realizzazione-siti-web-nord-italia" },
   openGraph: {
     title: "NF Media Lab | Realizzazione Siti Web nel Nord Italia",

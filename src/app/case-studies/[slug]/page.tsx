@@ -30,6 +30,13 @@ export async function generateMetadata({
       absolute: `NF Media Lab | ${caseStudy.shortClient}: ${caseStudy.title}`,
     },
     description: caseStudy.heroIntro,
+    keywords: [
+      caseStudy.client,
+      caseStudy.shortClient,
+      "case study",
+      "progetto digitale",
+      ...(caseStudy.services ?? []),
+    ],
     alternates: {
       canonical: `/case-studies/${caseStudy.slug}`,
     },

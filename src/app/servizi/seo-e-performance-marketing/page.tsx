@@ -5,6 +5,7 @@ export const metadata: Metadata = {
   title: { absolute: "NF Media Lab | SEO e Performance Marketing" },
   description:
     "Strategie SEO, Google Ads e performance marketing per aumentare visibilità, acquisire contatti qualificati e misurare il ritorno degli investimenti.",
+  keywords: ["SEO", "performance marketing", "posizionamento Google", "Google Ads", "agenzia SEO", "ottimizzazione motori di ricerca", "consulenza SEO Treviso"],
   alternates: { canonical: "/servizi/seo-e-performance-marketing" },
   openGraph: {
     title: "NF Media Lab | SEO e Performance Marketing",

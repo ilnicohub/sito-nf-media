@@ -5,6 +5,7 @@ export const metadata: Metadata = {
   title: { absolute: "NF Media Lab | Brand Identity e Comunicazione" },
   description:
     "Brand identity, direzione creativa e comunicazione per costruire un’identità riconoscibile, autorevole e coerente su ogni canale.",
+  keywords: ["brand identity", "comunicazione aziendale", "identità visiva", "branding per aziende", "strategia di marca", "agenzia comunicazione"],
   alternates: { canonical: "/servizi/brand-identity-e-comunicazione" },
   openGraph: {
     title: "NF Media Lab | Brand Identity e Comunicazione",

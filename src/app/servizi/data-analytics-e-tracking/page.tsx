@@ -5,6 +5,7 @@ export const metadata: Metadata = {
   title: { absolute: "NF Media Lab | Data Analytics e Tracking" },
   description:
     "Data analytics, tracking delle conversioni e dashboard per misurare marketing, lead e performance aziendali con dati affidabili.",
+  keywords: ["data analytics", "tracking conversioni", "Google Analytics", "dashboard aziendali", "business intelligence", "analisi dati marketing"],
   alternates: { canonical: "/servizi/data-analytics-e-tracking" },
   openGraph: {
     title: "NF Media Lab | Data Analytics e Tracking",

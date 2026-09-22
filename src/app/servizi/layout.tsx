@@ -4,6 +4,16 @@ export const metadata: Metadata = {
   title: "Sviluppo Software, Siti Web, SEO e Marketing",
   description:
     "Servizi digitali a Treviso: software gestionali, siti web ad alte prestazioni, SEO, Google Ads, social media e automazioni AI.",
+  keywords: [
+    "servizi digitali Treviso",
+    "sviluppo software",
+    "realizzazione siti web",
+    "SEO Treviso",
+    "social media marketing",
+    "comunicazione sportiva",
+    "software gestionale su misura",
+    "intelligenza artificiale per aziende",
+  ],
   alternates: { canonical: "/servizi" },
   openGraph: {
     title: "NF Media Lab | Sviluppo Software, Siti Web, SEO e Marketing",
