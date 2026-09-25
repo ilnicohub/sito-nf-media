@@ -332,3 +332,35 @@
     padding: 0 1rem 1.25rem 3.55rem;
   }
 }
+
+.territoriesSection {
+  padding: 4rem 0 1rem;
+  border-top: 1px solid var(--border);
+}
+
+.territoriesLinks {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 1.5rem;
+}
+
+.territoryLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.55rem 1.15rem;
+  border-radius: 40px;
+  border: 1px solid var(--border);
+  background: rgba(255, 255, 255, 0.02);
+  color: var(--text-muted);
+  font-size: 0.88rem;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.territoryLink:hover {
+  color: #ffffff;
+  border-color: var(--border-hover);
+  background: rgba(255, 255, 255, 0.05);
+}

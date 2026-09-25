@@ -317,6 +317,33 @@ export default function ServiceLanding({
         </section>
       )}
 
+      <section className={styles.territoriesSection}>
+        <div className={styles.container}>
+          <motion.div {...fadeUp}>
+            <p className={styles.eyebrow}>Presenza locale</p>
+            <h3 style={{ fontSize: "1.25rem", fontWeight: 600, marginTop: "0.25rem" }}>
+              Attivi a stretto contatto con aziende e realtà del territorio
+            </h3>
+            <div className={styles.territoriesLinks}>
+              {[
+                { label: "Castelfranco Veneto e Castellana", href: "/dove-operiamo/veneto/castelfranco-veneto" },
+                { label: "Noale e Miranese", href: "/dove-operiamo/veneto/noale" },
+                { label: "Camposampiero e Camposampierese", href: "/dove-operiamo/veneto/camposampiero" },
+                { label: "Treviso e provincia", href: "/dove-operiamo/veneto/treviso" },
+                { label: "Padova e provincia", href: "/dove-operiamo/veneto/padova" },
+                { label: "Venezia e provincia", href: "/dove-operiamo/veneto/venezia" },
+                { label: "Pordenone e Friuli occidentale", href: "/dove-operiamo/friuli-venezia-giulia/pordenone" },
+                { label: "Udine e territorio friulano", href: "/dove-operiamo/friuli-venezia-giulia/udine" },
+              ].map((t) => (
+                <Link key={t.href} href={t.href} className={styles.territoryLink}>
+                  {t.label}
+                </Link>
+              ))}
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
       <section className={styles.cta}>
         <div className={styles.container}>
           <motion.div className={styles.ctaContent} {...fadeUp}>

@@ -924,6 +924,17 @@
   line-height: 2;
 }
 
+.territoryCitiesText a {
+  color: var(--text-muted);
+  text-decoration: none;
+  transition: color 0.2s ease, text-decoration 0.2s ease;
+}
+
+.territoryCitiesText a:hover {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
 /* ── AVIVX Redesign ── */
 .avivxCardRedesigned {
   display: grid;

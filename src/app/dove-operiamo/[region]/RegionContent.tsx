@@ -77,21 +77,33 @@ export default function RegionContent({ region }: { region: Region }) {
         <div className={styles.container}>
           <motion.div className={styles.sectionHeading} {...reveal}><p className={styles.eyebrow}>Competenze</p><h2>Un unico partner, più leve coordinate</h2></motion.div>
           <div className={styles.infoGrid}>
-            {territoryCapabilities.map((capability, index) => (
-              <motion.article
-                key={capability.title}
-                className={styles.infoCard}
-                initial={{ opacity: 0, y: 28 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: "-50px" }}
-                transition={{ duration: 0.6, delay: index * 0.06 }}
-              >
-                <span>{String(index + 1).padStart(2, "0")}</span>
-                <h3>{capability.title}</h3>
-                <p>{capability.description}</p>
-                <Link href={capability.href} className={styles.cardLink}>Approfondisci <ArrowRight size={18} /></Link>
-              </motion.article>
-            ))}
+            {territoryCapabilities.map((capability, index) => {
+              const dynamicTitles: Record<string, string> = {
+                "/servizi/realizzazione-siti-web-nord-italia": `Realizzazione siti web in ${region.name}`,
+                "/servizi/sviluppo-gestionali-su-misura": `Software e gestionali per aziende del ${region.name}`,
+                "/servizi/seo-e-performance-marketing": `SEO e posizionamento Google in ${region.name}`,
+                "/servizi/social-media-management": `Gestione social media in ${region.name}`,
+                "/servizi/brand-identity-e-comunicazione": `Agenzia di comunicazione in ${region.name}`,
+                "/servizi": `AI e automazione aziendale in ${region.name}`,
+              };
+              const headingTitle = dynamicTitles[capability.href] || `${capability.title} in ${region.name}`;
+
+              return (
+                <motion.article
+                  key={capability.title}
+                  className={styles.infoCard}
+                  initial={{ opacity: 0, y: 28 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true, margin: "-50px" }}
+                  transition={{ duration: 0.6, delay: index * 0.06 }}
+                >
+                  <span>{String(index + 1).padStart(2, "0")}</span>
+                  <h3>{headingTitle}</h3>
+                  <p>{capability.description}</p>
+                  <Link href={capability.href} className={styles.cardLink}>Approfondisci <ArrowRight size={18} /></Link>
+                </motion.article>
+              );
+            })}
           </div>
         </div>
       </section>

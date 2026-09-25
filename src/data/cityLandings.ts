@@ -37,7 +37,7 @@ export const cityLandings: CityLanding[] = [
     footerLabel: "Noale e Miranese",
     regionSlug: "veneto",
     regionName: "Veneto",
-    title: "Agenzia Digitale, Web Agency e Comunicazione a Noale",
+    title: "Agenzia Comunicazione a Noale",
     description:
       "Cerchi una web agency o un'agenzia di comunicazione a Noale? Strategia digitale, siti web, social media e advertising per aziende del territorio.",
     intro:
@@ -87,7 +87,7 @@ export const cityLandings: CityLanding[] = [
     footerLabel: "Castelfranco Veneto e Castellana",
     regionSlug: "veneto",
     regionName: "Veneto",
-    title: "Agenzia Digitale, Web Agency e Comunicazione a Castelfranco Veneto",
+    title: "Agenzia Comunicazione a Castelfranco Veneto",
     description:
       "La tua web agency e agenzia di comunicazione a Castelfranco Veneto. Siti web, software gestionali, SEO e advertising per aziende della Castellana.",
     intro:
@@ -125,12 +125,67 @@ export const cityLandings: CityLanding[] = [
     ],
   },
   {
+    slug: "camposampiero",
+    name: "Camposampiero",
+    footerLabel: "Camposampiero e Camposampierese",
+    regionSlug: "veneto",
+    regionName: "Veneto",
+    title: "Agenzia Comunicazione a Camposampiero",
+    description:
+      "Cerchi una web agency o agenzia di comunicazione a Camposampiero? Realizzazione siti web, software gestionali, SEO e social media nel Camposampierese.",
+    intro:
+      "Come web agency e agenzia di comunicazione per Camposampiero e l'Alta Padovana, affianchiamo aziende e attività nel costruire una presenza digitale forte e orientata a generare contatti.",
+    contextTitle: "Strategia e presenza digitale per le imprese del Camposampierese",
+    context: [
+      "Il Camposampierese è un territorio operoso e strategico dell'Alta Padovana, crocevia tra le province di Padova, Treviso e Venezia. Qui convivono solide realtà artigianali e manifatturiere, poli commerciali e attività di servizi fortemente radicate.",
+      "Dalla nostra sede di Vedelago, a pochi minuti di distanza, offriamo la possibilità di incontrarsi di persona e costruire un percorso digitale coerente: siti web ad alte prestazioni, SEO per dominare i motori di ricerca, gestione social professionale e software su misura per ottimizzare il lavoro aziendale.",
+    ],
+    map: {
+      latitude: 45.5724212,
+      longitude: 11.9317548,
+      label: "Camposampiero e Camposampierese",
+      description: "Il cuore dell'Alta Padovana: un tessuto produttivo, commerciale e di servizi connesso tra le province di Padova, Treviso e Venezia.",
+    },
+    sectors: [
+      { title: "Manifattura e PMI", description: "Siti web B2B, cataloghi digitali e strategie per presentare lavorazioni e capacità tecnica ai buyer." },
+      { title: "Commercio e servizi locali", description: "Posizionamento locale su Google Maps, lead generation e social media per attrarre clienti nella zona." },
+      { title: "Software su misura e automazioni", description: "Piattaforme gestionali (ERP/CRM) personalizzate per eliminare passaggi manuali, centralizzare i dati e velocizzare la gestione degli ordini." },
+    ],
+    priorities: [
+      { title: "Vicinanza e contatto", description: "Un partner digitale a pochi chilometri, sempre raggiungibile per confronti diretti e supporto continuativo." },
+      { title: "Acquisizione contatti", description: "Costruire siti e campagne che trasformano la visibilità in richieste di preventivo misurabili." },
+      { title: "Autorevolezza", description: "Valorizzare la qualità reale dell’azienda con un'immagine digitale all'altezza delle aspettative." },
+    ],
+    nearbyAreas: ["Borgoricco", "Campodarsego", "Loreggia", "Massanzago", "Piombino Dese", "San Giorgio delle Pertiche", "Santa Giustina in Colle", "Trebaseleghe", "Villa del Conte", "Villanova di Camposampiero"],
+    proofs: [
+      {
+        client: "Symblux S.R.L.",
+        title: "Ecosistema digitale, UX e SEO per realtà industriale d'eccellenza",
+        description: "Riprogettazione completa dell'esperienza web e ottimizzazione SEO per comunicare il valore tecnico e generare lead qualificati nel territorio padovano e nazionale.",
+        metric: "+40% di contatti tramite il sito",
+        href: "/case-studies/symblux-comunicazione-digitale",
+      },
+      {
+        client: "Salone Tamara&Vanessa S.N.C.",
+        title: "Presenza online e lead generation per attività nel territorio padovano",
+        description: "Strategia social, restyling web e campagne mirate per attrarre nuove clienti e posizionarsi come punto di riferimento nella provincia di Padova.",
+        metric: "+150% nelle richieste digitali",
+        href: "/case-studies/salone-tamara-vanessa-lead-generation",
+      },
+    ],
+    faq: [
+      { question: "Operate direttamente a Camposampiero e nei comuni vicini?", answer: "Sì. La nostra sede è a Vedelago, a pochi minuti di distanza da Camposampiero, Piombino Dese e Trebaseleghe. Possiamo facilmente organizzare incontri di persona presso la tua azienda o nel nostro studio." },
+      { question: "Che tipo di aziende seguite nel Camposampierese?", answer: "Lavoriamo sia con PMI e aziende manifatturiere B2B che necessitano di siti tecnici e lead generation, sia con attività commerciali e di servizi locali che vogliono aumentare clienti e visibilità sul territorio." },
+      { question: "Realizzate siti web e seguite anche la SEO locale?", answer: "Sì. Progettiamo siti web veloci su misura e curiamo l'ottimizzazione SEO locale per farti trovare da chi cerca i tuoi servizi a Camposampiero, Padova e in tutto il Veneto." },
+    ],
+  },
+  {
     slug: "treviso",
     name: "Treviso",
     footerLabel: "Treviso e provincia",
     regionSlug: "veneto",
     regionName: "Veneto",
-    title: "Agenzia Digitale, Web Agency e Comunicazione a Treviso",
+    title: "Agenzia Comunicazione a Treviso",
     description:
       "Web agency e agenzia di comunicazione in provincia di Treviso per siti web, SEO, social media, software su misura, advertising e soluzioni AI.",
     intro:
@@ -164,7 +219,7 @@ export const cityLandings: CityLanding[] = [
     footerLabel: "Venezia e provincia",
     regionSlug: "veneto",
     regionName: "Veneto",
-    title: "Agenzia Digitale, Web Agency e Comunicazione a Venezia",
+    title: "Agenzia Comunicazione a Venezia",
     description:
       "Cerchi una web agency o agenzia di comunicazione a Venezia? Strategia digitale, siti web e lead generation per aziende del litorale e della provincia.",
     intro:
@@ -208,7 +263,7 @@ export const cityLandings: CityLanding[] = [
     footerLabel: "Padova e provincia",
     regionSlug: "veneto",
     regionName: "Veneto",
-    title: "Agenzia Digitale, Web Agency e Comunicazione a Padova",
+    title: "Agenzia Comunicazione a Padova",
     description:
       "La tua web agency e agenzia di comunicazione a Padova. Siti web, marketing, lead generation e social media per aziende, servizi e attività locali.",
     intro:
@@ -264,7 +319,7 @@ export const cityLandings: CityLanding[] = [
     footerLabel: "Pordenone e Friuli occidentale",
     regionSlug: "friuli-venezia-giulia",
     regionName: "Friuli-Venezia Giulia",
-    title: "Agenzia Digitale, Web Agency e Comunicazione a Pordenone",
+    title: "Agenzia Comunicazione a Pordenone",
     description:
       "Web agency e agenzia di comunicazione per aziende di Pordenone. Siti web, software, SEO, advertising e intelligenza artificiale nel Friuli occidentale.",
     intro:
@@ -298,7 +353,7 @@ export const cityLandings: CityLanding[] = [
     footerLabel: "Udine e territorio friulano",
     regionSlug: "friuli-venezia-giulia",
     regionName: "Friuli-Venezia Giulia",
-    title: "Agenzia Digitale, Web Agency e Comunicazione a Udine",
+    title: "Agenzia Comunicazione a Udine",
     description:
       "La tua web agency e agenzia di comunicazione a Udine. Siti web, SEO, software e automazioni per imprese orientate al risultato nel territorio friulano.",
     intro:

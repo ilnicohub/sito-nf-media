@@ -542,7 +542,7 @@ export default function Home() {
             ))}
           </motion.div>
 
-          {/* Cities text */}
+          {/* Cities text with contextual links */}
           <motion.p
             className={styles.territoryCitiesText}
             initial={{ opacity: 0 }}
@@ -550,7 +550,14 @@ export default function Home() {
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.3 }}
           >
-            Vedelago · Treviso · Venezia · Padova · Vicenza · Verona · Milano · Torino · Bologna · Udine
+            <Link href="/dove-operiamo/veneto/treviso">Treviso</Link> ·{" "}
+            <Link href="/dove-operiamo/veneto/castelfranco-veneto">Castelfranco Veneto</Link> ·{" "}
+            <Link href="/dove-operiamo/veneto/noale">Noale</Link> ·{" "}
+            <Link href="/dove-operiamo/veneto/camposampiero">Camposampiero</Link> ·{" "}
+            <Link href="/dove-operiamo/veneto/padova">Padova</Link> ·{" "}
+            <Link href="/dove-operiamo/veneto/venezia">Venezia</Link> ·{" "}
+            <Link href="/dove-operiamo/friuli-venezia-giulia/pordenone">Pordenone</Link> ·{" "}
+            <Link href="/dove-operiamo/friuli-venezia-giulia/udine">Udine</Link>
           </motion.p>
         </div>
       </section>

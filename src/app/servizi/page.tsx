@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { BarChart3, Bot, Code2, LayoutTemplate, Megaphone, Palette, Search, CheckCircle2 } from "lucide-react";
+import { BarChart3, Bot, Code2, LayoutTemplate, Megaphone, Palette, Search, CheckCircle2, ArrowRight } from "lucide-react";
 import styles from "./page.module.css";
 import Link from "next/link";
 
@@ -197,6 +197,50 @@ export default function Servizi() {
               </motion.div>
             </motion.div>
           ))}
+        </div>
+      </section>
+
+      <section className={styles.territorySection}>
+        <div className={styles.container}>
+          <motion.div
+            className={styles.territoryContent}
+            initial={{ opacity: 0, y: 24 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+          >
+            <p className={styles.eyebrow}>Presenza territoriale</p>
+            <h2>Web agency e agenzia di comunicazione per il Nord Italia</h2>
+            <p className={styles.territoryIntro}>
+              Dalla nostra sede di Vedelago (Treviso), lavoriamo a stretto contatto con aziende e realtà territoriali attraverso progetti dedicati e supporto continuo.
+            </p>
+            <div className={styles.territoryLinksGrid}>
+              <Link href="/dove-operiamo/veneto/castelfranco-veneto" className={styles.territoryLink}>
+                Castelfranco Veneto e Castellana <ArrowRight size={16} />
+              </Link>
+              <Link href="/dove-operiamo/veneto/noale" className={styles.territoryLink}>
+                Noale e Miranese <ArrowRight size={16} />
+              </Link>
+              <Link href="/dove-operiamo/veneto/camposampiero" className={styles.territoryLink}>
+                Camposampiero e Camposampierese <ArrowRight size={16} />
+              </Link>
+              <Link href="/dove-operiamo/veneto/treviso" className={styles.territoryLink}>
+                Treviso e provincia <ArrowRight size={16} />
+              </Link>
+              <Link href="/dove-operiamo/veneto/padova" className={styles.territoryLink}>
+                Padova e provincia <ArrowRight size={16} />
+              </Link>
+              <Link href="/dove-operiamo/veneto/venezia" className={styles.territoryLink}>
+                Venezia e provincia <ArrowRight size={16} />
+              </Link>
+              <Link href="/dove-operiamo/friuli-venezia-giulia/pordenone" className={styles.territoryLink}>
+                Pordenone e Friuli occidentale <ArrowRight size={16} />
+              </Link>
+              <Link href="/dove-operiamo/friuli-venezia-giulia/udine" className={styles.territoryLink}>
+                Udine e territorio friulano <ArrowRight size={16} />
+              </Link>
+            </div>
+          </motion.div>
         </div>
       </section>
       
